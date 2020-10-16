@@ -19,10 +19,8 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
-        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
-        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -53,36 +51,6 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="Cara" sid="674485836713199">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable comment="E a vida do persona" name="Vida" sid="400334869623891" type="number" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="BoundToLayout" sid="195161527494570">
-                    <behavior id="bound" />
-                </behavior-type>
-                <behavior-type name="8Direction" sid="981426736254104">
-                    <behavior id="EightDir" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="711024944329556" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Blood.png">
-                        <collision-poly>
-                            <point x="0.09375" y="0.09375" />
-                            <point x="0.5" y="0" />
-                            <point x="0.78125" y="0.21875" />
-                            <point x="0.96875" y="0.5" />
-                            <point x="0.84375" y="0.84375" />
-                            <point x="0.5" y="1" />
-                            <point x="0.125" y="0.875" />
-                            <point x="0.03125" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="solidos" sid="386033650479706">
             <plugin id="Sprite" />
             <behaviors>
@@ -118,26 +86,6 @@
         <object-type name="Keyboard" sid="918042255114390">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="TiledBackground" sid="199752618534612">
-            <plugin id="TiledBg" />
-            <texture />
-        </object-type>
-        <object-type name="Sprite" sid="819494875336258">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="400601484682998" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="areademorte" sid="932470241595562">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="445614571508379" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Moeda" sid="349943578797626">
             <plugin id="Sprite" />
             <animation-folder>
@@ -147,20 +95,6 @@
             </animation-folder>
         </object-type>
         <object-type name="Moedas" sid="361643337570905">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="Venceu" sid="223779972840487">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="Sprite3" sid="403759027568299">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="886907704556545" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Morreu" sid="406232551377047">
             <plugin id="Text" />
         </object-type>
         <object-type name="Tiro_2" sid="927025177538066">
@@ -187,11 +121,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="chao_terra" sid="719930930942025">
-            <plugin id="Tilemap" />
-            <texture original-source="C:\Users\user\Desktop\clone\centro.png" />
-            <tiles />
-        </object-type>
         <object-type name="camera" sid="672510481532015">
             <plugin id="Sprite" />
             <behaviors>
@@ -209,95 +138,86 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
-        <object-type name="m" sid="979200904829581">
-            <plugin id="Tilemap" />
-            <texture original-source="C:\Users\user\Desktop\clone\centro.png" />
-            <tiles />
-        </object-type>
-        <object-type name="p" sid="523169152783111">
-            <plugin id="Tilemap" />
-            <texture original-source="C:\Users\user\Desktop\clone\centro_agua.png" />
-            <tiles />
-        </object-type>
-        <object-type name="chao_azul" sid="610561733299860">
-            <plugin id="Tilemap" />
-            <texture original-source="C:\Users\user\Desktop\clone\chao_azul.png" />
-            <tiles />
-        </object-type>
-        <object-type name="chao_cinza" sid="182171920750863">
-            <plugin id="Tilemap" />
-            <texture original-source="C:\Users\user\Desktop\clone\chao.png" />
-            <tiles />
-        </object-type>
         <object-type name="parede" sid="203269700460802">
             <plugin id="Tilemap" />
             <texture original-source="C:\Users\user\Desktop\clone\parede.png" />
             <tiles />
         </object-type>
-        <object-type name="player" sid="946074057166410">
+        <object-type name="Player" sid="946074057166410">
             <plugin id="Sprite" />
             <instance-variables>
-                <instance-variable name="direcao" sid="912187418161257" type="number" />
+                <instance-variable name="Direction" sid="912187418161257" type="string" />
             </instance-variables>
             <behaviors>
-                <behavior-type name="Pin" sid="385196450722685">
-                    <behavior id="Pin" />
+                <behavior-type name="8Direction" sid="615988158471799">
+                    <behavior id="EightDir" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="frente" pingpong="0" repeatcount="1" repeatto="0" sid="612212968311703" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\clone\Coelho_frente.png">
-                        <collision-poly>
-                            <point x="0.234375" y="0.234375" />
-                            <point x="0.5" y="0.390625" />
-                            <point x="0.765625" y="0.234375" />
-                            <point x="0.671875" y="0.5" />
-                            <point x="0.734375" y="0.734375" />
-                            <point x="0.5" y="0.890625" />
-                            <point x="0.265625" y="0.734375" />
-                            <point x="0.328125" y="0.5" />
-                        </collision-poly>
-                    </frame>
+                <animation framecount="15" loop="0" name="Front" pingpong="0" repeatcount="1" repeatto="0" sid="612212968311703" speed="5">
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0001.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0002.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0003.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0004.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0005.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0006.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0007.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0008.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0009.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0010.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0011.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0012.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0013.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0014.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0015.png" />
                 </animation>
-                <animation framecount="1" loop="0" name="esquerda" pingpong="0" repeatcount="1" repeatto="0" sid="234490192689800" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\clone\Coelho_esquerda.png">
-                        <collision-poly>
-                            <point x="0.40625" y="0.40625" />
-                            <point x="0.5" y="0.171875" />
-                            <point x="0.765625" y="0.234375" />
-                            <point x="0.671875" y="0.5" />
-                            <point x="0.734375" y="0.734375" />
-                            <point x="0.5" y="0.890625" />
-                            <point x="0.265625" y="0.734375" />
-                            <point x="0.328125" y="0.5" />
-                        </collision-poly>
-                    </frame>
+                <animation framecount="15" loop="0" name="Side" pingpong="0" repeatcount="1" repeatto="0" sid="791303281280619" speed="5">
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0001.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0002.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0003.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0004.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0005.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0006.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0007.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0008.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0009.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0010.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0011.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0012.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0013.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0014.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0015.png" />
                 </animation>
-                <animation framecount="1" loop="0" name="direita" pingpong="0" repeatcount="1" repeatto="0" sid="791303281280619" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\clone\Coelho_direita.png">
-                        <collision-poly>
-                            <point x="0.234375" y="0.234375" />
-                            <point x="0.5" y="0.203125" />
-                            <point x="0.59375" y="0.40625" />
-                            <point x="0.671875" y="0.5" />
-                            <point x="0.734375" y="0.734375" />
-                            <point x="0.5" y="0.890625" />
-                            <point x="0.265625" y="0.734375" />
-                            <point x="0.328125" y="0.5" />
-                        </collision-poly>
-                    </frame>
+                <animation framecount="15" loop="0" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="735297282172893" speed="5">
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0001.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0002.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0003.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0004.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0005.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0006.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0007.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0008.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0009.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0010.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0011.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0012.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0013.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0014.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0015.png" />
                 </animation>
-                <animation framecount="1" loop="0" name="tras" pingpong="0" repeatcount="1" repeatto="0" sid="735297282172893" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\clone\Coelho_costa.png">
+            </animation-folder>
+        </object-type>
+        <object-type name="LaundryBG" sid="515202331461630">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="407216069232807" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\LAVANDERIA\lavanderiaChaoParede.png">
                         <collision-poly>
-                            <point x="0.234375" y="0.234375" />
-                            <point x="0.5" y="0.390625" />
-                            <point x="0.765625" y="0.234375" />
-                            <point x="0.671875" y="0.5" />
-                            <point x="0.734375" y="0.734375" />
-                            <point x="0.5" y="0.890625" />
-                            <point x="0.265625" y="0.734375" />
-                            <point x="0.328125" y="0.5" />
+                            <point x="0.0195313" y="0.0292969" />
+                            <point x="0.979167" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.977865" y="0.966797" />
+                            <point x="0.0221354" y="0.966797" />
                         </collision-poly>
                     </frame>
                 </animation>

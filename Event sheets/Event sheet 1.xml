@@ -5,38 +5,9 @@
     <events>
         <variable constant="0" name="Vidas" sid="338194106337379" static="0" type="number">3</variable>
         <variable comment="E o dinheiro" constant="0" name="dinheiro" sid="362366293273829" static="0" type="number">0</variable>
-        <event-block sid="123126466906851">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="923974932076918" type="Cara">
-                    <param id="0" name="Object">areademorte</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="654888112239087" type="Cara">
-                    <param id="0" name="Instance variable">Vida</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-11" name="Subtract from" sid="429948049078654" type="System">
-                    <param id="0" name="Variable">Vidas</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="254735746758677">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="445794837055636" type="Cara">
-                    <param id="0" name="Instance variable">Vida</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-26" name="Restart layout" sid="107055718808118" type="System" />
-            </actions>
-        </event-block>
         <event-block sid="502110209101733">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="936684114357725" type="Cara">
+                <condition id="0" name="On collision with another object" sid="936684114357725" type="Player">
                     <param id="0" name="Object">Moeda</param>
                 </condition>
             </conditions>
@@ -56,19 +27,10 @@
                 <action id="0" name="Set text" sid="209307080346985" type="Moedas">
                     <param id="0" name="Text">&quot;BIT: &quot; &amp; dinheiro &amp; &quot;VIDA: &quot; &amp; Vidas</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="909178683332985">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="176918628285175" type="Cara">
-                    <param id="0" name="Object">Sprite3</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-15" name="Set visible" sid="523877208910982" type="Venceu">
-                    <param id="0" name="Visibility">1</param>
+                <action id="4" name="Set animation" sid="724444419744019" type="Player">
+                    <param id="0" name="Animation">player.Direction</param>
+                    <param id="1" name="From">1</param>
                 </action>
-                <action id="-9" name="Destroy" sid="401165173924372" type="Sprite3" />
             </actions>
         </event-block>
         <event-block sid="515892997047480">
@@ -80,9 +42,6 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" sid="393180331811323" type="Morreu">
-                    <param id="0" name="Visibility">1</param>
-                </action>
                 <action id="-16" name="Wait" sid="722060562218746" type="System">
                     <param id="0" name="Seconds">1.0</param>
                 </action>
@@ -93,9 +52,6 @@
                 <action id="-9" name="Set value" sid="793215483946702" type="System">
                     <param id="0" name="Variable">Vidas</param>
                     <param id="1" name="Value">3</param>
-                </action>
-                <action id="-15" name="Set visible" sid="714411274719461" type="Morreu">
-                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
@@ -111,20 +67,6 @@
         </event-block>
         <event-group description="" sid="152637230714758" title="Coelho_player">
             <sub-events>
-                <event-block disabled="1" sid="613810863787814">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="962680159157664" type="Keyboard">
-                            <param id="0" name="Key">32</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="598128723352233" type="Cara">
-                            <param id="0" name="Object">Tiro_2</param>
-                            <param id="1" name="Layer">1</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="339007779023831">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="663944810034831" type="Keyboard">
@@ -132,7 +74,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="217344128591690" type="Cara">
+                        <action id="0" name="Spawn another object" sid="217344128591690" type="Player">
                             <param id="0" name="Object">Tiro_2</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
@@ -143,269 +85,83 @@
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="533813617714203" type="System" />
                     </conditions>
-                    <actions>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="612610732373343" type="player">
-                            <param id="0" name="Pin to">Cara</param>
-                            <param id="1" name="Mode">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="905325093490265">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="443767080845425" type="Keyboard">
-                            <param id="0" name="Key">37</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Key is down" sid="662996258620747" type="Keyboard">
-                            <param id="0" name="Key">39</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Key is down" sid="340799825370593" type="Keyboard">
-                            <param id="0" name="Key">38</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Key is down" sid="844289048320938" type="Keyboard">
-                            <param id="0" name="Key">40</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="966908104221443" type="Cara">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="350693895272572" type="player">
-                            <param id="0" name="Animation">&quot;esquerda&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="260073260777335" type="player">
-                            <param id="0" name="Instance variable">direcao</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="396713931915741">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="199640450962851" type="Keyboard">
-                            <param id="0" name="Key">37</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Key is down" sid="245228747645721" type="Keyboard">
-                            <param id="0" name="Key">39</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="147220427573981" type="Keyboard">
-                            <param id="0" name="Key">38</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Key is down" sid="958139841523666" type="Keyboard">
-                            <param id="0" name="Key">40</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="604129283700423" type="Cara">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="478622557867217" type="Cara">
-                            <param id="0" name="Control">2</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="195336311870661" type="player">
-                            <param id="0" name="Animation">&quot;esquerda&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="248620875914518" type="player">
-                            <param id="0" name="Instance variable">direcao</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="667436618380314">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="506385000916984" type="Keyboard">
-                            <param id="0" name="Key">37</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Key is down" sid="641785118465820" type="Keyboard">
-                            <param id="0" name="Key">39</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Key is down" sid="165965901716353" type="Keyboard">
-                            <param id="0" name="Key">38</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="709724783276215" type="Keyboard">
-                            <param id="0" name="Key">40</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="225549787686642" type="Cara">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="173129728307721" type="Cara">
-                            <param id="0" name="Control">3</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="204329481646320" type="player">
-                            <param id="0" name="Animation">&quot;esquerda&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="339754524920898" type="player">
-                            <param id="0" name="Instance variable">direcao</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="738065856803265">
-                    <conditions>
-                        <condition id="2" inverted="1" name="Key is down" sid="620021362904687" type="Keyboard">
-                            <param id="0" name="Key">37</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="101832525459269" type="Keyboard">
-                            <param id="0" name="Key">39</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Key is down" sid="123850150517508" type="Keyboard">
-                            <param id="0" name="Key">38</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Key is down" sid="920356540193581" type="Keyboard">
-                            <param id="0" name="Key">40</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="105135599707094" type="Cara">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="244147267583400" type="player">
-                            <param id="0" name="Animation">&quot;direita&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="708952396652177" type="player">
-                            <param id="0" name="Instance variable">direcao</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="162996862863137">
-                    <conditions>
-                        <condition id="2" inverted="1" name="Key is down" sid="995692564492804" type="Keyboard">
-                            <param id="0" name="Key">37</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="570928771225642" type="Keyboard">
-                            <param id="0" name="Key">39</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="668469897951301" type="Keyboard">
-                            <param id="0" name="Key">38</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Key is down" sid="619804328476211" type="Keyboard">
-                            <param id="0" name="Key">40</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="847777759631954" type="Cara">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="261786829756567" type="Cara">
-                            <param id="0" name="Control">2</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="666292864041217" type="player">
-                            <param id="0" name="Animation">&quot;direita&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="783883332124618" type="player">
-                            <param id="0" name="Instance variable">direcao</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="413582608235008">
-                    <conditions>
-                        <condition id="2" inverted="1" name="Key is down" sid="440647032835716" type="Keyboard">
-                            <param id="0" name="Key">37</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="804979159038146" type="Keyboard">
-                            <param id="0" name="Key">39</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Key is down" sid="708679963670846" type="Keyboard">
-                            <param id="0" name="Key">38</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="222522476434135" type="Keyboard">
-                            <param id="0" name="Key">40</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="364996604108287" type="Cara">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="585296541997116" type="Cara">
-                            <param id="0" name="Control">3</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="156057974244451" type="player">
-                            <param id="0" name="Animation">&quot;direita&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="140085053814415" type="player">
-                            <param id="0" name="Instance variable">direcao</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="924311003933199">
-                    <conditions>
-                        <condition id="2" inverted="1" name="Key is down" sid="368783414893690" type="Keyboard">
-                            <param id="0" name="Key">37</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Key is down" sid="561382937436301" type="Keyboard">
-                            <param id="0" name="Key">39</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="924979072016682" type="Keyboard">
-                            <param id="0" name="Key">38</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Key is down" sid="779968740288035" type="Keyboard">
-                            <param id="0" name="Key">40</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="157958073309231" type="Cara">
-                            <param id="0" name="Control">2</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="359819692269723" type="player">
-                            <param id="0" name="Animation">&quot;tras&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="583719182700946" type="player">
-                            <param id="0" name="Instance variable">direcao</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="548147920974117">
-                    <conditions>
-                        <condition id="2" inverted="1" name="Key is down" sid="440035326310146" type="Keyboard">
-                            <param id="0" name="Key">37</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Key is down" sid="354886145454206" type="Keyboard">
-                            <param id="0" name="Key">39</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Key is down" sid="961813748389223" type="Keyboard">
-                            <param id="0" name="Key">38</param>
-                        </condition>
-                        <condition id="2" name="Key is down" sid="994129307364958" type="Keyboard">
-                            <param id="0" name="Key">40</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="742764699824272" type="Cara">
-                            <param id="0" name="Control">3</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="182513614876973" type="player">
-                            <param id="0" name="Animation">&quot;frente&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="834848477699996" type="player">
-                            <param id="0" name="Instance variable">direcao</param>
-                            <param id="1" name="Value">4</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
         <event-block sid="935139405186716">
             <conditions>
-                <condition id="1" name="Is overlapping another object" sid="806270646787193" type="Cara">
+                <condition id="1" name="Is overlapping another object" sid="806270646787193" type="Player">
                     <param id="0" name="Object">Salas</param>
                 </condition>
             </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="210489583386210">
+            <conditions>
+                <condition id="2" name="Key is down" sid="519786732500189" type="Keyboard">
+                    <param id="0" name="Key">39</param>
+                </condition>
+            </conditions>
             <actions>
-                <action id="-3" name="Set position" sid="723087218551097" type="camera">
-                    <param id="0" name="X">lerp(scrollx,(clamp(Cara.X,Salas.X + (384),Salas.X + Salas.Width - (384))),0.1*60*dt)</param>
-                    <param id="1" name="Y">lerp(scrolly,(clamp(Cara.Y,Salas.Y + (256),Salas.Y + Salas.Height - (256))),0.1*60*dt)</param>
+                <action id="-10" name="Set value" sid="263393810153512" type="Player">
+                    <param id="0" name="Instance variable">Direction</param>
+                    <param id="1" name="Value">&quot;Side&quot;</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="941622614461876" type="Player">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="674912564204037">
+            <conditions>
+                <condition id="2" name="Key is down" sid="718831212302294" type="Keyboard">
+                    <param id="0" name="Key">37</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="140053522360665" type="Player">
+                    <param id="0" name="Instance variable">Direction</param>
+                    <param id="1" name="Value">&quot;Side&quot;</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="408494786396218" type="Player">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="465914764697208">
+            <conditions>
+                <condition id="2" name="Key is down" sid="188224470301467" type="Keyboard">
+                    <param id="0" name="Key">38</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="823036489623527" type="Player">
+                    <param id="0" name="Instance variable">Direction</param>
+                    <param id="1" name="Value">&quot;Back&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="506208312038124">
+            <conditions>
+                <condition id="2" name="Key is down" sid="741208822696858" type="Keyboard">
+                    <param id="0" name="Key">40</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="414011400743398" type="Player">
+                    <param id="0" name="Instance variable">Direction</param>
+                    <param id="1" name="Value">&quot;Front&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="454030257192912">
+            <conditions>
+                <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="676080497743408" type="Player" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="620778342381045" type="Player">
+                    <param id="0" name="Frame number">4</param>
                 </action>
             </actions>
         </event-block>
