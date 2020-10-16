@@ -28,17 +28,30 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
-        <folder expanded="1" path="animation-folder/solidos/" />
-        <folder expanded="1" path="animation-folder/obstaculo/" />
-        <folder expanded="1" path="animation-folder/Moeda/" />
-        <folder expanded="1" path="animation-folder/Tiro_2/" />
-        <folder expanded="1" path="animation-folder/camera/" />
+        <folder expanded="1" path="animation-folder/Solids/" />
+        <folder expanded="1" path="animation-folder/Obstacles/" />
+        <folder expanded="1" path="animation-folder/Coin/" />
+        <folder expanded="1" path="animation-folder/Shot/" />
+        <folder expanded="1" path="animation-folder/Camera/" />
         <folder expanded="1" path="animation-folder/Player/" />
         <folder expanded="1" path="animation-folder/LaundryRoom/" />
         <folder expanded="1" path="animation-folder/LaundryObj1/" />
-        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/LaundryObj5/" />
         <folder expanded="1" path="animation-folder/LaundryObj3/" />
         <folder expanded="1" path="animation-folder/LaundryObj4/" />
         <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/LivingRoom/" />
+        <folder expanded="1" path="animation-folder/LivingObj001/" />
+        <folder expanded="1" path="animation-folder/LivingObj002/" />
+        <folder expanded="1" path="animation-folder/LivingObj003/" />
+        <folder expanded="1" path="animation-folder/LivingObj004/" />
+        <folder expanded="1" path="animation-folder/LivingObj012/" />
+        <folder expanded="1" path="animation-folder/LivingObj005/" />
+        <folder expanded="1" path="animation-folder/LivingObj006/" />
+        <folder expanded="1" path="animation-folder/LivingObj007/" />
+        <folder expanded="1" path="animation-folder/LivingObj008/" />
+        <folder expanded="1" path="animation-folder/LivingObj009/" />
+        <folder expanded="1" path="animation-folder/LivingObj010/" />
+        <folder expanded="1" path="animation-folder/LivingObj011/" />
     </folders-expanded>
 </c2uistate>

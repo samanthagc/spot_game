@@ -8,7 +8,7 @@
         <event-block sid="502110209101733">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="936684114357725" type="Player">
-                    <param id="0" name="Object">Moeda</param>
+                    <param id="0" name="Object">Coin</param>
                 </condition>
             </conditions>
             <actions>
@@ -16,7 +16,7 @@
                     <param id="0" name="Variable">dinheiro</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action id="-9" name="Destroy" sid="384675432809947" type="Moeda" />
+                <action id="-9" name="Destroy" sid="384675432809947" type="Coin" />
             </actions>
         </event-block>
         <event-block sid="982568644414278">
@@ -24,7 +24,7 @@
                 <condition id="-1" name="Every tick" sid="118316467047661" type="System" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="209307080346985" type="Moedas">
+                <action id="0" name="Set text" sid="209307080346985" type="CoinText">
                     <param id="0" name="Text">&quot;BIT: &quot; &amp; dinheiro &amp; &quot;VIDA: &quot; &amp; Vidas</param>
                 </action>
                 <action id="4" name="Set animation" sid="724444419744019" type="Player">
@@ -57,12 +57,12 @@
         </event-block>
         <event-block sid="385743756072864">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="526947868667254" type="Tiro_2">
-                    <param id="0" name="Object">solidos</param>
+                <condition id="0" name="On collision with another object" sid="526947868667254" type="Shot">
+                    <param id="0" name="Object">Solids</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="831271893553390" type="Tiro_2" />
+                <action id="-9" name="Destroy" sid="831271893553390" type="Shot" />
             </actions>
         </event-block>
         <event-group description="" sid="152637230714758" title="Coelho_player">
@@ -75,7 +75,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Spawn another object" sid="217344128591690" type="Player">
-                            <param id="0" name="Object">Tiro_2</param>
+                            <param id="0" name="Object">Shot</param>
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
                         </action>
@@ -172,7 +172,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-3" name="Set position" sid="330137924189397" type="camera">
+                <action id="-3" name="Set position" sid="330137924189397" type="Camera">
                     <param id="0" name="X">lerp(scrollx,(clamp(Player.X,Rooms.X + (384),Rooms.X + Rooms.Width - (384))),0.1*60*dt)</param>
                     <param id="1" name="Y">lerp(scrolly,(clamp(Player.Y,Rooms.Y + (256),Rooms.Y + Rooms.Height - (256))),0.1*60*dt)</param>
                 </action>

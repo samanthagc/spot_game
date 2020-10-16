@@ -51,7 +51,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="solidos" sid="386033650479706">
+        <object-type name="Solids" sid="386033650479706">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Solid" sid="258406341876360">
@@ -64,7 +64,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="obstaculo" sid="912971597207221">
+        <object-type name="Obstacles" sid="912971597207221">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Sine" sid="727354367236603">
@@ -86,7 +86,7 @@
         <object-type name="Keyboard" sid="918042255114390">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="Moeda" sid="349943578797626">
+        <object-type name="Coin" sid="349943578797626">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="878508143182273" speed="5">
@@ -94,10 +94,10 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Moedas" sid="361643337570905">
+        <object-type name="CoinText" sid="361643337570905">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Tiro_2" sid="927025177538066">
+        <object-type name="Shot" sid="927025177538066">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Bullet" sid="100290725411577">
@@ -121,7 +121,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="camera" sid="672510481532015">
+        <object-type name="Camera" sid="672510481532015">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="ScrollTo" sid="995738863452014">
@@ -554,7 +554,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite2" sid="709019115777834">
+        <object-type name="LaundryObj5" sid="709019115777834">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="444401235587897" speed="5">
@@ -625,6 +625,229 @@
                             <point x="0.5" y="0.777778" />
                             <point x="0" y="1" />
                             <point x="0.0735294" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LivingRoom" sid="701197616018897">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="839760131724239" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\SALA\salaChaoParede.png">
+                        <collision-poly>
+                            <point x="0.0208333" y="0.03125" />
+                            <point x="0.979167" y="0.03125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.979167" y="0.96875" />
+                            <point x="0.0208333" y="0.96875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LivingObj001" sid="277748263557656">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="520263138475008" speed="5">
+                    <frame duration="1" hotspotX="0.500682" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\SALA\moveisSala.png">
+                        <collision-poly>
+                            <point x="0.0750341" y="0.114583" />
+                            <point x="0.499318" y="0.08125" />
+                            <point x="0.948158" y="0.0791667" />
+                            <point x="0.523874" y="0.272917" />
+                            <point x="0.499318" y="0.272917" />
+                            <point x="0.0436562" y="0.933333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LivingObj002" sid="675594861974390">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="786716479253215" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503546" original-source="C:\Users\AleCosta\Desktop\spot\assets\SALA\tapeteSala.png">
+                        <collision-poly>
+                            <point x="0.010101" y="0.0141844" />
+                            <point x="0.99495" y="0.0070922" />
+                            <point x="0.989899" y="0.985816" />
+                            <point x="0.5" y="1" />
+                            <point x="0.010101" y="0.985816" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LivingObj003" sid="363063022594923">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="471232371554783" speed="5">
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.507463" original-source="C:\Users\AleCosta\Desktop\spot\assets\SALA\poltrona.png">
+                        <collision-poly>
+                            <point x="0.060241" y="0.0746269" />
+                            <point x="0.493976" y="0" />
+                            <point x="0.795181" y="0.253731" />
+                            <point x="0.843373" y="0.492537" />
+                            <point x="0.963855" y="0.955224" />
+                            <point x="0.0120482" y="0.985075" />
+                            <point x="0" y="0.492537" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LivingObj004" sid="350470569018416">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="116246614175184" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503067" original-source="C:\Users\AleCosta\Desktop\spot\assets\SALA\sofaSala.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.5" y="0.0306748" />
+                            <point x="0.833333" y="0.0920245" />
+                            <point x="0.844444" y="0.496933" />
+                            <point x="0.888889" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LivingObj012" sid="698429186680528">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="680485734316186" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503067" original-source="C:\Users\AleCosta\Desktop\spot\assets\SALA\sofaSala.png">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0.111111" y="1" />
+                            <point x="0.155556" y="0.496933" />
+                            <point x="0.166667" y="0.0920245" />
+                            <point x="0.5" y="0.0306748" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LivingObj005" sid="102911622327170">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="244730957052139" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\SALA\puffAmarelo.png">
+                        <collision-poly>
+                            <point x="0.0555556" y="0.0555556" />
+                            <point x="0.5" y="0" />
+                            <point x="0.944444" y="0.0555556" />
+                            <point x="1" y="0.5" />
+                            <point x="0.944444" y="0.944444" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0555556" y="0.944444" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LivingObj006" sid="280413854984932">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="571578756274837" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\SALA\puffVerde.png">
+                        <collision-poly>
+                            <point x="0.0555556" y="0.0555556" />
+                            <point x="0.5" y="0" />
+                            <point x="0.944444" y="0.0555556" />
+                            <point x="1" y="0.5" />
+                            <point x="0.944444" y="0.944444" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0555556" y="0.944444" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LivingObj007" sid="361679456771637">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="412877549357343" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\SALA\puffRosa.png">
+                        <collision-poly>
+                            <point x="0.0555556" y="0.0555556" />
+                            <point x="0.5" y="0" />
+                            <point x="0.944444" y="0.0555556" />
+                            <point x="1" y="0.5" />
+                            <point x="0.944444" y="0.944444" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0555556" y="0.944444" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LivingObj008" sid="570307429015005">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="243916556714950" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\SALA\puffLaranja.png">
+                        <collision-poly>
+                            <point x="0.0555556" y="0.0555556" />
+                            <point x="0.5" y="0" />
+                            <point x="0.944444" y="0.0555556" />
+                            <point x="1" y="0.5" />
+                            <point x="0.944444" y="0.944444" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0555556" y="0.944444" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LivingObj009" sid="674262535269479">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="363379634436063" speed="5">
+                    <frame duration="1" hotspotX="0.511628" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\SALA\abajurSala.png">
+                        <collision-poly>
+                            <point x="0" y="0.189655" />
+                            <point x="0.488372" y="0" />
+                            <point x="1" y="0.206897" />
+                            <point x="0.604651" y="0.5" />
+                            <point x="0.883721" y="0.956897" />
+                            <point x="0.488372" y="1" />
+                            <point x="0.116279" y="0.956897" />
+                            <point x="0.372093" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LivingObj010" sid="871352737581083">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="465548494938063" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\SALA\quadro.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LivingObj011" sid="701329673730909">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="359573093689442" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\SALA\escada.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.791667" y="0.96875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.177083" y="0.96875" />
+                            <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
