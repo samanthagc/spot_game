@@ -92,7 +92,7 @@
         <event-block sid="935139405186716">
             <conditions>
                 <condition id="1" name="Is overlapping another object" sid="806270646787193" type="Player">
-                    <param id="0" name="Object">Salas</param>
+                    <param id="0" name="Object">Rooms</param>
                 </condition>
             </conditions>
             <actions />
@@ -162,6 +162,19 @@
             <actions>
                 <action id="5" name="Set frame" sid="620778342381045" type="Player">
                     <param id="0" name="Frame number">4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="428801286479160">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="998120788753558" type="Player">
+                    <param id="0" name="Object">Rooms</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="330137924189397" type="camera">
+                    <param id="0" name="X">lerp(scrollx,(clamp(Player.X,Rooms.X + (384),Rooms.X + Rooms.Width - (384))),0.1*60*dt)</param>
+                    <param id="1" name="Y">lerp(scrolly,(clamp(Player.Y,Rooms.Y + (256),Rooms.Y + Rooms.Height - (256))),0.1*60*dt)</param>
                 </action>
             </actions>
         </event-block>
