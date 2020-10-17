@@ -11,6 +11,7 @@
     <saved-with-version>27900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -106,16 +107,12 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="903781433442690" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\clone\Nave_Stars_tiro_norm.png">
+                    <frame duration="1" hotspotX="0.0294118" hotspotY="0.545455" original-source="C:\Users\AleCosta\Desktop\spot\assets\balaRevolver.png">
                         <collision-poly>
-                            <point x="0.85" y="0.3" />
-                            <point x="1" y="0.5" />
-                            <point x="0.85" y="0.7" />
-                            <point x="0.5" y="0.8" />
-                            <point x="0.15" y="0.7" />
-                            <point x="0" y="0.5" />
-                            <point x="0.15" y="0.3" />
-                            <point x="0.5" y="0.2" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -147,6 +144,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Direction" sid="912187418161257" type="string" />
+                <instance-variable name="AnglePlayer" sid="358189626424959" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="615988158471799">
@@ -853,6 +851,30 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TNT" sid="627371125250456">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="973421508054567">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="807997325432676" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\itemDinamite.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.175" />
+                            <point x="0.78125" y="0.4125" />
+                            <point x="0.78125" y="0.825" />
+                            <point x="0.203125" y="0.8375" />
+                            <point x="0.203125" y="0.425" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="933997983767806">
+            <plugin id="Mouse" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -863,6 +885,7 @@
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="4" />
+        <global-instance type="Mouse" uid="73" />
     </global-instances>
     <sounds-folder />
     <music-folder />

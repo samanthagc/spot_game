@@ -79,13 +79,10 @@
                             <param id="1" name="Layer">1</param>
                             <param id="2" name="Image point">0</param>
                         </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="489720917504410" type="Shot">
+                            <param id="0" name="Angle">Player.AnglePlayer</param>
+                        </action>
                     </actions>
-                </event-block>
-                <event-block sid="294357997496874">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="533813617714203" type="System" />
-                    </conditions>
-                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
@@ -111,6 +108,10 @@
                 <action id="7" name="Set mirrored" sid="941622614461876" type="Player">
                     <param id="0" name="State">1</param>
                 </action>
+                <action id="-10" name="Set value" sid="190645878505821" type="Player">
+                    <param id="0" name="Instance variable">AnglePlayer</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="674912564204037">
@@ -127,6 +128,10 @@
                 <action id="7" name="Set mirrored" sid="408494786396218" type="Player">
                     <param id="0" name="State">0</param>
                 </action>
+                <action id="-10" name="Set value" sid="937550827334278" type="Player">
+                    <param id="0" name="Instance variable">AnglePlayer</param>
+                    <param id="1" name="Value">180</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="465914764697208">
@@ -140,6 +145,10 @@
                     <param id="0" name="Instance variable">Direction</param>
                     <param id="1" name="Value">&quot;Back&quot;</param>
                 </action>
+                <action id="-10" name="Set value" sid="990452277684916" type="Player">
+                    <param id="0" name="Instance variable">AnglePlayer</param>
+                    <param id="1" name="Value">270</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="506208312038124">
@@ -152,6 +161,10 @@
                 <action id="-10" name="Set value" sid="414011400743398" type="Player">
                     <param id="0" name="Instance variable">Direction</param>
                     <param id="1" name="Value">&quot;Front&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="395310849070994" type="Player">
+                    <param id="0" name="Instance variable">AnglePlayer</param>
+                    <param id="1" name="Value">90</param>
                 </action>
             </actions>
         </event-block>
@@ -175,6 +188,20 @@
                 <action id="-3" name="Set position" sid="330137924189397" type="Camera">
                     <param id="0" name="X">lerp(scrollx,(clamp(Player.X,Rooms.X + (384),Rooms.X + Rooms.Width - (384))),0.1*60*dt)</param>
                     <param id="1" name="Y">lerp(scrolly,(clamp(Player.Y,Rooms.Y + (256),Rooms.Y + Rooms.Height - (256))),0.1*60*dt)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="713003919454133">
+            <conditions>
+                <condition id="0" name="On click" sid="287656272620783" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="722767545867429" type="TNT">
+                    <param id="0" name="X">Mouse.X</param>
+                    <param id="1" name="Y">Mouse.Y</param>
                 </action>
             </actions>
         </event-block>
