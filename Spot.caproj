@@ -20,8 +20,11 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -89,13 +92,32 @@
         </object-type>
         <object-type name="Coin" sid="349943578797626">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="846732437245579">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Rotate" sid="557653060560555">
+                    <behavior id="Rotate" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="878508143182273" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.53125" original-source="C:\Users\user\Desktop\Spot_game_copy\INVENTARIO\Estrela.png">
+                        <collision-poly>
+                            <point x="0.269231" y="0.28" />
+                            <point x="0.5" y="0.04" />
+                            <point x="0.730769" y="0.28" />
+                            <point x="0.884615" y="0.48" />
+                            <point x="0.807692" y="0.8" />
+                            <point x="0.5" y="0.84" />
+                            <point x="0.192308" y="0.8" />
+                            <point x="0.115385" y="0.48" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="CoinText" sid="361643337570905">
+        <object-type name="stars" sid="361643337570905">
             <plugin id="Text" />
         </object-type>
         <object-type name="Shot" sid="927025177538066">
@@ -103,6 +125,9 @@
             <behaviors>
                 <behavior-type name="Bullet" sid="100290725411577">
                     <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="733252972026971">
+                    <behavior id="destroy" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -152,13 +177,13 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="15" loop="0" name="Front" pingpong="0" repeatcount="1" repeatto="0" sid="612212968311703" speed="5">
+                <animation framecount="15" loop="1" name="Front" pingpong="0" repeatcount="1" repeatto="0" sid="612212968311703" speed="5">
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0001.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.14" />
+                            <point x="0.752809" y="0.14" />
+                            <point x="0.752809" y="0.95" />
+                            <point x="0.213483" y="0.95" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0002.png">
@@ -277,10 +302,10 @@
                 <animation framecount="15" loop="0" name="Side" pingpong="0" repeatcount="1" repeatto="0" sid="791303281280619" speed="5">
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0001.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.14" />
+                            <point x="0.752809" y="0.14" />
+                            <point x="0.752809" y="0.95" />
+                            <point x="0.213483" y="0.95" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0002.png">
@@ -399,10 +424,10 @@
                 <animation framecount="15" loop="0" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="735297282172893" speed="5">
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0001.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.14" />
+                            <point x="0.752809" y="0.14" />
+                            <point x="0.752809" y="0.95" />
+                            <point x="0.213483" y="0.95" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0002.png">
@@ -857,6 +882,9 @@
                 <behavior-type name="Solid" sid="973421508054567">
                     <behavior id="solid" />
                 </behavior-type>
+                <behavior-type name="Flash" sid="245407194926533">
+                    <behavior id="Flash" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="807997325432676" speed="5">
@@ -874,6 +902,205 @@
         </object-type>
         <object-type name="Mouse" sid="933997983767806">
             <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Sprite" sid="269344829084905">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="196592220492210" speed="5">
+                    <frame duration="1" hotspotX="0.513514" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\iconeVida.png">
+                        <collision-poly>
+                            <point x="0.0810811" y="0.09375" />
+                            <point x="0.486486" y="0.0625" />
+                            <point x="0.918919" y="0.09375" />
+                            <point x="0.972973" y="0.5" />
+                            <point x="0.810811" y="0.78125" />
+                            <point x="0.486486" y="1" />
+                            <point x="0.189189" y="0.78125" />
+                            <point x="0.027027" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Heart" sid="391150727764991">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="499736004412836" speed="5">
+                    <frame duration="1" hotspotX="0.513514" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\iconeVida.png">
+                        <collision-poly>
+                            <point x="0.0810811" y="0.09375" />
+                            <point x="0.486486" y="0.0625" />
+                            <point x="0.918919" y="0.09375" />
+                            <point x="0.972973" y="0.5" />
+                            <point x="0.810811" y="0.78125" />
+                            <point x="0.486486" y="1" />
+                            <point x="0.189189" y="0.78125" />
+                            <point x="0.027027" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Live_bar" sid="677234354238097">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="177564689539066" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.571429" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaVidaCheia.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LifeBarContainer" sid="127415806370671">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="453393831528446" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaVidaVazia.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Itemspanel" sid="478706430356312">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="679139304661729" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\painelItem.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Itemrecoverybar" sid="414805146454031">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="952813416269944" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.571429" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaTimerCheia.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ItemrecoverybarContainer" sid="627818150365198">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="831004033133292" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaTimerItem.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Improvementpanel" sid="983413586605777">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="212862385343906" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\painelMelhorias.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.0267857" />
+                            <point x="0.431818" y="0.446429" />
+                            <point x="0.511364" y="0.5" />
+                            <point x="0.977273" y="0.982143" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0227273" y="0.982143" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Chosenweapon_icon" sid="484804243465713">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Fire_gun" pingpong="0" repeatcount="1" repeatto="0" sid="344277630366202" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\INVENTARIO\itemRevolver.png">
+                        <collision-poly>
+                            <point x="0.390625" y="0.3125" />
+                            <point x="0.5" y="0.2875" />
+                            <point x="0.625" y="0.3" />
+                            <point x="0.625" y="0.5" />
+                            <point x="0.53125" y="0.625" />
+                            <point x="0.46875" y="0.625" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Tnt" pingpong="0" repeatcount="1" repeatto="0" sid="973353219047456" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\INVENTARIO\itemDinamite.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.1625" />
+                            <point x="0.625" y="0.3" />
+                            <point x="0.78125" y="0.5" />
+                            <point x="0.78125" y="0.825" />
+                            <point x="0.203125" y="0.8375" />
+                            <point x="0.203125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Glove" pingpong="0" repeatcount="1" repeatto="0" sid="800093911712977" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\INVENTARIO\itemLuvaDeBoxe.png">
+                        <collision-poly>
+                            <point x="0.328125" y="0.2625" />
+                            <point x="0.5" y="0.2125" />
+                            <point x="0.71875" y="0.225" />
+                            <point x="0.8125" y="0.5" />
+                            <point x="0.71875" y="0.775" />
+                            <point x="0.5" y="0.7875" />
+                            <point x="0.359375" y="0.7125" />
+                            <point x="0.1875" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Anvil" pingpong="0" repeatcount="1" repeatto="0" sid="387170548537192" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\INVENTARIO\itemBigorna.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.275" />
+                            <point x="0.65625" y="0.275" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.65625" y="0.725" />
+                            <point x="0.34375" y="0.725" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Glove" sid="857328388361662">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="155873382066133">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="391031483113563">
+                    <behavior id="Fade" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="283262182341414">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="665406352504338" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\INVENTARIO\itemLuvaDeBoxe.png">
+                        <collision-poly>
+                            <point x="0.7375" y="0.328125" />
+                            <point x="0.7875" y="0.5" />
+                            <point x="0.775" y="0.71875" />
+                            <point x="0.5" y="0.8125" />
+                            <point x="0.225" y="0.71875" />
+                            <point x="0.2125" y="0.5" />
+                            <point x="0.2875" y="0.359375" />
+                            <point x="0.5" y="0.1875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Anvil" sid="432678682263474">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="666169722358692" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\INVENTARIO\itemBigorna.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.275" />
+                            <point x="0.65625" y="0.275" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.65625" y="0.725" />
+                            <point x="0.34375" y="0.725" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

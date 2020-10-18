@@ -10,8 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Layout 1</layout>
-        <event-sheet active="1" order="1">Event sheet 1</event-sheet>
+        <layout active="1" order="0">Layout 1</layout>
+        <event-sheet order="1">Event sheet 1</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -54,5 +54,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/LivingObj010/" />
         <folder expanded="1" path="animation-folder/LivingObj011/" />
         <folder expanded="1" path="animation-folder/TNT/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Heart/" />
+        <folder expanded="1" path="animation-folder/Live_bar/" />
+        <folder expanded="1" path="animation-folder/LifeBarContainer/" />
+        <folder expanded="1" path="animation-folder/Itemspanel/" />
+        <folder expanded="1" path="animation-folder/Itemrecoverybar/" />
+        <folder expanded="1" path="animation-folder/ItemrecoverybarContainer/" />
+        <folder expanded="1" path="animation-folder/Improvementpanel/" />
+        <folder expanded="1" path="animation-folder/Chosenweapon_icon/" />
+        <folder expanded="1" path="animation-folder/Glove/" />
+        <folder expanded="1" path="animation-folder/Anvil/" />
     </folders-expanded>
 </c2uistate>
