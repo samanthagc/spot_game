@@ -3,9 +3,118 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
     <events>
-        <variable constant="0" name="Weapon" sid="529053577818744" static="0" type="number">4</variable>
+        <variable comment="Current weapon level" constant="0" name="C_level_weapon" sid="633716207846760" static="0" type="number">0</variable>
+        <variable comment="Fire_gun level = 4" constant="0" name="Lvl_fire_gun" sid="685070565892830" static="0" type="number">3</variable>
+        <variable comment="Tnt level = 3" constant="0" name="Lvl_tnt" sid="423632465884900" static="0" type="number">1</variable>
+        <variable comment="Anvil level = 2" constant="0" name="Lvl_anvil" sid="950635547001986" static="0" type="number">1</variable>
+        <variable comment="Glove level = 1" constant="0" name="Lvl_glove" sid="513496197255716" static="0" type="number">2</variable>
+        <variable comment="Number of the chosen weapon" constant="0" name="Weapon" sid="529053577818744" static="0" type="number">4</variable>
         <variable comment="Health power of player" constant="0" name="Health" sid="338194106337379" static="0" type="number">100</variable>
         <variable comment="Stars for power up" constant="0" name="Stars" sid="362366293273829" static="0" type="number">0</variable>
+        <event-block sid="515892997047480">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="268654107620131" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="221197328706167" type="System">
+                    <param id="0" name="Variable">C_level_weapon</param>
+                    <param id="1" name="Value">Lvl_fire_gun</param>
+                </action>
+                <action id="-15" name="Set visible" sid="311232735694426" type="recoverybar_fire_gun">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="263641937448070" type="recoverybar_tnt">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="132194202224594" type="recoverybar_anvil">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="947516490739091" type="recoverybar_glove">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="564115076520390">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="846209143591906" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-5" name="Compare width" sid="626150255186982" type="recoverybar_fire_gun">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Width">64</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="576641060356325" type="recoverybar_fire_gun">
+                    <param id="0" name="Width">self.Width +1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="958924720625777">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="717251382379132" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-5" name="Compare width" sid="328783835119787" type="recoverybar_tnt">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Width">64</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="722803980341905" type="recoverybar_tnt">
+                    <param id="0" name="Width">self.Width +1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="593198571642373">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="173858332963438" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-5" name="Compare width" sid="184450081748125" type="recoverybar_anvil">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Width">64</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="553820090857613" type="recoverybar_anvil">
+                    <param id="0" name="Width">self.Width +1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="369397383580759">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="232688016674894" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-5" name="Compare width" sid="576932718819616" type="recoverybar_glove">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Width">64</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="756261571049190" type="recoverybar_glove">
+                    <param id="0" name="Width">self.Width +1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="982568644414278">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="118316467047661" type="System" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="724444419744019" type="Player">
+                    <param id="0" name="Animation">player.Direction</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="0" name="Set text" sid="830783350182631" type="stars">
+                    <param id="0" name="Text">Stars</param>
+                </action>
+                <action id="0" name="Set text" sid="867007194802610" type="Level_weapon">
+                    <param id="0" name="Text">&quot;Lv: &quot; &amp; C_level_weapon</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="502110209101733">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="936684114357725" type="Player">
@@ -20,45 +129,6 @@
                 <action id="-9" name="Destroy" sid="384675432809947" type="Coin" />
             </actions>
         </event-block>
-        <event-block sid="982568644414278">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="118316467047661" type="System" />
-            </conditions>
-            <actions>
-                <action disabled="1" id="0" name="Set text" sid="209307080346985" type="stars">
-                    <param id="0" name="Text">&quot;STARS: &quot; &amp; Stars &amp;&quot;  &quot;&amp;&quot;HP: &quot; &amp; Health</param>
-                </action>
-                <action id="4" name="Set animation" sid="724444419744019" type="Player">
-                    <param id="0" name="Animation">player.Direction</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="0" name="Set text" sid="830783350182631" type="stars">
-                    <param id="0" name="Text">Stars</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="515892997047480">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="268654107620131" type="System">
-                    <param id="0" name="Variable">Health</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-16" name="Wait" sid="722060562218746" type="System">
-                    <param id="0" name="Seconds">1.0</param>
-                </action>
-                <action id="-9" name="Set value" sid="711408442694913" type="System">
-                    <param id="0" name="Variable">Stars</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-9" name="Set value" sid="793215483946702" type="System">
-                    <param id="0" name="Variable">Health</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="385743756072864">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="526947868667254" type="Shot">
@@ -68,31 +138,6 @@
             <actions>
                 <action id="-9" name="Destroy" sid="831271893553390" type="Shot" />
             </actions>
-        </event-block>
-        <event-block disabled="1" sid="339007779023831">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="663944810034831" type="Keyboard">
-                    <param id="0" name="Key">32</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="217344128591690" type="Player">
-                    <param id="0" name="Object">Shot</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action behavior="Bullet" id="3" name="Set angle of motion" sid="489720917504410" type="Shot">
-                    <param id="0" name="Angle">Player.AnglePlayer</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="935139405186716">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="806270646787193" type="Player">
-                    <param id="0" name="Object">Rooms</param>
-                </condition>
-            </conditions>
-            <actions />
         </event-block>
         <event-block sid="210489583386210">
             <conditions>
@@ -202,6 +247,10 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
+                <condition id="-5" name="Compare width" sid="721859945566749" type="recoverybar_glove">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Width">8</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Spawn another object" sid="162286910590258" type="Player">
@@ -212,9 +261,12 @@
                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="469803563952926" type="Glove">
                     <param id="0" name="Angle">Player.AnglePlayer</param>
                 </action>
+                <action id="-5" name="Set width" sid="770508244779046" type="recoverybar_glove">
+                    <param id="0" name="Width">self.Width -8</param>
+                </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="677848024704238">
+        <event-block sid="677848024704238">
             <conditions>
                 <condition id="0" name="On click" sid="686105382513851" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
@@ -225,11 +277,18 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">2</param>
                 </condition>
+                <condition id="-5" name="Compare width" sid="603348583284978" type="recoverybar_anvil">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Width">16</param>
+                </condition>
             </conditions>
             <actions>
-                <action id="-3" name="Set position" sid="487831278753025" type="TNT">
+                <action id="-3" name="Set position" sid="487831278753025" type="Anvil">
                     <param id="0" name="X">Mouse.X</param>
                     <param id="1" name="Y">Mouse.Y</param>
+                </action>
+                <action id="-5" name="Set width" sid="366421923058665" type="recoverybar_anvil">
+                    <param id="0" name="Width">self.Width -16</param>
                 </action>
             </actions>
         </event-block>
@@ -244,11 +303,18 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">3</param>
                 </condition>
+                <condition id="-5" name="Compare width" sid="245823179046675" type="recoverybar_tnt">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Width">32</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-3" name="Set position" sid="330344884681502" type="TNT">
                     <param id="0" name="X">Mouse.X</param>
                     <param id="1" name="Y">Mouse.Y</param>
+                </action>
+                <action id="-5" name="Set width" sid="171221812958983" type="recoverybar_tnt">
+                    <param id="0" name="Width">self.Width -32</param>
                 </action>
             </actions>
         </event-block>
@@ -263,6 +329,10 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">4</param>
                 </condition>
+                <condition id="-5" name="Compare width" sid="799375810449614" type="recoverybar_fire_gun">
+                    <param id="0" name="Comparison">5</param>
+                    <param id="1" name="Width">4</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Spawn another object" sid="861277449766436" type="Player">
@@ -273,6 +343,9 @@
                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="509645480960021" type="Shot">
                     <param id="0" name="Angle">Player.AnglePlayer</param>
                 </action>
+                <action id="-5" name="Set width" sid="337509841784002" type="recoverybar_fire_gun">
+                    <param id="0" name="Width">self.Width -4</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="993511692012094">
@@ -280,6 +353,7 @@
                 <condition id="2" name="Key is down" sid="708134253936715" type="Keyboard">
                     <param id="0" name="Key">97</param>
                 </condition>
+                <condition id="-1" name="Every tick" sid="373412523755532" type="System" />
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="111164845435989" type="Chosenweapon_icon">
@@ -290,6 +364,22 @@
                     <param id="0" name="Variable">Weapon</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="-9" name="Set value" sid="573780452648917" type="System">
+                    <param id="0" name="Variable">C_level_weapon</param>
+                    <param id="1" name="Value">Lvl_glove</param>
+                </action>
+                <action id="-15" name="Set visible" sid="355567351581057" type="recoverybar_fire_gun">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="478448873438734" type="recoverybar_tnt">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="719631427712163" type="recoverybar_anvil">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="450643008967780" type="recoverybar_glove">
+                    <param id="0" name="Visibility">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="569551203488436">
@@ -297,6 +387,7 @@
                 <condition id="2" name="Key is down" sid="397539571636916" type="Keyboard">
                     <param id="0" name="Key">98</param>
                 </condition>
+                <condition id="-1" name="Every tick" sid="917417040019723" type="System" />
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="807119915271628" type="Chosenweapon_icon">
@@ -307,6 +398,22 @@
                     <param id="0" name="Variable">Weapon</param>
                     <param id="1" name="Value">2</param>
                 </action>
+                <action id="-9" name="Set value" sid="206368335644326" type="System">
+                    <param id="0" name="Variable">C_level_weapon</param>
+                    <param id="1" name="Value">Lvl_anvil</param>
+                </action>
+                <action id="-15" name="Set visible" sid="202950522676947" type="recoverybar_fire_gun">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="771784110121118" type="recoverybar_tnt">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="296578000034862" type="recoverybar_anvil">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="911993155888797" type="recoverybar_glove">
+                    <param id="0" name="Visibility">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="265239402331490">
@@ -314,6 +421,7 @@
                 <condition id="2" name="Key is down" sid="669040433841287" type="Keyboard">
                     <param id="0" name="Key">99</param>
                 </condition>
+                <condition id="-1" name="Every tick" sid="449342897977510" type="System" />
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="497081446795430" type="Chosenweapon_icon">
@@ -324,6 +432,22 @@
                     <param id="0" name="Variable">Weapon</param>
                     <param id="1" name="Value">3</param>
                 </action>
+                <action id="-9" name="Set value" sid="527140274004773" type="System">
+                    <param id="0" name="Variable">C_level_weapon</param>
+                    <param id="1" name="Value">Lvl_tnt</param>
+                </action>
+                <action id="-15" name="Set visible" sid="149437065122440" type="recoverybar_fire_gun">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="650338119756751" type="recoverybar_tnt">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="969991581460824" type="recoverybar_anvil">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="472463302566204" type="recoverybar_glove">
+                    <param id="0" name="Visibility">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="564151196414958">
@@ -331,6 +455,7 @@
                 <condition id="2" name="Key is down" sid="669279742016871" type="Keyboard">
                     <param id="0" name="Key">100</param>
                 </condition>
+                <condition id="-1" name="Every tick" sid="205999455889440" type="System" />
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="557824354891761" type="Chosenweapon_icon">
@@ -340,6 +465,22 @@
                 <action id="-9" name="Set value" sid="229802146156844" type="System">
                     <param id="0" name="Variable">Weapon</param>
                     <param id="1" name="Value">4</param>
+                </action>
+                <action id="-9" name="Set value" sid="354764741636233" type="System">
+                    <param id="0" name="Variable">C_level_weapon</param>
+                    <param id="1" name="Value">Lvl_fire_gun</param>
+                </action>
+                <action id="-15" name="Set visible" sid="189373334019304" type="recoverybar_fire_gun">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="994648803620703" type="recoverybar_tnt">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="482879444296802" type="recoverybar_anvil">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="620463118119903" type="recoverybar_glove">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>

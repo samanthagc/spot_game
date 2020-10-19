@@ -170,6 +170,10 @@
             <instance-variables>
                 <instance-variable name="Direction" sid="912187418161257" type="string" />
                 <instance-variable name="AnglePlayer" sid="358189626424959" type="number" />
+                <instance-variable name="Lvl_fire_gun" sid="126011941861268" type="number" />
+                <instance-variable name="Lvl_glove" sid="504749093171220" type="number" />
+                <instance-variable name="Lvl_Anvil" sid="350010281127125" type="number" />
+                <instance-variable name="Lvl_tnt" sid="176579294186243" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="615988158471799">
@@ -965,7 +969,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Itemrecoverybar" sid="414805146454031">
+        <object-type name="recoverybar_fire_gun" sid="414805146454031">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="952813416269944" speed="5">
@@ -1087,6 +1091,11 @@
         </object-type>
         <object-type name="Anvil" sid="432678682263474">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="846718582541214">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="666169722358692" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\INVENTARIO\itemBigorna.png">
@@ -1099,6 +1108,60 @@
                             <point x="0.125" y="0.5" />
                         </collision-poly>
                     </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Level_weapon" sid="561849643392930">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Upgrade_icon" sid="781099572653392">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="576896262670834" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\botaoMelhoriaHud.png">
+                        <collision-poly>
+                            <point x="0.0357143" y="0.0625" />
+                            <point x="0.5" y="0" />
+                            <point x="0.964286" y="0.0625" />
+                            <point x="1" y="0.5" />
+                            <point x="0.964286" y="0.9375" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0357143" y="0.9375" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="recoverybar_fire_gun2" sid="453024095404973">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="547313897795146" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.571429" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaTimerCheia.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="recoverybar_tnt" sid="690513263078559">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="493283162363572" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.571429" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaTimerCheia.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="recoverybar_anvil" sid="849851452970392">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="912729015083567" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.571429" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaTimerCheia.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="recoverybar_glove" sid="464565709985610">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="253425710971963" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.571429" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaTimerCheia.png" />
                 </animation>
             </animation-folder>
         </object-type>

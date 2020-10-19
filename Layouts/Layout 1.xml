@@ -1706,8 +1706,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>171.494277954</x>
-                        <y>-58.471378326</y>
+                        <x>179.786849976</x>
+                        <y>-52.092411041</y>
                         <z>0</z>
                         <width>16.805364609</width>
                         <height>5.437029839</height>
@@ -1757,6 +1757,10 @@
                     <instance-variables>
                         <Direction></Direction>
                         <AnglePlayer>0</AnglePlayer>
+                        <Lvl_fire_gun>3</Lvl_fire_gun>
+                        <Lvl_glove>1</Lvl_glove>
+                        <Lvl_Anvil>2</Lvl_Anvil>
+                        <Lvl_tnt>1</Lvl_tnt>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -2020,8 +2024,8 @@
                             <properties>
                                 <active-at-start>Yes</active-at-start>
                                 <fade-in-time>0</fade-in-time>
-                                <wait-time>0</wait-time>
-                                <fade-out-time>1</fade-out-time>
+                                <wait-time>0.2</wait-time>
+                                <fade-out-time>0.2</fade-out-time>
                                 <destroy>After fade out</destroy>
                             </properties>
                         </behavior-instance>
@@ -2030,8 +2034,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>366.604919434</x>
-                        <y>-40.502319336</y>
+                        <x>365.328552246</x>
+                        <y>-54.536148071</y>
                         <z>0</z>
                         <width>80</width>
                         <height>64</height>
@@ -2049,11 +2053,18 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>324.576385498</x>
-                        <y>272.079040527</y>
+                        <x>464.276428223</x>
+                        <y>-54.527130127</y>
                         <z>0</z>
                         <width>64</width>
                         <height>80</height>
@@ -2372,7 +2383,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Itemrecoverybar" uid="78">
+                <instance type="recoverybar_fire_gun" uid="78">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2421,7 +2432,7 @@
                         <text>stars</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16</font>
-                        <color>255,255,0</color>
+                        <color>255,204,51</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -2461,6 +2472,121 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Level_weapon" uid="84">
+                    <properties>
+                        <text>Level_weapon</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Arial Narrow,-16,700,0</font>
+                        <color>255,204,51</color>
+                        <horizontal-alignment>Left</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>14.249679565</x>
+                        <y>55.054489136</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Upgrade_icon" uid="85">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>48.647354126</x>
+                        <y>209.707565308</y>
+                        <z>0</z>
+                        <width>56</width>
+                        <height>32</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="recoverybar_tnt" uid="86">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>47.070999146</x>
+                        <y>156.817001343</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>7</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.571428597</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="recoverybar_anvil" uid="87">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>47.070999146</x>
+                        <y>156.817001343</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>7</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.571428597</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="recoverybar_glove" uid="88">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>47.070999146</x>
+                        <y>156.817001343</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>7</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.571428597</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
