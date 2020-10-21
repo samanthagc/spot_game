@@ -29,7 +29,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/Solids/" />
-        <folder expanded="1" path="animation-folder/Obstacles/" />
         <folder expanded="1" path="animation-folder/Coin/" />
         <folder expanded="1" path="animation-folder/Shot/" />
         <folder expanded="1" path="animation-folder/Camera/" />
@@ -50,7 +49,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/LivingObj006/" />
         <folder expanded="1" path="animation-folder/LivingObj007/" />
         <folder expanded="1" path="animation-folder/LivingObj008/" />
-        <folder expanded="1" path="animation-folder/LivingObj009/" />
         <folder expanded="1" path="animation-folder/LivingObj010/" />
         <folder expanded="1" path="animation-folder/LivingObj011/" />
         <folder expanded="1" path="animation-folder/TNT/" />
@@ -70,5 +68,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/recoverybar_tnt/" />
         <folder expanded="1" path="animation-folder/recoverybar_anvil/" />
         <folder expanded="1" path="animation-folder/recoverybar_glove/" />
+        <folder expanded="1" path="animation-folder/ShotImpact/" />
+        <folder expanded="1" path="animation-folder/StandingBrush/" />
+        <folder expanded="1" path="animation-folder/TNTImpact/" />
+        <folder expanded="1" path="animation-folder/AnvilImpact/" />
+        <folder expanded="1" path="animation-folder/LivingObj009/" />
     </folders-expanded>
 </c2uistate>

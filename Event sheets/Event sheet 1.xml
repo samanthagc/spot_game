@@ -113,6 +113,10 @@
                 <action id="0" name="Set text" sid="867007194802610" type="Level_weapon">
                     <param id="0" name="Text">&quot;Lv: &quot; &amp; C_level_weapon</param>
                 </action>
+                <action id="4" name="Set animation" sid="454446944717735" type="StandingBrush">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="502110209101733">
@@ -137,6 +141,11 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="831271893553390" type="Shot" />
+                <action id="0" name="Spawn another object" sid="685999010723075" type="Shot">
+                    <param id="0" name="Object">ShotImpact</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="210489583386210">
@@ -283,9 +292,11 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-3" name="Set position" sid="487831278753025" type="Anvil">
-                    <param id="0" name="X">Mouse.X</param>
-                    <param id="1" name="Y">Mouse.Y</param>
+                <action id="-3" name="Create object" sid="669426818069755" type="System">
+                    <param id="0" name="Object to create">Anvil</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">Mouse.X</param>
+                    <param id="3" name="Y">Mouse.Y</param>
                 </action>
                 <action id="-5" name="Set width" sid="366421923058665" type="recoverybar_anvil">
                     <param id="0" name="Width">self.Width -16</param>
@@ -309,6 +320,12 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-3" name="Create object" sid="712108936700276" type="System">
+                    <param id="0" name="Object to create">TNT</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">Mouse.X</param>
+                    <param id="3" name="Y">Mouse.Y</param>
+                </action>
                 <action id="-3" name="Set position" sid="330344884681502" type="TNT">
                     <param id="0" name="X">Mouse.X</param>
                     <param id="1" name="Y">Mouse.Y</param>
@@ -482,6 +499,105 @@
                 <action id="-15" name="Set visible" sid="620463118119903" type="recoverybar_glove">
                     <param id="0" name="Visibility">0</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="511690579441139">
+            <conditions>
+                <condition id="-8" name="Is boolean instance variable set" sid="918403199864511" type="StandingBrush">
+                    <param id="0" name="Instance variable">IsLeft</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="780180174967170" type="StandingBrush">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="645005582326051" type="StandingBrush">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="129193099787002">
+            <conditions>
+                <condition id="-22" name="Else" sid="105829198049877" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="667960248716744" type="StandingBrush">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="950167264726958" type="StandingBrush">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="352202849542664">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="454329692943018" type="StandingBrush">
+                    <param id="0" name="Object">Solids</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-14" name="Toggle boolean" sid="612619334142298" type="StandingBrush">
+                    <param id="0" name="Instance variable">IsLeft</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="309708043491914">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="896087868375770" type="Shot">
+                    <param id="0" name="Object">StandingBrush</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="204221759492468" type="Shot" />
+                <action id="0" name="Spawn another object" sid="879083757655715" type="Shot">
+                    <param id="0" name="Object">ShotImpact</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="349447058340363" type="StandingBrush" />
+            </actions>
+        </event-block>
+        <event-block sid="461444475832882">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="892485365908433" type="Glove">
+                    <param id="0" name="Object">StandingBrush</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="204790164282347" type="Glove" />
+                <action id="-9" name="Destroy" sid="263137618265878" type="StandingBrush" />
+            </actions>
+        </event-block>
+        <event-block sid="441892539350464">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="301057489116238" type="TNT">
+                    <param id="0" name="Object">StandingBrush</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="673082278150127" type="TNT" />
+                <action id="0" name="Spawn another object" sid="837844698847101" type="TNT">
+                    <param id="0" name="Object">TNTImpact</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="377113627084311" type="StandingBrush" />
+            </actions>
+        </event-block>
+        <event-block sid="130904670317128">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="929838812717119" type="Anvil">
+                    <param id="0" name="Object">StandingBrush</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="743205844784331" type="StandingBrush" />
+                <action id="0" name="Spawn another object" sid="262601311885853" type="Anvil">
+                    <param id="0" name="Object">AnvilImpact</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="379911827908045" type="Anvil" />
             </actions>
         </event-block>
     </events>

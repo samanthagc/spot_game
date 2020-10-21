@@ -3,7 +3,7 @@
     <name>Spot</name>
     <description></description>
     <version>1.0.0.1</version>
-    <author></author>
+    <author>SCAR Game Studio</author>
     <author-email></author-email>
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
@@ -64,25 +64,6 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="444180978448377" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Obstacles" sid="912971597207221">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Sine" sid="727354367236603">
-                    <behavior id="Sin" />
-                </behavior-type>
-                <behavior-type name="Solid" sid="777037251861140">
-                    <behavior id="solid" />
-                </behavior-type>
-                <behavior-type name="Rotate" sid="800456065691993">
-                    <behavior id="Rotate" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="675588929165020" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -835,25 +816,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="LivingObj009" sid="674262535269479">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="363379634436063" speed="5">
-                    <frame duration="1" hotspotX="0.511628" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\SALA\abajurSala.png">
-                        <collision-poly>
-                            <point x="0" y="0.189655" />
-                            <point x="0.488372" y="0" />
-                            <point x="1" y="0.206897" />
-                            <point x="0.604651" y="0.5" />
-                            <point x="0.883721" y="0.956897" />
-                            <point x="0.488372" y="1" />
-                            <point x="0.116279" y="0.956897" />
-                            <point x="0.372093" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="LivingObj010" sid="871352737581083">
             <plugin id="Sprite" />
             <animation-folder>
@@ -949,7 +911,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="177564689539066" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.571429" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaVidaCheia.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.571429" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaVidaCheia.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -957,7 +919,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="453393831528446" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaVidaVazia.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.454545" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaVidaVazia.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -973,7 +935,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="952813416269944" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.571429" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaTimerCheia.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.571429" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaTimerCheia.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -981,7 +943,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="831004033133292" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaTimerItem.png" />
+                    <frame duration="1" hotspotX="0.0294118" hotspotY="0.545455" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaTimerItem.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -1145,7 +1107,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="493283162363572" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.571429" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaTimerCheia.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.571429" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaTimerCheia.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -1153,7 +1115,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="912729015083567" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.571429" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaTimerCheia.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.571429" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaTimerCheia.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -1161,7 +1123,266 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="253425710971963" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.571429" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaTimerCheia.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0.571429" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\barrinhaTimerCheia.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ShotImpact" sid="614896613856811">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="166700433072719" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\tiroImpacto\impacto tiro0001.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.44964" />
+                            <point x="0.510471" y="0.5" />
+                            <point x="0.460733" y="0.570144" />
+                            <point x="0.430628" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\tiroImpacto\impacto tiro0002.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.44964" />
+                            <point x="0.543194" y="0.521583" />
+                            <point x="0.409686" y="0.580936" />
+                            <point x="0.408377" y="0.446043" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\tiroImpacto\impacto tiro0003.png">
+                        <collision-poly>
+                            <point x="0.428011" y="0.406475" />
+                            <point x="0.548429" y="0.464029" />
+                            <point x="0.506545" y="0.602518" />
+                            <point x="0.366492" y="0.541367" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\tiroImpacto\impacto tiro0004.png">
+                        <collision-poly>
+                            <point x="0.412304" y="0.375899" />
+                            <point x="0.565445" y="0.483813" />
+                            <point x="0.513089" y="0.604317" />
+                            <point x="0.353404" y="0.553957" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\tiroImpacto\impacto tiro0005.png">
+                        <collision-poly>
+                            <point x="0.399215" y="0.383093" />
+                            <point x="0.554974" y="0.438849" />
+                            <point x="0.51178" y="0.642087" />
+                            <point x="0.363875" y="0.573741" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\tiroImpacto\impacto tiro0006.png">
+                        <collision-poly>
+                            <point x="0.562828" y="0.43705" />
+                            <point x="0.541885" y="0.61331" />
+                            <point x="0.460733" y="0.667267" />
+                            <point x="0.384817" y="0.379496" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\tiroImpacto\impacto tiro0007.png">
+                        <collision-poly>
+                            <point x="0.403142" y="0.352518" />
+                            <point x="0.579843" y="0.526979" />
+                            <point x="0.515707" y="0.642087" />
+                            <point x="0.349477" y="0.548561" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\tiroImpacto\impacto tiro0008.png">
+                        <collision-poly>
+                            <point x="0.38089" y="0.348921" />
+                            <point x="0.573298" y="0.489209" />
+                            <point x="0.517016" y="0.645684" />
+                            <point x="0.356021" y="0.526979" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\tiroImpacto\impacto tiro0009.png">
+                        <collision-poly>
+                            <point x="0.383508" y="0.352518" />
+                            <point x="0.594241" y="0.517986" />
+                            <point x="0.514398" y="0.654677" />
+                            <point x="0.362566" y="0.570144" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\tiroImpacto\impacto tiro0010.png">
+                        <collision-poly>
+                            <point x="0.358639" y="0.356115" />
+                            <point x="0.600785" y="0.44964" />
+                            <point x="0.506545" y="0.669065" />
+                            <point x="0.337697" y="0.564749" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.358639" y="0.356115" />
+                            <point x="0.600785" y="0.44964" />
+                            <point x="0.506545" y="0.669065" />
+                            <point x="0.337697" y="0.564749" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="StandingBrush" sid="702135898245117">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="IsLeft" sid="477784302473167" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="194216189513066">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="8Direction" sid="668807758080929">
+                    <behavior id="EightDir" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="719604178909304" speed="5">
+                    <frame duration="1" hotspotX="0.504505" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0001.png">
+                        <collision-poly>
+                            <point x="0.396396" y="0.162162" />
+                            <point x="0.495495" y="0.135135" />
+                            <point x="0.513514" y="0.378378" />
+                            <point x="0.63964" y="0.783784" />
+                            <point x="0.351351" y="0.927928" />
+                            <point x="0.441441" y="0.621622" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.504505" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0002.png">
+                        <collision-poly>
+                            <point x="0.396396" y="0.162162" />
+                            <point x="0.495495" y="0.135135" />
+                            <point x="0.513514" y="0.378378" />
+                            <point x="0.63964" y="0.783784" />
+                            <point x="0.351351" y="0.927928" />
+                            <point x="0.441441" y="0.621622" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.504505" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0003.png">
+                        <collision-poly>
+                            <point x="0.369369" y="0.306306" />
+                            <point x="0.45045" y="0.189189" />
+                            <point x="0.630631" y="0.495495" />
+                            <point x="0.63964" y="0.783784" />
+                            <point x="0.351351" y="0.927928" />
+                            <point x="0.441441" y="0.621622" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.504505" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0004.png">
+                        <collision-poly>
+                            <point x="0.369369" y="0.27027" />
+                            <point x="0.513514" y="0.369369" />
+                            <point x="0.666667" y="0.459459" />
+                            <point x="0.576577" y="0.756757" />
+                            <point x="0.351351" y="0.927928" />
+                            <point x="0.369369" y="0.666667" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.504505" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0005.png">
+                        <collision-poly>
+                            <point x="0.378378" y="0.288288" />
+                            <point x="0.495495" y="0.342342" />
+                            <point x="0.693694" y="0.45045" />
+                            <point x="0.558559" y="0.747748" />
+                            <point x="0.351351" y="0.927928" />
+                            <point x="0.405405" y="0.621622" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.504505" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0006.png">
+                        <collision-poly>
+                            <point x="0.396396" y="0.162162" />
+                            <point x="0.495495" y="0.315315" />
+                            <point x="0.648649" y="0.468468" />
+                            <point x="0.63964" y="0.783784" />
+                            <point x="0.351351" y="0.927928" />
+                            <point x="0.441441" y="0.621622" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.504505" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0007.png">
+                        <collision-poly>
+                            <point x="0.396396" y="0.162162" />
+                            <point x="0.495495" y="0.306306" />
+                            <point x="0.63964" y="0.495495" />
+                            <point x="0.63964" y="0.783784" />
+                            <point x="0.351351" y="0.927928" />
+                            <point x="0.441441" y="0.621622" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.504505" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0008.png">
+                        <collision-poly>
+                            <point x="0.396396" y="0.162162" />
+                            <point x="0.495495" y="0.135135" />
+                            <point x="0.513514" y="0.378378" />
+                            <point x="0.63964" y="0.783784" />
+                            <point x="0.351351" y="0.927928" />
+                            <point x="0.441441" y="0.621622" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TNTImpact" sid="800404423517163">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="13" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="582768102579664" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\explosaoTNT\explosaoAnimacao0001.png">
+                        <collision-poly>
+                            <point x="0.325301" y="0.45" />
+                            <point x="0.5" y="0.325" />
+                            <point x="0.686747" y="0.433333" />
+                            <point x="0.620482" y="0.5" />
+                            <point x="0.63253" y="0.491667" />
+                            <point x="0.5" y="0.691667" />
+                            <point x="0.313253" y="0.566667" />
+                            <point x="0.337349" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\explosaoTNT\explosaoAnimacao0002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\explosaoTNT\explosaoAnimacao0003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\explosaoTNT\explosaoAnimacao0004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\explosaoTNT\explosaoAnimacao0005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\explosaoTNT\explosaoAnimacao0006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\explosaoTNT\explosaoAnimacao0007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\explosaoTNT\explosaoAnimacao0008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\explosaoTNT\explosaoAnimacao0009.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\explosaoTNT\explosaoAnimacao0010.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\explosaoTNT\explosaoAnimacao0011.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\explosaoTNT\explosaoAnimacao0012.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AnvilImpact" sid="697520296048943">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="797952679503193" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502618" original-source="C:\Users\AleCosta\Desktop\spot\assets\ImpactoBigorna\impactoBirgorna1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502618" original-source="C:\Users\AleCosta\Desktop\spot\assets\ImpactoBigorna\impactoBirgorna2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502618" original-source="C:\Users\AleCosta\Desktop\spot\assets\ImpactoBigorna\impactoBirgorna3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502618" original-source="C:\Users\AleCosta\Desktop\spot\assets\ImpactoBigorna\impactoBirgorna4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502618" original-source="C:\Users\AleCosta\Desktop\spot\assets\ImpactoBigorna\impactoBirgorna5.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502618" original-source="C:\Users\AleCosta\Desktop\spot\assets\ImpactoBigorna\impactoBirgorna6.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502618" original-source="C:\Users\AleCosta\Desktop\spot\assets\ImpactoBigorna\impactoBirgorna7.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502618" original-source="C:\Users\AleCosta\Desktop\spot\assets\ImpactoBigorna\impactoBirgorna8.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502618" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LivingObj009" sid="427732481609528">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="387275709073675" speed="5">
+                    <frame duration="1" hotspotX="0.511628" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\SALA\abajurSala.png">
+                        <collision-poly>
+                            <point x="0.186047" y="0.0689655" />
+                            <point x="0.488372" y="0" />
+                            <point x="0.813953" y="0.0689655" />
+                            <point x="0.604651" y="0.5" />
+                            <point x="0.883721" y="0.956897" />
+                            <point x="0.488372" y="1" />
+                            <point x="0.116279" y="0.956897" />
+                            <point x="0.372093" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
