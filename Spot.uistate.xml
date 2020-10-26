@@ -73,5 +73,30 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/TNTImpact/" />
         <folder expanded="1" path="animation-folder/AnvilImpact/" />
         <folder expanded="1" path="animation-folder/LivingObj009/" />
+        <folder expanded="1" path="animation-folder/Carper_suite/" />
+        <folder expanded="1" path="animation-folder/Chair/" />
+        <folder expanded="1" path="animation-folder/Suite_painting/" />
+        <folder expanded="1" path="animation-folder/Tv_forniture/" />
+        <folder expanded="1" path="animation-folder/Tv_suite/" />
+        <folder expanded="1" path="animation-folder/Bed_1/" />
+        <folder expanded="1" path="animation-folder/Bed_2/" />
+        <folder expanded="1" path="animation-folder/wardrobe_suite/" />
+        <folder expanded="1" path="animation-folder/bedside_lamp_suite/" />
+        <folder expanded="1" path="animation-folder/closed_door_suite/" />
+        <folder expanded="1" path="animation-folder/laundry_table_tv/" />
+        <folder expanded="1" path="animation-folder/Tv_light/" />
+        <folder expanded="1" path="animation-folder/Laundry_rug/" />
+        <folder expanded="1" path="animation-folder/Pool/" />
+        <folder expanded="1" path="animation-folder/Stair_goes_up/" />
+        <folder expanded="1" path="animation-folder/Water_pool/" />
+        <folder expanded="1" path="animation-folder/agua/" />
+        <folder expanded="1" path="animation-folder/Kitchen_furniture/" />
+        <folder expanded="1" path="animation-folder/Kitchen_table/" />
+        <folder expanded="1" path="animation-folder/Kitchen_trash/" />
+        <folder expanded="1" path="animation-folder/Kitchen_chair_Side/" />
+        <folder expanded="1" path="animation-folder/Kitchen_chair_front/" />
+        <folder expanded="1" path="animation-folder/kitchen_wardrobe/" />
+        <folder expanded="1" path="animation-folder/Kitchen_painting/" />
+        <folder expanded="1" path="animation-folder/Evil_enemy_rabbit/" />
     </folders-expanded>
 </c2uistate>

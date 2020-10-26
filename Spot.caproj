@@ -10,6 +10,7 @@
     <unique-id>3uklhvt8n9o2d</unique-id>
     <saved-with-version>27900</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
@@ -22,6 +23,8 @@
         <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
@@ -1130,7 +1133,7 @@
         <object-type name="ShotImpact" sid="614896613856811">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="166700433072719" speed="5">
+                <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="166700433072719" speed="12">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\tiroImpacto\impacto tiro0001.png">
                         <collision-poly>
                             <point x="0.5" y="0.44964" />
@@ -1237,84 +1240,68 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="8" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="719604178909304" speed="5">
-                    <frame duration="1" hotspotX="0.504505" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0001.png">
+                    <frame duration="1" hotspotX="0.495495" hotspotY="0.495495" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0001.png">
                         <collision-poly>
-                            <point x="0.396396" y="0.162162" />
-                            <point x="0.495495" y="0.135135" />
-                            <point x="0.513514" y="0.378378" />
-                            <point x="0.63964" y="0.783784" />
-                            <point x="0.351351" y="0.927928" />
-                            <point x="0.441441" y="0.621622" />
+                            <point x="0.333333" y="0.072072" />
+                            <point x="0.666667" y="0.07207" />
+                            <point x="0.666667" y="0.873874" />
+                            <point x="0.333333" y="0.873874" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.504505" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0002.png">
+                    <frame duration="1" hotspotX="0.495495" hotspotY="0.495495" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0002.png">
                         <collision-poly>
-                            <point x="0.396396" y="0.162162" />
-                            <point x="0.495495" y="0.135135" />
-                            <point x="0.513514" y="0.378378" />
-                            <point x="0.63964" y="0.783784" />
-                            <point x="0.351351" y="0.927928" />
-                            <point x="0.441441" y="0.621622" />
+                            <point x="0.333333" y="0.072072" />
+                            <point x="0.666667" y="0.07207" />
+                            <point x="0.666667" y="0.873874" />
+                            <point x="0.333333" y="0.873874" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.504505" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0003.png">
+                    <frame duration="1" hotspotX="0.495495" hotspotY="0.495495" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0003.png">
                         <collision-poly>
-                            <point x="0.369369" y="0.306306" />
-                            <point x="0.45045" y="0.189189" />
-                            <point x="0.630631" y="0.495495" />
-                            <point x="0.63964" y="0.783784" />
-                            <point x="0.351351" y="0.927928" />
-                            <point x="0.441441" y="0.621622" />
+                            <point x="0.333333" y="0.072072" />
+                            <point x="0.666667" y="0.072072" />
+                            <point x="0.666667" y="0.873874" />
+                            <point x="0.333333" y="0.873874" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.504505" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0004.png">
+                    <frame duration="1" hotspotX="0.495495" hotspotY="0.495495" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0004.png">
                         <collision-poly>
-                            <point x="0.369369" y="0.27027" />
-                            <point x="0.513514" y="0.369369" />
-                            <point x="0.666667" y="0.459459" />
-                            <point x="0.576577" y="0.756757" />
-                            <point x="0.351351" y="0.927928" />
-                            <point x="0.369369" y="0.666667" />
+                            <point x="0.333333" y="0.072072" />
+                            <point x="0.666667" y="0.072072" />
+                            <point x="0.666667" y="0.873874" />
+                            <point x="0.333333" y="0.873874" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.504505" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0005.png">
+                    <frame duration="1" hotspotX="0.495495" hotspotY="0.495495" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0005.png">
                         <collision-poly>
-                            <point x="0.378378" y="0.288288" />
-                            <point x="0.495495" y="0.342342" />
-                            <point x="0.693694" y="0.45045" />
-                            <point x="0.558559" y="0.747748" />
-                            <point x="0.351351" y="0.927928" />
-                            <point x="0.405405" y="0.621622" />
+                            <point x="0.333333" y="0.072072" />
+                            <point x="0.666667" y="0.072072" />
+                            <point x="0.666667" y="0.873874" />
+                            <point x="0.333333" y="0.873874" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.504505" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0006.png">
+                    <frame duration="1" hotspotX="0.495495" hotspotY="0.495495" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0006.png">
                         <collision-poly>
-                            <point x="0.396396" y="0.162162" />
-                            <point x="0.495495" y="0.315315" />
-                            <point x="0.648649" y="0.468468" />
-                            <point x="0.63964" y="0.783784" />
-                            <point x="0.351351" y="0.927928" />
-                            <point x="0.441441" y="0.621622" />
+                            <point x="0.333333" y="0.072072" />
+                            <point x="0.666667" y="0.072072" />
+                            <point x="0.666667" y="0.873874" />
+                            <point x="0.333333" y="0.873874" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.504505" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0007.png">
+                    <frame duration="1" hotspotX="0.495495" hotspotY="0.495495" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0007.png">
                         <collision-poly>
-                            <point x="0.396396" y="0.162162" />
-                            <point x="0.495495" y="0.306306" />
-                            <point x="0.63964" y="0.495495" />
-                            <point x="0.63964" y="0.783784" />
-                            <point x="0.351351" y="0.927928" />
-                            <point x="0.441441" y="0.621622" />
+                            <point x="0.333333" y="0.072072" />
+                            <point x="0.666667" y="0.072072" />
+                            <point x="0.666667" y="0.873874" />
+                            <point x="0.333333" y="0.873874" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.504505" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0008.png">
+                    <frame duration="1" hotspotX="0.495495" hotspotY="0.495495" original-source="C:\Users\AleCosta\Desktop\spot\assets\pincelEmPe\pincelEmPe0008.png">
                         <collision-poly>
-                            <point x="0.396396" y="0.162162" />
-                            <point x="0.495495" y="0.135135" />
-                            <point x="0.513514" y="0.378378" />
-                            <point x="0.63964" y="0.783784" />
-                            <point x="0.351351" y="0.927928" />
-                            <point x="0.441441" y="0.621622" />
+                            <point x="0.333333" y="0.072072" />
+                            <point x="0.666667" y="0.072072" />
+                            <point x="0.666667" y="0.873874" />
+                            <point x="0.333333" y="0.873874" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -1323,7 +1310,7 @@
         <object-type name="TNTImpact" sid="800404423517163">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="13" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="582768102579664" speed="5">
+                <animation framecount="13" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="582768102579664" speed="12">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\explosaoTNT\explosaoAnimacao0001.png">
                         <collision-poly>
                             <point x="0.325301" y="0.45" />
@@ -1354,7 +1341,7 @@
         <object-type name="AnvilImpact" sid="697520296048943">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="797952679503193" speed="5">
+                <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="797952679503193" speed="12">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.502618" original-source="C:\Users\AleCosta\Desktop\spot\assets\ImpactoBigorna\impactoBirgorna1.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.502618" original-source="C:\Users\AleCosta\Desktop\spot\assets\ImpactoBigorna\impactoBirgorna2.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.502618" original-source="C:\Users\AleCosta\Desktop\spot\assets\ImpactoBigorna\impactoBirgorna3.png" />
@@ -1386,6 +1373,828 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TiledBackground" sid="183236296264944">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\jardimChaoParede.png" />
+        </object-type>
+        <object-type name="Garden" sid="944030029763165">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\jardimChaoParede.png" />
+        </object-type>
+        <object-type name="kitchen" sid="442375572698642">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\COZINHA\CozinhaChaoParedes.png" />
+        </object-type>
+        <object-type name="SuiteRoom" sid="603330623274966">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\suiteChaoParede.png" />
+        </object-type>
+        <object-type name="Bathroom_furniture" sid="158364250104535">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\moveisBanheiro.png" />
+        </object-type>
+        <object-type name="Carpet_suite" sid="371541300811924">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\tapeteQuarto.png" />
+        </object-type>
+        <object-type name="Carper_suite" sid="828236803814220">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="689158640829043" speed="5">
+                    <frame duration="1" hotspotX="0.502513" hotspotY="0.502513" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\tapeteQuarto.png">
+                        <collision-poly>
+                            <point x="0.150754" y="0.150754" />
+                            <point x="0.497487" y="0" />
+                            <point x="0.849246" y="0.150754" />
+                            <point x="0.98995" y="0.497487" />
+                            <point x="0.854271" y="0.854271" />
+                            <point x="0.497487" y="1" />
+                            <point x="0.150754" y="0.849246" />
+                            <point x="0.0100503" y="0.497487" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Chair" sid="115362336767183">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="186170138911993" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\cadeiraGiratoria.png">
+                        <collision-poly>
+                            <point x="0.0882353" y="0.0555556" />
+                            <point x="0.5" y="0" />
+                            <point x="0.911765" y="0.0555556" />
+                            <point x="1" y="0.5" />
+                            <point x="0.852941" y="0.907407" />
+                            <point x="0.5" y="1" />
+                            <point x="0.147059" y="0.907407" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Suite_forniture" sid="450621244639426">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\moveisQuarto.png" />
+        </object-type>
+        <object-type name="Suite_painting" sid="559987341565060">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="716935757712218" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\quadroQuarto.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tv_forniture" sid="372669591561444">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="827639080428995" speed="5">
+                    <frame duration="1" hotspotX="0.50505" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\mesaQuarto.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.494949" y="0.621212" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tv_suite" sid="666877064418098">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="581535058114293" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\TvQuarto.png">
+                        <collision-poly>
+                            <point x="0.015625" y="0.0208333" />
+                            <point x="0.5" y="0" />
+                            <point x="0.984375" y="0.0208333" />
+                            <point x="1" y="0.5" />
+                            <point x="0.984375" y="0.979167" />
+                            <point x="0.5" y="1" />
+                            <point x="0.015625" y="0.979167" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bed_1" sid="350007866666991">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="364889546960419" speed="5">
+                    <frame duration="1" hotspotX="0.50303" hotspotY="0.504673" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\camaQuarto1.png">
+                        <collision-poly>
+                            <point x="0.0484848" y="0.0747664" />
+                            <point x="0.49697" y="0.0747664" />
+                            <point x="0.993939" y="0.00934579" />
+                            <point x="0.993939" y="0.990654" />
+                            <point x="0.00606061" y="0.990654" />
+                            <point x="0" y="0.495327" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bed_2" sid="308126430850447">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="603483070638513" speed="5">
+                    <frame duration="1" hotspotX="0.505376" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\camaQuarto2.png">
+                        <collision-poly>
+                            <point x="0.0860215" y="0.057971" />
+                            <point x="0.494624" y="0" />
+                            <point x="0.903226" y="0.0652174" />
+                            <point x="1" y="0.5" />
+                            <point x="0.989247" y="0.992754" />
+                            <point x="0.0107527" y="0.992754" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="wardrobe_suite" sid="186777978450433">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="566654015892695" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503106" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\armarioQuarto.png">
+                        <collision-poly>
+                            <point x="0.0192308" y="0.00621118" />
+                            <point x="0.980769" y="0.00621118" />
+                            <point x="1" y="0.496894" />
+                            <point x="0.980769" y="0.993789" />
+                            <point x="0.0192308" y="0.993789" />
+                            <point x="0" y="0.496894" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bedside_lamp_suite" sid="839944193032709">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="326685817190707" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504132" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\abajurQuarto.png">
+                        <collision-poly>
+                            <point x="0.211538" y="0.0909091" />
+                            <point x="0.5" y="0" />
+                            <point x="0.807692" y="0.0826446" />
+                            <point x="1" y="0.495868" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.495868" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="closed_door_suite" sid="499230388165759">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="769218398750033" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507246" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\portaFechada.png">
+                        <collision-poly>
+                            <point x="0.0142857" y="0.0144928" />
+                            <point x="0.5" y="0" />
+                            <point x="0.985714" y="0.0144928" />
+                            <point x="1" y="0.492754" />
+                            <point x="0.985714" y="0.985507" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0142857" y="0.985507" />
+                            <point x="0" y="0.492754" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="laundry_table_tv" sid="418666485159191">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="341795778632249" speed="5">
+                    <frame duration="1" hotspotX="0.503759" hotspotY="0.505882" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\LAVANDERIA\mesaTvLavanderia.png">
+                        <collision-poly>
+                            <point x="0.180451" y="0.282353" />
+                            <point x="0.496241" y="0" />
+                            <point x="0.819549" y="0.282353" />
+                            <point x="1" y="0.494118" />
+                            <point x="0.992481" y="0.988235" />
+                            <point x="0.496241" y="0.858824" />
+                            <point x="0.0075188" y="0.988235" />
+                            <point x="0" y="0.494118" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tv_light" sid="294521446502648">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="411936571367207" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\LAVANDERIA\brilhoTv.png">
+                        <collision-poly>
+                            <point x="0.4" y="0.444444" />
+                            <point x="0.5" y="0.375" />
+                            <point x="0.6" y="0.444444" />
+                            <point x="0.6" y="0.5" />
+                            <point x="0.725" y="0.694444" />
+                            <point x="0.5" y="1" />
+                            <point x="0.275" y="0.694444" />
+                            <point x="0.4" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Laundry_rug" sid="255151567155220">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="974226923401611" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\LAVANDERIA\tapeteLavanderia.png">
+                        <collision-poly>
+                            <point x="0.0746269" y="0.142857" />
+                            <point x="0.5" y="0.0285714" />
+                            <point x="0.925373" y="0.142857" />
+                            <point x="0.985075" y="0.5" />
+                            <point x="0.932836" y="0.871429" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0671642" y="0.871429" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Pool_" sid="830083401373075">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\piscina.png" />
+        </object-type>
+        <object-type name="Pool" sid="499785660355496">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="137975780996343" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\piscina.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Stair_goes_up" sid="664612171645659">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="199343484601073" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\escadaSobe.png">
+                        <collision-poly>
+                            <point x="0.166667" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.833333" y="0.25" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Water_pool" sid="549713231871772">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="15" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="959012659827590" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua5.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua6.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua8.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua9.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua10.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua11.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua12.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua13.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua14.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua15.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua16.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="agua" sid="422972093619618">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="15" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="513868438287558" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua10.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua11.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua12.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua13.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua14.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua15.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua16.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua4.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua5.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua6.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua8.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua9.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Kitchen_furniture" sid="198175021663020">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="361248931193619" speed="5">
+                    <frame duration="1" hotspotX="0.500911" hotspotY="0.502092" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\COZINHA\CozinhaMoveis.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.499089" y="0.0209205" />
+                            <point x="0.96357" y="0.083682" />
+                            <point x="1" y="0.497908" />
+                            <point x="1" y="1" />
+                            <point x="0.499089" y="0.472803" />
+                            <point x="0.229508" y="0.472803" />
+                            <point x="0.876138" y="0.497908" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Kitchen_table" sid="267926191137204">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="464465151680736" speed="5">
+                    <frame duration="1" hotspotX="0.50303" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\COZINHA\mesaCozinha.png">
+                        <collision-poly>
+                            <point x="0.0121212" y="0.0172414" />
+                            <point x="0.49697" y="0" />
+                            <point x="0.987879" y="0.0172414" />
+                            <point x="1" y="0.5" />
+                            <point x="0.945455" y="0.922414" />
+                            <point x="0.49697" y="0.87069" />
+                            <point x="0.0545455" y="0.922414" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Kitchen_trash" sid="697630117524904">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="763914674037443" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\COZINHA\lixoCozinha.png">
+                        <collision-poly>
+                            <point x="0.131579" y="0.104167" />
+                            <point x="0.5" y="0" />
+                            <point x="0.868421" y="0.104167" />
+                            <point x="0.973684" y="0.5" />
+                            <point x="0.842105" y="0.875" />
+                            <point x="0.5" y="1" />
+                            <point x="0.157895" y="0.875" />
+                            <point x="0.0263158" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Kitchen_chair_Side" sid="783611717642138">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="528283547883347" speed="5">
+                    <frame duration="1" hotspotX="0.513514" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\COZINHA\cadeiraCozinhaLado.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.486486" y="0.279412" />
+                            <point x="0.486486" y="0.279412" />
+                            <point x="1" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0.486486" y="0.764706" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Kitchen_chair_front" sid="397034825934876">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="251662206713778" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\COZINHA\cadeiraCozinhaFrente.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="0.764706" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="kitchen_wardrobe" sid="638640449238180">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="463039101026189" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503106" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\COZINHA\ArmarioCozinha.png">
+                        <collision-poly>
+                            <point x="0.0192308" y="0.00621118" />
+                            <point x="0.980769" y="0.00621118" />
+                            <point x="1" y="0.496894" />
+                            <point x="0.980769" y="0.993789" />
+                            <point x="0.0192308" y="0.993789" />
+                            <point x="0" y="0.496894" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Kitchen_painting" sid="694279524773051">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="567918439112647" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\COZINHA\quadro.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="Evil_enemy_rabbit" sid="220800259211511">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Health" sid="535485063559357" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="325649584667000">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="284374100464529">
+                    <behavior id="LOS" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="14" loop="1" name="Side_evil_rabbit" pingpong="0" repeatcount="1" repeatto="0" sid="312636184644358" speed="10">
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0002.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0003.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0004.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0005.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0006.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0007.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0008.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0009.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0010.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0011.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0012.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0013.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0014.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0015.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="15" loop="1" name="Front_evil_rabbit" pingpong="0" repeatcount="1" repeatto="0" sid="382494126921419" speed="10">
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoFrente\coelhoInimigoFrente0001.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoFrente\coelhoInimigoFrente0002.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoFrente\coelhoInimigoFrente0003.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoFrente\coelhoInimigoFrente0004.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoFrente\coelhoInimigoFrente0005.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoFrente\coelhoInimigoFrente0006.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoFrente\coelhoInimigoFrente0007.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoFrente\coelhoInimigoFrente0008.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoFrente\coelhoInimigoFrente0009.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoFrente\coelhoInimigoFrente0010.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoFrente\coelhoInimigoFrente0011.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoFrente\coelhoInimigoFrente0012.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoFrente\coelhoInimigoFrente0013.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoFrente\coelhoInimigoFrente0014.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoFrente\coelhoInimigoFrente0015.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="15" loop="1" name="Back_evil_rabbit" pingpong="0" repeatcount="1" repeatto="0" sid="363528397272207" speed="10">
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoCostas\coelhoInimigoCostas0001.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoCostas\coelhoInimigoCostas0002.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoCostas\coelhoInimigoCostas0003.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoCostas\coelhoInimigoCostas0004.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoCostas\coelhoInimigoCostas0005.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoCostas\coelhoInimigoCostas0006.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoCostas\coelhoInimigoCostas0007.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoCostas\coelhoInimigoCostas0008.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoCostas\coelhoInimigoCostas0009.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoCostas\coelhoInimigoCostas0010.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoCostas\coelhoInimigoCostas0011.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoCostas\coelhoInimigoCostas0012.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoCostas\coelhoInimigoCostas0013.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoCostas\coelhoInimigoCostas0014.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoCostas\coelhoInimigoCostas0015.png">
+                        <collision-poly>
+                            <point x="0.269663" y="0.18018" />
+                            <point x="0.719101" y="0.18018" />
+                            <point x="0.719101" y="0.900901" />
+                            <point x="0.269663" y="0.900901" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="665976981558606">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -1397,8 +2206,26 @@
     <global-instances>
         <global-instance type="Keyboard" uid="4" />
         <global-instance type="Mouse" uid="73" />
+        <global-instance type="Audio" uid="164">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="Anvil_snd.ogg" />
+        <file name="Tnt_snd.ogg" />
+        <file name="Shot_snd.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">

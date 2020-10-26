@@ -32,6 +32,10 @@
                 <action id="-15" name="Set visible" sid="947516490739091" type="recoverybar_glove">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="276463281373934" type="Evil_enemy_rabbit">
+                    <param id="0" name="Obstacle">Solids</param>
+                </action>
+                <action behavior="Pathfinding" id="4" name="Regenerate obstacle map" sid="359147699832860" type="Evil_enemy_rabbit" />
             </actions>
         </event-block>
         <event-block sid="564115076520390">
@@ -119,6 +123,82 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="814771839470744">
+            <conditions>
+                <condition id="-11" name="For Each" sid="434260868821399" type="System">
+                    <param id="0" name="Object">Evil_enemy_rabbit</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="285868813584314">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="147880274692750" type="Evil_enemy_rabbit">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">Player.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="407322280467876" type="Evil_enemy_rabbit">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="424406258269765" type="Evil_enemy_rabbit">
+                            <param id="0" name="Animation">&quot;Side_evil_rabbit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="302925568397303">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="784245246408701" type="Evil_enemy_rabbit">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">Player.X</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="325267940812257" type="Evil_enemy_rabbit">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="200247805693647" type="Evil_enemy_rabbit">
+                            <param id="0" name="Animation">&quot;Side_evil_rabbit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="514402871963523">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="245578685490887" type="System">
+                    <param id="0" name="Interval (seconds)">0.5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="260024653392509" type="Evil_enemy_rabbit">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="790165842034208">
+            <conditions>
+                <condition behavior="Pathfinding" id="0" name="On path found" sid="591069476783676" type="Evil_enemy_rabbit" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="830918159608674" type="Evil_enemy_rabbit" />
+            </actions>
+        </event-block>
+        <event-block sid="253262845565882">
+            <conditions>
+                <condition behavior="Pathfinding" id="1" name="On failed to find path" sid="891396411697336" type="Evil_enemy_rabbit" />
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="597306827890028" type="Evil_enemy_rabbit">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="502110209101733">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="936684114357725" type="Player">
@@ -151,10 +231,13 @@
         <event-block sid="210489583386210">
             <conditions>
                 <condition id="2" name="Key is down" sid="519786732500189" type="Keyboard">
-                    <param id="0" name="Key">39</param>
+                    <param id="0" name="Key">68</param>
                 </condition>
             </conditions>
             <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="411250085057163" type="Player">
+                    <param id="0" name="Control">1</param>
+                </action>
                 <action id="-10" name="Set value" sid="263393810153512" type="Player">
                     <param id="0" name="Instance variable">Direction</param>
                     <param id="1" name="Value">&quot;Side&quot;</param>
@@ -171,10 +254,13 @@
         <event-block sid="674912564204037">
             <conditions>
                 <condition id="2" name="Key is down" sid="718831212302294" type="Keyboard">
-                    <param id="0" name="Key">37</param>
+                    <param id="0" name="Key">65</param>
                 </condition>
             </conditions>
             <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="200930185666487" type="Player">
+                    <param id="0" name="Control">0</param>
+                </action>
                 <action id="-10" name="Set value" sid="140053522360665" type="Player">
                     <param id="0" name="Instance variable">Direction</param>
                     <param id="1" name="Value">&quot;Side&quot;</param>
@@ -191,10 +277,13 @@
         <event-block sid="465914764697208">
             <conditions>
                 <condition id="2" name="Key is down" sid="188224470301467" type="Keyboard">
-                    <param id="0" name="Key">38</param>
+                    <param id="0" name="Key">87</param>
                 </condition>
             </conditions>
             <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="599810294967841" type="Player">
+                    <param id="0" name="Control">2</param>
+                </action>
                 <action id="-10" name="Set value" sid="823036489623527" type="Player">
                     <param id="0" name="Instance variable">Direction</param>
                     <param id="1" name="Value">&quot;Back&quot;</param>
@@ -203,15 +292,21 @@
                     <param id="0" name="Instance variable">AnglePlayer</param>
                     <param id="1" name="Value">270</param>
                 </action>
+                <action id="7" name="Set mirrored" sid="566912419293714" type="Player">
+                    <param id="0" name="State">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="506208312038124">
             <conditions>
                 <condition id="2" name="Key is down" sid="741208822696858" type="Keyboard">
-                    <param id="0" name="Key">40</param>
+                    <param id="0" name="Key">83</param>
                 </condition>
             </conditions>
             <actions>
+                <action behavior="8Direction" id="7" name="Simulate control" sid="428796051184108" type="Player">
+                    <param id="0" name="Control">3</param>
+                </action>
                 <action id="-10" name="Set value" sid="414011400743398" type="Player">
                     <param id="0" name="Instance variable">Direction</param>
                     <param id="1" name="Value">&quot;Front&quot;</param>
@@ -219,6 +314,9 @@
                 <action id="-10" name="Set value" sid="395310849070994" type="Player">
                     <param id="0" name="Instance variable">AnglePlayer</param>
                     <param id="1" name="Value">90</param>
+                </action>
+                <action id="7" name="Set mirrored" sid="892505105717269" type="Player">
+                    <param id="0" name="State">1</param>
                 </action>
             </actions>
         </event-block>
@@ -358,6 +456,12 @@
                 </action>
                 <action id="-5" name="Set width" sid="337509841784002" type="recoverybar_fire_gun">
                     <param id="0" name="Width">self.Width -4</param>
+                </action>
+                <action id="0" name="Play" sid="380426820286226" type="Audio">
+                    <param id="0" name="Audio file">Shot_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -594,6 +698,104 @@
                     <param id="2" name="Image point">0</param>
                 </action>
                 <action id="-9" name="Destroy" sid="379911827908045" type="Anvil" />
+                <action id="0" name="Play" sid="436998623985492" type="Audio">
+                    <param id="0" name="Audio file">Anvil_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="295150424214366">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="993011205618389" type="Shot">
+                    <param id="0" name="Object">Evil_enemy_rabbit</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="968149321409488" type="Evil_enemy_rabbit">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="885270987612947" type="Shot" />
+                <action id="0" name="Spawn another object" sid="908460227355415" type="Shot">
+                    <param id="0" name="Object">ShotImpact</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action disabled="1" id="-9" name="Destroy" sid="717957403689043" type="Evil_enemy_rabbit" />
+                <action id="-12" name="Subtract from" sid="254233000209853" type="Evil_enemy_rabbit">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="164570117681396">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="732256098685080" type="Glove">
+                    <param id="0" name="Object">Evil_enemy_rabbit</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="886497579571218" type="Glove" />
+                <action disabled="1" id="-9" name="Destroy" sid="589908382500482" type="Evil_enemy_rabbit" />
+                <action id="-12" name="Subtract from" sid="897240446132772" type="Evil_enemy_rabbit">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="959444359119944">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="327835181579405" type="TNT">
+                    <param id="0" name="Object">Evil_enemy_rabbit</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="523365031356074" type="TNT" />
+                <action id="0" name="Spawn another object" sid="319085858962469" type="TNT">
+                    <param id="0" name="Object">TNTImpact</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action disabled="1" id="-9" name="Destroy" sid="353173335078144" type="Evil_enemy_rabbit" />
+                <action id="-12" name="Subtract from" sid="449653017013786" type="Evil_enemy_rabbit">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">8</param>
+                </action>
+                <action id="0" name="Play" sid="333055618630199" type="Audio">
+                    <param id="0" name="Audio file">Tnt_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="103000024850713">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="631130241649607" type="Anvil">
+                    <param id="0" name="Object">Evil_enemy_rabbit</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="630838710186289" type="Anvil">
+                    <param id="0" name="Object">AnvilImpact</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="261125221693559" type="Anvil" />
+                <action disabled="1" id="-9" name="Destroy" sid="331520277084688" type="Evil_enemy_rabbit" />
+                <action id="-12" name="Subtract from" sid="583736092017242" type="Evil_enemy_rabbit">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="0" name="Play" sid="376039678351216" type="Audio">
+                    <param id="0" name="Audio file">Anvil_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="326695838733725">
@@ -605,6 +807,18 @@
             <actions>
                 <action id="-5" name="Set width" sid="227612924822760" type="Live_bar">
                     <param id="0" name="Width">self.Width -10</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="692971817241061">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="268021549660936" type="Player">
+                    <param id="0" name="Object">Evil_enemy_rabbit</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="523464079044045" type="Live_bar">
+                    <param id="0" name="Width">self.Width -18</param>
                 </action>
             </actions>
         </event-block>
