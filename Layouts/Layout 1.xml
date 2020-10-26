@@ -80,7 +80,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LaundryObj1" uid="0">
+                <instance type="LaundryObj001" uid="0">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -160,7 +160,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="LaundryObj4" uid="17">
+                <instance type="LaundryObj004" uid="17">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -182,7 +182,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LaundryObj5" uid="3">
+                <instance type="LaundryObj005" uid="3">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -204,7 +204,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LaundryObj3" uid="7">
+                <instance type="LaundryObj003" uid="7">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -773,7 +773,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="Garden" uid="91">
+                <instance type="GardenRoom" uid="91">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -793,7 +793,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="kitchen" uid="93">
+                <instance type="KitchenRoom" uid="93">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -1007,7 +1007,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="Bathroom_furniture" uid="102">
+                <instance type="SuiteObj001" uid="102">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -1027,7 +1027,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Carper_suite" uid="103">
+                <instance type="SuiteObj005" uid="103">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1049,7 +1049,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Chair" uid="104">
+                <instance type="SuiteObj007" uid="104">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1071,7 +1071,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Suite_forniture" uid="105">
+                <instance type="SuiteObj008" uid="105">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -1091,7 +1091,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Suite_painting" uid="106">
+                <instance type="SuiteObj012" uid="106">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1113,7 +1113,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tv_forniture" uid="107">
+                <instance type="SuiteObj010" uid="107">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1135,7 +1135,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tv_suite" uid="108">
+                <instance type="SuiteObj009" uid="108">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1157,7 +1157,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Bed_1" uid="109">
+                <instance type="SuiteObj002" uid="109">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1179,7 +1179,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Bed_2" uid="110">
+                <instance type="SuiteObj003" uid="110">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1201,7 +1201,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="wardrobe_suite" uid="111">
+                <instance type="SuiteObj011" uid="111">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1223,7 +1223,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="bedside_lamp_suite" uid="112">
+                <instance type="SuiteObj004" uid="112">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1564,7 +1564,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="closed_door_suite" uid="121">
+                <instance type="SuiteObj006" uid="121">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1586,7 +1586,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Stair_goes_up" uid="127">
+                <instance type="StairGoesUp" uid="127">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1608,7 +1608,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pool" uid="126">
+                <instance type="GardenObj001" uid="126">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1630,7 +1630,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Water_pool" uid="129">
+                <instance type="GardenObj002" uid="129">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1942,7 +1942,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="Kitchen_furniture" uid="138">
+                <instance type="KitchenObj003" uid="138">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1964,7 +1964,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Kitchen_table" uid="139">
+                <instance type="KitchenObj005" uid="139">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1986,7 +1986,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Kitchen_trash" uid="140">
+                <instance type="KitchenObj006" uid="140">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2037,7 +2037,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="Kitchen_chair_Side" uid="141">
+                <instance type="KitchenObj002" uid="141">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2059,7 +2059,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Kitchen_chair_Side" uid="142">
+                <instance type="KitchenObj002" uid="142">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2081,7 +2081,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Kitchen_chair_front" uid="143">
+                <instance type="KitchenObj001" uid="143">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2103,7 +2103,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="kitchen_wardrobe" uid="144">
+                <instance type="KitchenObj007" uid="144">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2125,7 +2125,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Kitchen_painting" uid="145">
+                <instance type="KitchenObj004" uid="145">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2698,26 +2698,65 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-            </instances>
-            <effects />
-        </layer>
-        <layer name="Main" sid="546000745120728">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>1</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
-            <instances>
-                <instance type="Laundry_rug" uid="125">
+                <instance type="Solids" uid="165">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1536</x>
+                        <y>1184</y>
+                        <z>0</z>
+                        <width>192</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-1.570796371</angle>
+                        <opacity>0.5</opacity>
+                    </world>
+                </instance>
+                <instance type="Solids" uid="166">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1536</x>
+                        <y>1456</y>
+                        <z>0</z>
+                        <width>160</width>
+                        <height>64</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-1.570796371</angle>
+                        <opacity>0.5</opacity>
+                    </world>
+                </instance>
+                <instance type="LaudryObj007" uid="125">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2739,7 +2778,114 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="StandingBrush" uid="92">
+                <instance type="LaundryObj002" uid="122">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>665.388977051</x>
+                        <y>946.872497559</y>
+                        <z>0</z>
+                        <width>133</width>
+                        <height>85</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503759384</hotspotX>
+                        <hotspotY>0.505882382</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TVLight" uid="124">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>664.808044434</x>
+                        <y>874.780090332</y>
+                        <z>0</z>
+                        <width>80</width>
+                        <height>72</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LivingObj009" uid="60">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1472</x>
+                        <y>928</y>
+                        <z>0</z>
+                        <width>43</width>
+                        <height>116</height>
+                        <depth>0</depth>
+                        <hotspotX>0.511627913</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="TVLight" uid="128">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1308.724975586</x>
+                        <y>88.512397766</y>
+                        <z>0</z>
+                        <width>67.891845703</width>
+                        <height>84.426109314</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="Main" sid="546000745120728">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="Enemy002" uid="92">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2825,29 +2971,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Tv_light" uid="124">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>664.808044434</x>
-                        <y>874.780090332</y>
-                        <z>0</z>
-                        <width>80</width>
-                        <height>72</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Coin" uid="9">
+                <instance type="CoinStar" uid="9">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2890,7 +3014,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Coin" uid="27">
+                <instance type="CoinStar" uid="27">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2933,7 +3057,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Coin" uid="30">
+                <instance type="CoinStar" uid="30">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2976,7 +3100,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Coin" uid="31">
+                <instance type="CoinStar" uid="31">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -3019,7 +3143,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Coin" uid="32">
+                <instance type="CoinStar" uid="32">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -3062,7 +3186,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Coin" uid="33">
+                <instance type="CoinStar" uid="33">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -3105,7 +3229,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Coin" uid="34">
+                <instance type="CoinStar" uid="34">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -3148,7 +3272,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Coin" uid="35">
+                <instance type="CoinStar" uid="35">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -3191,7 +3315,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Coin" uid="36">
+                <instance type="CoinStar" uid="36">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -3234,7 +3358,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Coin" uid="37">
+                <instance type="CoinStar" uid="37">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -3277,7 +3401,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Coin" uid="38">
+                <instance type="CoinStar" uid="38">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -3414,7 +3538,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Coin" uid="29">
+                <instance type="CoinStar" uid="29">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -3457,7 +3581,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Coin" uid="39">
+                <instance type="CoinStar" uid="39">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -3573,7 +3697,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="StandingBrush" uid="22">
+                <instance type="Enemy002" uid="22">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -3616,7 +3740,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="StandingBrush" uid="41">
+                <instance type="Enemy002" uid="41">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -3725,73 +3849,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LivingObj009" uid="60">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1472</x>
-                        <y>928</y>
-                        <z>0</z>
-                        <width>43</width>
-                        <height>116</height>
-                        <depth>0</depth>
-                        <hotspotX>0.511627913</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="laundry_table_tv" uid="122">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>665.388977051</x>
-                        <y>946.872497559</y>
-                        <z>0</z>
-                        <width>133</width>
-                        <height>85</height>
-                        <depth>0</depth>
-                        <hotspotX>0.503759384</hotspotX>
-                        <hotspotY>0.505882382</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Tv_light" uid="128">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1308.724975586</x>
-                        <y>88.512397766</y>
-                        <z>0</z>
-                        <width>67.891845703</width>
-                        <height>84.426109314</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="StandingBrush" uid="155">
+                <instance type="Enemy002" uid="155">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -3822,8 +3880,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1364.57421875</x>
-                        <y>1195.223144531</y>
+                        <x>1728</x>
+                        <y>960</y>
                         <z>0</z>
                         <width>56</width>
                         <height>56</height>
@@ -3834,7 +3892,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="StandingBrush" uid="156">
+                <instance type="Enemy002" uid="156">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -3877,7 +3935,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Evil_enemy_rabbit" uid="157">
+                <instance type="Enemy001" uid="157">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -3926,7 +3984,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Evil_enemy_rabbit" uid="47">
+                <instance type="Enemy001" uid="47">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -3975,7 +4033,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Evil_enemy_rabbit" uid="159">
+                <instance type="Enemy001" uid="159">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4024,7 +4082,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Evil_enemy_rabbit" uid="160">
+                <instance type="Enemy001" uid="160">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4073,7 +4131,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Evil_enemy_rabbit" uid="161">
+                <instance type="Enemy001" uid="161">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4122,7 +4180,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Evil_enemy_rabbit" uid="162">
+                <instance type="Enemy001" uid="162">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4171,7 +4229,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Evil_enemy_rabbit" uid="163">
+                <instance type="Enemy001" uid="163">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4400,7 +4458,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Live_bar" uid="75">
+                <instance type="LiveBar" uid="75">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4444,7 +4502,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Itemspanel" uid="77">
+                <instance type="ItemsPanel" uid="77">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4466,7 +4524,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ItemrecoverybarContainer" uid="79">
+                <instance type="ItemRecoveryBarContainer" uid="79">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4488,7 +4546,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="recoverybar_fire_gun" uid="78">
+                <instance type="RecoveryBarFireGun" uid="78">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4510,7 +4568,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Improvementpanel" uid="80">
+                <instance type="ImprovementPanel" uid="80">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4532,7 +4590,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="stars" uid="10">
+                <instance type="Stars" uid="10">
                     <properties>
                         <text>stars</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -4559,7 +4617,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Chosenweapon_icon" uid="81">
+                <instance type="FireGun" uid="81">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4581,7 +4639,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Level_weapon" uid="84">
+                <instance type="LevelWeapon" uid="84">
                     <properties>
                         <text>Level_weapon</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -4608,7 +4666,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Upgrade_icon" uid="85">
+                <instance type="UpgradeIcon" uid="85">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4630,7 +4688,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="recoverybar_tnt" uid="86">
+                <instance type="RecoveryBarTNTt" uid="86">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4652,7 +4710,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="recoverybar_anvil" uid="87">
+                <instance type="RecoveryBarAnvil" uid="87">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4674,7 +4732,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="recoverybar_glove" uid="88">
+                <instance type="RecoveryBarGlove" uid="88">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>

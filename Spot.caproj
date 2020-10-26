@@ -74,7 +74,7 @@
         <object-type name="Keyboard" sid="918042255114390">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="Coin" sid="349943578797626">
+        <object-type name="CoinStar" sid="349943578797626">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Sine" sid="846732437245579">
@@ -101,7 +101,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="stars" sid="361643337570905">
+        <object-type name="Stars" sid="361643337570905">
             <plugin id="Text" />
         </object-type>
         <object-type name="Shot" sid="927025177538066">
@@ -549,7 +549,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="LaundryObj1" sid="486823736455579">
+        <object-type name="LaundryObj001" sid="486823736455579">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="525073056570371" speed="5">
@@ -565,7 +565,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="LaundryObj5" sid="709019115777834">
+        <object-type name="LaundryObj005" sid="709019115777834">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="444401235587897" speed="5">
@@ -584,7 +584,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="LaundryObj3" sid="254210875113832">
+        <object-type name="LaundryObj003" sid="254210875113832">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="606110922794040" speed="5">
@@ -603,7 +603,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="LaundryObj4" sid="838705003219322">
+        <object-type name="LaundryObj004" sid="838705003219322">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268803976892238" speed="5">
@@ -910,7 +910,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Live_bar" sid="677234354238097">
+        <object-type name="LiveBar" sid="677234354238097">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="177564689539066" speed="5">
@@ -926,7 +926,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Itemspanel" sid="478706430356312">
+        <object-type name="ItemsPanel" sid="478706430356312">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="679139304661729" speed="5">
@@ -934,7 +934,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="recoverybar_fire_gun" sid="414805146454031">
+        <object-type name="RecoveryBarFireGun" sid="414805146454031">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="952813416269944" speed="5">
@@ -942,7 +942,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="ItemrecoverybarContainer" sid="627818150365198">
+        <object-type name="ItemRecoveryBarContainer" sid="627818150365198">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="831004033133292" speed="5">
@@ -950,7 +950,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Improvementpanel" sid="983413586605777">
+        <object-type name="ImprovementPanel" sid="983413586605777">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="212862385343906" speed="5">
@@ -968,7 +968,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Chosenweapon_icon" sid="484804243465713">
+        <object-type name="FireGun" sid="484804243465713">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Fire_gun" pingpong="0" repeatcount="1" repeatto="0" sid="344277630366202" speed="5">
@@ -1076,10 +1076,10 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Level_weapon" sid="561849643392930">
+        <object-type name="LevelWeapon" sid="561849643392930">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Upgrade_icon" sid="781099572653392">
+        <object-type name="UpgradeIcon" sid="781099572653392">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="576896262670834" speed="5">
@@ -1106,7 +1106,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="recoverybar_tnt" sid="690513263078559">
+        <object-type name="RecoveryBarTNTt" sid="690513263078559">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="493283162363572" speed="5">
@@ -1114,7 +1114,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="recoverybar_anvil" sid="849851452970392">
+        <object-type name="RecoveryBarAnvil" sid="849851452970392">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="912729015083567" speed="5">
@@ -1122,7 +1122,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="recoverybar_glove" sid="464565709985610">
+        <object-type name="RecoveryBarGlove" sid="464565709985610">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="253425710971963" speed="5">
@@ -1225,7 +1225,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="StandingBrush" sid="702135898245117">
+        <object-type name="Enemy002" sid="702135898245117">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="IsLeft" sid="477784302473167" type="boolean" />
@@ -1377,11 +1377,11 @@
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\jardimChaoParede.png" />
         </object-type>
-        <object-type name="Garden" sid="944030029763165">
+        <object-type name="GardenRoom" sid="944030029763165">
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\jardimChaoParede.png" />
         </object-type>
-        <object-type name="kitchen" sid="442375572698642">
+        <object-type name="KitchenRoom" sid="442375572698642">
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\COZINHA\CozinhaChaoParedes.png" />
         </object-type>
@@ -1389,7 +1389,7 @@
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\suiteChaoParede.png" />
         </object-type>
-        <object-type name="Bathroom_furniture" sid="158364250104535">
+        <object-type name="SuiteObj001" sid="158364250104535">
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\moveisBanheiro.png" />
         </object-type>
@@ -1397,7 +1397,7 @@
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\tapeteQuarto.png" />
         </object-type>
-        <object-type name="Carper_suite" sid="828236803814220">
+        <object-type name="SuiteObj005" sid="828236803814220">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="689158640829043" speed="5">
@@ -1416,7 +1416,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Chair" sid="115362336767183">
+        <object-type name="SuiteObj007" sid="115362336767183">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="186170138911993" speed="5">
@@ -1435,11 +1435,11 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Suite_forniture" sid="450621244639426">
+        <object-type name="SuiteObj008" sid="450621244639426">
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\moveisQuarto.png" />
         </object-type>
-        <object-type name="Suite_painting" sid="559987341565060">
+        <object-type name="SuiteObj012" sid="559987341565060">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="716935757712218" speed="5">
@@ -1447,7 +1447,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Tv_forniture" sid="372669591561444">
+        <object-type name="SuiteObj010" sid="372669591561444">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="827639080428995" speed="5">
@@ -1463,7 +1463,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Tv_suite" sid="666877064418098">
+        <object-type name="SuiteObj009" sid="666877064418098">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="581535058114293" speed="5">
@@ -1482,7 +1482,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Bed_1" sid="350007866666991">
+        <object-type name="SuiteObj002" sid="350007866666991">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="364889546960419" speed="5">
@@ -1499,7 +1499,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Bed_2" sid="308126430850447">
+        <object-type name="SuiteObj003" sid="308126430850447">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="603483070638513" speed="5">
@@ -1517,7 +1517,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="wardrobe_suite" sid="186777978450433">
+        <object-type name="SuiteObj011" sid="186777978450433">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="566654015892695" speed="5">
@@ -1534,7 +1534,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="bedside_lamp_suite" sid="839944193032709">
+        <object-type name="SuiteObj004" sid="839944193032709">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="326685817190707" speed="5">
@@ -1552,7 +1552,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="closed_door_suite" sid="499230388165759">
+        <object-type name="SuiteObj006" sid="499230388165759">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="769218398750033" speed="5">
@@ -1571,7 +1571,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="laundry_table_tv" sid="418666485159191">
+        <object-type name="LaundryObj002" sid="418666485159191">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="341795778632249" speed="5">
@@ -1590,7 +1590,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Tv_light" sid="294521446502648">
+        <object-type name="TVLight" sid="294521446502648">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="411936571367207" speed="5">
@@ -1609,7 +1609,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Laundry_rug" sid="255151567155220">
+        <object-type name="LaudryObj007" sid="255151567155220">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="974226923401611" speed="5">
@@ -1632,7 +1632,7 @@
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\piscina.png" />
         </object-type>
-        <object-type name="Pool" sid="499785660355496">
+        <object-type name="GardenObj001" sid="499785660355496">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="137975780996343" speed="5">
@@ -1640,7 +1640,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Stair_goes_up" sid="664612171645659">
+        <object-type name="StairGoesUp" sid="664612171645659">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="199343484601073" speed="5">
@@ -1658,7 +1658,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Water_pool" sid="549713231871772">
+        <object-type name="GardenObj002" sid="549713231871772">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="15" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="959012659827590" speed="5">
@@ -1702,7 +1702,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Kitchen_furniture" sid="198175021663020">
+        <object-type name="KitchenObj003" sid="198175021663020">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="361248931193619" speed="5">
@@ -1721,7 +1721,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Kitchen_table" sid="267926191137204">
+        <object-type name="KitchenObj005" sid="267926191137204">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="464465151680736" speed="5">
@@ -1740,7 +1740,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Kitchen_trash" sid="697630117524904">
+        <object-type name="KitchenObj006" sid="697630117524904">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="763914674037443" speed="5">
@@ -1759,7 +1759,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Kitchen_chair_Side" sid="783611717642138">
+        <object-type name="KitchenObj002" sid="783611717642138">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="528283547883347" speed="5">
@@ -1777,7 +1777,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Kitchen_chair_front" sid="397034825934876">
+        <object-type name="KitchenObj001" sid="397034825934876">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="251662206713778" speed="5">
@@ -1793,7 +1793,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="kitchen_wardrobe" sid="638640449238180">
+        <object-type name="KitchenObj007" sid="638640449238180">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="463039101026189" speed="5">
@@ -1810,7 +1810,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Kitchen_painting" sid="694279524773051">
+        <object-type name="KitchenObj004" sid="694279524773051">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="567918439112647" speed="5">
@@ -1818,7 +1818,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type global="1" name="Evil_enemy_rabbit" sid="220800259211511">
+        <object-type global="1" name="Enemy001" sid="220800259211511">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Health" sid="535485063559357" type="number" />
