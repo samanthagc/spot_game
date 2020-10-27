@@ -1564,28 +1564,6 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="SuiteObj006" uid="121">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1280</x>
-                        <y>446</y>
-                        <z>0</z>
-                        <width>70</width>
-                        <height>69</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.507246375</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="StairGoesUp" uid="127">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -2866,6 +2844,50 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="LivingObj013" uid="167">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1280</x>
+                        <y>576</y>
+                        <z>0</z>
+                        <width>69</width>
+                        <height>69</height>
+                        <depth>0</depth>
+                        <hotspotX>0.507246375</hotspotX>
+                        <hotspotY>0.507246375</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LivingObj013" uid="168">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1280</x>
+                        <y>446</y>
+                        <z>0</z>
+                        <width>69</width>
+                        <height>69</height>
+                        <depth>0</depth>
+                        <hotspotX>0.507246375</hotspotX>
+                        <hotspotY>0.507246375</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -2903,7 +2925,7 @@
                         </behavior-instance>
                         <behavior-instance type="8Direction">
                             <properties>
-                                <max-speed>150</max-speed>
+                                <max-speed>75</max-speed>
                                 <acceleration>500</acceleration>
                                 <deceleration>500</deceleration>
                                 <directions>Left &amp; right</directions>
@@ -3715,7 +3737,7 @@
                         </behavior-instance>
                         <behavior-instance type="8Direction">
                             <properties>
-                                <max-speed>150</max-speed>
+                                <max-speed>75</max-speed>
                                 <acceleration>500</acceleration>
                                 <deceleration>500</deceleration>
                                 <directions>Left &amp; right</directions>
@@ -3758,7 +3780,7 @@
                         </behavior-instance>
                         <behavior-instance type="8Direction">
                             <properties>
-                                <max-speed>150</max-speed>
+                                <max-speed>75</max-speed>
                                 <acceleration>500</acceleration>
                                 <deceleration>500</deceleration>
                                 <directions>Left &amp; right</directions>
@@ -3867,7 +3889,7 @@
                         </behavior-instance>
                         <behavior-instance type="8Direction">
                             <properties>
-                                <max-speed>150</max-speed>
+                                <max-speed>75</max-speed>
                                 <acceleration>500</acceleration>
                                 <deceleration>500</deceleration>
                                 <directions>Left &amp; right</directions>
@@ -3880,8 +3902,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1728</x>
-                        <y>960</y>
+                        <x>1120</x>
+                        <y>1184</y>
                         <z>0</z>
                         <width>56</width>
                         <height>56</height>
@@ -3910,7 +3932,7 @@
                         </behavior-instance>
                         <behavior-instance type="8Direction">
                             <properties>
-                                <max-speed>150</max-speed>
+                                <max-speed>75</max-speed>
                                 <acceleration>500</acceleration>
                                 <deceleration>500</deceleration>
                                 <directions>Left &amp; right</directions>
@@ -3951,19 +3973,24 @@
                                 <cell-size>30</cell-size>
                                 <cell-border>-1</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>60</max-speed>
+                                <max-speed>150</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>2000</deceleration>
-                                <rotate-speed>500</rotate-speed>
+                                <rotate-speed>135</rotate-speed>
                                 <rotate-object>No</rotate-object>
                                 <diagonals>Enabled</diagonals>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
-                                <range>170</range>
+                                <range>10000</range>
                                 <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -3978,7 +4005,7 @@
                         <width>56.958000183</width>
                         <height>63.998001099</height>
                         <depth>0</depth>
-                        <hotspotX>0.505617976</hotspotX>
+                        <hotspotX>0.494382024</hotspotX>
                         <hotspotY>0.504504502</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -4000,19 +4027,24 @@
                                 <cell-size>30</cell-size>
                                 <cell-border>-1</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>60</max-speed>
+                                <max-speed>150</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>2000</deceleration>
-                                <rotate-speed>500</rotate-speed>
+                                <rotate-speed>135</rotate-speed>
                                 <rotate-object>No</rotate-object>
                                 <diagonals>Enabled</diagonals>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
-                                <range>170</range>
+                                <range>10000</range>
                                 <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -4027,7 +4059,7 @@
                         <width>56.958000183</width>
                         <height>63.998001099</height>
                         <depth>0</depth>
-                        <hotspotX>0.505617976</hotspotX>
+                        <hotspotX>0.494382024</hotspotX>
                         <hotspotY>0.504504502</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -4049,19 +4081,24 @@
                                 <cell-size>30</cell-size>
                                 <cell-border>-1</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>60</max-speed>
+                                <max-speed>150</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>2000</deceleration>
-                                <rotate-speed>500</rotate-speed>
+                                <rotate-speed>135</rotate-speed>
                                 <rotate-object>No</rotate-object>
                                 <diagonals>Enabled</diagonals>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
-                                <range>170</range>
+                                <range>10000</range>
                                 <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -4076,7 +4113,7 @@
                         <width>56.958000183</width>
                         <height>63.998001099</height>
                         <depth>0</depth>
-                        <hotspotX>0.505617976</hotspotX>
+                        <hotspotX>0.494382024</hotspotX>
                         <hotspotY>0.504504502</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -4098,19 +4135,24 @@
                                 <cell-size>30</cell-size>
                                 <cell-border>-1</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>60</max-speed>
+                                <max-speed>150</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>2000</deceleration>
-                                <rotate-speed>500</rotate-speed>
+                                <rotate-speed>135</rotate-speed>
                                 <rotate-object>No</rotate-object>
                                 <diagonals>Enabled</diagonals>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
-                                <range>170</range>
+                                <range>10000</range>
                                 <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -4125,7 +4167,7 @@
                         <width>56.958000183</width>
                         <height>63.998001099</height>
                         <depth>0</depth>
-                        <hotspotX>0.505617976</hotspotX>
+                        <hotspotX>0.494382024</hotspotX>
                         <hotspotY>0.504504502</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -4147,19 +4189,24 @@
                                 <cell-size>30</cell-size>
                                 <cell-border>-1</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>60</max-speed>
+                                <max-speed>150</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>2000</deceleration>
-                                <rotate-speed>500</rotate-speed>
+                                <rotate-speed>135</rotate-speed>
                                 <rotate-object>No</rotate-object>
                                 <diagonals>Enabled</diagonals>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
-                                <range>170</range>
+                                <range>10000</range>
                                 <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -4168,13 +4215,13 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2226</x>
-                        <y>948</y>
+                        <x>2176</x>
+                        <y>896</y>
                         <z>0</z>
                         <width>56.958000183</width>
                         <height>63.998001099</height>
                         <depth>0</depth>
-                        <hotspotX>0.505617976</hotspotX>
+                        <hotspotX>0.494382024</hotspotX>
                         <hotspotY>0.504504502</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -4196,19 +4243,24 @@
                                 <cell-size>30</cell-size>
                                 <cell-border>-1</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>60</max-speed>
+                                <max-speed>150</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>2000</deceleration>
-                                <rotate-speed>500</rotate-speed>
+                                <rotate-speed>135</rotate-speed>
                                 <rotate-object>No</rotate-object>
                                 <diagonals>Enabled</diagonals>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
-                                <range>170</range>
+                                <range>10000</range>
                                 <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -4217,13 +4269,13 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>529</x>
-                        <y>622</y>
+                        <x>544</x>
+                        <y>672</y>
                         <z>0</z>
                         <width>56.958000183</width>
                         <height>63.998001099</height>
                         <depth>0</depth>
-                        <hotspotX>0.505617976</hotspotX>
+                        <hotspotX>0.494382024</hotspotX>
                         <hotspotY>0.504504502</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -4245,19 +4297,24 @@
                                 <cell-size>30</cell-size>
                                 <cell-border>-1</cell-border>
                                 <obstacles>Solids</obstacles>
-                                <max-speed>60</max-speed>
+                                <max-speed>150</max-speed>
                                 <acceleration>1000</acceleration>
                                 <deceleration>2000</deceleration>
-                                <rotate-speed>500</rotate-speed>
+                                <rotate-speed>135</rotate-speed>
                                 <rotate-object>No</rotate-object>
                                 <diagonals>Enabled</diagonals>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Solid">
+                            <properties>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
                             <properties>
                                 <obstacles>Solids</obstacles>
-                                <range>170</range>
+                                <range>10000</range>
                                 <cone-of-view>360</cone-of-view>
                                 <use-collision-cells>Yes</use-collision-cells>
                             </properties>
@@ -4272,8 +4329,180 @@
                         <width>56.958000183</width>
                         <height>63.998001099</height>
                         <depth>0</depth>
-                        <hotspotX>0.505617976</hotspotX>
+                        <hotspotX>0.494382024</hotspotX>
                         <hotspotY>0.504504502</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CoinStar" uid="121">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>8</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Rotate">
+                            <properties>
+                                <speed>100</speed>
+                                <acceleration>0</acceleration>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1696</x>
+                        <y>864</y>
+                        <z>0</z>
+                        <width>25</width>
+                        <height>25</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.53125</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CoinStar" uid="169">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>8</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Rotate">
+                            <properties>
+                                <speed>100</speed>
+                                <acceleration>0</acceleration>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2208</x>
+                        <y>960</y>
+                        <z>0</z>
+                        <width>25</width>
+                        <height>25</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.53125</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CoinStar" uid="170">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>8</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Rotate">
+                            <properties>
+                                <speed>100</speed>
+                                <acceleration>0</acceleration>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1664</x>
+                        <y>640</y>
+                        <z>0</z>
+                        <width>25</width>
+                        <height>25</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.53125</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CoinStar" uid="171">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Vertical</movement>
+                                <wave>Sine</wave>
+                                <period>4</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>8</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Rotate">
+                            <properties>
+                                <speed>100</speed>
+                                <acceleration>0</acceleration>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2176</x>
+                        <y>704</y>
+                        <z>0</z>
+                        <width>25</width>
+                        <height>25</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.53125</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

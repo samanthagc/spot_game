@@ -16,7 +16,6 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -143,11 +142,6 @@
         <object-type name="Rooms" sid="846902136950355">
             <plugin id="TiledBg" />
             <texture />
-        </object-type>
-        <object-type name="parede" sid="203269700460802">
-            <plugin id="Tilemap" />
-            <texture original-source="C:\Users\user\Desktop\clone\parede.png" />
-            <tiles />
         </object-type>
         <object-type name="Player" sid="946074057166410">
             <plugin id="Sprite" />
@@ -617,25 +611,6 @@
                             <point x="0.5" y="0.935146" />
                             <point x="0.116715" y="0.830544" />
                             <point x="0.0619597" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite3" sid="994572130195411">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="696569559589999" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\LAVANDERIA\telaCavalete.png">
-                        <collision-poly>
-                            <point x="0.0588235" y="0.157407" />
-                            <point x="0.5" y="0" />
-                            <point x="0.941177" y="0.175926" />
-                            <point x="0.955882" y="0.5" />
-                            <point x="1" y="1" />
-                            <point x="0.5" y="0.777778" />
-                            <point x="0" y="1" />
-                            <point x="0.0735294" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -1628,10 +1603,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Pool_" sid="830083401373075">
-            <plugin id="TiledBg" />
-            <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\piscina.png" />
-        </object-type>
         <object-type name="GardenObj001" sid="499785660355496">
             <plugin id="Sprite" />
             <animation-folder>
@@ -1677,28 +1648,6 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua14.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua15.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua16.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="agua" sid="422972093619618">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="15" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="513868438287558" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua1.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua10.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua11.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua12.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua13.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua14.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua15.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua16.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua2.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua3.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua4.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua5.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua6.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua8.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\aguaPiscina\agua9.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -1827,126 +1776,129 @@
                 <behavior-type name="Pathfinding" sid="325649584667000">
                     <behavior id="Pathfinding" />
                 </behavior-type>
-                <behavior-type name="LineOfSight" sid="284374100464529">
+                <behavior-type name="Solid" sid="795878131066465">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="LineOfSight" sid="879883620817158">
                     <behavior id="LOS" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="14" loop="1" name="Side_evil_rabbit" pingpong="0" repeatcount="1" repeatto="0" sid="312636184644358" speed="10">
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0002.png">
+                <animation framecount="14" loop="1" name="Side" pingpong="0" repeatcount="1" repeatto="0" sid="312636184644358" speed="10">
+                    <frame duration="1" hotspotX="0.494382" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0002.png">
                         <collision-poly>
-                            <point x="0.269663" y="0.18018" />
-                            <point x="0.719101" y="0.18018" />
-                            <point x="0.719101" y="0.900901" />
-                            <point x="0.269663" y="0.900901" />
+                            <point x="0.730337" y="0.900901" />
+                            <point x="0.280899" y="0.900901" />
+                            <point x="0.280899" y="0.18018" />
+                            <point x="0.730337" y="0.18018" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0003.png">
+                    <frame duration="1" hotspotX="0.494382" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0003.png">
                         <collision-poly>
-                            <point x="0.269663" y="0.18018" />
-                            <point x="0.719101" y="0.18018" />
-                            <point x="0.719101" y="0.900901" />
-                            <point x="0.269663" y="0.900901" />
+                            <point x="0.730337" y="0.900901" />
+                            <point x="0.280899" y="0.900901" />
+                            <point x="0.280899" y="0.18018" />
+                            <point x="0.730337" y="0.18018" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0004.png">
+                    <frame duration="1" hotspotX="0.494382" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0004.png">
                         <collision-poly>
-                            <point x="0.269663" y="0.18018" />
-                            <point x="0.719101" y="0.18018" />
-                            <point x="0.719101" y="0.900901" />
-                            <point x="0.269663" y="0.900901" />
+                            <point x="0.730337" y="0.900901" />
+                            <point x="0.280899" y="0.900901" />
+                            <point x="0.280899" y="0.18018" />
+                            <point x="0.730337" y="0.18018" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0005.png">
+                    <frame duration="1" hotspotX="0.494382" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0005.png">
                         <collision-poly>
-                            <point x="0.269663" y="0.18018" />
-                            <point x="0.719101" y="0.18018" />
-                            <point x="0.719101" y="0.900901" />
-                            <point x="0.269663" y="0.900901" />
+                            <point x="0.730337" y="0.900901" />
+                            <point x="0.280899" y="0.900901" />
+                            <point x="0.280899" y="0.18018" />
+                            <point x="0.730337" y="0.18018" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0006.png">
+                    <frame duration="1" hotspotX="0.494382" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0006.png">
                         <collision-poly>
-                            <point x="0.269663" y="0.18018" />
-                            <point x="0.719101" y="0.18018" />
-                            <point x="0.719101" y="0.900901" />
-                            <point x="0.269663" y="0.900901" />
+                            <point x="0.730337" y="0.900901" />
+                            <point x="0.280899" y="0.900901" />
+                            <point x="0.280899" y="0.18018" />
+                            <point x="0.730337" y="0.18018" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0007.png">
+                    <frame duration="1" hotspotX="0.494382" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0007.png">
                         <collision-poly>
-                            <point x="0.269663" y="0.18018" />
-                            <point x="0.719101" y="0.18018" />
-                            <point x="0.719101" y="0.900901" />
-                            <point x="0.269663" y="0.900901" />
+                            <point x="0.730337" y="0.900901" />
+                            <point x="0.280899" y="0.900901" />
+                            <point x="0.280899" y="0.18018" />
+                            <point x="0.730337" y="0.18018" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0008.png">
+                    <frame duration="1" hotspotX="0.494382" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0008.png">
                         <collision-poly>
-                            <point x="0.269663" y="0.18018" />
-                            <point x="0.719101" y="0.18018" />
-                            <point x="0.719101" y="0.900901" />
-                            <point x="0.269663" y="0.900901" />
+                            <point x="0.730337" y="0.900901" />
+                            <point x="0.280899" y="0.900901" />
+                            <point x="0.280899" y="0.18018" />
+                            <point x="0.730337" y="0.18018" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0009.png">
+                    <frame duration="1" hotspotX="0.494382" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0009.png">
                         <collision-poly>
-                            <point x="0.269663" y="0.18018" />
-                            <point x="0.719101" y="0.18018" />
-                            <point x="0.719101" y="0.900901" />
-                            <point x="0.269663" y="0.900901" />
+                            <point x="0.730337" y="0.900901" />
+                            <point x="0.280899" y="0.900901" />
+                            <point x="0.280899" y="0.18018" />
+                            <point x="0.730337" y="0.18018" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0010.png">
+                    <frame duration="1" hotspotX="0.494382" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0010.png">
                         <collision-poly>
-                            <point x="0.269663" y="0.18018" />
-                            <point x="0.719101" y="0.18018" />
-                            <point x="0.719101" y="0.900901" />
-                            <point x="0.269663" y="0.900901" />
+                            <point x="0.730337" y="0.900901" />
+                            <point x="0.280899" y="0.900901" />
+                            <point x="0.280899" y="0.18018" />
+                            <point x="0.730337" y="0.18018" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0011.png">
+                    <frame duration="1" hotspotX="0.494382" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0011.png">
                         <collision-poly>
-                            <point x="0.269663" y="0.18018" />
-                            <point x="0.719101" y="0.18018" />
-                            <point x="0.719101" y="0.900901" />
-                            <point x="0.269663" y="0.900901" />
+                            <point x="0.730337" y="0.900901" />
+                            <point x="0.280899" y="0.900901" />
+                            <point x="0.280899" y="0.18018" />
+                            <point x="0.730337" y="0.18018" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0012.png">
+                    <frame duration="1" hotspotX="0.494382" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0012.png">
                         <collision-poly>
-                            <point x="0.269663" y="0.18018" />
-                            <point x="0.719101" y="0.18018" />
-                            <point x="0.719101" y="0.900901" />
-                            <point x="0.269663" y="0.900901" />
+                            <point x="0.730337" y="0.900901" />
+                            <point x="0.280899" y="0.900901" />
+                            <point x="0.280899" y="0.18018" />
+                            <point x="0.730337" y="0.18018" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0013.png">
+                    <frame duration="1" hotspotX="0.494382" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0013.png">
                         <collision-poly>
-                            <point x="0.269663" y="0.18018" />
-                            <point x="0.719101" y="0.18018" />
-                            <point x="0.719101" y="0.900901" />
-                            <point x="0.269663" y="0.900901" />
+                            <point x="0.730337" y="0.900901" />
+                            <point x="0.280899" y="0.900901" />
+                            <point x="0.280899" y="0.18018" />
+                            <point x="0.730337" y="0.18018" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0014.png">
+                    <frame duration="1" hotspotX="0.494382" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0014.png">
                         <collision-poly>
-                            <point x="0.269663" y="0.18018" />
-                            <point x="0.719101" y="0.18018" />
-                            <point x="0.719101" y="0.900901" />
-                            <point x="0.269663" y="0.900901" />
+                            <point x="0.730337" y="0.900901" />
+                            <point x="0.280899" y="0.900901" />
+                            <point x="0.280899" y="0.18018" />
+                            <point x="0.730337" y="0.18018" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0015.png">
+                    <frame duration="1" hotspotX="0.494382" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoLado\coelhoInimigoLado0015.png">
                         <collision-poly>
-                            <point x="0.269663" y="0.18018" />
-                            <point x="0.719101" y="0.18018" />
-                            <point x="0.719101" y="0.900901" />
-                            <point x="0.269663" y="0.900901" />
+                            <point x="0.730337" y="0.900901" />
+                            <point x="0.280899" y="0.900901" />
+                            <point x="0.280899" y="0.18018" />
+                            <point x="0.730337" y="0.18018" />
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="15" loop="1" name="Front_evil_rabbit" pingpong="0" repeatcount="1" repeatto="0" sid="382494126921419" speed="10">
+                <animation framecount="15" loop="1" name="Front" pingpong="0" repeatcount="1" repeatto="0" sid="382494126921419" speed="10">
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoFrente\coelhoInimigoFrente0001.png">
                         <collision-poly>
                             <point x="0.269663" y="0.18018" />
@@ -2068,7 +2020,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="15" loop="1" name="Back_evil_rabbit" pingpong="0" repeatcount="1" repeatto="0" sid="363528397272207" speed="10">
+                <animation framecount="15" loop="1" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="363528397272207" speed="10">
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\PERSONAGENS\coelhoInimigo\coelhoInimigoCostas\coelhoInimigoCostas0001.png">
                         <collision-poly>
                             <point x="0.269663" y="0.18018" />
@@ -2194,6 +2146,25 @@
         </object-type>
         <object-type name="Audio" sid="665976981558606">
             <plugin id="Audio" />
+        </object-type>
+        <object-type name="LivingObj013" sid="179706003997362">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="365677090491322" speed="5">
+                    <frame duration="1" hotspotX="0.507246" hotspotY="0.507246" original-source="C:\Users\AleCosta\Desktop\spot\assets\SALA\portaAberta.png">
+                        <collision-poly>
+                            <point x="0.0144928" y="0.0144928" />
+                            <point x="0.492754" y="0" />
+                            <point x="0.985507" y="0.0144928" />
+                            <point x="1" y="0.492754" />
+                            <point x="0.985507" y="0.985507" />
+                            <point x="0.492754" y="1" />
+                            <point x="0.0144928" y="0.985507" />
+                            <point x="0" y="0.492754" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

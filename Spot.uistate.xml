@@ -10,8 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Layout 1</layout>
-        <event-sheet active="1" order="1">Event sheet 1</event-sheet>
+        <layout active="1" order="0">Layout 1</layout>
+        <event-sheet order="1">Event sheet 1</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -38,7 +38,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/LaundryObj005/" />
         <folder expanded="1" path="animation-folder/LaundryObj003/" />
         <folder expanded="1" path="animation-folder/LaundryObj004/" />
-        <folder expanded="1" path="animation-folder/Sprite3/" />
         <folder expanded="1" path="animation-folder/LivingRoom/" />
         <folder expanded="1" path="animation-folder/LivingObj001/" />
         <folder expanded="1" path="animation-folder/LivingObj002/" />
@@ -89,7 +88,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/GardenObj001/" />
         <folder expanded="1" path="animation-folder/StairGoesUp/" />
         <folder expanded="1" path="animation-folder/GardenObj002/" />
-        <folder expanded="1" path="animation-folder/agua/" />
         <folder expanded="1" path="animation-folder/KitchenObj003/" />
         <folder expanded="1" path="animation-folder/KitchenObj005/" />
         <folder expanded="1" path="animation-folder/KitchenObj006/" />
@@ -98,5 +96,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/KitchenObj007/" />
         <folder expanded="1" path="animation-folder/KitchenObj004/" />
         <folder expanded="1" path="animation-folder/Enemy001/" />
+        <folder expanded="1" path="animation-folder/LivingObj013/" />
     </folders-expanded>
 </c2uistate>
