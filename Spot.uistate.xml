@@ -68,7 +68,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/RecoveryBarAnvil/" />
         <folder expanded="1" path="animation-folder/RecoveryBarGlove/" />
         <folder expanded="1" path="animation-folder/ShotImpact/" />
-        <folder expanded="1" path="animation-folder/Enemy002/" />
+        <folder expanded="1" path="animation-folder/Enemy001/" />
         <folder expanded="1" path="animation-folder/TNTImpact/" />
         <folder expanded="1" path="animation-folder/AnvilImpact/" />
         <folder expanded="1" path="animation-folder/LivingObj009/" />
@@ -95,7 +95,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/KitchenObj001/" />
         <folder expanded="1" path="animation-folder/KitchenObj007/" />
         <folder expanded="1" path="animation-folder/KitchenObj004/" />
-        <folder expanded="1" path="animation-folder/Enemy001/" />
+        <folder expanded="1" path="animation-folder/Enemy002/" />
         <folder expanded="1" path="animation-folder/LivingObj013/" />
+        <folder expanded="1" path="animation-folder/PauseMenu/" />
+        <folder expanded="1" path="animation-folder/HamburgerMenu/" />
+        <folder expanded="1" path="animation-folder/Enemy003/" />
     </folders-expanded>
 </c2uistate>

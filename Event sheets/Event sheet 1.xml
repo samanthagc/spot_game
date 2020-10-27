@@ -32,7 +32,7 @@
                 <action id="-15" name="Set visible" sid="947516490739091" type="RecoveryBarGlove">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="690675872260359" type="Enemy001">
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="690675872260359" type="Enemy002">
                     <param id="0" name="Obstacle">Solids</param>
                 </action>
             </actions>
@@ -116,45 +116,48 @@
                 <action id="0" name="Set text" sid="867007194802610" type="LevelWeapon">
                     <param id="0" name="Text">&quot;Lv: &quot; &amp; WeaponCurrentLvl</param>
                 </action>
-                <action id="4" name="Set animation" sid="454446944717735" type="Enemy002">
+                <action id="4" name="Set animation" sid="454446944717735" type="Enemy001">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
-                <action id="6" name="Set speed" sid="477907231852247" type="Enemy002">
+                <action id="6" name="Set speed" sid="477907231852247" type="Enemy001">
                     <param id="0" name="Speed">13</param>
+                </action>
+                <action id="6" name="Set speed" sid="238399606237112" type="Enemy003">
+                    <param id="0" name="Speed">10</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="814771839470744">
             <conditions>
                 <condition id="-11" name="For Each" sid="434260868821399" type="System">
-                    <param id="0" name="Object">Enemy001</param>
+                    <param id="0" name="Object">Enemy002</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
                 <event-block sid="302925568397303">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="784245246408701" type="Enemy001">
+                        <condition id="-1" name="Compare X" sid="784245246408701" type="Enemy002">
                             <param id="0" name="Comparison">2</param>
                             <param id="1" name="X co-ordinate">Player.X</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="7" name="Set mirrored" sid="407322280467876" type="Enemy001">
+                        <action id="7" name="Set mirrored" sid="407322280467876" type="Enemy002">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="285868813584314">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="147880274692750" type="Enemy001">
+                        <condition id="-1" name="Compare X" sid="147880274692750" type="Enemy002">
                             <param id="0" name="Comparison">4</param>
                             <param id="1" name="X co-ordinate">Player.X</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="7" name="Set mirrored" sid="325267940812257" type="Enemy001">
+                        <action id="7" name="Set mirrored" sid="325267940812257" type="Enemy002">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
@@ -163,7 +166,7 @@
         </event-block>
         <event-block sid="512042499535635">
             <conditions>
-                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="639205861549757" type="Enemy001">
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="639205861549757" type="Enemy002">
                     <param id="0" name="Object">Player</param>
                 </condition>
                 <condition id="-6" name="Every X seconds" sid="240691651835099" type="System">
@@ -171,14 +174,14 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Pathfinding" id="0" name="Find path" sid="673764925104961" type="Enemy001">
+                <action behavior="Pathfinding" id="0" name="Find path" sid="673764925104961" type="Enemy002">
                     <param id="0" name="X">Player.X</param>
                     <param id="1" name="Y">Player.Y</param>
                 </action>
-                <action behavior="Pathfinding" id="14" name="Set speed" sid="703962810063129" type="Enemy001">
+                <action behavior="Pathfinding" id="14" name="Set speed" sid="703962810063129" type="Enemy002">
                     <param id="0" name="Speed">150</param>
                 </action>
-                <action behavior="Pathfinding" id="1" name="Move along path" sid="558378506796864" type="Enemy001" />
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="558378506796864" type="Enemy002" />
             </actions>
         </event-block>
         <event-block sid="502110209101733">
@@ -558,7 +561,7 @@
             </conditions>
             <actions>
                 <action id="4" name="Set animation" sid="557824354891761" type="FireGun">
-                    <param id="0" name="Animation">&quot;Fire_gun&quot;</param>
+                    <param id="0" name="Animation">&quot;FireGun&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-9" name="Set value" sid="229802146156844" type="System">
@@ -586,7 +589,7 @@
         <event-block sid="309708043491914">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="896087868375770" type="Shot">
-                    <param id="0" name="Object">Enemy002</param>
+                    <param id="0" name="Object">Enemy001</param>
                 </condition>
             </conditions>
             <actions>
@@ -596,24 +599,24 @@
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
-                <action id="-9" name="Destroy" sid="349447058340363" type="Enemy002" />
+                <action id="-9" name="Destroy" sid="349447058340363" type="Enemy001" />
             </actions>
         </event-block>
         <event-block sid="461444475832882">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="892485365908433" type="Glove">
-                    <param id="0" name="Object">Enemy002</param>
+                    <param id="0" name="Object">Enemy001</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="204790164282347" type="Glove" />
-                <action id="-9" name="Destroy" sid="263137618265878" type="Enemy002" />
+                <action id="-9" name="Destroy" sid="263137618265878" type="Enemy001" />
             </actions>
         </event-block>
         <event-block sid="441892539350464">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="301057489116238" type="TNT">
-                    <param id="0" name="Object">Enemy002</param>
+                    <param id="0" name="Object">Enemy001</param>
                 </condition>
             </conditions>
             <actions>
@@ -623,17 +626,17 @@
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
-                <action id="-9" name="Destroy" sid="377113627084311" type="Enemy002" />
+                <action id="-9" name="Destroy" sid="377113627084311" type="Enemy001" />
             </actions>
         </event-block>
         <event-block sid="130904670317128">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="929838812717119" type="Anvil">
-                    <param id="0" name="Object">Enemy002</param>
+                    <param id="0" name="Object">Enemy001</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="743205844784331" type="Enemy002" />
+                <action id="-9" name="Destroy" sid="743205844784331" type="Enemy001" />
                 <action id="0" name="Spawn another object" sid="262601311885853" type="Anvil">
                     <param id="0" name="Object">AnvilImpact</param>
                     <param id="1" name="Layer">1</param>
@@ -651,9 +654,9 @@
         <event-block sid="295150424214366">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="993011205618389" type="Shot">
-                    <param id="0" name="Object">Enemy001</param>
+                    <param id="0" name="Object">Enemy002</param>
                 </condition>
-                <condition id="-7" name="Compare instance variable" sid="968149321409488" type="Enemy001">
+                <condition id="-7" name="Compare instance variable" sid="968149321409488" type="Enemy002">
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Comparison">5</param>
                     <param id="2" name="Value">1</param>
@@ -666,8 +669,8 @@
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
-                <action id="-9" name="Destroy" sid="261371405380950" type="Enemy001" />
-                <action id="-12" name="Subtract from" sid="254233000209853" type="Enemy001">
+                <action id="-9" name="Destroy" sid="261371405380950" type="Enemy002" />
+                <action id="-12" name="Subtract from" sid="254233000209853" type="Enemy002">
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Value">1</param>
                 </action>
@@ -676,13 +679,13 @@
         <event-block sid="164570117681396">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="732256098685080" type="Glove">
-                    <param id="0" name="Object">Enemy001</param>
+                    <param id="0" name="Object">Enemy002</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="886497579571218" type="Glove" />
-                <action id="-9" name="Destroy" sid="537837810304192" type="Enemy001" />
-                <action id="-12" name="Subtract from" sid="897240446132772" type="Enemy001">
+                <action id="-9" name="Destroy" sid="537837810304192" type="Enemy002" />
+                <action id="-12" name="Subtract from" sid="897240446132772" type="Enemy002">
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Value">2</param>
                 </action>
@@ -691,7 +694,7 @@
         <event-block sid="959444359119944">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="327835181579405" type="TNT">
-                    <param id="0" name="Object">Enemy001</param>
+                    <param id="0" name="Object">Enemy002</param>
                 </condition>
             </conditions>
             <actions>
@@ -707,8 +710,8 @@
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
-                <action id="-9" name="Destroy" sid="157151381035101" type="Enemy001" />
-                <action id="-12" name="Subtract from" sid="449653017013786" type="Enemy001">
+                <action id="-9" name="Destroy" sid="157151381035101" type="Enemy002" />
+                <action id="-12" name="Subtract from" sid="449653017013786" type="Enemy002">
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Value">8</param>
                 </action>
@@ -717,7 +720,7 @@
         <event-block sid="103000024850713">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="631130241649607" type="Anvil">
-                    <param id="0" name="Object">Enemy001</param>
+                    <param id="0" name="Object">Enemy002</param>
                 </condition>
             </conditions>
             <actions>
@@ -733,8 +736,8 @@
                     <param id="2" name="Image point">0</param>
                 </action>
                 <action id="-9" name="Destroy" sid="261125221693559" type="Anvil" />
-                <action id="-9" name="Destroy" sid="663270067680624" type="Enemy001" />
-                <action id="-12" name="Subtract from" sid="583736092017242" type="Enemy001">
+                <action id="-9" name="Destroy" sid="663270067680624" type="Enemy002" />
+                <action id="-12" name="Subtract from" sid="583736092017242" type="Enemy002">
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Value">4</param>
                 </action>
@@ -743,7 +746,7 @@
         <event-block sid="326695838733725">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="522292114631185" type="Player">
-                    <param id="0" name="Object">Enemy002</param>
+                    <param id="0" name="Object">Enemy001</param>
                 </condition>
             </conditions>
             <actions>
@@ -755,7 +758,7 @@
         <event-block sid="692971817241061">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="268021549660936" type="Player">
-                    <param id="0" name="Object">Enemy001</param>
+                    <param id="0" name="Object">Enemy002</param>
                 </condition>
             </conditions>
             <actions>
@@ -767,22 +770,22 @@
         <event-block sid="956404661369901">
             <conditions>
                 <condition id="-11" name="For Each" sid="809761330369455" type="System">
-                    <param id="0" name="Object">Enemy002</param>
+                    <param id="0" name="Object">Enemy001</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
                 <event-block sid="123912254284504">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="918403199864511" type="Enemy002">
+                        <condition id="-8" name="Is boolean instance variable set" sid="918403199864511" type="Enemy001">
                             <param id="0" name="Instance variable">IsLeft</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="780180174967170" type="Enemy002">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="780180174967170" type="Enemy001">
                             <param id="0" name="Control">0</param>
                         </action>
-                        <action id="7" name="Set mirrored" sid="645005582326051" type="Enemy002">
+                        <action id="7" name="Set mirrored" sid="645005582326051" type="Enemy001">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
@@ -792,23 +795,79 @@
                         <condition id="-22" name="Else" sid="105829198049877" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="667960248716744" type="Enemy002">
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="667960248716744" type="Enemy001">
                             <param id="0" name="Control">1</param>
                         </action>
-                        <action id="7" name="Set mirrored" sid="950167264726958" type="Enemy002">
+                        <action id="7" name="Set mirrored" sid="950167264726958" type="Enemy001">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="352202849542664">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="454329692943018" type="Enemy002">
+                        <condition id="0" name="On collision with another object" sid="454329692943018" type="Enemy001">
                             <param id="0" name="Object">Solids</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-14" name="Toggle boolean" sid="612619334142298" type="Enemy002">
+                        <action id="-14" name="Toggle boolean" sid="612619334142298" type="Enemy001">
                             <param id="0" name="Instance variable">IsLeft</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="773745039036012">
+            <conditions>
+                <condition id="-11" name="For Each" sid="539636832901251" type="System">
+                    <param id="0" name="Object">Enemy003</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="210727494125313">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="287714402432322" type="Enemy003">
+                            <param id="0" name="Instance variable">IsBack</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="428127649440459" type="Enemy003">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="842932693188105" type="Enemy003">
+                            <param id="0" name="Animation">&quot;Back&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="964436823046063" type="Player">
+                            <param id="0" name="Instance variable">AnglePlayer</param>
+                            <param id="1" name="Value">270</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="973036812167028">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="922387802477518" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="150574112455308" type="Enemy003">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="919828758880104" type="Enemy003">
+                            <param id="0" name="Animation">&quot;Front&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="105633122507075">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="517520863625978" type="Enemy003">
+                            <param id="0" name="Object">Solids</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Toggle boolean" sid="784819645097674" type="Enemy003">
+                            <param id="0" name="Instance variable">IsBack</param>
                         </action>
                     </actions>
                 </event-block>
