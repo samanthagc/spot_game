@@ -760,6 +760,136 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="407378700866946">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="425319578201790" type="Shot">
+                    <param id="0" name="Object">Enemy003</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="948397106123492" type="Shot" />
+                <action id="0" name="Spawn another object" sid="422383176284378" type="Shot">
+                    <param id="0" name="Object">ShotImpact</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="486751157968841" type="Enemy003" />
+            </actions>
+        </event-block>
+        <event-block sid="554286346662706">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="446636286193450" type="Glove">
+                    <param id="0" name="Object">Enemy003</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="713451339610005" type="Glove" />
+                <action id="-9" name="Destroy" sid="392514702059761" type="Enemy003" />
+            </actions>
+        </event-block>
+        <event-block sid="481501924231528">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="896575667335810" type="TNT">
+                    <param id="0" name="Object">Enemy003</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="244536804758296" type="TNT" />
+                <action id="0" name="Spawn another object" sid="226653522791503" type="TNT">
+                    <param id="0" name="Object">TNTImpact</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="233177995107164" type="Enemy002" />
+            </actions>
+        </event-block>
+        <event-block sid="104412907076582">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="826145818847351" type="Anvil">
+                    <param id="0" name="Object">Enemy003</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="138531893181130" type="Enemy003" />
+                <action id="0" name="Spawn another object" sid="133539039056902" type="Anvil">
+                    <param id="0" name="Object">AnvilImpact</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="868680173460938" type="Anvil" />
+                <action id="0" name="Play" sid="786708537909851" type="Audio">
+                    <param id="0" name="Audio file">Anvil_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="987978712558599">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="991748353127680" type="Shot">
+                    <param id="0" name="Object">Enemy004</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="927090092165939" type="Shot" />
+                <action id="0" name="Spawn another object" sid="766129060814975" type="Shot">
+                    <param id="0" name="Object">ShotImpact</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="907616978342339" type="Enemy004" />
+            </actions>
+        </event-block>
+        <event-block sid="301909651456981">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="512246764257997" type="Glove">
+                    <param id="0" name="Object">Enemy004</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="316105265223270" type="Glove" />
+                <action id="-9" name="Destroy" sid="551974707650225" type="Enemy004" />
+            </actions>
+        </event-block>
+        <event-block sid="346274214319110">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="621271256201893" type="TNT">
+                    <param id="0" name="Object">Enemy004</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="904633191994416" type="TNT" />
+                <action id="0" name="Spawn another object" sid="732019540850680" type="TNT">
+                    <param id="0" name="Object">TNTImpact</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="345714039526074" type="Enemy004" />
+            </actions>
+        </event-block>
+        <event-block sid="362308826840795">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="384053014564760" type="Anvil">
+                    <param id="0" name="Object">Enemy004</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="288776650515612" type="Enemy004" />
+                <action id="0" name="Spawn another object" sid="232356348937860" type="Anvil">
+                    <param id="0" name="Object">AnvilImpact</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="964005176035105" type="Anvil" />
+                <action id="0" name="Play" sid="271728483426977" type="Audio">
+                    <param id="0" name="Audio file">Anvil_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block any="1" sid="326695838733725">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="522292114631185" type="Player">
