@@ -126,6 +126,13 @@
                 <action id="6" name="Set speed" sid="238399606237112" type="Enemy003">
                     <param id="0" name="Speed">10</param>
                 </action>
+                <action id="4" name="Set animation" sid="143319036691059" type="Enemy004">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="6" name="Set speed" sid="996389746995062" type="Enemy004">
+                    <param id="0" name="Speed">7</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="814771839470744">
@@ -182,6 +189,16 @@
                     <param id="0" name="Speed">150</param>
                 </action>
                 <action behavior="Pathfinding" id="1" name="Move along path" sid="558378506796864" type="Enemy002" />
+            </actions>
+        </event-block>
+        <event-block sid="808592174696030">
+            <conditions>
+                <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="602494689462516" type="Enemy002" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="205468414362017" type="Enemy002">
+                    <param id="0" name="Frame number">13</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="502110209101733">
@@ -743,10 +760,13 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="326695838733725">
+        <event-block any="1" sid="326695838733725">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="522292114631185" type="Player">
                     <param id="0" name="Object">Enemy001</param>
+                </condition>
+                <condition id="0" name="On collision with another object" sid="509005344325968" type="Player">
+                    <param id="0" name="Object">Enemy004</param>
                 </condition>
             </conditions>
             <actions>
@@ -817,6 +837,56 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="638516022702356">
+            <conditions>
+                <condition id="-11" name="For Each" sid="727965786029209" type="System">
+                    <param id="0" name="Object">Enemy004</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="577852149482541">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="475211157731125" type="Enemy004">
+                            <param id="0" name="Instance variable">IsRight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="731132360267244" type="Enemy004">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="106869406161337" type="Enemy004">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="888564137990648">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="137482624494757" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="584996681530692" type="Enemy004">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="753019701173315" type="Enemy004">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="798880517867474">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="507486540620825" type="Enemy004">
+                            <param id="0" name="Object">Solids</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Toggle boolean" sid="470897535894857" type="Enemy004">
+                            <param id="0" name="Instance variable">IsRight</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="773745039036012">
             <conditions>
                 <condition id="-11" name="For Each" sid="539636832901251" type="System">
@@ -872,6 +942,20 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="407727614426632">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="646779284547054" type="System">
+                    <param id="0" name="Interval (seconds)">random(15,30)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="590232522464624" type="Enemy002">
+                    <param id="0" name="Object">Enemy004</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
