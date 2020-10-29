@@ -1039,10 +1039,6 @@
                             <param id="0" name="Animation">&quot;Back&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-10" name="Set value" sid="964436823046063" type="Player">
-                            <param id="0" name="Instance variable">AnglePlayer</param>
-                            <param id="1" name="Value">270</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="973036812167028">
