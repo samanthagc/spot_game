@@ -36,69 +36,8 @@
                     <param id="0" name="Obstacle">Solids</param>
                 </action>
                 <action id="-9" name="Destroy" sid="424054064604061" type="Anvil" />
-            </actions>
-        </event-block>
-        <event-block sid="564115076520390">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="846209143591906" type="System">
-                    <param id="0" name="Interval (seconds)">1.0</param>
-                </condition>
-                <condition id="-5" name="Compare width" sid="626150255186982" type="RecoveryBarFireGun">
-                    <param id="0" name="Comparison">3</param>
-                    <param id="1" name="Width">64</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-5" name="Set width" sid="576641060356325" type="RecoveryBarFireGun">
-                    <param id="0" name="Width">self.Width +1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="958924720625777">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="717251382379132" type="System">
-                    <param id="0" name="Interval (seconds)">1.0</param>
-                </condition>
-                <condition id="-5" name="Compare width" sid="328783835119787" type="RecoveryBarTNTt">
-                    <param id="0" name="Comparison">3</param>
-                    <param id="1" name="Width">64</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-5" name="Set width" sid="722803980341905" type="RecoveryBarTNTt">
-                    <param id="0" name="Width">self.Width +1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="593198571642373">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="173858332963438" type="System">
-                    <param id="0" name="Interval (seconds)">1.0</param>
-                </condition>
-                <condition id="-5" name="Compare width" sid="184450081748125" type="RecoveryBarAnvil">
-                    <param id="0" name="Comparison">3</param>
-                    <param id="1" name="Width">64</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-5" name="Set width" sid="553820090857613" type="RecoveryBarAnvil">
-                    <param id="0" name="Width">self.Width +1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="369397383580759">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="232688016674894" type="System">
-                    <param id="0" name="Interval (seconds)">1.0</param>
-                </condition>
-                <condition id="-5" name="Compare width" sid="576932718819616" type="RecoveryBarGlove">
-                    <param id="0" name="Comparison">3</param>
-                    <param id="1" name="Width">64</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-5" name="Set width" sid="756261571049190" type="RecoveryBarGlove">
-                    <param id="0" name="Width">self.Width +1</param>
+                <action behavior="Pathfinding" id="5" name="Add obstacle" sid="181574654084623" type="EnemyBoss">
+                    <param id="0" name="Obstacle">Solids</param>
                 </action>
             </actions>
         </event-block>
@@ -138,20 +77,10 @@
                     <param id="0" name="Object">Enemy003</param>
                     <param id="1" name="Image point (optional)">0</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="502110209101733">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="936684114357725" type="Player">
-                    <param id="0" name="Object">CoinStar</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Add to" sid="499698227862120" type="System">
-                    <param id="0" name="Variable">Stars</param>
-                    <param id="1" name="Value">1</param>
+                <action id="-4" name="Set position to another object" sid="910223829542240" type="EnemyBossSights">
+                    <param id="0" name="Object">EnemyBoss</param>
+                    <param id="1" name="Image point (optional)">0</param>
                 </action>
-                <action id="-9" name="Destroy" sid="384675432809947" type="CoinStar" />
             </actions>
         </event-block>
         <event-block sid="385743756072864">
@@ -167,6 +96,21 @@
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
+            </actions>
+        </event-block>
+        <comment>Rabbit 1</comment>
+        <event-block sid="502110209101733">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="936684114357725" type="Player">
+                    <param id="0" name="Object">CoinStar</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="499698227862120" type="System">
+                    <param id="0" name="Variable">Stars</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="384675432809947" type="CoinStar" />
             </actions>
         </event-block>
         <event-block sid="210489583386210">
@@ -447,6 +391,71 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Recoveries bar</comment>
+        <event-block sid="414373486814439">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="672838619627123" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-5" name="Compare width" sid="648186595876251" type="RecoveryBarFireGun">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Width">64</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="204649158660346" type="RecoveryBarFireGun">
+                    <param id="0" name="Width">Self.Width+1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="583125477501884">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="882975646325184" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-5" name="Compare width" sid="918888726950155" type="RecoveryBarTNTt">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Width">64</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="513742615190454" type="RecoveryBarTNTt">
+                    <param id="0" name="Width">Self.Width+1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="604951343904970">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="516318394300544" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-5" name="Compare width" sid="172233445385695" type="RecoveryBarAnvil">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Width">64</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="443862224871131" type="RecoveryBarAnvil">
+                    <param id="0" name="Width">Self.Width+1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="970447784019724">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="966437071542766" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-5" name="Compare width" sid="462145215031446" type="RecoveryBarGlove">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Width">64</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="803099138296625" type="RecoveryBarGlove">
+                    <param id="0" name="Width">Self.Width+1</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="993511692012094">
             <conditions>
                 <condition id="2" name="Key is down" sid="708134253936715" type="Keyboard">
@@ -583,6 +592,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Bouncing brush damage</comment>
         <event-block sid="309708043491914">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="896087868375770" type="Shot">
@@ -656,6 +666,7 @@
                 <action id="-9" name="Destroy" sid="743205844784331" type="Enemy001" />
             </actions>
         </event-block>
+        <comment>Rabbit 2 damage</comment>
         <event-block sid="295150424214366">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="993011205618389" type="Shot">
@@ -735,6 +746,7 @@
                 <action id="-9" name="Destroy" sid="663270067680624" type="Enemy002" />
             </actions>
         </event-block>
+        <comment>Painting damage</comment>
         <event-block sid="407378700866946">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="425319578201790" type="Shot">
@@ -808,6 +820,7 @@
                 <action id="-9" name="Destroy" sid="138531893181130" type="Enemy003" />
             </actions>
         </event-block>
+        <comment>Crawling brush damage</comment>
         <event-block sid="987978712558599">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="991748353127680" type="Shot">
@@ -881,6 +894,61 @@
                 <action id="-9" name="Destroy" sid="288776650515612" type="Enemy004" />
             </actions>
         </event-block>
+        <comment>Boss damage</comment>
+        <event-block sid="189616537830236">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="250813725029011" type="Shot">
+                    <param id="0" name="Object">EnemyBoss</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="294508069558747" type="Shot" />
+                <action id="0" name="Spawn another object" sid="871107432517603" type="Shot">
+                    <param id="0" name="Object">ShotImpact</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="855436293182545" type="EnemyBoss" />
+            </actions>
+        </event-block>
+        <event-block sid="908100551044881">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="268795624611347" type="Glove">
+                    <param id="0" name="Object">EnemyBoss</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="877517564636629" type="Glove" />
+                <action id="-9" name="Destroy" sid="920897353559464" type="EnemyBoss" />
+            </actions>
+        </event-block>
+        <event-block sid="595492479990776">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="753043082943277" type="TNT">
+                    <param id="0" name="Object">EnemyBoss</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="866378859809531" type="TNT" />
+                <action id="0" name="Spawn another object" sid="227877926721895" type="TNT">
+                    <param id="0" name="Object">TNTImpact</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="139971759124666" type="EnemyBoss" />
+            </actions>
+        </event-block>
+        <event-block sid="489720487452397">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="534776890972451" type="Anvil">
+                    <param id="0" name="Object">EnemyBoss</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="929051489549773" type="EnemyBoss" />
+            </actions>
+        </event-block>
+        <comment>Rabbit 1 damage</comment>
         <event-block any="1" sid="326695838733725">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="522292114631185" type="Player">
@@ -936,6 +1004,26 @@
                 <action id="-9" name="Destroy" sid="732507751906630" type="Enemy003SpawObj" />
             </actions>
         </event-block>
+        <event-block sid="274332784699848">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="874240191591687" type="Shot">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="449193119434119" type="Player">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
+                <action id="-5" name="Set width" sid="486871192137087" type="LiveBar">
+                    <param id="0" name="Width">self.Width -5</param>
+                </action>
+                <action id="-9" name="Destroy" sid="557158972250364" type="Shot" />
+            </actions>
+        </event-block>
+        <comment>ENEMIES</comment>
+        <comment>Bouncing brush</comment>
         <event-block sid="956404661369901">
             <conditions>
                 <condition id="-11" name="For Each" sid="809761330369455" type="System">
@@ -986,6 +1074,7 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>Rabbit 2</comment>
         <event-block sid="814771839470744">
             <conditions>
                 <condition id="-11" name="For Each" sid="434260868821399" type="System">
@@ -1066,6 +1155,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Painting</comment>
         <event-block sid="773745039036012">
             <conditions>
                 <condition id="-11" name="For Each" sid="539636832901251" type="System">
@@ -1146,6 +1236,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Crawling brush</comment>
         <event-block sid="638516022702356">
             <conditions>
                 <condition id="-11" name="For Each" sid="727965786029209" type="System">
@@ -1196,16 +1287,29 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <comment>BOSS</comment>
         <event-block sid="859755400110776">
             <conditions>
                 <condition id="-1" name="Compare X" sid="553756744623633" type="EnemyBoss">
                     <param id="0" name="Comparison">2</param>
                     <param id="1" name="X co-ordinate">Player.X</param>
                 </condition>
+                <condition id="-6" name="Every X seconds" sid="840342392573027" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="7" name="Set mirrored" sid="433196962785996" type="EnemyBoss">
                     <param id="0" name="State">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="679974560537924" type="EnemyBossSights">
+                    <param id="0" name="Object">Shot</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="962217191881234" type="Shot">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y</param>
                 </action>
             </actions>
         </event-block>
@@ -1215,10 +1319,22 @@
                     <param id="0" name="Comparison">4</param>
                     <param id="1" name="X co-ordinate">Player.X</param>
                 </condition>
+                <condition id="-6" name="Every X seconds" sid="824463747720233" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="7" name="Set mirrored" sid="655074866239675" type="EnemyBoss">
                     <param id="0" name="State">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="825199332760640" type="EnemyBossSights">
+                    <param id="0" name="Object">Shot</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-22" name="Set angle toward position" sid="151474284139781" type="Shot">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y</param>
                 </action>
             </actions>
         </event-block>
@@ -1228,7 +1344,7 @@
                     <param id="0" name="Object">Player</param>
                 </condition>
                 <condition id="-6" name="Every X seconds" sid="243924655604164" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
+                    <param id="0" name="Interval (seconds)">0.5</param>
                 </condition>
             </conditions>
             <actions>
