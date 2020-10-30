@@ -35,6 +35,7 @@
                 <action behavior="Pathfinding" id="5" name="Add obstacle" sid="690675872260359" type="Enemy002">
                     <param id="0" name="Obstacle">Solids</param>
                 </action>
+                <action id="-9" name="Destroy" sid="424054064604061" type="Anvil" />
             </actions>
         </event-block>
         <event-block sid="564115076520390">
@@ -133,71 +134,9 @@
                 <action id="6" name="Set speed" sid="996389746995062" type="Enemy004">
                     <param id="0" name="Speed">7</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="814771839470744">
-            <conditions>
-                <condition id="-11" name="For Each" sid="434260868821399" type="System">
-                    <param id="0" name="Object">Enemy002</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="302925568397303">
-                    <conditions>
-                        <condition id="-1" name="Compare X" sid="784245246408701" type="Enemy002">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="X co-ordinate">Player.X</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Set mirrored" sid="407322280467876" type="Enemy002">
-                            <param id="0" name="State">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="285868813584314">
-                    <conditions>
-                        <condition id="-1" name="Compare X" sid="147880274692750" type="Enemy002">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="X co-ordinate">Player.X</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Set mirrored" sid="325267940812257" type="Enemy002">
-                            <param id="0" name="State">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="512042499535635">
-            <conditions>
-                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="639205861549757" type="Enemy002">
-                    <param id="0" name="Object">Player</param>
-                </condition>
-                <condition id="-6" name="Every X seconds" sid="240691651835099" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Pathfinding" id="0" name="Find path" sid="673764925104961" type="Enemy002">
-                    <param id="0" name="X">Player.X</param>
-                    <param id="1" name="Y">Player.Y</param>
-                </action>
-                <action behavior="Pathfinding" id="14" name="Set speed" sid="703962810063129" type="Enemy002">
-                    <param id="0" name="Speed">150</param>
-                </action>
-                <action behavior="Pathfinding" id="1" name="Move along path" sid="558378506796864" type="Enemy002" />
-            </actions>
-        </event-block>
-        <event-block sid="808592174696030">
-            <conditions>
-                <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="602494689462516" type="Enemy002" />
-            </conditions>
-            <actions>
-                <action id="5" name="Set frame" sid="205468414362017" type="Enemy002">
-                    <param id="0" name="Frame number">13</param>
+                <action id="-4" name="Set position to another object" sid="678024101170213" type="Enemy003Sights">
+                    <param id="0" name="Object">Enemy003</param>
+                    <param id="1" name="Image point (optional)">0</param>
                 </action>
             </actions>
         </event-block>
@@ -393,14 +332,55 @@
             </conditions>
             <actions>
                 <action id="-3" name="Create object" sid="134609218242384" type="System">
-                    <param id="0" name="Object to create">Anvil</param>
+                    <param id="0" name="Object to create">AnvilTarget</param>
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="X">Mouse.X</param>
                     <param id="3" name="Y">Mouse.Y</param>
                 </action>
+                <action id="-3" name="Create object" sid="724317539614542" type="System">
+                    <param id="0" name="Object to create">AnvilSpaw</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">AnvilTarget.X</param>
+                    <param id="3" name="Y">AnvilTarget.Y-700</param>
+                </action>
                 <action id="-5" name="Set width" sid="366421923058665" type="RecoveryBarAnvil">
                     <param id="0" name="Width">self.Width -16</param>
                 </action>
+                <action id="0" name="Spawn another object" sid="350872843844333" type="AnvilSpaw">
+                    <param id="0" name="Object">Anvil</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Play" sid="376039678351216" type="Audio">
+                    <param id="0" name="Audio file">Anvil_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="845776835714851">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="620051387543882" type="Anvil">
+                    <param id="0" name="Object">AnvilTarget</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="426363424188555" type="Anvil">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="801286753883830" type="AnvilTarget">
+                    <param id="0" name="Object">AnvilImpact</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="758366491876797" type="AnvilTarget" />
+                <action id="-9" name="Destroy" sid="608063811280608" type="AnvilSpaw" />
+                <action id="-16" name="Wait" sid="815431421193750" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="901925228526603" type="Anvil" />
+                <action id="-9" name="Destroy" sid="741587328695128" type="AnvilImpact" />
             </actions>
         </event-block>
         <event-block sid="447555436487260">
@@ -616,6 +596,11 @@
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
+                <action behavior="Flash" id="0" name="Flash" sid="425288486539677" type="Enemy001">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
                 <action id="-9" name="Destroy" sid="349447058340363" type="Enemy001" />
             </actions>
         </event-block>
@@ -627,6 +612,11 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="204790164282347" type="Glove" />
+                <action behavior="Flash" id="0" name="Flash" sid="500777233796684" type="Enemy001">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
                 <action id="-9" name="Destroy" sid="263137618265878" type="Enemy001" />
             </actions>
         </event-block>
@@ -643,6 +633,11 @@
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
+                <action behavior="Flash" id="0" name="Flash" sid="300128275480658" type="Enemy001">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
                 <action id="-9" name="Destroy" sid="377113627084311" type="Enemy001" />
             </actions>
         </event-block>
@@ -653,30 +648,18 @@
                 </condition>
             </conditions>
             <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="103011403959954" type="Enemy001">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
                 <action id="-9" name="Destroy" sid="743205844784331" type="Enemy001" />
-                <action id="0" name="Spawn another object" sid="262601311885853" type="Anvil">
-                    <param id="0" name="Object">AnvilImpact</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="379911827908045" type="Anvil" />
-                <action id="0" name="Play" sid="436998623985492" type="Audio">
-                    <param id="0" name="Audio file">Anvil_snd</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="295150424214366">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="993011205618389" type="Shot">
                     <param id="0" name="Object">Enemy002</param>
-                </condition>
-                <condition id="-7" name="Compare instance variable" sid="968149321409488" type="Enemy002">
-                    <param id="0" name="Instance variable">Health</param>
-                    <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Value">1</param>
                 </condition>
             </conditions>
             <actions>
@@ -686,11 +669,12 @@
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
-                <action id="-9" name="Destroy" sid="261371405380950" type="Enemy002" />
-                <action id="-12" name="Subtract from" sid="254233000209853" type="Enemy002">
-                    <param id="0" name="Instance variable">Health</param>
-                    <param id="1" name="Value">1</param>
+                <action behavior="Flash" id="0" name="Flash" sid="784550493596567" type="Enemy002">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
                 </action>
+                <action id="-9" name="Destroy" sid="261371405380950" type="Enemy002" />
             </actions>
         </event-block>
         <event-block sid="164570117681396">
@@ -701,11 +685,12 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="886497579571218" type="Glove" />
-                <action id="-9" name="Destroy" sid="537837810304192" type="Enemy002" />
-                <action id="-12" name="Subtract from" sid="897240446132772" type="Enemy002">
-                    <param id="0" name="Instance variable">Health</param>
-                    <param id="1" name="Value">2</param>
+                <action behavior="Flash" id="0" name="Flash" sid="198522583939347" type="Enemy002">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
                 </action>
+                <action id="-9" name="Destroy" sid="537837810304192" type="Enemy002" />
             </actions>
         </event-block>
         <event-block sid="959444359119944">
@@ -727,11 +712,12 @@
                     <param id="3" name="Volume">0</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
-                <action id="-9" name="Destroy" sid="157151381035101" type="Enemy002" />
-                <action id="-12" name="Subtract from" sid="449653017013786" type="Enemy002">
-                    <param id="0" name="Instance variable">Health</param>
-                    <param id="1" name="Value">8</param>
+                <action behavior="Flash" id="0" name="Flash" sid="721480196022473" type="Enemy002">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
                 </action>
+                <action id="-9" name="Destroy" sid="157151381035101" type="Enemy002" />
             </actions>
         </event-block>
         <event-block sid="103000024850713">
@@ -741,23 +727,12 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Play" sid="376039678351216" type="Audio">
-                    <param id="0" name="Audio file">Anvil_snd</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                <action behavior="Flash" id="0" name="Flash" sid="198726063019672" type="Enemy002">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
                 </action>
-                <action id="0" name="Spawn another object" sid="630838710186289" type="Anvil">
-                    <param id="0" name="Object">AnvilImpact</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="261125221693559" type="Anvil" />
                 <action id="-9" name="Destroy" sid="663270067680624" type="Enemy002" />
-                <action id="-12" name="Subtract from" sid="583736092017242" type="Enemy002">
-                    <param id="0" name="Instance variable">Health</param>
-                    <param id="1" name="Value">4</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="407378700866946">
@@ -773,6 +748,11 @@
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
+                <action behavior="Flash" id="0" name="Flash" sid="724986711404292" type="Enemy003">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
                 <action id="-9" name="Destroy" sid="486751157968841" type="Enemy003" />
             </actions>
         </event-block>
@@ -784,6 +764,11 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="713451339610005" type="Glove" />
+                <action behavior="Flash" id="0" name="Flash" sid="629405453009275" type="Enemy003">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
                 <action id="-9" name="Destroy" sid="392514702059761" type="Enemy003" />
             </actions>
         </event-block>
@@ -800,6 +785,11 @@
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
+                <action behavior="Flash" id="0" name="Flash" sid="414505090083806" type="Enemy003">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
                 <action id="-9" name="Destroy" sid="233177995107164" type="Enemy002" />
             </actions>
         </event-block>
@@ -810,19 +800,12 @@
                 </condition>
             </conditions>
             <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="582538764961410" type="Enemy003">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
                 <action id="-9" name="Destroy" sid="138531893181130" type="Enemy003" />
-                <action id="0" name="Spawn another object" sid="133539039056902" type="Anvil">
-                    <param id="0" name="Object">AnvilImpact</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="868680173460938" type="Anvil" />
-                <action id="0" name="Play" sid="786708537909851" type="Audio">
-                    <param id="0" name="Audio file">Anvil_snd</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="987978712558599">
@@ -838,6 +821,11 @@
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
+                <action behavior="Flash" id="0" name="Flash" sid="102830724349443" type="Enemy004">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
                 <action id="-9" name="Destroy" sid="907616978342339" type="Enemy004" />
             </actions>
         </event-block>
@@ -849,6 +837,11 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="316105265223270" type="Glove" />
+                <action behavior="Flash" id="0" name="Flash" sid="329696053571868" type="Enemy004">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
                 <action id="-9" name="Destroy" sid="551974707650225" type="Enemy004" />
             </actions>
         </event-block>
@@ -865,6 +858,11 @@
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
+                <action behavior="Flash" id="0" name="Flash" sid="700370978560502" type="Enemy004">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
                 <action id="-9" name="Destroy" sid="345714039526074" type="Enemy004" />
             </actions>
         </event-block>
@@ -875,19 +873,12 @@
                 </condition>
             </conditions>
             <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="111417693596459" type="Enemy004">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
                 <action id="-9" name="Destroy" sid="288776650515612" type="Enemy004" />
-                <action id="0" name="Spawn another object" sid="232356348937860" type="Anvil">
-                    <param id="0" name="Object">AnvilImpact</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="964005176035105" type="Anvil" />
-                <action id="0" name="Play" sid="271728483426977" type="Audio">
-                    <param id="0" name="Audio file">Anvil_snd</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                </action>
             </actions>
         </event-block>
         <event-block any="1" sid="326695838733725">
@@ -900,8 +891,13 @@
                 </condition>
             </conditions>
             <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="708514848671530" type="Player">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
                 <action id="-5" name="Set width" sid="227612924822760" type="LiveBar">
-                    <param id="0" name="Width">self.Width -10</param>
+                    <param id="0" name="Width">self.Width -1</param>
                 </action>
             </actions>
         </event-block>
@@ -912,9 +908,32 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-5" name="Set width" sid="523464079044045" type="LiveBar">
-                    <param id="0" name="Width">self.Width -18</param>
+                <action behavior="Flash" id="0" name="Flash" sid="191421241403618" type="Player">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
                 </action>
+                <action id="-5" name="Set width" sid="523464079044045" type="LiveBar">
+                    <param id="0" name="Width">self.Width -2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="572300931445691">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="979662305642080" type="Enemy003SpawObj">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Flash" id="0" name="Flash" sid="945248259591998" type="Player">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">1.0</param>
+                </action>
+                <action id="-5" name="Set width" sid="509548403095891" type="LiveBar">
+                    <param id="0" name="Width">self.Width -3</param>
+                </action>
+                <action id="-9" name="Destroy" sid="732507751906630" type="Enemy003SpawObj" />
             </actions>
         </event-block>
         <event-block sid="956404661369901">
@@ -967,55 +986,85 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="638516022702356">
+        <event-block sid="814771839470744">
             <conditions>
-                <condition id="-11" name="For Each" sid="727965786029209" type="System">
-                    <param id="0" name="Object">Enemy004</param>
+                <condition id="-11" name="For Each" sid="434260868821399" type="System">
+                    <param id="0" name="Object">Enemy002</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="577852149482541">
+                <event-block sid="302925568397303">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="475211157731125" type="Enemy004">
-                            <param id="0" name="Instance variable">IsRight</param>
+                        <condition id="-1" name="Compare X" sid="784245246408701" type="Enemy002">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">Player.X</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="731132360267244" type="Enemy004">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                        <action id="7" name="Set mirrored" sid="106869406161337" type="Enemy004">
+                        <action id="7" name="Set mirrored" sid="407322280467876" type="Enemy002">
                             <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="888564137990648">
+                <event-block sid="285868813584314">
                     <conditions>
-                        <condition id="-22" name="Else" sid="137482624494757" type="System" />
+                        <condition id="-1" name="Compare X" sid="147880274692750" type="Enemy002">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">Player.X</param>
+                        </condition>
                     </conditions>
                     <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="584996681530692" type="Enemy004">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                        <action id="7" name="Set mirrored" sid="753019701173315" type="Enemy004">
+                        <action id="7" name="Set mirrored" sid="325267940812257" type="Enemy002">
                             <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="798880517867474">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="507486540620825" type="Enemy004">
-                            <param id="0" name="Object">Solids</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-14" name="Toggle boolean" sid="470897535894857" type="Enemy004">
-                            <param id="0" name="Instance variable">IsRight</param>
-                        </action>
-                    </actions>
-                </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="512042499535635">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="639205861549757" type="Enemy002">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="240691651835099" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="673764925104961" type="Enemy002">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y</param>
+                </action>
+                <action behavior="Pathfinding" id="14" name="Set speed" sid="703962810063129" type="Enemy002">
+                    <param id="0" name="Speed">150</param>
+                </action>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="558378506796864" type="Enemy002" />
+            </actions>
+        </event-block>
+        <event-block sid="808592174696030">
+            <conditions>
+                <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="602494689462516" type="Enemy002" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="205468414362017" type="Enemy002">
+                    <param id="0" name="Frame number">13</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="407727614426632">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="646779284547054" type="System">
+                    <param id="0" name="Interval (seconds)">random(45,70)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="590232522464624" type="Enemy002">
+                    <param id="0" name="Object">Enemy004</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="773745039036012">
             <conditions>
@@ -1069,60 +1118,6 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="163996773185810">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="579922521322647" type="System">
-                    <param id="0" name="Interval (seconds)">3</param>
-                </condition>
-                <condition id="-8" name="Is boolean instance variable set" sid="583046252341173" type="Enemy003">
-                    <param id="0" name="Instance variable">IsBack</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Bullet" id="3" name="Set angle of motion" sid="606751197640071" type="Enemy003SpawObj">
-                    <param id="0" name="Angle">270</param>
-                </action>
-                <action id="0" name="Spawn another object" sid="454375374571247" type="Enemy003">
-                    <param id="0" name="Object">Enemy003SpawObj</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="980506328441045">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="738488619505678" type="System">
-                    <param id="0" name="Interval (seconds)">3</param>
-                </condition>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="384006122979097" type="Enemy003">
-                    <param id="0" name="Instance variable">IsBack</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Bullet" id="3" name="Set angle of motion" sid="461747123016211" type="Enemy003SpawObj">
-                    <param id="0" name="Angle">90</param>
-                </action>
-                <action id="0" name="Spawn another object" sid="999298347024606" type="Enemy003">
-                    <param id="0" name="Object">Enemy003SpawObj</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="407727614426632">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="646779284547054" type="System">
-                    <param id="0" name="Interval (seconds)">random(15,30)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Spawn another object" sid="590232522464624" type="Enemy002">
-                    <param id="0" name="Object">Enemy004</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="227854828451172">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="179971432694469" type="Enemy003SpawObj">
@@ -1133,17 +1128,142 @@
                 <action id="-9" name="Destroy" sid="537223220102637" type="Enemy003SpawObj" />
             </actions>
         </event-block>
-        <event-block sid="572300931445691">
+        <event-block sid="716634914933723">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="979662305642080" type="Enemy003SpawObj">
-                    <param id="0" name="Object">Player</param>
+                <condition id="-6" name="Every X seconds" sid="933157191412245" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-5" name="Set width" sid="509548403095891" type="LiveBar">
-                    <param id="0" name="Width">self.Width -20</param>
+                <action id="0" name="Spawn another object" sid="498239324918954" type="Enemy003Sights">
+                    <param id="0" name="Object">Enemy003SpawObj</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
                 </action>
-                <action id="-9" name="Destroy" sid="732507751906630" type="Enemy003SpawObj" />
+                <action id="-22" name="Set angle toward position" sid="277294584490566" type="Enemy003SpawObj">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="638516022702356">
+            <conditions>
+                <condition id="-11" name="For Each" sid="727965786029209" type="System">
+                    <param id="0" name="Object">Enemy004</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="577852149482541">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="475211157731125" type="Enemy004">
+                            <param id="0" name="Instance variable">IsRight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="731132360267244" type="Enemy004">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="106869406161337" type="Enemy004">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="888564137990648">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="137482624494757" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="584996681530692" type="Enemy004">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="753019701173315" type="Enemy004">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="798880517867474">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="507486540620825" type="Enemy004">
+                            <param id="0" name="Object">Solids</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Toggle boolean" sid="470897535894857" type="Enemy004">
+                            <param id="0" name="Instance variable">IsRight</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="859755400110776">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="553756744623633" type="EnemyBoss">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">Player.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="433196962785996" type="EnemyBoss">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="597783841418737">
+            <conditions>
+                <condition id="-1" name="Compare X" sid="744051615637676" type="EnemyBoss">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">Player.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="655074866239675" type="EnemyBoss">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="151380807482392">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="361788664355455" type="EnemyBoss">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="243924655604164" type="System">
+                    <param id="0" name="Interval (seconds)">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Pathfinding" id="0" name="Find path" sid="678629115436340" type="EnemyBoss">
+                    <param id="0" name="X">Player.X</param>
+                    <param id="1" name="Y">Player.Y</param>
+                </action>
+                <action behavior="Pathfinding" id="14" name="Set speed" sid="263328561572746" type="EnemyBoss">
+                    <param id="0" name="Speed">200</param>
+                </action>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="663755632542624" type="EnemyBoss" />
+            </actions>
+        </event-block>
+        <event-block sid="814480054061806">
+            <conditions>
+                <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="542767168726336" type="EnemyBoss" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="488512895991782" type="EnemyBoss">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="215561363029585">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="439630656435488" type="System">
+                    <param id="0" name="Interval (seconds)">random(90,120)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="511608586343571" type="EnemyBoss">
+                    <param id="0" name="Object">Enemy002</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
             </actions>
         </event-block>
     </events>

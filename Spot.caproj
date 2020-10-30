@@ -24,8 +24,10 @@
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -157,371 +159,374 @@
                 <behavior-type name="8Direction" sid="615988158471799">
                     <behavior id="EightDir" />
                 </behavior-type>
+                <behavior-type name="Flash" sid="811228033473211">
+                    <behavior id="Flash" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="15" loop="1" name="Front" pingpong="0" repeatcount="1" repeatto="0" sid="612212968311703" speed="5">
+                <animation framecount="15" loop="1" name="Front" pingpong="0" repeatcount="1" repeatto="0" sid="612212968311703" speed="40">
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0001.png">
                         <collision-poly>
-                            <point x="0.213483" y="0.14" />
-                            <point x="0.752809" y="0.14" />
-                            <point x="0.752809" y="0.95" />
-                            <point x="0.213483" y="0.95" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0002.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0003.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0004.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0005.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0006.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0007.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0008.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0009.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0010.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0011.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0012.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0013.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0014.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0015.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="15" loop="0" name="Side" pingpong="0" repeatcount="1" repeatto="0" sid="791303281280619" speed="5">
+                <animation framecount="15" loop="0" name="Side" pingpong="0" repeatcount="1" repeatto="0" sid="791303281280619" speed="40">
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0001.png">
                         <collision-poly>
-                            <point x="0.213483" y="0.14" />
-                            <point x="0.752809" y="0.14" />
-                            <point x="0.752809" y="0.95" />
-                            <point x="0.213483" y="0.95" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0002.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0003.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0004.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0005.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0006.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0007.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0008.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0009.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0010.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0011.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0012.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0013.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0014.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0015.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="15" loop="0" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="735297282172893" speed="5">
+                <animation framecount="15" loop="0" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="735297282172893" speed="40">
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0001.png">
                         <collision-poly>
-                            <point x="0.213483" y="0.14" />
-                            <point x="0.752809" y="0.14" />
-                            <point x="0.752809" y="0.95" />
-                            <point x="0.213483" y="0.95" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0002.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0003.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0004.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0005.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0006.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0007.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0008.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0009.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0010.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0011.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0012.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0013.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0014.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0015.png">
                         <collision-poly>
-                            <point x="0.123595" y="0.16" />
-                            <point x="0.786517" y="0.16" />
-                            <point x="0.786517" y="0.95" />
-                            <point x="0.146067" y="0.97" />
+                            <point x="0.213483" y="0.185" />
+                            <point x="0.744382" y="0.18" />
+                            <point x="0.752809" y="0.8525" />
+                            <point x="0.210674" y="0.8525" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -1035,6 +1040,12 @@
                 <behavior-type name="Solid" sid="846718582541214">
                     <behavior id="solid" />
                 </behavior-type>
+                <behavior-type name="Bullet" sid="910869766684441">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="911081472631553">
+                    <behavior id="Fade" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="666169722358692" speed="5">
@@ -1211,6 +1222,9 @@
                 </behavior-type>
                 <behavior-type name="8Direction" sid="668807758080929">
                     <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="575923069982915">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -1782,6 +1796,9 @@
                 <behavior-type name="LineOfSight" sid="879883620817158">
                     <behavior id="LOS" />
                 </behavior-type>
+                <behavior-type name="Flash" sid="313286141238547">
+                    <behavior id="Flash" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="14" loop="1" name="Side" pingpong="0" repeatcount="1" repeatto="0" sid="312636184644358" speed="10">
@@ -2205,41 +2222,261 @@
                 <behavior-type name="Solid" sid="477135195847051">
                     <behavior id="solid" />
                 </behavior-type>
+                <behavior-type name="Flash" sid="988897456977026">
+                    <behavior id="Flash" />
+                </behavior-type>
+                <behavior-type name="Turret" sid="616932811544758">
+                    <behavior id="Turret" />
+                </behavior-type>
             </behaviors>
+            <container>
+                <type>Enemy003</type>
+                <type>Enemy003Sights</type>
+            </container>
             <animation-folder>
                 <animation framecount="15" loop="0" name="Front" pingpong="0" repeatcount="1" repeatto="0" sid="550157855125443" speed="5">
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0001.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0002.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0003.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0004.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0005.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0006.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0007.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0008.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0009.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0010.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0011.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0012.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0013.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0014.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0015.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0001.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0002.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0003.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0004.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0005.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0006.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0007.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0008.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0009.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0010.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0011.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0012.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0013.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0014.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroFrente\quadroFrente0015.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
                 </animation>
                 <animation framecount="15" loop="0" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="432576328904471" speed="5">
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0001.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0002.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0003.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0004.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0005.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0006.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0007.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0008.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0009.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0010.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0011.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0012.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0013.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0014.png" />
-                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0015.png" />
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0001.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0002.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0003.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0004.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0005.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0006.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0007.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0008.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0009.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0010.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0011.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0012.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0013.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0014.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\quadroInimigo\quadroCostas\quadroCostas0015.png">
+                        <collision-poly>
+                            <point x="0.0926966" y="0.105769" />
+                            <point x="0.898876" y="0.104167" />
+                            <point x="0.901685" y="0.788461" />
+                            <point x="0.0926966" y="0.786859" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -2254,6 +2491,9 @@
                 </behavior-type>
                 <behavior-type name="Solid" sid="510743733709307">
                     <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="601980278138965">
+                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -2328,6 +2568,257 @@
         <object-type name="Door2" sid="927677709548553">
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SALA\portaAberta.png" />
+        </object-type>
+        <object-type name="AnvilSpaw" sid="156469288550603">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="180476222063666" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AnvilTarget" sid="289517679411410">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="737052531148536" speed="5">
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\ImpactoBigorna\alvoBigorna.png">
+                        <collision-poly>
+                            <point x="0.137255" y="0.14" />
+                            <point x="0.490196" y="0" />
+                            <point x="0.862745" y="0.14" />
+                            <point x="1" y="0.5" />
+                            <point x="0.862745" y="0.86" />
+                            <point x="0.490196" y="1" />
+                            <point x="0.137255" y="0.86" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Enemy003Sights" sid="803518323927676">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Turret" sid="376124014664407">
+                    <behavior id="Turret" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="390810783646318">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <container>
+                <type>Enemy003</type>
+                <type>Enemy003Sights</type>
+            </container>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="851797195268653" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GarageRoom" sid="641923232940371">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="258568323484248" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\GARAGEM\garagemCenarioBg.png">
+                        <collision-poly>
+                            <point x="0.0212766" y="0.0333333" />
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0212766" y="0.966667" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GarageObj001" sid="672913985177690">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="481640109369944" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\GARAGEM\moveisGaragem.png">
+                        <collision-poly>
+                            <point x="0.0582386" y="0.154135" />
+                            <point x="0.5" y="0.210526" />
+                            <point x="0.933239" y="0.176692" />
+                            <point x="0.988636" y="0.5" />
+                            <point x="0.836648" y="0.567669" />
+                            <point x="0.5" y="0.394737" />
+                            <point x="0" y="1" />
+                            <point x="0.794034" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GarageObj002" sid="893065620401680">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="513307290230470" speed="5">
+                    <frame duration="1" hotspotX="0.501044" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\GARAGEM\papeladaGaragem.png">
+                        <collision-poly>
+                            <point x="0.139875" y="0.213376" />
+                            <point x="0.498956" y="0.0923567" />
+                            <point x="0.701461" y="0.455414" />
+                            <point x="0.730689" y="0.5" />
+                            <point x="0.916493" y="0.872611" />
+                            <point x="0.498956" y="0.974522" />
+                            <point x="0.091858" y="0.859873" />
+                            <point x="0.0375783" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GarageObj003" sid="846087344533561">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Flash" sid="159121317575070">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="839666627051869" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\GARAGEM\laserGaragem.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyBoss" sid="819062684107594">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="LineOfSight" sid="116322063134329">
+                    <behavior id="LOS" />
+                </behavior-type>
+                <behavior-type name="Pathfinding" sid="303772538879380">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="15" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="567790641373915" speed="5">
+                    <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0001.png">
+                        <collision-poly>
+                            <point x="0.195876" y="0.162162" />
+                            <point x="0.649485" y="0.162162" />
+                            <point x="0.835052" y="0.702703" />
+                            <point x="0.195876" y="0.873874" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0002.png">
+                        <collision-poly>
+                            <point x="0.195876" y="0.162162" />
+                            <point x="0.649485" y="0.162162" />
+                            <point x="0.835052" y="0.702703" />
+                            <point x="0.195876" y="0.873874" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0003.png">
+                        <collision-poly>
+                            <point x="0.195876" y="0.162162" />
+                            <point x="0.649485" y="0.162162" />
+                            <point x="0.835052" y="0.702703" />
+                            <point x="0.195876" y="0.873874" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0004.png">
+                        <collision-poly>
+                            <point x="0.195876" y="0.162162" />
+                            <point x="0.649485" y="0.162162" />
+                            <point x="0.835052" y="0.702703" />
+                            <point x="0.195876" y="0.873874" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0005.png">
+                        <collision-poly>
+                            <point x="0.195876" y="0.162162" />
+                            <point x="0.649485" y="0.162162" />
+                            <point x="0.835052" y="0.702703" />
+                            <point x="0.195876" y="0.873874" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0006.png">
+                        <collision-poly>
+                            <point x="0.195876" y="0.162162" />
+                            <point x="0.649485" y="0.162162" />
+                            <point x="0.835052" y="0.702703" />
+                            <point x="0.195876" y="0.873874" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0007.png">
+                        <collision-poly>
+                            <point x="0.195876" y="0.162162" />
+                            <point x="0.649485" y="0.162162" />
+                            <point x="0.835052" y="0.702703" />
+                            <point x="0.195876" y="0.873874" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0008.png">
+                        <collision-poly>
+                            <point x="0.195876" y="0.162162" />
+                            <point x="0.649485" y="0.162162" />
+                            <point x="0.835052" y="0.702703" />
+                            <point x="0.195876" y="0.873874" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0009.png">
+                        <collision-poly>
+                            <point x="0.195876" y="0.162162" />
+                            <point x="0.649485" y="0.162162" />
+                            <point x="0.835052" y="0.702703" />
+                            <point x="0.195876" y="0.873874" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0010.png">
+                        <collision-poly>
+                            <point x="0.195876" y="0.162162" />
+                            <point x="0.649485" y="0.162162" />
+                            <point x="0.835052" y="0.702703" />
+                            <point x="0.195876" y="0.873874" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0011.png">
+                        <collision-poly>
+                            <point x="0.195876" y="0.162162" />
+                            <point x="0.649485" y="0.162162" />
+                            <point x="0.835052" y="0.702703" />
+                            <point x="0.195876" y="0.873874" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0012.png">
+                        <collision-poly>
+                            <point x="0.195876" y="0.162162" />
+                            <point x="0.649485" y="0.162162" />
+                            <point x="0.835052" y="0.702703" />
+                            <point x="0.195876" y="0.873874" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0013.png">
+                        <collision-poly>
+                            <point x="0.195876" y="0.162162" />
+                            <point x="0.649485" y="0.162162" />
+                            <point x="0.835052" y="0.702703" />
+                            <point x="0.195876" y="0.873874" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0014.png">
+                        <collision-poly>
+                            <point x="0.195876" y="0.162162" />
+                            <point x="0.649485" y="0.162162" />
+                            <point x="0.835052" y="0.702703" />
+                            <point x="0.195876" y="0.873874" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0015.png">
+                        <collision-poly>
+                            <point x="0.195876" y="0.162162" />
+                            <point x="0.649485" y="0.162162" />
+                            <point x="0.835052" y="0.702703" />
+                            <point x="0.195876" y="0.873874" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
