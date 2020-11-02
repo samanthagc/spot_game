@@ -10,8 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Layout 1</layout>
-        <event-sheet order="1">Event sheet 1</event-sheet>
+        <layout active="1" order="0">Gameplay</layout>
+        <layout order="2">MainMenu</layout>
+        <event-sheet order="1">GameplayEvent</event-sheet>
+        <event-sheet order="3">MainMenuEvent</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -30,7 +32,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/Solids/" />
         <folder expanded="1" path="animation-folder/CoinStar/" />
-        <folder expanded="1" path="animation-folder/Shot/" />
+        <folder expanded="1" path="animation-folder/ShotPlayer/" />
         <folder expanded="1" path="animation-folder/Camera/" />
         <folder expanded="1" path="animation-folder/Player/" />
         <folder expanded="1" path="animation-folder/LaundryRoom/" />
@@ -112,5 +114,31 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/GarageObj003/" />
         <folder expanded="1" path="animation-folder/EnemyBoss/" />
         <folder expanded="1" path="animation-folder/EnemyBossSights/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Continue/" />
+        <folder expanded="1" path="animation-folder/restart/" />
+        <folder expanded="1" path="animation-folder/TitleMenu/" />
+        <folder expanded="1" path="animation-folder/DarkScreen/" />
+        <folder expanded="1" path="animation-folder/TitleCover/" />
+        <folder expanded="1" path="animation-folder/PlayButton/" />
+        <folder expanded="1" path="animation-folder/CreditsButton/" />
+        <folder expanded="1" path="animation-folder/MusicButton/" />
+        <folder expanded="1" path="animation-folder/SondsButton/" />
+        <folder expanded="1" path="animation-folder/DarkScreenFadeIn/" />
+        <folder expanded="1" path="animation-folder/DarkScreenFadeOut/" />
+        <folder expanded="1" path="animation-folder/BackgroundCredits/" />
+        <folder expanded="1" path="animation-folder/BackButton/" />
+        <folder expanded="1" path="animation-folder/SplashScreenFatecLogo/" />
+        <folder expanded="1" path="animation-folder/SplashScreenScarlogo/" />
+        <folder expanded="1" path="animation-folder/ShotBoss/" />
+        <folder expanded="1" path="animation-folder/KillMosters/" />
+        <folder expanded="1" path="animation-folder/MosterDeath/" />
+        <folder expanded="1" path="animation-folder/CutscenePage1/" />
+        <folder expanded="1" path="animation-folder/CutscenePage2/" />
+        <folder expanded="1" path="animation-folder/CutscenePage3/" />
+        <folder expanded="1" path="animation-folder/CutscenePage4/" />
+        <folder expanded="1" path="animation-folder/TutorialPage1/" />
+        <folder expanded="1" path="animation-folder/TutorialPage2/" />
+        <folder expanded="1" path="animation-folder/ScreenTransition/" />
     </folders-expanded>
 </c2uistate>

@@ -105,7 +105,7 @@
         <object-type name="Stars" sid="361643337570905">
             <plugin id="Text" />
         </object-type>
-        <object-type name="Shot" sid="927025177538066">
+        <object-type name="ShotPlayer" sid="927025177538066">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Bullet" sid="100290725411577">
@@ -154,6 +154,11 @@
                 <instance-variable name="GloveLvl" sid="504749093171220" type="number" />
                 <instance-variable name="AnvilLvl" sid="350010281127125" type="number" />
                 <instance-variable name="TNTLvl" sid="176579294186243" type="string" />
+                <instance-variable name="OnMenuPause" sid="935633393004582" type="boolean" />
+                <instance-variable name="FireGunPassLvl" sid="386645682131045" type="number" />
+                <instance-variable name="GlovePassLvl" sid="944090006480339" type="number" />
+                <instance-variable name="AnvilPassLvl" sid="752188936825904" type="number" />
+                <instance-variable name="TntPassLvl" sid="657346819054820" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="615988158471799">
@@ -166,6 +171,7 @@
             <animation-folder>
                 <animation framecount="15" loop="1" name="Front" pingpong="0" repeatcount="1" repeatto="0" sid="612212968311703" speed="40">
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0001.png">
+                        <image-point name="ShotPoint" x="0.483146" y="0.97" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -174,6 +180,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0002.png">
+                        <image-point name="ShotPoint" x="0.483146" y="0.97" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -182,6 +189,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0003.png">
+                        <image-point name="ShotPoint" x="0.483146" y="0.97" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -190,6 +198,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0004.png">
+                        <image-point name="ShotPoint" x="0.483146" y="0.97" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -198,6 +207,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0005.png">
+                        <image-point name="ShotPoint" x="0.483146" y="0.97" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -206,6 +216,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0006.png">
+                        <image-point name="ShotPoint" x="0.483146" y="0.97" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -214,6 +225,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0007.png">
+                        <image-point name="ShotPoint" x="0.483146" y="0.97" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -222,6 +234,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0008.png">
+                        <image-point name="ShotPoint" x="0.483146" y="0.97" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -230,6 +243,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0009.png">
+                        <image-point name="ShotPoint" x="0.483146" y="0.97" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -238,6 +252,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0010.png">
+                        <image-point name="ShotPoint" x="0.483146" y="0.97" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -246,6 +261,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0011.png">
+                        <image-point name="ShotPoint" x="0.483146" y="0.97" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -254,6 +270,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0012.png">
+                        <image-point name="ShotPoint" x="0.483146" y="0.97" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -262,6 +279,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0013.png">
+                        <image-point name="ShotPoint" x="0.483146" y="0.97" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -270,6 +288,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0014.png">
+                        <image-point name="ShotPoint" x="0.483146" y="0.97" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -278,6 +297,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoFrente\AndandoFrente0015.png">
+                        <image-point name="ShotPoint" x="0.483146" y="0.97" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -288,6 +308,7 @@
                 </animation>
                 <animation framecount="15" loop="0" name="Side" pingpong="0" repeatcount="1" repeatto="0" sid="791303281280619" speed="40">
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0001.png">
+                        <image-point name="ShotPoint" x="0.775281" y="0.67" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -296,6 +317,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0002.png">
+                        <image-point name="ShotPoint" x="0.775281" y="0.67" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -304,6 +326,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0003.png">
+                        <image-point name="ShotPoint" x="0.775281" y="0.67" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -312,6 +335,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0004.png">
+                        <image-point name="ShotPoint" x="0.775281" y="0.67" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -320,6 +344,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0005.png">
+                        <image-point name="ShotPoint" x="0.775281" y="0.67" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -328,6 +353,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0006.png">
+                        <image-point name="ShotPoint" x="0.775281" y="0.67" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -336,6 +362,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0007.png">
+                        <image-point name="ShotPoint" x="0.775281" y="0.67" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -344,6 +371,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0008.png">
+                        <image-point name="ShotPoint" x="0.775281" y="0.67" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -352,6 +380,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0009.png">
+                        <image-point name="ShotPoint" x="0.775281" y="0.67" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -360,6 +389,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0010.png">
+                        <image-point name="ShotPoint" x="0.775281" y="0.67" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -368,6 +398,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0011.png">
+                        <image-point name="ShotPoint" x="0.775281" y="0.67" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -376,6 +407,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0012.png">
+                        <image-point name="ShotPoint" x="0.775281" y="0.67" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -384,6 +416,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0013.png">
+                        <image-point name="ShotPoint" x="0.775281" y="0.67" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -392,6 +425,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0014.png">
+                        <image-point name="ShotPoint" x="0.775281" y="0.67" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -400,6 +434,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoLado\AndandoLado0015.png">
+                        <image-point name="ShotPoint" x="0.775281" y="0.67" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -410,6 +445,7 @@
                 </animation>
                 <animation framecount="15" loop="0" name="Back" pingpong="0" repeatcount="1" repeatto="0" sid="735297282172893" speed="40">
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0001.png">
+                        <image-point name="ShotPoint" x="0.449438" y="0.13" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -418,6 +454,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0002.png">
+                        <image-point name="ShotPoint" x="0.449438" y="0.13" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -426,6 +463,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0003.png">
+                        <image-point name="ShotPoint" x="0.449438" y="0.13" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -434,6 +472,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0004.png">
+                        <image-point name="ShotPoint" x="0.449438" y="0.13" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -442,6 +481,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0005.png">
+                        <image-point name="ShotPoint" x="0.449438" y="0.13" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -450,6 +490,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0006.png">
+                        <image-point name="ShotPoint" x="0.449438" y="0.13" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -458,6 +499,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0007.png">
+                        <image-point name="ShotPoint" x="0.449438" y="0.13" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -466,6 +508,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0008.png">
+                        <image-point name="ShotPoint" x="0.449438" y="0.13" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -474,6 +517,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0009.png">
+                        <image-point name="ShotPoint" x="0.449438" y="0.13" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -482,6 +526,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0010.png">
+                        <image-point name="ShotPoint" x="0.449438" y="0.13" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -490,6 +535,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0011.png">
+                        <image-point name="ShotPoint" x="0.449438" y="0.13" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -498,6 +544,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0012.png">
+                        <image-point name="ShotPoint" x="0.449438" y="0.13" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -506,6 +553,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0013.png">
+                        <image-point name="ShotPoint" x="0.449438" y="0.13" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -514,6 +562,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0014.png">
+                        <image-point name="ShotPoint" x="0.449438" y="0.13" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -522,6 +571,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505618" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\Player\AndandoCostas\AndandoCostas0015.png">
+                        <image-point name="ShotPoint" x="0.449438" y="0.13" />
                         <collision-poly>
                             <point x="0.213483" y="0.185" />
                             <point x="0.744382" y="0.18" />
@@ -1215,6 +1265,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="IsLeft" sid="477784302473167" type="boolean" />
+                <instance-variable name="Health" sid="199916449475345" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="194216189513066">
@@ -2193,6 +2244,11 @@
         </object-type>
         <object-type name="HamburgerMenu" sid="565786428648911">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="370370557836372">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="147469445991973" speed="5">
                     <frame duration="1" hotspotX="0.510204" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\MENU-GAMEPLAY\botaoMenu.png">
@@ -2214,6 +2270,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="IsBack" sid="752381713096400" type="boolean" />
+                <instance-variable name="Health" sid="204563564679307" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="858341521990636">
@@ -2697,11 +2754,26 @@
                 <behavior-type name="Solid" sid="165071460780762">
                     <behavior id="solid" />
                 </behavior-type>
+                <behavior-type name="Turret" sid="500783851682185">
+                    <behavior id="Turret" />
+                </behavior-type>
+                <behavior-type name="Flash" sid="882285644496739">
+                    <behavior id="Flash" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="15" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="567790641373915" speed="30">
-                    <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0001.png" />
+                    <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0001.png">
+                        <image-point name="Imagepoint 1" x="0.948454" y="0.576577" />
+                        <collision-poly>
+                            <point x="0.195876" y="0.162162" />
+                            <point x="0.649485" y="0.162162" />
+                            <point x="0.649485" y="0.972973" />
+                            <point x="0.195876" y="0.972973" />
+                        </collision-poly>
+                    </frame>
                     <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0002.png">
+                        <image-point name="Imagepoint 1" x="0.948454" y="0.576577" />
                         <collision-poly>
                             <point x="0.195876" y="0.162162" />
                             <point x="0.649485" y="0.162162" />
@@ -2710,6 +2782,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0003.png">
+                        <image-point name="Imagepoint 1" x="0.948454" y="0.576577" />
                         <collision-poly>
                             <point x="0.195876" y="0.162162" />
                             <point x="0.649485" y="0.162162" />
@@ -2718,6 +2791,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0004.png">
+                        <image-point name="Imagepoint 1" x="0.948454" y="0.576577" />
                         <collision-poly>
                             <point x="0.195876" y="0.162162" />
                             <point x="0.649485" y="0.162162" />
@@ -2726,6 +2800,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0005.png">
+                        <image-point name="Imagepoint 1" x="0.948454" y="0.576577" />
                         <collision-poly>
                             <point x="0.195876" y="0.162162" />
                             <point x="0.649485" y="0.162162" />
@@ -2733,7 +2808,8 @@
                             <point x="0.195876" y="0.972973" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.505155" hotspotY="0.45045" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0006.png">
+                    <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0006.png">
+                        <image-point name="Imagepoint 1" x="0.948454" y="0.576577" />
                         <collision-poly>
                             <point x="0.195876" y="0.162162" />
                             <point x="0.649485" y="0.162162" />
@@ -2742,6 +2818,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0007.png">
+                        <image-point name="Imagepoint 1" x="0.948454" y="0.576577" />
                         <collision-poly>
                             <point x="0.195876" y="0.162162" />
                             <point x="0.649485" y="0.162162" />
@@ -2750,6 +2827,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0008.png">
+                        <image-point name="Imagepoint 1" x="0.948454" y="0.576577" />
                         <collision-poly>
                             <point x="0.195876" y="0.162162" />
                             <point x="0.649485" y="0.162162" />
@@ -2758,6 +2836,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0009.png">
+                        <image-point name="Imagepoint 1" x="0.948454" y="0.576577" />
                         <collision-poly>
                             <point x="0.195876" y="0.162162" />
                             <point x="0.649485" y="0.162162" />
@@ -2766,6 +2845,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0010.png">
+                        <image-point name="Imagepoint 1" x="0.948454" y="0.576577" />
                         <collision-poly>
                             <point x="0.195876" y="0.162162" />
                             <point x="0.649485" y="0.162162" />
@@ -2774,6 +2854,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0011.png">
+                        <image-point name="Imagepoint 1" x="0.948454" y="0.576577" />
                         <collision-poly>
                             <point x="0.195876" y="0.162162" />
                             <point x="0.649485" y="0.162162" />
@@ -2782,6 +2863,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0012.png">
+                        <image-point name="Imagepoint 1" x="0.948454" y="0.576577" />
                         <collision-poly>
                             <point x="0.195876" y="0.162162" />
                             <point x="0.649485" y="0.162162" />
@@ -2790,6 +2872,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0013.png">
+                        <image-point name="Imagepoint 1" x="0.948454" y="0.576577" />
                         <collision-poly>
                             <point x="0.195876" y="0.162162" />
                             <point x="0.649485" y="0.162162" />
@@ -2798,6 +2881,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0014.png">
+                        <image-point name="Imagepoint 1" x="0.948454" y="0.576577" />
                         <collision-poly>
                             <point x="0.195876" y="0.162162" />
                             <point x="0.649485" y="0.162162" />
@@ -2806,6 +2890,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.505155" hotspotY="0.504505" original-source="C:\Users\AleCosta\Desktop\spot\assets\artistaInimigo\artistaLado\artistaInimigoLado0015.png">
+                        <image-point name="Imagepoint 1" x="0.948454" y="0.576577" />
                         <collision-poly>
                             <point x="0.195876" y="0.162162" />
                             <point x="0.649485" y="0.162162" />
@@ -2824,13 +2909,484 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Sprite2" sid="486642692465818">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="184802550095803" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Continue" sid="910249717527581">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="326870554603138">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="728310909697403" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" original-source="C:\Users\user\Desktop\Spot_game_copy\MENU-GAMEPLAY\botaoContinuar.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.127273" />
+                            <point x="0.5" y="0.0545455" />
+                            <point x="0.982143" y="0.0545455" />
+                            <point x="1" y="0.490909" />
+                            <point x="0.982143" y="0.945455" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0178571" y="0.945455" />
+                            <point x="0" y="0.490909" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="restart" sid="412109260496864">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="616289266676553">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="480081673309738" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" original-source="C:\Users\user\Desktop\Spot_game_copy\MENU-GAMEPLAY\botaoRecomecar.png">
+                        <collision-poly>
+                            <point x="0.0178571" y="0.0545455" />
+                            <point x="0.5" y="0.0545455" />
+                            <point x="0.958333" y="0.127273" />
+                            <point x="1" y="0.490909" />
+                            <point x="0.982143" y="0.945455" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0178571" y="0.945455" />
+                            <point x="0" y="0.490909" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TitleMenu" sid="346748243370746">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="333981841290957">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="415000016595907" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509091" original-source="C:\Users\user\Desktop\Spot_game_copy\MENU-GAMEPLAY\menuTitulo.png">
+                        <collision-poly>
+                            <point x="0.0416667" y="0.127273" />
+                            <point x="0.5" y="0.0545455" />
+                            <point x="0.982143" y="0.0545455" />
+                            <point x="1" y="0.490909" />
+                            <point x="0.982143" y="0.945455" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0178571" y="0.945455" />
+                            <point x="0" y="0.490909" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DarkScreen" sid="417088774398848">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="794903830211360">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="144122935772305" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TitleCover" sid="896434984917702">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="506735569346737" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\TITULO\tituloCapa.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlayButton" sid="291788493462727">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="246401307740563">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="159399699438140" speed="5">
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\TITULO\botaoJogar.png">
+                        <collision-poly>
+                            <point x="0.195402" y="0.197674" />
+                            <point x="0.494253" y="0.0116279" />
+                            <point x="0.885057" y="0.116279" />
+                            <point x="0.977012" y="0.5" />
+                            <point x="0.804598" y="0.802326" />
+                            <point x="0.494253" y="0.988372" />
+                            <point x="0.126437" y="0.872093" />
+                            <point x="0.0114943" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CreditsButton" sid="206232463402056">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="814741603125431">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="426268701124169" speed="5">
+                    <frame duration="1" hotspotX="0.505376" hotspotY="0.506667" original-source="C:\Users\user\Desktop\Spot_game_copy\TITULO\botaoCreditos.png">
+                        <collision-poly>
+                            <point x="0.129032" y="0.16" />
+                            <point x="0.494624" y="0" />
+                            <point x="0.88172" y="0.146667" />
+                            <point x="1" y="0.493333" />
+                            <point x="0.88172" y="0.853333" />
+                            <point x="0.494624" y="1" />
+                            <point x="0.129032" y="0.84" />
+                            <point x="0" y="0.493333" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MusicButton" sid="910161347049185">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="797751633273385">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="682299073932968" speed="5">
+                    <frame duration="1" hotspotX="0.509434" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\TITULO\botaoMusica.png">
+                        <collision-poly>
+                            <point x="0.113208" y="0.15" />
+                            <point x="0.490566" y="0" />
+                            <point x="0.886792" y="0.15" />
+                            <point x="1" y="0.5" />
+                            <point x="0.886792" y="0.85" />
+                            <point x="0.490566" y="1" />
+                            <point x="0.113208" y="0.85" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SondsButton" sid="319264768237443">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="380157043897460">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="512430421146431" speed="5">
+                    <frame duration="1" hotspotX="0.509434" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\TITULO\botaoEfeitosSonoros.png">
+                        <collision-poly>
+                            <point x="0.113208" y="0.15" />
+                            <point x="0.490566" y="0" />
+                            <point x="0.886792" y="0.15" />
+                            <point x="1" y="0.5" />
+                            <point x="0.886792" y="0.85" />
+                            <point x="0.490566" y="1" />
+                            <point x="0.113208" y="0.85" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DarkScreenFadeIn" sid="294802685631337">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="164245646921880">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="249730525174300" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DarkScreenFadeOut" sid="134089988627745">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="583828623008259">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="860224514513900" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BackgroundCredits" sid="520842581450205">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="244743059131854" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CREDITOS\CreditosBackground.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BackButton" sid="214546993798880">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="842309778962177" speed="0">
+                    <frame duration="1" hotspotX="0.510204" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CREDITOS\botaoFechar.png">
+                        <collision-poly>
+                            <point x="0.204082" y="0.208333" />
+                            <point x="0.489796" y="0.0208333" />
+                            <point x="0.897959" y="0.104167" />
+                            <point x="0.979592" y="0.5" />
+                            <point x="0.816327" y="0.8125" />
+                            <point x="0.489796" y="1" />
+                            <point x="0.122449" y="0.875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SplashScreenFatecLogo" sid="945950525981684">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="155412471549086">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="836442828261408" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\PRETITULO\PreTituloFatecLogo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SplashScreenScarlogo" sid="172374271501750">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="926639391136686">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="311934264600787" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\PRETITULO\PreTituloScarLogo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ShotBoss" sid="579496926556335">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="402494314585604">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="653408541255783">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="116268551071587" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\user\Desktop\Spot_game_copy\tiro.png">
+                        <collision-poly>
+                            <point x="0.0294118" y="0.0909091" />
+                            <point x="0.5" y="0" />
+                            <point x="0.941176" y="0.181818" />
+                            <point x="1" y="0.454545" />
+                            <point x="0.970588" y="0.909091" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0294118" y="0.909091" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="KillMosters" sid="310232049665736">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="607568986222335" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MosterDeath" sid="260888109985333">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="20" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="805275556641262" speed="18">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\morteMonstro\morte1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\morteMonstro\morte2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\morteMonstro\morte3.png" />
+                    <frame duration="1" hotspotX="0.545812" hotspotY="0.482014" original-source="C:\Users\user\Desktop\Spot_game_copy\morteMonstro\morte4.png" />
+                    <frame duration="1" hotspotX="0.480366" hotspotY="0.508993" original-source="C:\Users\user\Desktop\Spot_game_copy\morteMonstro\morte5.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\morteMonstro\morte6.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\morteMonstro\morte7.png" />
+                    <frame duration="1" hotspotX="0.517016" hotspotY="0.494604" original-source="C:\Users\user\Desktop\Spot_game_copy\morteMonstro\morte8.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\morteMonstro\morte9.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\morteMonstro\morte10.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\morteMonstro\morte11.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\morteMonstro\morte12.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\morteMonstro\morte13.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\morteMonstro\morte14.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\morteMonstro\morte15.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\morteMonstro\morte16.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\morteMonstro\morte17.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\morteMonstro\morte18.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\morteMonstro\morte19.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\morteMonstro\morte20.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="UpdatePass" sid="180345899119545">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="CutscenePage1" sid="158063947291735">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="863843805784051">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="677470503572552" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CUTSCENES\CutsceneIntro1.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CutscenePage2" sid="692354154098915">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="511238194136479">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="544603767534060" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CUTSCENES\CutsceneIntro2.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CutscenePage3" sid="357155728244006">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="461157691408129">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="933021049600385" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CUTSCENES\CutsceneIntro3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CutscenePage4" sid="657369131185684">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="992412032275487">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="434561098178951" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CUTSCENES\CutsceneIntro4.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TutorialPage1" sid="968765602318637">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="230519534806784" speed="0">
+                    <frame duration="1" hotspotX="0.501577" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\TUTORIAL\teclasMovePlayer.png">
+                        <collision-poly>
+                            <point x="0.044164" y="0.0341463" />
+                            <point x="0.498423" y="0.0170732" />
+                            <point x="0.940063" y="0.0463415" />
+                            <point x="0.968454" y="0.5" />
+                            <point x="0.952681" y="0.963415" />
+                            <point x="0.498423" y="0.982927" />
+                            <point x="0.0630915" y="0.951219" />
+                            <point x="0.0347003" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TutorialPage2" sid="537654063963550">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="672922669775194" speed="0">
+                    <frame duration="1" hotspotX="0.501511" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\TUTORIAL\mouseItemClick.png">
+                        <collision-poly>
+                            <point x="0.0634441" y="0.0504808" />
+                            <point x="0.498489" y="0.0264423" />
+                            <point x="0.918429" y="0.0649038" />
+                            <point x="0.957704" y="0.5" />
+                            <point x="0.939577" y="0.951923" />
+                            <point x="0.498489" y="0.978365" />
+                            <point x="0.0996979" y="0.920673" />
+                            <point x="0.060423" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ScreenTransition" sid="559151990570557">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="21" loop="1" name="NormalAnymate" pingpong="1" repeatcount="0" repeatto="0" sid="260310845250773" speed="12">
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0001.png">
+                        <collision-poly>
+                            <point x="0.49685" y="0.49685" />
+                            <point x="0.49955" y="0.49595" />
+                            <point x="0.50315" y="0.49685" />
+                            <point x="0.504951" y="0.49955" />
+                            <point x="0.50315" y="0.50315" />
+                            <point x="0.49955" y="0.504951" />
+                            <point x="0.49685" y="0.50315" />
+                            <point x="0.49505" y="0.49955" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0001.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0002.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0003.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0004.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0005.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0006.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0007.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0008.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0009.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0010.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0011.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0012.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0013.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0014.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0015.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0016.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0017.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0018.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0019.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0020.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Layout 1.xml</layout>
+        <layout>Gameplay.xml</layout>
+        <layout>MainMenu.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>GameplayEvent.xml</event-sheet>
+        <event-sheet>MainMenuEvent.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="4" />
@@ -2854,6 +3410,14 @@
         <file name="Anvil_snd.ogg" />
         <file name="Tnt_snd.ogg" />
         <file name="Shot_snd.ogg" />
+        <file name="AnyClick_snd.m4a" />
+        <file name="AnyClick_snd.ogg" />
+        <file name="BackAction_snd.m4a" />
+        <file name="BackAction_snd.ogg" />
+        <file name="UpgradeWeapon_snd.m4a" />
+        <file name="UpgradeWeapon_snd.ogg" />
+        <file name="Serenata Noturna - Mozart.ogg" />
+        <file name="Moonlight - Sonata - Bethooven - Cutscenes.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
