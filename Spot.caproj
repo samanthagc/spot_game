@@ -153,12 +153,17 @@
                 <instance-variable name="FireGunLvl" sid="126011941861268" type="number" />
                 <instance-variable name="GloveLvl" sid="504749093171220" type="number" />
                 <instance-variable name="AnvilLvl" sid="350010281127125" type="number" />
-                <instance-variable name="TNTLvl" sid="176579294186243" type="string" />
+                <instance-variable name="TNTLvl" sid="176579294186243" type="number" />
                 <instance-variable name="OnMenuPause" sid="935633393004582" type="boolean" />
                 <instance-variable name="FireGunPassLvl" sid="386645682131045" type="number" />
                 <instance-variable name="GlovePassLvl" sid="944090006480339" type="number" />
                 <instance-variable name="AnvilPassLvl" sid="752188936825904" type="number" />
                 <instance-variable name="TntPassLvl" sid="657346819054820" type="number" />
+                <instance-variable name="FireGunDamage" sid="728820726332810" type="number" />
+                <instance-variable name="GloveDamage" sid="498995163101856" type="number" />
+                <instance-variable name="AnvilDamage" sid="344623217623711" type="number" />
+                <instance-variable name="TntDamage" sid="681277091088591" type="number" />
+                <instance-variable name="Stars" sid="650491795693053" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="615988158471799">

@@ -2965,7 +2965,7 @@
                     </properties>
                     <instance-variables>
                         <IsLeft>false</IsLeft>
-                        <Health>2</Health>
+                        <Health>3</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -3012,14 +3012,19 @@
                         <Direction></Direction>
                         <AnglePlayer>0</AnglePlayer>
                         <FireGunLvl>3</FireGunLvl>
-                        <GloveLvl>1</GloveLvl>
-                        <AnvilLvl>2</AnvilLvl>
-                        <TNTLvl></TNTLvl>
+                        <GloveLvl>2</GloveLvl>
+                        <AnvilLvl>1</AnvilLvl>
+                        <TNTLvl>1</TNTLvl>
                         <OnMenuPause>false</OnMenuPause>
                         <FireGunPassLvl>3</FireGunPassLvl>
                         <GlovePassLvl>4</GlovePassLvl>
                         <AnvilPassLvl>5</AnvilPassLvl>
                         <TntPassLvl>6</TntPassLvl>
+                        <FireGunDamage>1</FireGunDamage>
+                        <GloveDamage>2</GloveDamage>
+                        <AnvilDamage>4</AnvilDamage>
+                        <TntDamage>8</TntDamage>
+                        <Stars>25</Stars>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -3038,7 +3043,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
+                        <x>832</x>
                         <y>800</y>
                         <z>0</z>
                         <width>56.958217621</width>
@@ -3804,7 +3809,7 @@
                     </properties>
                     <instance-variables>
                         <IsLeft>false</IsLeft>
-                        <Health>2</Health>
+                        <Health>3</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -3849,7 +3854,7 @@
                     </properties>
                     <instance-variables>
                         <IsLeft>false</IsLeft>
-                        <Health>2</Health>
+                        <Health>3</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -3960,7 +3965,7 @@
                     </properties>
                     <instance-variables>
                         <IsLeft>false</IsLeft>
-                        <Health>2</Health>
+                        <Health>3</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -4005,7 +4010,7 @@
                     </properties>
                     <instance-variables>
                         <IsLeft>false</IsLeft>
-                        <Health>2</Health>
+                        <Health>3</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">

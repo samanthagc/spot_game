@@ -5,21 +5,24 @@
     <events>
         <variable comment="Number of star for power up" constant="0" name="UpgradeStarPass" sid="406135747323305" static="0" type="number">0</variable>
         <variable comment="Weapon current level" constant="0" name="WeaponCurrentLvl" sid="633716207846760" static="0" type="number">0</variable>
-        <variable comment="FireGun level = 4" constant="0" name="FireGunLvl" sid="685070565892830" static="0" type="number">3</variable>
-        <variable comment="TNT level = 3" constant="0" name="TNTLvl" sid="423632465884900" static="0" type="number">1</variable>
-        <variable comment="Anvil level = 2" constant="0" name="AnvilLvl" sid="950635547001986" static="0" type="number">1</variable>
-        <variable comment="Glove level = 1" constant="0" name="GloveLvl" sid="513496197255716" static="0" type="number">2</variable>
         <variable comment="Number of the chosen weapon" constant="0" name="Weapon" sid="529053577818744" static="0" type="number">4</variable>
         <variable comment="Health power of player" constant="0" name="Health" sid="338194106337379" static="0" type="number">100</variable>
-        <variable comment="Stars for power up" constant="0" name="Stars" sid="362366293273829" static="0" type="number">0</variable>
         <event-block sid="515892997047480">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="268654107620131" type="System" />
             </conditions>
             <actions>
+                <action id="-9" name="Set value" sid="478351129059918" type="System">
+                    <param id="0" name="Variable">Weapon</param>
+                    <param id="1" name="Value">4</param>
+                </action>
                 <action id="-9" name="Set value" sid="221197328706167" type="System">
                     <param id="0" name="Variable">WeaponCurrentLvl</param>
-                    <param id="1" name="Value">FireGunLvl</param>
+                    <param id="1" name="Value">Player.FireGunLvl</param>
+                </action>
+                <action id="-9" name="Set value" sid="359772684366877" type="System">
+                    <param id="0" name="Variable">UpgradeStarPass</param>
+                    <param id="1" name="Value">player.FireGunLvl * Player.FireGunPassLvl</param>
                 </action>
                 <action id="-15" name="Set visible" sid="311232735694426" type="RecoveryBarFireGun">
                     <param id="0" name="Visibility">1</param>
@@ -43,10 +46,6 @@
                 <action id="-9" name="Destroy" sid="756821768495900" type="TNT" />
                 <action id="-9" name="Destroy" sid="237119729957990" type="ShotBoss" />
                 <action id="-9" name="Destroy" sid="503057336697950" type="ShotPlayer" />
-                <action id="-9" name="Set value" sid="459520703327325" type="System">
-                    <param id="0" name="Variable">UpgradeStarPass</param>
-                    <param id="1" name="Value">FireGunLvl * Player.FireGunPassLvl</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="982568644414278">
@@ -59,7 +58,7 @@
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="0" name="Set text" sid="830783350182631" type="Stars">
-                    <param id="0" name="Text">Stars</param>
+                    <param id="0" name="Text">Player.Stars</param>
                 </action>
                 <action id="0" name="Set text" sid="867007194802610" type="LevelWeapon">
                     <param id="0" name="Text">&quot;Lv: &quot; &amp; WeaponCurrentLvl</param>
@@ -122,8 +121,8 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Add to" sid="499698227862120" type="System">
-                    <param id="0" name="Variable">Stars</param>
+                <action id="-11" name="Add to" sid="499698227862120" type="Player">
+                    <param id="0" name="Instance variable">Stars</param>
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-9" name="Destroy" sid="384675432809947" type="CoinStar" />
@@ -496,7 +495,11 @@
                 </action>
                 <action id="-9" name="Set value" sid="573780452648917" type="System">
                     <param id="0" name="Variable">WeaponCurrentLvl</param>
-                    <param id="1" name="Value">GloveLvl</param>
+                    <param id="1" name="Value">Player.GloveLvl</param>
+                </action>
+                <action id="-9" name="Set value" sid="893224874175875" type="System">
+                    <param id="0" name="Variable">UpgradeStarPass</param>
+                    <param id="1" name="Value">Player.GloveLvl * Player.GlovePassLvl</param>
                 </action>
                 <action id="-15" name="Set visible" sid="355567351581057" type="RecoveryBarFireGun">
                     <param id="0" name="Visibility">0</param>
@@ -509,10 +512,6 @@
                 </action>
                 <action id="-15" name="Set visible" sid="450643008967780" type="RecoveryBarGlove">
                     <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-9" name="Set value" sid="346233523385669" type="System">
-                    <param id="0" name="Variable">UpgradeStarPass</param>
-                    <param id="1" name="Value">GloveLvl * Player.FireGunPassLvl</param>
                 </action>
             </actions>
         </event-block>
@@ -534,7 +533,11 @@
                 </action>
                 <action id="-9" name="Set value" sid="206368335644326" type="System">
                     <param id="0" name="Variable">WeaponCurrentLvl</param>
-                    <param id="1" name="Value">AnvilLvl</param>
+                    <param id="1" name="Value">Player.AnvilLvl</param>
+                </action>
+                <action id="-9" name="Set value" sid="395741149319097" type="System">
+                    <param id="0" name="Variable">UpgradeStarPass</param>
+                    <param id="1" name="Value">Player.AnvilLvl * Player.AnvilPassLvl</param>
                 </action>
                 <action id="-15" name="Set visible" sid="202950522676947" type="RecoveryBarFireGun">
                     <param id="0" name="Visibility">0</param>
@@ -547,10 +550,6 @@
                 </action>
                 <action id="-15" name="Set visible" sid="911993155888797" type="RecoveryBarGlove">
                     <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-9" name="Set value" sid="541199126836467" type="System">
-                    <param id="0" name="Variable">UpgradeStarPass</param>
-                    <param id="1" name="Value">AnvilLvl * Player.FireGunPassLvl</param>
                 </action>
             </actions>
         </event-block>
@@ -572,7 +571,11 @@
                 </action>
                 <action id="-9" name="Set value" sid="527140274004773" type="System">
                     <param id="0" name="Variable">WeaponCurrentLvl</param>
-                    <param id="1" name="Value">TNTLvl</param>
+                    <param id="1" name="Value">Player.TNTLvl</param>
+                </action>
+                <action id="-9" name="Set value" sid="994477381546937" type="System">
+                    <param id="0" name="Variable">UpgradeStarPass</param>
+                    <param id="1" name="Value">Player.TNTLvl * Player.TntPassLvl</param>
                 </action>
                 <action id="-15" name="Set visible" sid="149437065122440" type="RecoveryBarFireGun">
                     <param id="0" name="Visibility">0</param>
@@ -585,10 +588,6 @@
                 </action>
                 <action id="-15" name="Set visible" sid="472463302566204" type="RecoveryBarGlove">
                     <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-9" name="Set value" sid="490817691230375" type="System">
-                    <param id="0" name="Variable">UpgradeStarPass</param>
-                    <param id="1" name="Value">TNTLvl * Player.FireGunPassLvl</param>
                 </action>
             </actions>
         </event-block>
@@ -610,7 +609,11 @@
                 </action>
                 <action id="-9" name="Set value" sid="354764741636233" type="System">
                     <param id="0" name="Variable">WeaponCurrentLvl</param>
-                    <param id="1" name="Value">FireGunLvl</param>
+                    <param id="1" name="Value">Player.FireGunLvl</param>
+                </action>
+                <action id="-9" name="Set value" sid="869118268156588" type="System">
+                    <param id="0" name="Variable">UpgradeStarPass</param>
+                    <param id="1" name="Value">Player.FireGunLvl * Player.FireGunPassLvl</param>
                 </action>
                 <action id="-15" name="Set visible" sid="189373334019304" type="RecoveryBarFireGun">
                     <param id="0" name="Visibility">1</param>
@@ -624,117 +627,192 @@
                 <action id="-15" name="Set visible" sid="620463118119903" type="RecoveryBarGlove">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-9" name="Set value" sid="957003295853056" type="System">
-                    <param id="0" name="Variable">UpgradeStarPass</param>
-                    <param id="1" name="Value">FireGunLvl * Player.FireGunPassLvl</param>
-                </action>
             </actions>
         </event-block>
         <comment>Bouncing brush damage</comment>
-        <event-block sid="309708043491914">
+        <event-block sid="942257211648121">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="896087868375770" type="ShotPlayer">
+                <condition id="-11" name="For Each" sid="317111005297565" type="System">
                     <param id="0" name="Object">Enemy001</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="204221759492468" type="ShotPlayer" />
-                <action id="0" name="Spawn another object" sid="879083757655715" type="ShotPlayer">
-                    <param id="0" name="Object">ShotImpact</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action behavior="Flash" id="0" name="Flash" sid="425288486539677" type="Enemy001">
-                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                    <param id="2" name="Duration">1.0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="349447058340363" type="Enemy001" />
-                <action behavior="ScrollTo" id="0" name="Shake" sid="524921318576138" type="Camera">
-                    <param id="0" name="Magnitude">10</param>
-                    <param id="1" name="Duration">0.2</param>
-                    <param id="2" name="Mode">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="461444475832882">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="892485365908433" type="Glove">
-                    <param id="0" name="Object">Enemy001</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="204790164282347" type="Glove" />
-                <action behavior="Flash" id="0" name="Flash" sid="500777233796684" type="Enemy001">
-                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                    <param id="2" name="Duration">1.0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="263137618265878" type="Enemy001" />
-                <action behavior="ScrollTo" id="0" name="Shake" sid="554490501129783" type="Camera">
-                    <param id="0" name="Magnitude">10</param>
-                    <param id="1" name="Duration">0.2</param>
-                    <param id="2" name="Mode">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="441892539350464">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="301057489116238" type="TNT">
-                    <param id="0" name="Object">Enemy001</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="673082278150127" type="TNT" />
-                <action id="0" name="Spawn another object" sid="837844698847101" type="TNT">
-                    <param id="0" name="Object">TNTImpact</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action behavior="Flash" id="0" name="Flash" sid="300128275480658" type="Enemy001">
-                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                    <param id="2" name="Duration">1.0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="377113627084311" type="Enemy001" />
-                <action id="0" name="Play" sid="329196959277805" type="Audio">
-                    <param id="0" name="Audio file">Tnt_snd</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">-10</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                </action>
-                <action behavior="ScrollTo" id="0" name="Shake" sid="802269504985072" type="Camera">
-                    <param id="0" name="Magnitude">10</param>
-                    <param id="1" name="Duration">0.2</param>
-                    <param id="2" name="Mode">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="130904670317128">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="929838812717119" type="Anvil">
-                    <param id="0" name="Object">Enemy001</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Flash" id="0" name="Flash" sid="103011403959954" type="Enemy001">
-                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                    <param id="2" name="Duration">1.0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="743205844784331" type="Enemy001" />
-                <action id="0" name="Play" sid="406518901168214" type="Audio">
-                    <param id="0" name="Audio file">Anvil_snd</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                </action>
-                <action behavior="ScrollTo" id="0" name="Shake" sid="494917933398808" type="Camera">
-                    <param id="0" name="Magnitude">10</param>
-                    <param id="1" name="Duration">0.2</param>
-                    <param id="2" name="Mode">0</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="309708043491914">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="896087868375770" type="ShotPlayer">
+                            <param id="0" name="Object">Enemy001</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="861619885720349" type="ShotPlayer" />
+                        <action id="0" name="Spawn another object" sid="879083757655715" type="ShotPlayer">
+                            <param id="0" name="Object">ShotImpact</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="425288486539677" type="Enemy001">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="524921318576138" type="Camera">
+                            <param id="0" name="Magnitude">10</param>
+                            <param id="1" name="Duration">0.2</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="210463696796397" type="Enemy001">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">Enemy001.Health - (Player.FireGunLvl * Player.FireGunDamage)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="461444475832882">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="892485365908433" type="Glove">
+                            <param id="0" name="Object">Enemy001</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="204790164282347" type="Glove" />
+                        <action behavior="Flash" id="0" name="Flash" sid="500777233796684" type="Enemy001">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="554490501129783" type="Camera">
+                            <param id="0" name="Magnitude">10</param>
+                            <param id="1" name="Duration">0.2</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="993997898041567" type="Enemy001">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">Enemy001.Health - (Player.GloveLvl * Player.GloveDamage)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="130904670317128">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="929838812717119" type="Anvil">
+                            <param id="0" name="Object">Enemy001</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="103011403959954" type="Enemy001">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="0" name="Play" sid="406518901168214" type="Audio">
+                            <param id="0" name="Audio file">Anvil_snd</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="494917933398808" type="Camera">
+                            <param id="0" name="Magnitude">10</param>
+                            <param id="1" name="Duration">0.2</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="662431229794797" type="Enemy001">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">Enemy001.Health - (Player.AnvilLvl * Player.AnvilDamage)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="441892539350464">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="301057489116238" type="TNT">
+                            <param id="0" name="Object">Enemy001</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="673082278150127" type="TNT" />
+                        <action id="0" name="Spawn another object" sid="837844698847101" type="TNT">
+                            <param id="0" name="Object">TNTImpact</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="300128275480658" type="Enemy001">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="0" name="Play" sid="329196959277805" type="Audio">
+                            <param id="0" name="Audio file">Tnt_snd</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="802269504985072" type="Camera">
+                            <param id="0" name="Magnitude">10</param>
+                            <param id="1" name="Duration">0.2</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="793211134117909" type="Enemy001">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">Enemy001.Health - (Player.TNTLvl * Player.TntDamage)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="662290425370820">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="778561631140221" type="Enemy001">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="ScrollTo" disabled="1" id="0" name="Shake" sid="763268728890371" type="Camera">
+                            <param id="0" name="Magnitude">10</param>
+                            <param id="1" name="Duration">0.2</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="651916953688473" type="Enemy001" />
+                    </actions>
+                </event-block>
+                <event-block sid="123912254284504">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="918403199864511" type="Enemy001">
+                            <param id="0" name="Instance variable">IsLeft</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="780180174967170" type="Enemy001">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="645005582326051" type="Enemy001">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="129193099787002">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="105829198049877" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="667960248716744" type="Enemy001">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="950167264726958" type="Enemy001">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="352202849542664">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="454329692943018" type="Enemy001">
+                            <param id="0" name="Object">Solids</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Toggle boolean" sid="612619334142298" type="Enemy001">
+                            <param id="0" name="Instance variable">IsLeft</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <comment>Rabbit 2 damage</comment>
         <event-block sid="295150424214366">
@@ -1217,56 +1295,6 @@
         </event-block>
         <comment>ENEMIES</comment>
         <comment>Bouncing brush</comment>
-        <event-block sid="956404661369901">
-            <conditions>
-                <condition id="-11" name="For Each" sid="809761330369455" type="System">
-                    <param id="0" name="Object">Enemy001</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="123912254284504">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="918403199864511" type="Enemy001">
-                            <param id="0" name="Instance variable">IsLeft</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="780180174967170" type="Enemy001">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                        <action id="7" name="Set mirrored" sid="645005582326051" type="Enemy001">
-                            <param id="0" name="State">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="129193099787002">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="105829198049877" type="System" />
-                    </conditions>
-                    <actions>
-                        <action behavior="8Direction" id="7" name="Simulate control" sid="667960248716744" type="Enemy001">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                        <action id="7" name="Set mirrored" sid="950167264726958" type="Enemy001">
-                            <param id="0" name="State">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="352202849542664">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="454329692943018" type="Enemy001">
-                            <param id="0" name="Object">Solids</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-14" name="Toggle boolean" sid="612619334142298" type="Enemy001">
-                            <param id="0" name="Instance variable">IsLeft</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
         <comment>Rabbit 2</comment>
         <event-block sid="814771839470744">
             <conditions>
@@ -1766,6 +1794,155 @@
                 </action>
                 <action id="-2" name="Go to layout" sid="569927484699862" type="System">
                     <param id="0" name="Layout">MainMenu</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Power Ups Weapons</comment>
+        <event-block sid="669750356805369">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="508558844886556" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">UpgradeIcon</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="139249940242008" type="Player">
+                    <param id="0" name="Instance variable">Stars</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">Player.FireGunLvl * Player.FireGunPassLvl</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="895063701155518" type="System">
+                    <param id="0" name="Variable">Weapon</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="411851966744441" type="Player">
+                    <param id="0" name="Instance variable">FireGunLvl</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="373942293197097" type="Player">
+                    <param id="0" name="Instance variable">Stars</param>
+                    <param id="1" name="Value">UpgradeStarPass</param>
+                </action>
+                <action id="-9" name="Set value" sid="781274467055843" type="System">
+                    <param id="0" name="Variable">WeaponCurrentLvl</param>
+                    <param id="1" name="Value">Player.FireGunLvl</param>
+                </action>
+                <action id="-9" name="Set value" sid="135626812632139" type="System">
+                    <param id="0" name="Variable">UpgradeStarPass</param>
+                    <param id="1" name="Value">Player.FireGunLvl * Player.FireGunPassLvl</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="391811380260529">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="580930971324027" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">UpgradeIcon</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="788648167968104" type="Player">
+                    <param id="0" name="Instance variable">Stars</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">Player.GloveLvl * Player.GlovePassLvl</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="524824243526431" type="System">
+                    <param id="0" name="Variable">Weapon</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="570250753622116" type="Player">
+                    <param id="0" name="Instance variable">GloveLvl</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="296971043092003" type="Player">
+                    <param id="0" name="Instance variable">Stars</param>
+                    <param id="1" name="Value">UpgradeStarPass</param>
+                </action>
+                <action id="-9" name="Set value" sid="674420243778695" type="System">
+                    <param id="0" name="Variable">WeaponCurrentLvl</param>
+                    <param id="1" name="Value">Player.GloveLvl</param>
+                </action>
+                <action id="-9" name="Set value" sid="839482267188419" type="System">
+                    <param id="0" name="Variable">UpgradeStarPass</param>
+                    <param id="1" name="Value">Player.GloveLvl * Player.GlovePassLvl</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="962976073184113">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="748367599735537" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">UpgradeIcon</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="928180382817236" type="Player">
+                    <param id="0" name="Instance variable">Stars</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">Player.AnvilLvl * Player.AnvilPassLvl</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="404667209531821" type="System">
+                    <param id="0" name="Variable">Weapon</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="714233515946344" type="Player">
+                    <param id="0" name="Instance variable">AnvilLvl</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="834229643837719" type="Player">
+                    <param id="0" name="Instance variable">Stars</param>
+                    <param id="1" name="Value">UpgradeStarPass</param>
+                </action>
+                <action id="-9" name="Set value" sid="914012780194880" type="System">
+                    <param id="0" name="Variable">WeaponCurrentLvl</param>
+                    <param id="1" name="Value">Player.AnvilLvl</param>
+                </action>
+                <action id="-9" name="Set value" sid="162376157457334" type="System">
+                    <param id="0" name="Variable">UpgradeStarPass</param>
+                    <param id="1" name="Value">Player.AnvilLvl * Player.AnvilPassLvl</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="611085808673673">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="644386625297373" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">UpgradeIcon</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="902769871642985" type="Player">
+                    <param id="0" name="Instance variable">Stars</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">Player.TNTLvl * Player.TntPassLvl</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="176688155362076" type="System">
+                    <param id="0" name="Variable">Weapon</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="279202409746517" type="Player">
+                    <param id="0" name="Instance variable">TNTLvl</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="660079824925430" type="Player">
+                    <param id="0" name="Instance variable">Stars</param>
+                    <param id="1" name="Value">UpgradeStarPass</param>
+                </action>
+                <action id="-9" name="Set value" sid="143816457590397" type="System">
+                    <param id="0" name="Variable">WeaponCurrentLvl</param>
+                    <param id="1" name="Value">Player.TNTLvl</param>
+                </action>
+                <action id="-9" name="Set value" sid="723845945007200" type="System">
+                    <param id="0" name="Variable">UpgradeStarPass</param>
+                    <param id="1" name="Value">Player.TNTLvl * Player.TntPassLvl</param>
                 </action>
             </actions>
         </event-block>
