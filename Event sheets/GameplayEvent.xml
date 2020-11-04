@@ -300,7 +300,7 @@
                 <action id="0" name="Play" sid="448349733054907" type="Audio">
                     <param id="0" name="Audio file">Anvil_snd</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
+                    <param id="3" name="Volume">-9</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
@@ -364,7 +364,7 @@
                 <action id="0" name="Play" sid="380426820286226" type="Audio">
                     <param id="0" name="Audio file">Shot_snd</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
+                    <param id="3" name="Volume">-9</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
@@ -585,7 +585,7 @@
                         <action id="0" name="Play" sid="406518901168214" type="Audio">
                             <param id="0" name="Audio file">Anvil_snd</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">0</param>
+                            <param id="3" name="Volume">-9</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" sid="494917933398808" type="Camera">
@@ -620,7 +620,7 @@
                         <action id="0" name="Play" sid="329196959277805" type="Audio">
                             <param id="0" name="Audio file">Tnt_snd</param>
                             <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-10</param>
+                            <param id="3" name="Volume">-14</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" sid="802269504985072" type="Camera">
@@ -737,7 +737,7 @@
                 <action id="0" name="Play" sid="333055618630199" type="Audio">
                     <param id="0" name="Audio file">Tnt_snd</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">-10</param>
+                    <param id="3" name="Volume">-14</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
                 <action behavior="ScrollTo" id="0" name="Shake" sid="775253022366876" type="Camera">
@@ -763,7 +763,7 @@
                 <action id="0" name="Play" sid="344794362521004" type="Audio">
                     <param id="0" name="Audio file">Anvil_snd</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
+                    <param id="3" name="Volume">-9</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
                 <action behavior="ScrollTo" id="0" name="Shake" sid="470416869214185" type="Camera">
@@ -822,7 +822,7 @@
                 <action id="0" name="Play" sid="532534069268337" type="Audio">
                     <param id="0" name="Audio file">Tnt_snd</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">-10</param>
+                    <param id="3" name="Volume">-14</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
                 <action behavior="ScrollTo" id="0" name="Shake" sid="750803977127899" type="Camera">
@@ -848,7 +848,7 @@
                 <action id="0" name="Play" sid="131751136355584" type="Audio">
                     <param id="0" name="Audio file">Anvil_snd</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
+                    <param id="3" name="Volume">-9</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
                 <action behavior="ScrollTo" id="0" name="Shake" sid="568993210153283" type="Camera">
@@ -892,7 +892,7 @@
                 <action id="0" name="Play" sid="753349059659775" type="Audio">
                     <param id="0" name="Audio file">Tnt_snd</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">-10</param>
+                    <param id="3" name="Volume">-14</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
                 <action behavior="ScrollTo" id="0" name="Shake" sid="678063378555169" type="Camera">
@@ -918,7 +918,7 @@
                 <action id="0" name="Play" sid="655094527442339" type="Audio">
                     <param id="0" name="Audio file">Anvil_snd</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
+                    <param id="3" name="Volume">-9</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
@@ -1224,7 +1224,7 @@
                 <action id="0" name="Play" sid="881514279784841" type="Audio">
                     <param id="0" name="Audio file">Shot_snd</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
+                    <param id="3" name="Volume">-9</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
