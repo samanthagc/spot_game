@@ -1735,9 +1735,9 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1488</x>
-                        <y>1216</y>
+                        <y>1212</y>
                         <z>0</z>
-                        <width>64</width>
+                        <width>58</width>
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -1764,9 +1764,9 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1488</x>
-                        <y>1440</y>
+                        <y>1438</y>
                         <z>0</z>
-                        <width>64</width>
+                        <width>58</width>
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -1793,9 +1793,9 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>816</x>
-                        <y>1440</y>
+                        <y>1436</y>
                         <z>0</z>
-                        <width>64</width>
+                        <width>56</width>
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -1822,9 +1822,9 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>816</x>
-                        <y>1216</y>
+                        <y>1212</y>
                         <z>0</z>
-                        <width>64</width>
+                        <width>58</width>
                         <height>32</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -2965,7 +2965,6 @@
                     </properties>
                     <instance-variables>
                         <IsLeft>false</IsLeft>
-                        <Health>3</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -3043,7 +3042,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>128</x>
+                        <x>1152</x>
                         <y>800</y>
                         <z>0</z>
                         <width>56.958217621</width>
@@ -3809,7 +3808,6 @@
                     </properties>
                     <instance-variables>
                         <IsLeft>false</IsLeft>
-                        <Health>3</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -3854,7 +3852,6 @@
                     </properties>
                     <instance-variables>
                         <IsLeft>false</IsLeft>
-                        <Health>3</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -3965,7 +3962,6 @@
                     </properties>
                     <instance-variables>
                         <IsLeft>false</IsLeft>
-                        <Health>3</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -4010,7 +4006,6 @@
                     </properties>
                     <instance-variables>
                         <IsLeft>false</IsLeft>
-                        <Health>3</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -4073,7 +4068,7 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
@@ -4128,7 +4123,7 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
@@ -4183,7 +4178,7 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
@@ -4238,7 +4233,7 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
@@ -4293,7 +4288,7 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
@@ -4348,7 +4343,7 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
@@ -4403,7 +4398,7 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="LineOfSight">
@@ -5927,6 +5922,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Health>8</Health>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LineOfSight">
                             <properties>
@@ -5952,7 +5950,7 @@
                         </behavior-instance>
                         <behavior-instance type="Solid">
                             <properties>
-                                <initial-state>Enabled</initial-state>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Turret">
@@ -5981,6 +5979,357 @@
                         <depth>0</depth>
                         <hotspotX>0.50515461</hotspotX>
                         <hotspotY>0.504504502</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPCs" uid="237">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSetter>-1</AnimationSetter>
+                        <Animation>&quot;Baby&quot;</Animation>
+                        <ViolenceCounter>0</ViolenceCounter>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>168</x>
+                        <y>614</y>
+                        <z>0</z>
+                        <width>42.365982056</width>
+                        <height>48.340671539</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPCs" uid="238">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSetter>-1</AnimationSetter>
+                        <Animation>&quot;Baby&quot;</Animation>
+                        <ViolenceCounter>0</ViolenceCounter>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>608</x>
+                        <y>772</y>
+                        <z>0</z>
+                        <width>42.365982056</width>
+                        <height>48.340671539</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPCs" uid="239">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSetter>-1</AnimationSetter>
+                        <Animation>&quot;Baby&quot;</Animation>
+                        <ViolenceCounter>0</ViolenceCounter>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1113</x>
+                        <y>726</y>
+                        <z>0</z>
+                        <width>42.365982056</width>
+                        <height>48.340671539</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPCs" uid="240">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSetter>-1</AnimationSetter>
+                        <Animation>&quot;Baby&quot;</Animation>
+                        <ViolenceCounter>0</ViolenceCounter>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1209</x>
+                        <y>726</y>
+                        <z>0</z>
+                        <width>42.365982056</width>
+                        <height>48.340671539</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPCs" uid="241">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSetter>-1</AnimationSetter>
+                        <Animation>&quot;Baby&quot;</Animation>
+                        <ViolenceCounter>0</ViolenceCounter>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1408</x>
+                        <y>352</y>
+                        <z>0</z>
+                        <width>42.365982056</width>
+                        <height>48.340671539</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPCs" uid="242">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSetter>-1</AnimationSetter>
+                        <Animation>&quot;Baby&quot;</Animation>
+                        <ViolenceCounter>0</ViolenceCounter>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>992</x>
+                        <y>128</y>
+                        <z>0</z>
+                        <width>42.365982056</width>
+                        <height>48.340671539</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPCs" uid="243">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSetter>-1</AnimationSetter>
+                        <Animation>&quot;Baby&quot;</Animation>
+                        <ViolenceCounter>0</ViolenceCounter>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1905</x>
+                        <y>883</y>
+                        <z>0</z>
+                        <width>42.365982056</width>
+                        <height>48.340671539</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPCs" uid="244">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSetter>-1</AnimationSetter>
+                        <Animation>&quot;Baby&quot;</Animation>
+                        <ViolenceCounter>0</ViolenceCounter>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1485</x>
+                        <y>1218</y>
+                        <z>0</z>
+                        <width>42.365982056</width>
+                        <height>48.340671539</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPCs" uid="245">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSetter>-1</AnimationSetter>
+                        <Animation>&quot;Baby&quot;</Animation>
+                        <ViolenceCounter>0</ViolenceCounter>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1485</x>
+                        <y>1445</y>
+                        <z>0</z>
+                        <width>42.365982056</width>
+                        <height>48.340671539</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPCs" uid="246">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSetter>-1</AnimationSetter>
+                        <Animation>&quot;Baby&quot;</Animation>
+                        <ViolenceCounter>0</ViolenceCounter>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>819</x>
+                        <y>1440</y>
+                        <z>0</z>
+                        <width>42.365982056</width>
+                        <height>48.340671539</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPCs" uid="247">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSetter>-1</AnimationSetter>
+                        <Animation>&quot;Baby&quot;</Animation>
+                        <ViolenceCounter>0</ViolenceCounter>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>819</x>
+                        <y>1216</y>
+                        <z>0</z>
+                        <width>42.365982056</width>
+                        <height>48.340671539</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPCs" uid="248">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSetter>-1</AnimationSetter>
+                        <Animation>&quot;Baby&quot;</Animation>
+                        <ViolenceCounter>0</ViolenceCounter>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1622</x>
+                        <y>1115</y>
+                        <z>0</z>
+                        <width>42.365982056</width>
+                        <height>48.340671539</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPCs" uid="249">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSetter>-1</AnimationSetter>
+                        <Animation>&quot;Baby&quot;</Animation>
+                        <ViolenceCounter>0</ViolenceCounter>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2240</x>
+                        <y>1152</y>
+                        <z>0</z>
+                        <width>42.365982056</width>
+                        <height>48.340671539</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -140,5 +140,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/TutorialPage1/" />
         <folder expanded="1" path="animation-folder/TutorialPage2/" />
         <folder expanded="1" path="animation-folder/ScreenTransition/" />
+        <folder expanded="1" path="animation-folder/NPCs/" />
     </folders-expanded>
 </c2uistate>

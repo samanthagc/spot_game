@@ -1270,7 +1270,6 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="IsLeft" sid="477784302473167" type="boolean" />
-                <instance-variable name="Health" sid="199916449475345" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="194216189513066">
@@ -2749,6 +2748,9 @@
         </object-type>
         <object-type name="EnemyBoss" sid="819062684107594">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Health" sid="709839018329048" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="LineOfSight" sid="116322063134329">
                     <behavior id="LOS" />
@@ -3380,6 +3382,80 @@
                     <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0018.png" />
                     <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0019.png" />
                     <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0020.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="NPCs" sid="846130094991283">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="AnimationSetter" sid="154783725953765" type="number" />
+                <instance-variable name="Animation" sid="220906273181844" type="string" />
+                <instance-variable name="ViolenceCounter" sid="500406628994429" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="11" loop="0" name="Baby" pingpong="0" repeatcount="1" repeatto="0" sid="763100879848579" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\bebeFofucho\bebeFofucho0001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\bebeFofucho\bebeFofucho0002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\bebeFofucho\bebeFofucho0003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\bebeFofucho\bebeFofucho0004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\bebeFofucho\bebeFofucho0005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\bebeFofucho\bebeFofucho0006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\bebeFofucho\bebeFofucho0007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\bebeFofucho\bebeFofucho0008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\bebeFofucho\bebeFofucho0009.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\bebeFofucho\bebeFofucho0010.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\bebeFofucho\bebeFofucho0011.png" />
+                </animation>
+                <animation framecount="12" loop="0" name="Dog" pingpong="0" repeatcount="1" repeatto="0" sid="902981567615575" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\cachorroFofucho\cachorroFofucho0001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\cachorroFofucho\cachorroFofucho0002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\cachorroFofucho\cachorroFofucho0003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\cachorroFofucho\cachorroFofucho0004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\cachorroFofucho\cachorroFofucho0005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\cachorroFofucho\cachorroFofucho0006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\cachorroFofucho\cachorroFofucho0007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\cachorroFofucho\cachorroFofucho0008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\cachorroFofucho\cachorroFofucho0009.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\cachorroFofucho\cachorroFofucho0010.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\cachorroFofucho\cachorroFofucho0011.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\cachorroFofucho\cachorroFofucho0012.png" />
+                </animation>
+                <animation framecount="10" loop="0" name="Cat" pingpong="0" repeatcount="1" repeatto="0" sid="467494744327148" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\gatoFofucho\gatoFofucho0001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\gatoFofucho\gatoFofucho0002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\gatoFofucho\gatoFofucho0003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\gatoFofucho\gatoFofucho0004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\gatoFofucho\gatoFofucho0005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\gatoFofucho\gatoFofucho0006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\gatoFofucho\gatoFofucho0007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\gatoFofucho\gatoFofucho0008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\gatoFofucho\gatoFofucho0009.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\gatoFofucho\gatoFofucho0010.png" />
+                </animation>
+                <animation framecount="10" loop="0" name="Duck" pingpong="0" repeatcount="1" repeatto="0" sid="917199098978404" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\patoFofucho\patoFofucho0001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\patoFofucho\patoFofucho0002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\patoFofucho\patoFofucho0003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\patoFofucho\patoFofucho0004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\patoFofucho\patoFofucho0005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\patoFofucho\patoFofucho0006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\patoFofucho\patoFofucho0007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\patoFofucho\patoFofucho0008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\patoFofucho\patoFofucho0009.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\patoFofucho\patoFofucho0010.png" />
+                </animation>
+                <animation framecount="11" loop="0" name="Turtle" pingpong="0" repeatcount="1" repeatto="0" sid="848185194552679" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\tartarugaFofucho\tartarugaFofucho0001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\tartarugaFofucho\tartarugaFofucho0002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\tartarugaFofucho\tartarugaFofucho0003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\tartarugaFofucho\tartarugaFofucho0004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\tartarugaFofucho\tartarugaFofucho0005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\tartarugaFofucho\tartarugaFofucho0006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\tartarugaFofucho\tartarugaFofucho0007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\tartarugaFofucho\tartarugaFofucho0008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\tartarugaFofucho\tartarugaFofucho0009.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\tartarugaFofucho\tartarugaFofucho0010.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\AleCosta\Desktop\spot\assets\tartarugaFofucho\tartarugaFofucho0011.png" />
                 </animation>
             </animation-folder>
         </object-type>
