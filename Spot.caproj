@@ -1271,6 +1271,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="IsLeft" sid="477784302473167" type="boolean" />
+                <instance-variable name="Health" sid="776772221474504" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="194216189513066">

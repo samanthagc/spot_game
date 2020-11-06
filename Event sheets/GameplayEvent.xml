@@ -810,6 +810,82 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="309708043491914">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="896087868375770" type="ShotPlayer">
+                            <param id="0" name="Object">Enemy001</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="861619885720349" type="ShotPlayer" />
+                        <action id="0" name="Spawn another object" sid="879083757655715" type="ShotPlayer">
+                            <param id="0" name="Object">ShotImpact</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="524921318576138" type="Camera">
+                            <param id="0" name="Magnitude">10</param>
+                            <param id="1" name="Duration">0.2</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="355095200450401" type="Enemy001">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="130904670317128">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="929838812717119" type="Anvil">
+                            <param id="0" name="Object">Enemy001</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="406518901168214" type="Audio">
+                            <param id="0" name="Audio file">Anvil_snd</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-9</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="494917933398808" type="Camera">
+                            <param id="0" name="Magnitude">10</param>
+                            <param id="1" name="Duration">0.2</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="164108133000299" type="Enemy001">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="441892539350464">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="301057489116238" type="TNTImpact">
+                            <param id="0" name="Object">Enemy001</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="684130147034395" type="Enemy001">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="863840127505620">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="979386416315165" type="Enemy001">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="806772781242204" type="Enemy001" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
         <comment>Rabbit 2</comment>
@@ -845,6 +921,82 @@
                         <action id="7" name="Set mirrored" sid="325267940812257" type="Enemy002">
                             <param id="0" name="State">1</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="295150424214366">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="993011205618389" type="ShotPlayer">
+                            <param id="0" name="Object">Enemy002</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="885270987612947" type="ShotPlayer" />
+                        <action id="0" name="Spawn another object" sid="908460227355415" type="ShotPlayer">
+                            <param id="0" name="Object">ShotImpact</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="784550493596567" type="Enemy002">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="782830527066129" type="Camera">
+                            <param id="0" name="Magnitude">10</param>
+                            <param id="1" name="Duration">0.2</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="959444359119944">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="327835181579405" type="TNTImpact">
+                            <param id="0" name="Object">Enemy002</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="721480196022473" type="Enemy002">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="103000024850713">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="631130241649607" type="Anvil">
+                            <param id="0" name="Object">Enemy002</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="198726063019672" type="Enemy002">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="0" name="Play" sid="344794362521004" type="Audio">
+                            <param id="0" name="Audio file">Anvil_snd</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-9</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="470416869214185" type="Camera">
+                            <param id="0" name="Magnitude">10</param>
+                            <param id="1" name="Duration">0.2</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="980103118911575">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="840820855290889" type="Enemy002">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="261371405380950" type="Enemy002" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -928,6 +1080,85 @@
                         <action id="-14" name="Toggle boolean" sid="784819645097674" type="Enemy003">
                             <param id="0" name="Instance variable">IsBack</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="407378700866946">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="425319578201790" type="ShotPlayer">
+                            <param id="0" name="Object">Enemy003</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="948397106123492" type="ShotPlayer" />
+                        <action id="0" name="Spawn another object" sid="422383176284378" type="ShotPlayer">
+                            <param id="0" name="Object">ShotImpact</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="724986711404292" type="Enemy003">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="486751157968841" type="Enemy003" />
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="897873577449984" type="Camera">
+                            <param id="0" name="Magnitude">10</param>
+                            <param id="1" name="Duration">0.2</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="481501924231528">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="896575667335810" type="TNT">
+                            <param id="0" name="Object">TNTImpact</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="414505090083806" type="Enemy003">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="885530852495058" type="Enemy003" />
+                    </actions>
+                </event-block>
+                <event-block sid="104412907076582">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="826145818847351" type="Anvil">
+                            <param id="0" name="Object">Enemy003</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="582538764961410" type="Enemy003">
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="138531893181130" type="Enemy003" />
+                        <action id="0" name="Play" sid="131751136355584" type="Audio">
+                            <param id="0" name="Audio file">Anvil_snd</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-9</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="568993210153283" type="Camera">
+                            <param id="0" name="Magnitude">10</param>
+                            <param id="1" name="Duration">0.2</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="425502820442854">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="948365420005644" type="Enemy003">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="465930621230615" type="Enemy002" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -1097,195 +1328,6 @@
                 </action>
                 <action id="-9" name="Destroy" sid="965645706895001" type="ShotImpact" />
                 <action behavior="ScrollTo" id="0" name="Shake" sid="508770351253280" type="Camera">
-                    <param id="0" name="Magnitude">10</param>
-                    <param id="1" name="Duration">0.2</param>
-                    <param id="2" name="Mode">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>Bouncing brush damage</comment>
-        <event-block sid="309708043491914">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="896087868375770" type="ShotPlayer">
-                    <param id="0" name="Object">Enemy001</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="861619885720349" type="ShotPlayer" />
-                <action id="0" name="Spawn another object" sid="879083757655715" type="ShotPlayer">
-                    <param id="0" name="Object">ShotImpact</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action behavior="ScrollTo" id="0" name="Shake" sid="524921318576138" type="Camera">
-                    <param id="0" name="Magnitude">10</param>
-                    <param id="1" name="Duration">0.2</param>
-                    <param id="2" name="Mode">0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="806772781242204" type="Enemy001" />
-            </actions>
-        </event-block>
-        <event-block sid="130904670317128">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="929838812717119" type="Anvil">
-                    <param id="0" name="Object">Enemy001</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="0" name="Play" sid="406518901168214" type="Audio">
-                    <param id="0" name="Audio file">Anvil_snd</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">-9</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                </action>
-                <action behavior="ScrollTo" id="0" name="Shake" sid="494917933398808" type="Camera">
-                    <param id="0" name="Magnitude">10</param>
-                    <param id="1" name="Duration">0.2</param>
-                    <param id="2" name="Mode">0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="724291498524078" type="Enemy001" />
-            </actions>
-        </event-block>
-        <event-block sid="441892539350464">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="301057489116238" type="TNTImpact">
-                    <param id="0" name="Object">Enemy001</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="651916953688473" type="Enemy001" />
-            </actions>
-        </event-block>
-        <comment>Rabbit 2 damage</comment>
-        <event-block sid="295150424214366">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="993011205618389" type="ShotPlayer">
-                    <param id="0" name="Object">Enemy002</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="885270987612947" type="ShotPlayer" />
-                <action id="0" name="Spawn another object" sid="908460227355415" type="ShotPlayer">
-                    <param id="0" name="Object">ShotImpact</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action behavior="Flash" id="0" name="Flash" sid="784550493596567" type="Enemy002">
-                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                    <param id="2" name="Duration">1.0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="261371405380950" type="Enemy002" />
-                <action behavior="ScrollTo" id="0" name="Shake" sid="782830527066129" type="Camera">
-                    <param id="0" name="Magnitude">10</param>
-                    <param id="1" name="Duration">0.2</param>
-                    <param id="2" name="Mode">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="959444359119944">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="327835181579405" type="TNTImpact">
-                    <param id="0" name="Object">Enemy002</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Flash" id="0" name="Flash" sid="721480196022473" type="Enemy002">
-                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                    <param id="2" name="Duration">1.0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="157151381035101" type="Enemy002" />
-            </actions>
-        </event-block>
-        <event-block sid="103000024850713">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="631130241649607" type="Anvil">
-                    <param id="0" name="Object">Enemy002</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Flash" id="0" name="Flash" sid="198726063019672" type="Enemy002">
-                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                    <param id="2" name="Duration">1.0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="663270067680624" type="Enemy002" />
-                <action id="0" name="Play" sid="344794362521004" type="Audio">
-                    <param id="0" name="Audio file">Anvil_snd</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">-9</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                </action>
-                <action behavior="ScrollTo" id="0" name="Shake" sid="470416869214185" type="Camera">
-                    <param id="0" name="Magnitude">10</param>
-                    <param id="1" name="Duration">0.2</param>
-                    <param id="2" name="Mode">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <comment>Painting damage</comment>
-        <event-block sid="407378700866946">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="425319578201790" type="ShotPlayer">
-                    <param id="0" name="Object">Enemy003</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="948397106123492" type="ShotPlayer" />
-                <action id="0" name="Spawn another object" sid="422383176284378" type="ShotPlayer">
-                    <param id="0" name="Object">ShotImpact</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action behavior="Flash" id="0" name="Flash" sid="724986711404292" type="Enemy003">
-                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                    <param id="2" name="Duration">1.0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="486751157968841" type="Enemy003" />
-                <action behavior="ScrollTo" id="0" name="Shake" sid="897873577449984" type="Camera">
-                    <param id="0" name="Magnitude">10</param>
-                    <param id="1" name="Duration">0.2</param>
-                    <param id="2" name="Mode">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="481501924231528">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="896575667335810" type="TNT">
-                    <param id="0" name="Object">TNTImpact</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Flash" id="0" name="Flash" sid="414505090083806" type="Enemy003">
-                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                    <param id="2" name="Duration">1.0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="885530852495058" type="Enemy003" />
-            </actions>
-        </event-block>
-        <event-block sid="104412907076582">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="826145818847351" type="Anvil">
-                    <param id="0" name="Object">Enemy003</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Flash" id="0" name="Flash" sid="582538764961410" type="Enemy003">
-                    <param id="0" name="&apos;On&apos; time">0.1</param>
-                    <param id="1" name="&apos;Off&apos; time">0.1</param>
-                    <param id="2" name="Duration">1.0</param>
-                </action>
-                <action id="-9" name="Destroy" sid="138531893181130" type="Enemy003" />
-                <action id="0" name="Play" sid="131751136355584" type="Audio">
-                    <param id="0" name="Audio file">Anvil_snd</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">-9</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                </action>
-                <action behavior="ScrollTo" id="0" name="Shake" sid="568993210153283" type="Camera">
                     <param id="0" name="Magnitude">10</param>
                     <param id="1" name="Duration">0.2</param>
                     <param id="2" name="Mode">0</param>

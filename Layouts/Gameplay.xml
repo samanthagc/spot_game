@@ -2965,6 +2965,7 @@
                     </properties>
                     <instance-variables>
                         <IsLeft>false</IsLeft>
+                        <Health>3</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -3809,6 +3810,7 @@
                     </properties>
                     <instance-variables>
                         <IsLeft>false</IsLeft>
+                        <Health>3</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -3853,6 +3855,7 @@
                     </properties>
                     <instance-variables>
                         <IsLeft>false</IsLeft>
+                        <Health>3</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -3963,6 +3966,7 @@
                     </properties>
                     <instance-variables>
                         <IsLeft>false</IsLeft>
+                        <Health>3</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -4007,6 +4011,7 @@
                     </properties>
                     <instance-variables>
                         <IsLeft>false</IsLeft>
+                        <Health>3</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Solid">
@@ -4050,7 +4055,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Health>3</Health>
+                        <Health>7</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
@@ -4105,7 +4110,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Health>3</Health>
+                        <Health>7</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
@@ -4160,7 +4165,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Health>3</Health>
+                        <Health>7</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
@@ -4215,7 +4220,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Health>3</Health>
+                        <Health>7</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
@@ -4270,7 +4275,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Health>3</Health>
+                        <Health>7</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
@@ -4325,7 +4330,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Health>3</Health>
+                        <Health>7</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
@@ -4380,7 +4385,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Health>3</Health>
+                        <Health>7</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pathfinding">
@@ -4780,7 +4785,7 @@
                     </properties>
                     <instance-variables>
                         <IsBack>false</IsBack>
-                        <Health>5</Health>
+                        <Health>15</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -5164,7 +5169,7 @@
                     </properties>
                     <instance-variables>
                         <IsBack>false</IsBack>
-                        <Health>5</Health>
+                        <Health>15</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -5222,7 +5227,7 @@
                     </properties>
                     <instance-variables>
                         <IsBack>false</IsBack>
-                        <Health>5</Health>
+                        <Health>15</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -5924,7 +5929,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Health>8</Health>
+                        <Health>80</Health>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="LineOfSight">
