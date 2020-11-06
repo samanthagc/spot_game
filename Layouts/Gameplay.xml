@@ -3024,6 +3024,7 @@
                         <AnvilDamage>4</AnvilDamage>
                         <TntDamage>8</TntDamage>
                         <Stars>25</Stars>
+                        <SelectedItem>0</SelectedItem>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
@@ -3042,7 +3043,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1152</x>
+                        <x>352</x>
                         <y>800</y>
                         <z>0</z>
                         <width>56.958217621</width>
@@ -6133,8 +6134,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>992</x>
-                        <y>128</y>
+                        <x>896</x>
+                        <y>160</y>
                         <z>0</z>
                         <width>42.365982056</width>
                         <height>48.340671539</height>
@@ -6268,8 +6269,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>819</x>
-                        <y>1216</y>
+                        <x>960</x>
+                        <y>1137</y>
                         <z>0</z>
                         <width>42.365982056</width>
                         <height>48.340671539</height>

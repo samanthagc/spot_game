@@ -164,6 +164,7 @@
                 <instance-variable name="AnvilDamage" sid="344623217623711" type="number" />
                 <instance-variable name="TntDamage" sid="681277091088591" type="number" />
                 <instance-variable name="Stars" sid="650491795693053" type="number" />
+                <instance-variable name="SelectedItem" sid="454922148452795" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="615988158471799">
