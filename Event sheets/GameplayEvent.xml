@@ -252,7 +252,7 @@
                 <condition id="-14" name="Compare variable" sid="466628119039595" type="System">
                     <param id="0" name="Variable">Weapon</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">0</param>
+                    <param id="2" name="Value">4</param>
                 </condition>
                 <condition id="-5" name="Compare width" sid="799375810449614" type="RecoveryBarFireGun">
                     <param id="0" name="Comparison">5</param>
@@ -294,7 +294,7 @@
                 <condition id="-14" name="Compare variable" sid="624132159647335" type="System">
                     <param id="0" name="Variable">Weapon</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
+                    <param id="2" name="Value">2</param>
                 </condition>
                 <condition id="-5" name="Compare width" sid="603348583284978" type="RecoveryBarAnvil">
                     <param id="0" name="Comparison">5</param>
@@ -369,7 +369,7 @@
                 <condition id="-14" name="Compare variable" sid="312232956453448" type="System">
                     <param id="0" name="Variable">Weapon</param>
                     <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">2</param>
+                    <param id="2" name="Value">3</param>
                 </condition>
                 <condition id="-5" name="Compare width" sid="245823179046675" type="RecoveryBarTNTt">
                     <param id="0" name="Comparison">5</param>
@@ -497,7 +497,7 @@
                 </action>
                 <action id="-9" name="Set value" sid="229802146156844" type="System">
                     <param id="0" name="Variable">Weapon</param>
-                    <param id="1" name="Value">0</param>
+                    <param id="1" name="Value">4</param>
                 </action>
                 <action id="-9" name="Set value" sid="354764741636233" type="System">
                     <param id="0" name="Variable">WeaponCurrentLvl</param>
@@ -536,7 +536,7 @@
                 </action>
                 <action id="-9" name="Set value" sid="513863136875945" type="System">
                     <param id="0" name="Variable">Weapon</param>
-                    <param id="1" name="Value">1</param>
+                    <param id="1" name="Value">2</param>
                 </action>
                 <action id="-9" name="Set value" sid="206368335644326" type="System">
                     <param id="0" name="Variable">WeaponCurrentLvl</param>
@@ -575,7 +575,7 @@
                 </action>
                 <action id="-9" name="Set value" sid="534615357906451" type="System">
                     <param id="0" name="Variable">Weapon</param>
-                    <param id="1" name="Value">2</param>
+                    <param id="1" name="Value">3</param>
                 </action>
                 <action id="-9" name="Set value" sid="527140274004773" type="System">
                     <param id="0" name="Variable">WeaponCurrentLvl</param>
@@ -833,6 +833,10 @@
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">1.0</param>
                         </action>
+                        <action id="-10" name="Set value" sid="962643871662193" type="Enemy001">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">Enemy001.Health - (Player.FireGunLvl  * Player.FireGunDamage)</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="130904670317128">
@@ -858,6 +862,10 @@
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">1.0</param>
                         </action>
+                        <action id="-10" name="Set value" sid="674867446613634" type="Enemy001">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">Enemy001.Health - (Player.AnvilLvl * Player.AnvilDamage)</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="441892539350464">
@@ -871,6 +879,10 @@
                             <param id="0" name="&apos;On&apos; time">0.1</param>
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="978752473928799" type="Enemy001">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">Enemy001.Health - (Player.TNTLvl * Player.TntDamage)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -946,6 +958,10 @@
                             <param id="1" name="Duration">0.2</param>
                             <param id="2" name="Mode">0</param>
                         </action>
+                        <action id="-10" name="Set value" sid="871433782335118" type="Enemy002">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">Enemy002.Health - (Player.FireGunLvl  * Player.FireGunDamage)</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="959444359119944">
@@ -959,6 +975,10 @@
                             <param id="0" name="&apos;On&apos; time">0.1</param>
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="717803820087967" type="Enemy002">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">Enemy002.Health - (Player.TNTLvl * Player.TntDamage)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -984,6 +1004,10 @@
                             <param id="0" name="Magnitude">10</param>
                             <param id="1" name="Duration">0.2</param>
                             <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="629146589369065" type="Enemy002">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">Enemy002.Health - (Player.AnvilLvl * Player.AnvilDamage)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1100,11 +1124,14 @@
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="486751157968841" type="Enemy003" />
                         <action behavior="ScrollTo" id="0" name="Shake" sid="897873577449984" type="Camera">
                             <param id="0" name="Magnitude">10</param>
                             <param id="1" name="Duration">0.2</param>
                             <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="639041361544849" type="Enemy003">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">Enemy003.Health - (Player.FireGunLvl * Player.FireGunDamage)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1120,7 +1147,10 @@
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="885530852495058" type="Enemy003" />
+                        <action id="-10" name="Set value" sid="820578238315883" type="Enemy003">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">Enemy003.Health - (Player.TNTLvl * Player.TntDamage)</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="104412907076582">
@@ -1135,7 +1165,6 @@
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">1.0</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="138531893181130" type="Enemy003" />
                         <action id="0" name="Play" sid="131751136355584" type="Audio">
                             <param id="0" name="Audio file">Anvil_snd</param>
                             <param id="2" name="Loop">0</param>
@@ -1146,6 +1175,10 @@
                             <param id="0" name="Magnitude">10</param>
                             <param id="1" name="Duration">0.2</param>
                             <param id="2" name="Mode">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="713417896443913" type="Enemy003">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Value">Enemy003.Health - (Player.AnvilLvl * Player.AnvilDamage)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1158,7 +1191,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="465930621230615" type="Enemy002" />
+                        <action id="-9" name="Destroy" sid="465930621230615" type="Enemy003" />
                     </actions>
                 </event-block>
             </sub-events>
