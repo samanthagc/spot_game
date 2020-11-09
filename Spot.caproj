@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
     <name>Spot</name>
-    <description></description>
-    <version>1.0.0.1</version>
+    <description>Projeto Smaug Fatec Carapicuiba</description>
+    <version>1.0.0</version>
     <author>SCAR Game Studio</author>
-    <author-email></author-email>
+    <author-email>alefantasyking@gmail.com</author-email>
     <author-website>http://</author-website>
-    <app-id>com.mycompany.myapp</app-id>
+    <app-id>SCAR</app-id>
     <unique-id>3uklhvt8n9o2d</unique-id>
     <saved-with-version>27900</saved-with-version>
     <used-plugins>
@@ -42,6 +42,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>MainMenu</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -148,13 +149,14 @@
         <object-type name="Player" sid="946074057166410">
             <plugin id="Sprite" />
             <instance-variables>
+                <instance-variable name="OnMenuPause" sid="935633393004582" type="boolean" />
+                <instance-variable name="BossFight" sid="281070772551593" type="boolean" />
                 <instance-variable name="Direction" sid="912187418161257" type="string" />
                 <instance-variable name="AnglePlayer" sid="358189626424959" type="number" />
                 <instance-variable name="FireGunLvl" sid="126011941861268" type="number" />
                 <instance-variable name="GloveLvl" sid="504749093171220" type="number" />
                 <instance-variable name="AnvilLvl" sid="350010281127125" type="number" />
                 <instance-variable name="TNTLvl" sid="176579294186243" type="number" />
-                <instance-variable name="OnMenuPause" sid="935633393004582" type="boolean" />
                 <instance-variable name="FireGunPassLvl" sid="386645682131045" type="number" />
                 <instance-variable name="GlovePassLvl" sid="944090006480339" type="number" />
                 <instance-variable name="AnvilPassLvl" sid="752188936825904" type="number" />
@@ -890,6 +892,9 @@
                 <behavior-type name="Flash" sid="245407194926533">
                     <behavior id="Flash" />
                 </behavior-type>
+                <behavior-type name="Sine" sid="596098576156055">
+                    <behavior id="Sin" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="807997325432676" speed="5">
@@ -1386,6 +1391,11 @@
         </object-type>
         <object-type name="AnvilImpact" sid="697520296048943">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="639326081820957">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="9" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="797952679503193" speed="12">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.502618" original-source="C:\Users\AleCosta\Desktop\spot\assets\ImpactoBigorna\impactoBirgorna1.png" />
@@ -1638,6 +1648,11 @@
         </object-type>
         <object-type name="TVLight" sid="294521446502648">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="573445716535151">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="411936571367207" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\LAVANDERIA\brilhoTv.png">
@@ -3021,11 +3036,6 @@
         </object-type>
         <object-type name="PlayButton" sid="291788493462727">
             <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Sine" sid="246401307740563">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="159399699438140" speed="5">
                     <frame duration="1" hotspotX="0.505747" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\TITULO\botaoJogar.png">
@@ -3351,7 +3361,7 @@
         <object-type name="ScreenTransition" sid="559151990570557">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="21" loop="1" name="NormalAnymate" pingpong="1" repeatcount="0" repeatto="0" sid="260310845250773" speed="12">
+                <animation framecount="21" loop="0" name="NormalAnymate" pingpong="0" repeatcount="0" repeatto="0" sid="260310845250773" speed="12">
                     <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0001.png">
                         <collision-poly>
                             <point x="0.49685" y="0.49685" />
@@ -3461,15 +3471,373 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Ptext" sid="640031481916925">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Viole" sid="213030518118344">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="FinalBackground" sid="614663258273090">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="951690776974079" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\FINAL\finalBackground.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ViolencePanel" sid="217110125013799">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="830256784832649" speed="0">
+                    <frame duration="1" hotspotX="0.502075" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\FINAL\painelViolencia.png">
+                        <collision-poly>
+                            <point x="0.19917" y="0.255319" />
+                            <point x="0.497925" y="0.170213" />
+                            <point x="0.908714" y="0.117021" />
+                            <point x="0.966805" y="0.5" />
+                            <point x="0.86722" y="0.829787" />
+                            <point x="0.497925" y="0.920213" />
+                            <point x="0.0871369" y="0.888298" />
+                            <point x="0.033195" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FinalPhoto" sid="859092192555162">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="361641120878249" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\FINAL\fotografiaFinal.png">
+                        <collision-poly>
+                            <point x="0.0426357" y="0.0572917" />
+                            <point x="0.98062" y="0.0260417" />
+                            <point x="0.924419" y="0.898438" />
+                            <point x="0.5" y="0.963542" />
+                            <point x="0.0562016" y="0.924479" />
+                            <point x="0.0213178" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ContinueButton" sid="214966621241447">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="184541229069037">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="299199370725760" speed="0">
+                    <frame duration="1" hotspotX="0.505747" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\FINAL\botaoContinuar.png">
+                        <collision-poly>
+                            <point x="0.195402" y="0.197674" />
+                            <point x="0.494253" y="0.0116279" />
+                            <point x="0.885057" y="0.116279" />
+                            <point x="0.977012" y="0.5" />
+                            <point x="0.804598" y="0.802326" />
+                            <point x="0.494253" y="0.988372" />
+                            <point x="0.126437" y="0.872093" />
+                            <point x="0.0114943" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FinalTransition" sid="277090513709336">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="21" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="841328464467915" speed="14">
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0001.png">
+                        <collision-poly>
+                            <point x="0.49685" y="0.49685" />
+                            <point x="0.49955" y="0.49595" />
+                            <point x="0.50315" y="0.49685" />
+                            <point x="0.504951" y="0.49955" />
+                            <point x="0.50315" y="0.50315" />
+                            <point x="0.49955" y="0.504951" />
+                            <point x="0.49685" y="0.50315" />
+                            <point x="0.49505" y="0.49955" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0001.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0002.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0003.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0004.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0005.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0006.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0007.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0008.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0009.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0010.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0011.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0012.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0013.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0014.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0015.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0016.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0017.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0018.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0019.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0020.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GameOverMessage" sid="357463107250953">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="398244149308724" speed="0">
+                    <frame duration="1" hotspotX="0.501062" hotspotY="0.504854" original-source="C:\Users\user\Desktop\Spot_game_copy\DERROTA\mensagem.png">
+                        <collision-poly>
+                            <point x="0.0955414" y="0.436893" />
+                            <point x="0.498938" y="0.116505" />
+                            <point x="0.915074" y="0.38835" />
+                            <point x="0.972399" y="0.495146" />
+                            <point x="0.910828" y="0.592233" />
+                            <point x="0.0934183" y="0.572816" />
+                            <point x="0.00212314" y="0.495146" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GameplayTransitionUp" sid="216873755675937">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="21" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="218765609911123" speed="14">
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0001.png">
+                        <collision-poly>
+                            <point x="0.49685" y="0.49685" />
+                            <point x="0.49955" y="0.49595" />
+                            <point x="0.50315" y="0.49685" />
+                            <point x="0.504951" y="0.49955" />
+                            <point x="0.50315" y="0.50315" />
+                            <point x="0.49955" y="0.504951" />
+                            <point x="0.49685" y="0.50315" />
+                            <point x="0.49505" y="0.49955" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0001.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0002.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0003.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0004.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0005.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0006.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0007.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0008.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0009.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0010.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0011.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0012.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0013.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0014.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0015.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0016.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0017.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0018.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0019.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0020.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GamePlayTransitionDown" sid="460961177866685">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="21" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="504829809451894" speed="14">
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0020.png">
+                        <collision-poly>
+                            <point x="0.0855085" y="0.0855085" />
+                            <point x="0.49955" y="0" />
+                            <point x="0.913591" y="0.0864086" />
+                            <point x="1" y="0.49955" />
+                            <point x="0.912691" y="0.912691" />
+                            <point x="0.49955" y="1" />
+                            <point x="0.0864086" y="0.913591" />
+                            <point x="0" y="0.49955" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0020.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0019.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0018.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0017.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0016.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0015.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0014.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0013.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0012.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0011.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0010.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0009.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0008.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0007.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0006.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0005.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0004.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0003.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0002.png" />
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.50045" original-source="C:\Users\user\Desktop\Spot_game_copy\Transicao\transicao0001.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TvFinal" sid="149476997464557">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="926419098400064">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="21" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="833076411454764" speed="24">
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0001.png" />
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0002.png" />
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0003.png" />
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0004.png" />
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0005.png" />
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0006.png" />
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0007.png" />
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0008.png" />
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0009.png" />
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0010.png" />
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0011.png" />
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0012.png" />
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0013.png" />
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0014.png" />
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0015.png" />
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0016.png" />
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0017.png" />
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0018.png" />
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0019.png" />
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0020.png" />
+                    <frame duration="1" hotspotX="0.500469" hotspotY="0.500703" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\tvFinal\tvFinal0021.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CleanPage" sid="681080188545324">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="603412178359640" speed="0">
+                    <frame duration="1" hotspotX="0.501754" hotspotY="0.501587" original-source="C:\Users\user\Desktop\Spot_game_copy\DERROTA\CleanPage.png">
+                        <collision-poly>
+                            <point x="0.0596491" y="0.0539683" />
+                            <point x="0.498246" y="0.0539683" />
+                            <point x="0.982456" y="0.015873" />
+                            <point x="0.940351" y="0.498413" />
+                            <point x="0.936842" y="0.942857" />
+                            <point x="0.498246" y="0.996825" />
+                            <point x="0.00350877" y="0.996825" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LegendHistory" sid="790857599093813">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="13" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="305304387532905" speed="0.2">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507246" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\legendaHistoria\legendaHistoria0001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507246" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\legendaHistoria\legendaHistoria0002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507246" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\legendaHistoria\legendaHistoria0003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507246" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\legendaHistoria\legendaHistoria0004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507246" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\legendaHistoria\legendaHistoria0005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507246" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\legendaHistoria\legendaHistoria0006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507246" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\legendaHistoria\legendaHistoria0007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507246" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\legendaHistoria\legendaHistoria0008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507246" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\legendaHistoria\legendaHistoria0009.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507246" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\legendaHistoria\legendaHistoria0010.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507246" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\legendaHistoria\legendaHistoria0011.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507246" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\legendaHistoria\legendaHistoria0012.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.507246" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\legendaHistoria\legendaHistoria0013.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Dark" sid="873011400951413">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="406278706506853" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FinalHomeButton" sid="841756143587384">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="543390068756416" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.510204" original-source="C:\Users\user\Desktop\Spot_game_copy\MENU-GAMEPLAY\botaoHome.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.204082" />
+                            <point x="0.5" y="0.0204082" />
+                            <point x="0.88" y="0.122449" />
+                            <point x="0.98" y="0.489796" />
+                            <point x="0.8" y="0.795918" />
+                            <point x="0.5" y="0.979592" />
+                            <point x="0.12" y="0.877551" />
+                            <point x="0.02" y="0.489796" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FinalFadeIn" sid="266000067875086">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="394256367024330">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="662638335798798" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ThatIsAll" sid="658371145820872">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="13" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="973561926148979" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\issoEtudo\issoEtudo0002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\issoEtudo\issoEtudo0003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\issoEtudo\issoEtudo0004.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\issoEtudo\issoEtudo0005.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\issoEtudo\issoEtudo0006.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\issoEtudo\issoEtudo0007.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\issoEtudo\issoEtudo0008.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\issoEtudo\issoEtudo0009.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\issoEtudo\issoEtudo0010.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\issoEtudo\issoEtudo0011.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\issoEtudo\issoEtudo0012.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\issoEtudo\issoEtudo0013.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\issoEtudo\issoEtudo0014.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Gate" sid="323330132641507">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="462268710554506" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DarkPageMainMenu" sid="852746033746490">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="372012694816361" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Gameplay.xml</layout>
         <layout>MainMenu.xml</layout>
+        <layout>Gameplay.xml</layout>
+        <layout>FinalInterface.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>GameplayEvent.xml</event-sheet>
         <event-sheet>MainMenuEvent.xml</event-sheet>
+        <event-sheet>FinalInterfaceEvent.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="4" />
@@ -3498,11 +3866,16 @@
         <file name="BackAction_snd.m4a" />
         <file name="BackAction_snd.ogg" />
         <file name="UpgradeWeapon_snd.m4a" />
-        <file name="UpgradeWeapon_snd.ogg" />
-        <file name="Serenata Noturna - Mozart.ogg" />
-        <file name="Moonlight - Sonata - Bethooven - Cutscenes.ogg" />
+        <file name="Upgradeweapons_snd.ogg" />
+        <file name="WeaponChange_snd.m4a" />
+        <file name="WeaponChange_snd.ogg" />
     </sounds-folder>
-    <music-folder />
+    <music-folder>
+        <file name="Carmen Habanera - Georges Bizet - Gameplay(Piano).ogg" />
+        <file name="Summer Storm - Vivaldi - Boss fight.ogg" />
+        <file name="Moonlight - Sonata - Bethooven - Cutscenes.ogg" />
+        <file name="Serenata Noturna - Mozart.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />

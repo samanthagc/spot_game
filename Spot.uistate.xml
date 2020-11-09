@@ -11,9 +11,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Gameplay</layout>
-        <layout order="2">MainMenu</layout>
-        <event-sheet active="1" order="1">GameplayEvent</event-sheet>
+        <layout active="1" order="2">MainMenu</layout>
+        <layout order="4">FinalInterface</layout>
+        <event-sheet order="1">GameplayEvent</event-sheet>
         <event-sheet order="3">MainMenuEvent</event-sheet>
+        <event-sheet order="5">FinalInterfaceEvent</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -141,5 +143,22 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/TutorialPage2/" />
         <folder expanded="1" path="animation-folder/ScreenTransition/" />
         <folder expanded="1" path="animation-folder/NPCs/" />
+        <folder expanded="1" path="animation-folder/FinalBackground/" />
+        <folder expanded="1" path="animation-folder/ViolencePanel/" />
+        <folder expanded="1" path="animation-folder/FinalPhoto/" />
+        <folder expanded="1" path="animation-folder/ContinueButton/" />
+        <folder expanded="1" path="animation-folder/FinalTransition/" />
+        <folder expanded="1" path="animation-folder/GameOverMessage/" />
+        <folder expanded="1" path="animation-folder/GameplayTransitionUp/" />
+        <folder expanded="1" path="animation-folder/GamePlayTransitionDown/" />
+        <folder expanded="1" path="animation-folder/TvFinal/" />
+        <folder expanded="1" path="animation-folder/CleanPage/" />
+        <folder expanded="1" path="animation-folder/LegendHistory/" />
+        <folder expanded="1" path="animation-folder/Dark/" />
+        <folder expanded="1" path="animation-folder/FinalHomeButton/" />
+        <folder expanded="1" path="animation-folder/FinalFadeIn/" />
+        <folder expanded="1" path="animation-folder/ThatIsAll/" />
+        <folder expanded="1" path="animation-folder/Gate/" />
+        <folder expanded="1" path="animation-folder/DarkPageMainMenu/" />
     </folders-expanded>
 </c2uistate>

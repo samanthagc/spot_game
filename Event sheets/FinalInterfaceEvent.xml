@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>FinalInterfaceEvent</name>
+    <events>
+        <event-block sid="349632562401708">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="980980347543098" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="495080957592276" type="Ptext">
+                    <param id="0" name="Text">ViolenceCount &amp; &quot;%&quot;</param>
+                </action>
+                <action id="4" name="Set animation" sid="565983098561158" type="FinalTransition">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="153439557736889" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-3" name="Set position" sid="167781315026032" type="FinalPhoto">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+                <action id="-16" name="Wait" sid="965383977409347" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-3" name="Set position" sid="806809961623583" type="ViolencePanel">
+                    <param id="0" name="X">165.819</param>
+                    <param id="1" name="Y">96.909</param>
+                </action>
+                <action id="-3" name="Set position" sid="418276331593525" type="Ptext">
+                    <param id="0" name="X">175.157</param>
+                    <param id="1" name="Y">140.401</param>
+                </action>
+                <action id="-16" name="Wait" sid="568738518485571" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-3" name="Set position" sid="243455885913942" type="ContinueButton">
+                    <param id="0" name="X">704</param>
+                    <param id="1" name="Y">448</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="984776770751142" type="ContinueButton" />
+            </actions>
+        </event-block>
+        <event-block sid="552914705172512">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="311503003218178" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">ContinueButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="759440068724906" type="Audio">
+                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-9</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-3" name="Set position" sid="727104643106134" type="FinalPhoto">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">-550</param>
+                </action>
+                <action id="-3" name="Set position" sid="928287426756390" type="ViolencePanel">
+                    <param id="0" name="X">165.819</param>
+                    <param id="1" name="Y">-550</param>
+                </action>
+                <action id="-3" name="Set position" sid="748461462648238" type="FinalTransition">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">-600</param>
+                </action>
+                <action id="-3" name="Set position" sid="809374486547279" type="Ptext">
+                    <param id="0" name="X">175.157</param>
+                    <param id="1" name="Y">-550</param>
+                </action>
+                <action id="-3" name="Set position" sid="316133474371616" type="Dark">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+                <action id="-3" name="Set position" sid="630886276100691" type="ContinueButton">
+                    <param id="0" name="X">704</param>
+                    <param id="1" name="Y">-550</param>
+                </action>
+                <action id="-16" name="Wait" sid="379716888695856" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-3" name="Set position" sid="488873101948079" type="TvFinal">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">320</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="305835895823702" type="TvFinal" />
+                <action id="-3" name="Set position" sid="986073253619309" type="FinalHomeButton">
+                    <param id="0" name="X">704</param>
+                    <param id="1" name="Y">448</param>
+                </action>
+                <action id="-16" name="Wait" sid="402986252285320" type="System">
+                    <param id="0" name="Seconds">2.5</param>
+                </action>
+                <action id="5" name="Set frame" sid="250728512370918" type="LegendHistory">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="493118860940221" type="LegendHistory">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="242588821167671" type="LegendHistory">
+                    <param id="0" name="X">336</param>
+                    <param id="1" name="Y">389</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="950659525926239">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="748203838500563" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">FinalHomeButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="837297909468522" type="Audio">
+                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-9</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-3" name="Set position" sid="942268074949957" type="FinalHomeButton">
+                    <param id="0" name="X">960</param>
+                    <param id="1" name="Y">650</param>
+                </action>
+                <action id="-3" name="Set position" sid="428199981009465" type="FinalFadeIn">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="792151222136019" type="FinalFadeIn" />
+                <action id="-16" name="Wait" sid="818106865286844" type="System">
+                    <param id="0" name="Seconds">4</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="582430212802331" type="System">
+                    <param id="0" name="Layout">MainMenu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="306695228612702">
+            <conditions>
+                <condition id="4" name="On finished" sid="686950371006229" type="LegendHistory">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="530015049814632" type="System">
+                    <param id="0" name="Seconds">1.5</param>
+                </action>
+                <action id="-3" name="Set position" sid="632839541405686" type="ThatIsAll">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">64</param>
+                </action>
+                <action id="4" name="Set animation" sid="311461516915818" type="ThatIsAll">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

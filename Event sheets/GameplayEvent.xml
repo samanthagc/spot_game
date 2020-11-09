@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameplayEvent</name>
     <events>
+        <variable comment="0 = Gameplay, 1 = GameOver" constant="0" name="GameOver" sid="368237936883552" static="0" type="number">0</variable>
+        <variable comment="Number of Violence Count" constant="0" name="ViolenceCount" sid="834883515816128" static="0" type="number">0</variable>
         <variable comment="Number of star for power up" constant="0" name="UpgradeStarPass" sid="406135747323305" static="0" type="number">0</variable>
         <variable comment="Weapon current level" constant="0" name="WeaponCurrentLvl" sid="633716207846760" static="0" type="number">0</variable>
         <variable comment="Number of the chosen weapon" constant="0" name="Weapon" sid="529053577818744" static="0" type="number">4</variable>
@@ -11,17 +13,26 @@
                 <condition id="-2" name="On start of layout" sid="268654107620131" type="System" />
             </conditions>
             <actions>
-                <action id="-9" name="Set value" sid="478351129059918" type="System">
-                    <param id="0" name="Variable">Weapon</param>
-                    <param id="1" name="Value">4</param>
+                <action id="33" name="Stop all" sid="546584811530948" type="Audio" />
+                <action id="-9" name="Set value" sid="136458514218570" type="System">
+                    <param id="0" name="Variable">GameOver</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="121655656866627" type="System">
+                    <param id="0" name="Variable">ViolenceCount</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="359772684366877" type="System">
+                    <param id="0" name="Variable">UpgradeStarPass</param>
+                    <param id="1" name="Value">player.FireGunLvl * Player.FireGunPassLvl</param>
                 </action>
                 <action id="-9" name="Set value" sid="221197328706167" type="System">
                     <param id="0" name="Variable">WeaponCurrentLvl</param>
                     <param id="1" name="Value">Player.FireGunLvl</param>
                 </action>
-                <action id="-9" name="Set value" sid="359772684366877" type="System">
-                    <param id="0" name="Variable">UpgradeStarPass</param>
-                    <param id="1" name="Value">player.FireGunLvl * Player.FireGunPassLvl</param>
+                <action id="-9" name="Set value" sid="478351129059918" type="System">
+                    <param id="0" name="Variable">Weapon</param>
+                    <param id="1" name="Value">4</param>
                 </action>
                 <action id="-15" name="Set visible" sid="311232735694426" type="RecoveryBarFireGun">
                     <param id="0" name="Visibility">1</param>
@@ -38,13 +49,36 @@
                 <action behavior="Pathfinding" id="5" name="Add obstacle" sid="690675872260359" type="Enemy002">
                     <param id="0" name="Obstacle">Solids</param>
                 </action>
-                <action id="-9" name="Destroy" sid="424054064604061" type="Anvil" />
                 <action behavior="Pathfinding" id="5" name="Add obstacle" sid="181574654084623" type="EnemyBoss">
                     <param id="0" name="Obstacle">Solids</param>
                 </action>
+                <action id="-9" name="Destroy" sid="424054064604061" type="Anvil" />
                 <action id="-9" name="Destroy" sid="756821768495900" type="TNT" />
                 <action id="-9" name="Destroy" sid="237119729957990" type="ShotBoss" />
                 <action id="-9" name="Destroy" sid="503057336697950" type="ShotPlayer" />
+                <action id="0" name="Play" sid="518163125340835" type="Audio">
+                    <param id="0" name="Audio file">Carmen Habanera - Georges Bizet - Gameplay(Piano)</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="133013613824012">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="823667305977483" type="EnemyBoss">
+                    <param id="0" name="Object">Gate</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="219558453769368" type="Audio" />
+                <action id="-9" name="Destroy" sid="155706420941067" type="Gate" />
+                <action id="0" name="Play" sid="500411285048872" type="Audio">
+                    <param id="0" name="Audio file">Summer Storm - Vivaldi - Boss fight</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="982568644414278">
@@ -72,6 +106,9 @@
                 </action>
                 <action id="0" name="Set text" sid="117968622974577" type="UpdatePass">
                     <param id="0" name="Text">UpgradeStarPass</param>
+                </action>
+                <action id="0" name="Set text" sid="935380810164411" type="Viole">
+                    <param id="0" name="Text">&quot;Violência em: &quot; &amp; ViolenceCount &amp; &quot;%&quot;</param>
                 </action>
                 <action id="4" name="Set animation" sid="454446944717735" type="Enemy001">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
@@ -243,6 +280,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Weapons Actions</comment>
         <event-block sid="511545450207336">
             <conditions>
                 <condition id="0" name="On click" sid="783480022144997" type="Mouse">
@@ -263,6 +301,12 @@
                 </condition>
                 <condition id="7" inverted="1" name="Cursor is over object" sid="201035654121949" type="Mouse">
                     <param id="0" name="Object">UpgradeIcon</param>
+                </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="472680438534299" type="Mouse">
+                    <param id="0" name="Object">HamburgerMenu</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="149496517267077" type="Player">
+                    <param id="0" name="Instance variable">OnMenuPause</param>
                 </condition>
             </conditions>
             <actions>
@@ -306,6 +350,12 @@
                 <condition id="7" inverted="1" name="Cursor is over object" sid="676252384671939" type="Mouse">
                     <param id="0" name="Object">UpgradeIcon</param>
                 </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="206520398471350" type="Mouse">
+                    <param id="0" name="Object">HamburgerMenu</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="991109365327202" type="Player">
+                    <param id="0" name="Instance variable">OnMenuPause</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-3" name="Create object" sid="134609218242384" type="System">
@@ -347,10 +397,6 @@
                 </action>
                 <action id="-9" name="Destroy" sid="758366491876797" type="AnvilTarget" />
                 <action id="-9" name="Destroy" sid="608063811280608" type="AnvilSpaw" />
-                <action disabled="1" id="-16" name="Wait" sid="815431421193750" type="System">
-                    <param id="0" name="Seconds">2</param>
-                </action>
-                <action disabled="1" id="-9" name="Destroy" sid="741587328695128" type="AnvilImpact" />
                 <action behavior="Fade" id="1" name="Start fade" sid="901925228526603" type="Anvil" />
                 <action id="0" name="Play" sid="448349733054907" type="Audio">
                     <param id="0" name="Audio file">Anvil_snd</param>
@@ -381,6 +427,12 @@
                 <condition id="7" inverted="1" name="Cursor is over object" sid="285593872739066" type="Mouse">
                     <param id="0" name="Object">UpgradeIcon</param>
                 </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="479126835226140" type="Mouse">
+                    <param id="0" name="Object">HamburgerMenu</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="414410937378982" type="Player">
+                    <param id="0" name="Instance variable">OnMenuPause</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-3" name="Create object" sid="712108936700276" type="System">
@@ -403,7 +455,7 @@
                 <action id="0" name="Play" sid="534154292100459" type="Audio">
                     <param id="0" name="Audio file">Tnt_snd</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">-14</param>
+                    <param id="3" name="Volume">-19</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
                 <action id="-9" name="Destroy" sid="767636285105865" type="TNT" />
@@ -467,6 +519,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Change Weapons</comment>
         <event-block sid="103101727771101">
             <conditions>
                 <condition id="6" name="On object clicked" sid="339253126330697" type="Mouse">
@@ -479,6 +532,12 @@
                 <action id="-10" name="Set value" sid="264056096911921" type="Player">
                     <param id="0" name="Instance variable">SelectedItem</param>
                     <param id="1" name="Value">Player.SelectedItem = 2 ? 0 : Player.SelectedItem + 1</param>
+                </action>
+                <action id="0" name="Play" sid="290206648653562" type="Audio">
+                    <param id="0" name="Audio file">WeaponChange_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-22</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -627,9 +686,9 @@
                     <param id="2" name="Image point">0</param>
                 </action>
                 <action id="-9" name="Destroy" sid="567704189194783" type="NPCs" />
-                <action id="-10" name="Set value" sid="675534243407637" type="NPCs">
-                    <param id="0" name="Instance variable">ViolenceCounter</param>
-                    <param id="1" name="Value">NPCs.ViolenceCounter +1</param>
+                <action id="-10" name="Add to" sid="675534243407637" type="System">
+                    <param id="0" name="Variable">ViolenceCount</param>
+                    <param id="1" name="Value">6.25</param>
                 </action>
                 <action behavior="ScrollTo" id="0" name="Shake" sid="378573471289893" type="Camera">
                     <param id="0" name="Magnitude">10</param>
@@ -646,9 +705,9 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="261164700276151" type="NPCs" />
-                <action id="-10" name="Set value" sid="637651775289905" type="NPCs">
-                    <param id="0" name="Instance variable">ViolenceCounter</param>
-                    <param id="1" name="Value">NPCs.ViolenceCounter +1</param>
+                <action id="-10" name="Add to" sid="178379045188216" type="System">
+                    <param id="0" name="Variable">ViolenceCount</param>
+                    <param id="1" name="Value">6.25</param>
                 </action>
             </actions>
         </event-block>
@@ -660,15 +719,9 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="417835056909503" type="NPCs" />
-                <action id="-10" name="Set value" sid="719599436436569" type="NPCs">
-                    <param id="0" name="Instance variable">ViolenceCounter</param>
-                    <param id="1" name="Value">NPCs.ViolenceCounter +1</param>
-                </action>
-                <action id="0" name="Play" sid="523207406007042" type="Audio">
-                    <param id="0" name="Audio file">Anvil_snd</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">-9</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                <action id="-10" name="Add to" sid="756259281212018" type="System">
+                    <param id="0" name="Variable">ViolenceCount</param>
+                    <param id="1" name="Value">6.25</param>
                 </action>
                 <action behavior="ScrollTo" id="0" name="Shake" sid="557559677465521" type="Camera">
                     <param id="0" name="Magnitude">10</param>
@@ -677,7 +730,6 @@
                 </action>
             </actions>
         </event-block>
-        <comment>Bouncing brush damage</comment>
         <comment>Rabbit 1 damage</comment>
         <event-block any="1" sid="326695838733725">
             <conditions>
@@ -846,12 +898,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Play" sid="406518901168214" type="Audio">
-                            <param id="0" name="Audio file">Anvil_snd</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-9</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                        </action>
                         <action behavior="ScrollTo" id="0" name="Shake" sid="494917933398808" type="Camera">
                             <param id="0" name="Magnitude">10</param>
                             <param id="1" name="Duration">0.2</param>
@@ -993,12 +1039,6 @@
                             <param id="0" name="&apos;On&apos; time">0.1</param>
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">1.0</param>
-                        </action>
-                        <action id="0" name="Play" sid="344794362521004" type="Audio">
-                            <param id="0" name="Audio file">Anvil_snd</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-9</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" sid="470416869214185" type="Camera">
                             <param id="0" name="Magnitude">10</param>
@@ -1164,12 +1204,6 @@
                             <param id="0" name="&apos;On&apos; time">0.1</param>
                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                             <param id="2" name="Duration">1.0</param>
-                        </action>
-                        <action id="0" name="Play" sid="131751136355584" type="Audio">
-                            <param id="0" name="Audio file">Anvil_snd</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-9</param>
-                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                         <action behavior="ScrollTo" id="0" name="Shake" sid="568993210153283" type="Camera">
                             <param id="0" name="Magnitude">10</param>
@@ -1431,12 +1465,6 @@
                     <param id="1" name="Duration">0.2</param>
                     <param id="2" name="Mode">0</param>
                 </action>
-                <action id="0" name="Play" sid="655094527442339" type="Audio">
-                    <param id="0" name="Audio file">Anvil_snd</param>
-                    <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">-9</param>
-                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="547089169983145">
@@ -1449,6 +1477,17 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="929051489549773" type="EnemyBoss" />
+                <action behavior="Fade" id="1" name="Start fade" sid="583339787822287" type="DarkScreen" />
+                <action id="-3" name="Set position" sid="784130887532005" type="DarkScreen">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+                <action id="-16" name="Wait" sid="755025568556571" type="System">
+                    <param id="0" name="Seconds">3.5</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="129537361390121" type="System">
+                    <param id="0" name="Layout">FinalInterface</param>
+                </action>
             </actions>
         </event-block>
         <comment>Menu Gameplay Paused</comment>
@@ -1467,6 +1506,12 @@
                 <action behavior="Sine" id="0" name="Set active" sid="154577281634312" type="HamburgerMenu">
                     <param id="0" name="State">1</param>
                 </action>
+                <action id="0" name="Play" sid="852069764995734" type="Audio">
+                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-16</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action id="-16" name="Wait" sid="403260936866923" type="System">
                     <param id="0" name="Seconds">0.3</param>
                 </action>
@@ -1475,6 +1520,10 @@
                 </action>
                 <action id="-15" name="Set visible" sid="533496170344111" type="PauseMenu">
                     <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="699009986980697" type="Viole">
+                    <param id="0" name="X">256</param>
+                    <param id="1" name="Y">352</param>
                 </action>
                 <action id="-3" name="Set position" sid="681158590119184" type="Continue">
                     <param id="0" name="X">391</param>
@@ -1519,6 +1568,12 @@
                 <action behavior="Sine" id="0" name="Set active" sid="931728518350930" type="HamburgerMenu">
                     <param id="0" name="State">1</param>
                 </action>
+                <action id="0" name="Play" sid="663952772249521" type="Audio">
+                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-16</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action behavior="Sine" id="0" name="Set active" sid="602164471105586" type="Continue">
                     <param id="0" name="State">1</param>
                 </action>
@@ -1530,6 +1585,10 @@
                 </action>
                 <action behavior="Sine" id="0" name="Set active" sid="529204716668034" type="Continue">
                     <param id="0" name="State">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="249672118701922" type="Viole">
+                    <param id="0" name="X">-288</param>
+                    <param id="1" name="Y">352</param>
                 </action>
                 <action id="-15" name="Set visible" sid="795842522086947" type="PauseMenu">
                     <param id="0" name="Visibility">0</param>
@@ -1571,6 +1630,16 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-3" name="Set position" sid="362750767736937" type="Viole">
+                    <param id="0" name="X">-288</param>
+                    <param id="1" name="Y">352</param>
+                </action>
+                <action id="0" name="Play" sid="782135614506383" type="Audio">
+                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-16</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action id="-13" name="Set time scale" sid="808606472718359" type="System">
                     <param id="0" name="Time scale">1.0</param>
                 </action>
@@ -1589,10 +1658,194 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-3" name="Set position" sid="553375223677497" type="Viole">
+                    <param id="0" name="X">-288</param>
+                    <param id="1" name="Y">352</param>
+                </action>
+                <action id="0" name="Play" sid="784585489674971" type="Audio">
+                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-16</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action id="-13" name="Set time scale" sid="684421701708073" type="System">
                     <param id="0" name="Time scale">1.0</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="569927484699862" type="System">
+                    <param id="0" name="Layout">MainMenu</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Menu Gameplay Game Over</comment>
+        <event-block sid="541434928557451">
+            <conditions>
+                <condition id="-5" name="Compare width" sid="349497071141700" type="LiveBar">
+                    <param id="0" name="Comparison">3</param>
+                    <param id="1" name="Width">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="554107623487397" type="System">
+                    <param id="0" name="Variable">GameOver</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="277632694435640" type="Player" />
+                <action id="-15" name="Set visible" sid="915454801253510" type="GameplayTransitionUp">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="917052161512897" type="GameplayTransitionUp">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">252</param>
+                </action>
+                <action id="4" name="Set animation" sid="811904552084656" type="GameplayTransitionUp">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="500735357813902" type="System">
+                    <param id="0" name="Seconds">1.2</param>
+                </action>
+                <action id="-9" name="Set value" sid="714939486788347" type="System">
+                    <param id="0" name="Variable">GameOver</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="669305398720042" type="CleanPage">
+                    <param id="0" name="X">397</param>
+                    <param id="1" name="Y">292</param>
+                </action>
+                <action id="-3" name="Set position" sid="414385411656722" type="restart">
+                    <param id="0" name="X">391</param>
+                    <param id="1" name="Y">254</param>
+                </action>
+                <action id="-3" name="Set position" sid="994122095648817" type="TitleMenu">
+                    <param id="0" name="X">391</param>
+                    <param id="1" name="Y">328</param>
+                </action>
+                <action id="-3" name="Set position" sid="338982538554003" type="HamburgerMenu">
+                    <param id="0" name="X">-250</param>
+                    <param id="1" name="Y">32</param>
+                </action>
+                <action id="-16" name="Wait" sid="745615483219136" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="526777256209198" type="GameOverMessage">
+                    <param id="0" name="X">390</param>
+                    <param id="1" name="Y">86</param>
+                </action>
+                <action id="-3" name="Set position" sid="767518580493307" type="GamePlayTransitionDown">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">252</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="203547039030049">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="289976638988729" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">restart</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="883881239679739" type="System">
+                    <param id="0" name="Variable">GameOver</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="258794529315422" type="Viole">
+                    <param id="0" name="X">-288</param>
+                    <param id="1" name="Y">352</param>
+                </action>
+                <action id="0" name="Play" sid="402636867137015" type="Audio">
+                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-16</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="918119458818307" type="GameplayTransitionUp">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="903836833460677" type="CleanPage">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="609176848377055" type="restart">
+                    <param id="0" name="X">-250</param>
+                    <param id="1" name="Y">224</param>
+                </action>
+                <action id="-3" name="Set position" sid="792148436559135" type="TitleMenu">
+                    <param id="0" name="X">-250</param>
+                    <param id="1" name="Y">224</param>
+                </action>
+                <action id="4" name="Set animation" sid="347090311260698" type="GamePlayTransitionDown">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="992288723543380" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="131459187360562" type="GameOverMessage">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="835040300939245" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="412566470536167" type="System">
+                    <param id="0" name="Variable">GameOver</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-26" name="Restart layout" sid="497803987123346" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="247135563085525">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="438435177080203" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">TitleMenu</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="231575461732596" type="System">
+                    <param id="0" name="Variable">GameOver</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="100469585636291" type="Viole">
+                    <param id="0" name="X">-288</param>
+                    <param id="1" name="Y">352</param>
+                </action>
+                <action id="0" name="Play" sid="517875883841617" type="Audio">
+                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-16</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-3" name="Set position" sid="150498792050601" type="restart">
+                    <param id="0" name="X">-250</param>
+                    <param id="1" name="Y">224</param>
+                </action>
+                <action id="-3" name="Set position" sid="940450394440643" type="TitleMenu">
+                    <param id="0" name="X">-250</param>
+                    <param id="1" name="Y">224</param>
+                </action>
+                <action id="4" name="Set animation" sid="234955291756728" type="GamePlayTransitionDown">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="920077929765590" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="391935558864129" type="GameOverMessage">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="110820907011538" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="149137423254333" type="System">
+                    <param id="0" name="Variable">GameOver</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="294710850756831" type="System">
                     <param id="0" name="Layout">MainMenu</param>
                 </action>
             </actions>
@@ -1633,6 +1886,12 @@
                     <param id="0" name="Variable">UpgradeStarPass</param>
                     <param id="1" name="Value">Player.FireGunLvl * Player.FireGunPassLvl</param>
                 </action>
+                <action id="0" name="Play" sid="213851465172829" type="Audio">
+                    <param id="0" name="Audio file">Upgradeweapons_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-9</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="962976073184113">
@@ -1670,6 +1929,12 @@
                     <param id="0" name="Variable">UpgradeStarPass</param>
                     <param id="1" name="Value">Player.AnvilLvl * Player.AnvilPassLvl</param>
                 </action>
+                <action id="0" name="Play" sid="535017546966132" type="Audio">
+                    <param id="0" name="Audio file">Upgradeweapons_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-9</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="611085808673673">
@@ -1706,6 +1971,12 @@
                 <action id="-9" name="Set value" sid="723845945007200" type="System">
                     <param id="0" name="Variable">UpgradeStarPass</param>
                     <param id="1" name="Value">Player.TNTLvl * Player.TntPassLvl</param>
+                </action>
+                <action id="0" name="Play" sid="750201439792986" type="Audio">
+                    <param id="0" name="Audio file">Upgradeweapons_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-9</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
