@@ -942,6 +942,11 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="806772781242204" type="Enemy001" />
+                        <action id="0" name="Spawn another object" sid="535738367787098" type="Enemy001">
+                            <param id="0" name="Object">EnemyDeath</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -1061,6 +1066,11 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="261371405380950" type="Enemy002" />
+                        <action id="0" name="Spawn another object" sid="423668480542655" type="Enemy002">
+                            <param id="0" name="Object">EnemyDeath</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -1226,6 +1236,11 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="465930621230615" type="Enemy003" />
+                        <action id="0" name="Spawn another object" sid="221987356796719" type="Enemy003">
+                            <param id="0" name="Object">EnemyDeath</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -1477,6 +1492,11 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="929051489549773" type="EnemyBoss" />
+                <action id="0" name="Spawn another object" sid="444540293902478" type="EnemyBoss">
+                    <param id="0" name="Object">EnemyDeath</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="583339787822287" type="DarkScreen" />
                 <action id="-3" name="Set position" sid="784130887532005" type="DarkScreen">
                     <param id="0" name="X">384</param>
