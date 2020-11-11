@@ -4,7 +4,7 @@
     <description>Projeto Smaug Fatec Carapicuiba</description>
     <version>1.0.0</version>
     <author>SCAR Game Studio</author>
-    <author-email>alefantasyking@gmail.com</author-email>
+    <author-email></author-email>
     <author-website>http://</author-website>
     <app-id>SCAR</app-id>
     <unique-id>3uklhvt8n9o2d</unique-id>
@@ -3274,44 +3274,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="TutorialPage1" sid="968765602318637">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="230519534806784" speed="0">
-                    <frame duration="1" hotspotX="0.501577" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\TUTORIAL\teclasMovePlayer.png">
-                        <collision-poly>
-                            <point x="0.044164" y="0.0341463" />
-                            <point x="0.498423" y="0.0170732" />
-                            <point x="0.940063" y="0.0463415" />
-                            <point x="0.968454" y="0.5" />
-                            <point x="0.952681" y="0.963415" />
-                            <point x="0.498423" y="0.982927" />
-                            <point x="0.0630915" y="0.951219" />
-                            <point x="0.0347003" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TutorialPage2" sid="537654063963550">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="672922669775194" speed="0">
-                    <frame duration="1" hotspotX="0.501511" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\TUTORIAL\mouseItemClick.png">
-                        <collision-poly>
-                            <point x="0.0634441" y="0.0504808" />
-                            <point x="0.498489" y="0.0264423" />
-                            <point x="0.918429" y="0.0649038" />
-                            <point x="0.957704" y="0.5" />
-                            <point x="0.939577" y="0.951923" />
-                            <point x="0.498489" y="0.978365" />
-                            <point x="0.0996979" y="0.920673" />
-                            <point x="0.060423" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="ScreenTransition" sid="559151990570557">
             <plugin id="Sprite" />
             <animation-folder>
@@ -3806,6 +3768,25 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\morteMonstro\morte19.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\morteMonstro\morte20.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LaundryOb004j" sid="294419006287215">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="152084357669840" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\LAVANDERIA\tutorialPapelada.png">
+                        <collision-poly>
+                            <point x="0.0699708" y="0.142857" />
+                            <point x="0.5" y="0.39881" />
+                            <point x="0.835277" y="0.33631" />
+                            <point x="0.979592" y="0.5" />
+                            <point x="0.781341" y="0.553571" />
+                            <point x="0.5" y="0.833333" />
+                            <point x="0.0874636" y="0.821429" />
+                            <point x="0.106414" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>

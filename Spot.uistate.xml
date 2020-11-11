@@ -10,8 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Gameplay</layout>
-        <layout order="2">MainMenu</layout>
+        <layout order="0">Gameplay</layout>
+        <layout active="1" order="2">MainMenu</layout>
         <layout order="4">FinalInterface</layout>
         <event-sheet order="1">GameplayEvent</event-sheet>
         <event-sheet order="3">MainMenuEvent</event-sheet>
@@ -137,8 +137,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/CutscenePage2/" />
         <folder expanded="1" path="animation-folder/CutscenePage3/" />
         <folder expanded="1" path="animation-folder/CutscenePage4/" />
-        <folder expanded="1" path="animation-folder/TutorialPage1/" />
-        <folder expanded="1" path="animation-folder/TutorialPage2/" />
         <folder expanded="1" path="animation-folder/ScreenTransition/" />
         <folder expanded="1" path="animation-folder/NPCs/" />
         <folder expanded="1" path="animation-folder/FinalBackground/" />
@@ -159,5 +157,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Gate/" />
         <folder expanded="1" path="animation-folder/DarkPageMainMenu/" />
         <folder expanded="1" path="animation-folder/EnemyDeath/" />
+        <folder expanded="1" path="animation-folder/LaundryOb004j/" />
     </folders-expanded>
 </c2uistate>
