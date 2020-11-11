@@ -185,6 +185,10 @@
                 <action id="7" name="Set mirrored" sid="941622614461876" type="Player">
                     <param id="0" name="State">1</param>
                 </action>
+                <action id="-13" name="Set boolean" sid="159241487166026" type="Player">
+                    <param id="0" name="Instance variable">IsMirrored</param>
+                    <param id="1" name="Value">0</param>
+                </action>
                 <action id="-10" name="Set value" sid="190645878505821" type="Player">
                     <param id="0" name="Instance variable">AnglePlayer</param>
                     <param id="1" name="Value">0</param>
@@ -210,6 +214,10 @@
                 </action>
                 <action id="7" name="Set mirrored" sid="408494786396218" type="Player">
                     <param id="0" name="State">0</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="621196249609254" type="Player">
+                    <param id="0" name="Instance variable">IsMirrored</param>
+                    <param id="1" name="Value">1</param>
                 </action>
                 <action id="-10" name="Set value" sid="937550827334278" type="Player">
                     <param id="0" name="Instance variable">AnglePlayer</param>
@@ -763,7 +771,7 @@
         <event-block sid="692971817241061">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="268021549660936" type="Player">
-                    <param id="0" name="Object">Enemy002</param>
+                    <param id="0" name="Object">Enemy002Lightining</param>
                 </condition>
             </conditions>
             <actions>
@@ -1125,6 +1133,24 @@
                 <action id="5" name="Set frame" sid="205468414362017" type="Enemy002">
                     <param id="0" name="Frame number">13</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="901504417556154">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="631362773075827" type="System">
+                    <param id="0" name="Interval (seconds)">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="389648149016335" type="Enemy002">
+                    <param id="0" name="Object">Enemy002Lightining</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="996052279645422" type="System">
+                    <param id="0" name="Seconds">0.7</param>
+                </action>
+                <action id="-9" name="Destroy" sid="333239131972888" type="Enemy002Lightining" />
             </actions>
         </event-block>
         <comment>Painting</comment>

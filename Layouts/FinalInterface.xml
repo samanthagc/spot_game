@@ -55,6 +55,7 @@
                         <TntDamage>8</TntDamage>
                         <Stars>25</Stars>
                         <SelectedItem>0</SelectedItem>
+                        <IsMirrored>false</IsMirrored>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="8Direction">
