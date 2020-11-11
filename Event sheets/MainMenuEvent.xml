@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>MainMenuEvent</name>
+    <events>
+        <comment>Splash Screen Game</comment>
+        <event-block sid="882668143073127">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="996026890438423" type="System" />
+            </conditions>
+            <actions>
+                <action id="33" name="Stop all" sid="382291222966943" type="Audio" />
+                <action behavior="Fade" id="1" name="Start fade" sid="412295310171115" type="SplashScreenFatecLogo" />
+                <action id="-16" name="Wait" sid="225026274331628" type="System">
+                    <param id="0" name="Seconds">5.5</param>
+                </action>
+                <action id="-15" name="Set visible" sid="141181676581360" type="SplashScreenScarlogo">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="372712259666375" type="SplashScreenScarlogo" />
+                <action id="-16" name="Wait" sid="257815559776695" type="System">
+                    <param id="0" name="Seconds">6</param>
+                </action>
+                <action id="-3" name="Set position" sid="943241047000604" type="SondsButton">
+                    <param id="0" name="X">32</param>
+                    <param id="1" name="Y">32</param>
+                </action>
+                <action id="-3" name="Set position" sid="133794170358916" type="MusicButton">
+                    <param id="0" name="X">96</param>
+                    <param id="1" name="Y">32</param>
+                </action>
+                <action id="-3" name="Set position" sid="930557999728196" type="CreditsButton">
+                    <param id="0" name="X">312</param>
+                    <param id="1" name="Y">384</param>
+                </action>
+                <action id="-3" name="Set position" sid="878156242562822" type="PlayButton">
+                    <param id="0" name="X">424</param>
+                    <param id="1" name="Y">384</param>
+                </action>
+                <action id="-3" name="Set position" sid="411763530639479" type="TitleCover">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+                <action id="0" name="Play" sid="695261630710489" type="Audio">
+                    <param id="0" name="Audio file">Serenata Noturna - Mozart</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="608670415303815">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="776954931095878" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">PlayButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="969254559309620" type="Audio">
+                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="774376720070780" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="33" name="Stop all" sid="650354114986815" type="Audio" />
+                <action id="-3" name="Set position" sid="572103703727312" type="SondsButton">
+                    <param id="0" name="X">32</param>
+                    <param id="1" name="Y">-960</param>
+                </action>
+                <action id="-3" name="Set position" sid="802800255017321" type="MusicButton">
+                    <param id="0" name="X">96</param>
+                    <param id="1" name="Y">-960</param>
+                </action>
+                <action id="-3" name="Set position" sid="280123060513852" type="CreditsButton">
+                    <param id="0" name="X">288</param>
+                    <param id="1" name="Y">-608</param>
+                </action>
+                <action id="-3" name="Set position" sid="143612010975446" type="PlayButton">
+                    <param id="0" name="X">448</param>
+                    <param id="1" name="Y">-608</param>
+                </action>
+                <action id="-3" name="Set position" sid="462475688521285" type="DarkScreenFadeIn">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+                <action id="-15" name="Set visible" sid="259228444186953" type="DarkScreenFadeIn">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="845213354922266" type="DarkScreenFadeIn" />
+                <action id="-16" name="Wait" sid="897727089837068" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-3" name="Set position" sid="976243810645391" type="TitleCover">
+                    <param id="0" name="X">-416</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+                <action id="-3" name="Set position" sid="525819429758767" type="CutscenePage1">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+                <action id="-3" name="Set position" sid="109860758331698" type="CutscenePage2">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+                <action id="-3" name="Set position" sid="597008085530429" type="CutscenePage3">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+                <action id="-3" name="Set position" sid="823120953246131" type="CutscenePage4">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+                <action id="0" name="Play" sid="841526144598421" type="Audio">
+                    <param id="0" name="Audio file">Moonlight - Sonata - Bethooven - Cutscenes</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-3" name="Set position" sid="619269873635210" type="DarkScreenFadeIn">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">-256</param>
+                </action>
+                <action id="-3" name="Set position" sid="402985570913849" type="DarkScreenFadeOut">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+                <action id="-15" name="Set visible" sid="490937589142419" type="DarkScreenFadeOut">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="334581520849898" type="DarkScreenFadeOut" />
+                <action id="-16" name="Wait" sid="612041536203191" type="System">
+                    <param id="0" name="Seconds">1.5</param>
+                </action>
+                <action id="-15" name="Set visible" sid="282238266935249" type="CutscenePage1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="468062577954214" type="CutscenePage1" />
+                <action id="-16" name="Wait" sid="588567296376038" type="System">
+                    <param id="0" name="Seconds">9</param>
+                </action>
+                <action id="-15" name="Set visible" sid="806141035199277" type="CutscenePage2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="561046626696984" type="CutscenePage2" />
+                <action id="-16" name="Wait" sid="494506038945730" type="System">
+                    <param id="0" name="Seconds">10</param>
+                </action>
+                <action id="-15" name="Set visible" sid="583978392109769" type="CutscenePage3">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="842864352264111" type="CutscenePage3" />
+                <action id="-16" name="Wait" sid="280745883304492" type="System">
+                    <param id="0" name="Seconds">12</param>
+                </action>
+                <action id="-15" name="Set visible" sid="580768130667580" type="CutscenePage4">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="706740829931959" type="CutscenePage4" />
+                <action id="-16" name="Wait" sid="352933637774143" type="System">
+                    <param id="0" name="Seconds">13</param>
+                </action>
+                <action id="-3" name="Set position" sid="335945931450313" type="ScreenTransition">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+                <action id="4" name="Set animation" sid="498720539230916" type="ScreenTransition">
+                    <param id="0" name="Animation">&quot;NormalAnymate&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="110026944785809" type="System">
+                    <param id="0" name="Seconds">4.5</param>
+                </action>
+                <action id="-15" name="Set visible" sid="829971088132809" type="CutscenePage1">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="392356736629637" type="CutscenePage2">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="422007321076062" type="CutscenePage3">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="887471530689851" type="CutscenePage4">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="6" name="Stop" sid="322216745541019" type="Audio">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="429200808003633" type="System">
+                    <param id="0" name="Layout">Gameplay</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="943174227636608">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="823166618107413" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">CreditsButton</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Sine" id="0" name="Set active" sid="217596564356134" type="CreditsButton">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="0" name="Play" sid="396495026791427" type="Audio">
+                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="856498205411863" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="588937084181266" type="CreditsButton">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="702661680942824" type="SondsButton">
+                    <param id="0" name="X">32</param>
+                    <param id="1" name="Y">-960</param>
+                </action>
+                <action id="-3" name="Set position" sid="690436315475330" type="MusicButton">
+                    <param id="0" name="X">96</param>
+                    <param id="1" name="Y">-960</param>
+                </action>
+                <action id="-3" name="Set position" sid="167290742987858" type="CreditsButton">
+                    <param id="0" name="X">288</param>
+                    <param id="1" name="Y">-608</param>
+                </action>
+                <action id="-3" name="Set position" sid="750323777334288" type="PlayButton">
+                    <param id="0" name="X">448</param>
+                    <param id="1" name="Y">-608</param>
+                </action>
+                <action id="-3" name="Set position" sid="126213519363210" type="DarkScreenFadeIn">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+                <action id="-15" name="Set visible" sid="553314025474164" type="DarkScreenFadeIn">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="528213772812130" type="DarkScreenFadeIn" />
+                <action id="-16" name="Wait" sid="300406730468754" type="System">
+                    <param id="0" name="Seconds">1.3</param>
+                </action>
+                <action id="-3" name="Set position" sid="753431009834268" type="DarkScreenFadeIn">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">-256</param>
+                </action>
+                <action id="-3" name="Set position" sid="203977972979460" type="DarkScreenFadeOut">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+                <action id="-15" name="Set visible" sid="374150638580777" type="DarkScreenFadeOut">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="474599020547042" type="DarkScreenFadeOut" />
+                <action id="-15" name="Set visible" sid="887302692848697" type="BackgroundCredits">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-3" name="Set position" sid="822053451805222" type="BackgroundCredits">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+                <action id="-16" name="Wait" sid="217136439071792" type="System">
+                    <param id="0" name="Seconds">10</param>
+                </action>
+                <action id="-3" name="Set position" sid="905633515826394" type="DarkScreenFadeIn">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+                <action id="-15" name="Set visible" sid="779237072532972" type="DarkScreenFadeIn">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="466959650740853" type="DarkScreenFadeIn" />
+                <action id="-16" name="Wait" sid="839212826427003" type="System">
+                    <param id="0" name="Seconds">1.3</param>
+                </action>
+                <action id="-3" name="Set position" sid="695842469757279" type="DarkScreenFadeIn">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">-256</param>
+                </action>
+                <action id="-3" name="Set position" sid="730724052664036" type="DarkScreenFadeOut">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+                <action id="-15" name="Set visible" sid="189556418960949" type="DarkScreenFadeOut">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="785504721225423" type="DarkScreenFadeOut" />
+                <action id="-15" name="Set visible" sid="195194770371530" type="BackgroundCredits">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="433766028665288" type="BackgroundCredits">
+                    <param id="0" name="X">1280</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+                <action id="-3" name="Set position" sid="153879673049480" type="SondsButton">
+                    <param id="0" name="X">32</param>
+                    <param id="1" name="Y">32</param>
+                </action>
+                <action id="-3" name="Set position" sid="407896241081695" type="MusicButton">
+                    <param id="0" name="X">96</param>
+                    <param id="1" name="Y">32</param>
+                </action>
+                <action id="-3" name="Set position" sid="577975239170210" type="CreditsButton">
+                    <param id="0" name="X">312</param>
+                    <param id="1" name="Y">384</param>
+                </action>
+                <action id="-3" name="Set position" sid="435624345683605" type="PlayButton">
+                    <param id="0" name="X">424</param>
+                    <param id="1" name="Y">384</param>
+                </action>
+                <action id="-3" name="Set position" sid="233231283307125" type="TitleCover">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

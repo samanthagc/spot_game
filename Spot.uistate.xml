@@ -10,8 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Layout 1</layout>
-        <event-sheet active="1" order="1">Event sheet 1</event-sheet>
+        <layout order="0">Gameplay</layout>
+        <layout active="1" order="2">MainMenu</layout>
+        <layout order="4">FinalInterface</layout>
+        <event-sheet order="1">GameplayEvent</event-sheet>
+        <event-sheet order="3">MainMenuEvent</event-sheet>
+        <event-sheet order="5">FinalInterfaceEvent</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -29,16 +33,14 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/Solids/" />
-        <folder expanded="1" path="animation-folder/Coin/" />
-        <folder expanded="1" path="animation-folder/Shot/" />
+        <folder expanded="1" path="animation-folder/CoinStar/" />
+        <folder expanded="1" path="animation-folder/ShotPlayer/" />
         <folder expanded="1" path="animation-folder/Camera/" />
         <folder expanded="1" path="animation-folder/Player/" />
         <folder expanded="1" path="animation-folder/LaundryRoom/" />
-        <folder expanded="1" path="animation-folder/LaundryObj1/" />
-        <folder expanded="1" path="animation-folder/LaundryObj5/" />
-        <folder expanded="1" path="animation-folder/LaundryObj3/" />
-        <folder expanded="1" path="animation-folder/LaundryObj4/" />
-        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/LaundryObj001/" />
+        <folder expanded="1" path="animation-folder/LaundryObj005/" />
+        <folder expanded="1" path="animation-folder/LaundryObj003/" />
         <folder expanded="1" path="animation-folder/LivingRoom/" />
         <folder expanded="1" path="animation-folder/LivingObj001/" />
         <folder expanded="1" path="animation-folder/LivingObj002/" />
@@ -54,24 +56,107 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/TNT/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/Heart/" />
-        <folder expanded="1" path="animation-folder/Live_bar/" />
+        <folder expanded="1" path="animation-folder/LiveBar/" />
         <folder expanded="1" path="animation-folder/LifeBarContainer/" />
-        <folder expanded="1" path="animation-folder/Itemspanel/" />
-        <folder expanded="1" path="animation-folder/recoverybar_fire_gun/" />
-        <folder expanded="1" path="animation-folder/ItemrecoverybarContainer/" />
-        <folder expanded="1" path="animation-folder/Improvementpanel/" />
-        <folder expanded="1" path="animation-folder/Chosenweapon_icon/" />
+        <folder expanded="1" path="animation-folder/ItemsPanel/" />
+        <folder expanded="1" path="animation-folder/RecoveryBarFireGun/" />
+        <folder expanded="1" path="animation-folder/ItemRecoveryBarContainer/" />
+        <folder expanded="1" path="animation-folder/ImprovementPanel/" />
+        <folder expanded="1" path="animation-folder/FireGun/" />
         <folder expanded="1" path="animation-folder/Glove/" />
         <folder expanded="1" path="animation-folder/Anvil/" />
-        <folder expanded="1" path="animation-folder/Upgrade_icon/" />
+        <folder expanded="1" path="animation-folder/UpgradeIcon/" />
         <folder expanded="1" path="animation-folder/recoverybar_fire_gun2/" />
-        <folder expanded="1" path="animation-folder/recoverybar_tnt/" />
-        <folder expanded="1" path="animation-folder/recoverybar_anvil/" />
-        <folder expanded="1" path="animation-folder/recoverybar_glove/" />
+        <folder expanded="1" path="animation-folder/RecoveryBarTNTt/" />
+        <folder expanded="1" path="animation-folder/RecoveryBarAnvil/" />
+        <folder expanded="1" path="animation-folder/RecoveryBarGlove/" />
         <folder expanded="1" path="animation-folder/ShotImpact/" />
-        <folder expanded="1" path="animation-folder/StandingBrush/" />
+        <folder expanded="1" path="animation-folder/Enemy001/" />
         <folder expanded="1" path="animation-folder/TNTImpact/" />
         <folder expanded="1" path="animation-folder/AnvilImpact/" />
         <folder expanded="1" path="animation-folder/LivingObj009/" />
+        <folder expanded="1" path="animation-folder/SuiteObj005/" />
+        <folder expanded="1" path="animation-folder/SuiteObj007/" />
+        <folder expanded="1" path="animation-folder/SuiteObj012/" />
+        <folder expanded="1" path="animation-folder/SuiteObj010/" />
+        <folder expanded="1" path="animation-folder/SuiteObj009/" />
+        <folder expanded="1" path="animation-folder/SuiteObj002/" />
+        <folder expanded="1" path="animation-folder/SuiteObj003/" />
+        <folder expanded="1" path="animation-folder/SuiteObj011/" />
+        <folder expanded="1" path="animation-folder/SuiteObj004/" />
+        <folder expanded="1" path="animation-folder/SuiteObj006/" />
+        <folder expanded="1" path="animation-folder/LaundryObj002/" />
+        <folder expanded="1" path="animation-folder/TVLight/" />
+        <folder expanded="1" path="animation-folder/LaudryObj007/" />
+        <folder expanded="1" path="animation-folder/GardenObj001/" />
+        <folder expanded="1" path="animation-folder/StairGoesUp/" />
+        <folder expanded="1" path="animation-folder/GardenObj002/" />
+        <folder expanded="1" path="animation-folder/KitchenObj003/" />
+        <folder expanded="1" path="animation-folder/KitchenObj005/" />
+        <folder expanded="1" path="animation-folder/KitchenObj006/" />
+        <folder expanded="1" path="animation-folder/KitchenObj002/" />
+        <folder expanded="1" path="animation-folder/KitchenObj001/" />
+        <folder expanded="1" path="animation-folder/KitchenObj007/" />
+        <folder expanded="1" path="animation-folder/KitchenObj004/" />
+        <folder expanded="1" path="animation-folder/Enemy002/" />
+        <folder expanded="1" path="animation-folder/LivingObj013/" />
+        <folder expanded="1" path="animation-folder/PauseMenu/" />
+        <folder expanded="1" path="animation-folder/HamburgerMenu/" />
+        <folder expanded="1" path="animation-folder/Enemy003/" />
+        <folder expanded="1" path="animation-folder/Enemy004/" />
+        <folder expanded="1" path="animation-folder/Enemy003SpawObj/" />
+        <folder expanded="1" path="animation-folder/DarkHall/" />
+        <folder expanded="1" path="animation-folder/AnvilSpaw/" />
+        <folder expanded="1" path="animation-folder/AnvilTarget/" />
+        <folder expanded="1" path="animation-folder/Enemy003Sights/" />
+        <folder expanded="1" path="animation-folder/GarageRoom/" />
+        <folder expanded="1" path="animation-folder/GarageObj001/" />
+        <folder expanded="1" path="animation-folder/GarageObj002/" />
+        <folder expanded="1" path="animation-folder/GarageObj003/" />
+        <folder expanded="1" path="animation-folder/EnemyBoss/" />
+        <folder expanded="1" path="animation-folder/EnemyBossSights/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Continue/" />
+        <folder expanded="1" path="animation-folder/restart/" />
+        <folder expanded="1" path="animation-folder/TitleMenu/" />
+        <folder expanded="1" path="animation-folder/DarkScreen/" />
+        <folder expanded="1" path="animation-folder/TitleCover/" />
+        <folder expanded="1" path="animation-folder/PlayButton/" />
+        <folder expanded="1" path="animation-folder/CreditsButton/" />
+        <folder expanded="1" path="animation-folder/MusicButton/" />
+        <folder expanded="1" path="animation-folder/SondsButton/" />
+        <folder expanded="1" path="animation-folder/DarkScreenFadeIn/" />
+        <folder expanded="1" path="animation-folder/DarkScreenFadeOut/" />
+        <folder expanded="1" path="animation-folder/BackgroundCredits/" />
+        <folder expanded="1" path="animation-folder/BackButton/" />
+        <folder expanded="1" path="animation-folder/SplashScreenFatecLogo/" />
+        <folder expanded="1" path="animation-folder/SplashScreenScarlogo/" />
+        <folder expanded="1" path="animation-folder/ShotBoss/" />
+        <folder expanded="1" path="animation-folder/KillMosters/" />
+        <folder expanded="1" path="animation-folder/CutscenePage1/" />
+        <folder expanded="1" path="animation-folder/CutscenePage2/" />
+        <folder expanded="1" path="animation-folder/CutscenePage3/" />
+        <folder expanded="1" path="animation-folder/CutscenePage4/" />
+        <folder expanded="1" path="animation-folder/ScreenTransition/" />
+        <folder expanded="1" path="animation-folder/NPCs/" />
+        <folder expanded="1" path="animation-folder/FinalBackground/" />
+        <folder expanded="1" path="animation-folder/ViolencePanel/" />
+        <folder expanded="1" path="animation-folder/FinalPhoto/" />
+        <folder expanded="1" path="animation-folder/ContinueButton/" />
+        <folder expanded="1" path="animation-folder/FinalTransition/" />
+        <folder expanded="1" path="animation-folder/GameOverMessage/" />
+        <folder expanded="1" path="animation-folder/GameplayTransitionUp/" />
+        <folder expanded="1" path="animation-folder/GamePlayTransitionDown/" />
+        <folder expanded="1" path="animation-folder/TvFinal/" />
+        <folder expanded="1" path="animation-folder/CleanPage/" />
+        <folder expanded="1" path="animation-folder/LegendHistory/" />
+        <folder expanded="1" path="animation-folder/Dark/" />
+        <folder expanded="1" path="animation-folder/FinalHomeButton/" />
+        <folder expanded="1" path="animation-folder/FinalFadeIn/" />
+        <folder expanded="1" path="animation-folder/ThatIsAll/" />
+        <folder expanded="1" path="animation-folder/Gate/" />
+        <folder expanded="1" path="animation-folder/DarkPageMainMenu/" />
+        <folder expanded="1" path="animation-folder/EnemyDeath/" />
+        <folder expanded="1" path="animation-folder/LaundryOb004j/" />
     </folders-expanded>
 </c2uistate>
