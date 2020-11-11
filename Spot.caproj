@@ -3771,7 +3771,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="LaundryOb004j" sid="294419006287215">
+        <object-type name="LaundryObj004" sid="294419006287215">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="152084357669840" speed="5">
@@ -3785,6 +3785,47 @@
                             <point x="0.5" y="0.833333" />
                             <point x="0.0874636" y="0.821429" />
                             <point x="0.106414" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LaundryObj006" sid="898927224989307">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="652585307189935" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\LAVANDERIA\piaLavanderia.png">
+                        <collision-poly>
+                            <point x="0.235294" y="0.228571" />
+                            <point x="0.5" y="0" />
+                            <point x="0.764706" y="0.228571" />
+                            <point x="1" y="0.5" />
+                            <point x="0.926471" y="0.928571" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0735294" y="0.928571" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="EnemyBlood" sid="767619312358884">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="365511506654207">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="242125577273897" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506329" original-source="C:\Users\AleCosta\Desktop\spot\assets\manchaSangue.png">
+                        <collision-poly>
+                            <point x="0.141304" y="0.164557" />
+                            <point x="0.5" y="0.265823" />
+                            <point x="0.902174" y="0.493671" />
+                            <point x="0.782609" y="0.746835" />
+                            <point x="0.5" y="0.860759" />
+                            <point x="0.26087" y="0.696203" />
                         </collision-poly>
                     </frame>
                 </animation>

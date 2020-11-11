@@ -11,9 +11,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Gameplay</layout>
-        <layout active="1" order="2">MainMenu</layout>
+        <layout order="2">MainMenu</layout>
         <layout order="4">FinalInterface</layout>
-        <event-sheet order="1">GameplayEvent</event-sheet>
+        <event-sheet active="1" order="1">GameplayEvent</event-sheet>
         <event-sheet order="3">MainMenuEvent</event-sheet>
         <event-sheet order="5">FinalInterfaceEvent</event-sheet>
     </open-tabs>
@@ -157,6 +157,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Gate/" />
         <folder expanded="1" path="animation-folder/DarkPageMainMenu/" />
         <folder expanded="1" path="animation-folder/EnemyDeath/" />
-        <folder expanded="1" path="animation-folder/LaundryOb004j/" />
+        <folder expanded="1" path="animation-folder/LaundryObj004/" />
+        <folder expanded="1" path="animation-folder/LaundryObj006/" />
+        <folder expanded="1" path="animation-folder/EnemyBlood/" />
     </folders-expanded>
 </c2uistate>
