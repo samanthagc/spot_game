@@ -4316,6 +4316,78 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="LivingObj014" sid="801913812983539">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="950772570755518" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\AleCosta\Desktop\spot\assets\SALA\upgradePapel.png">
+                        <collision-poly>
+                            <point x="0.133929" y="0.154639" />
+                            <point x="0.5" y="0.0927835" />
+                            <point x="0.8125" y="0.216495" />
+                            <point x="0.946429" y="0.494845" />
+                            <point x="0.821429" y="0.793814" />
+                            <point x="0.5" y="0.876289" />
+                            <point x="0.205357" y="0.762887" />
+                            <point x="0.0535714" y="0.494845" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LivingObj015" sid="413401201373534">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="747000608783856" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501805" original-source="C:\Users\AleCosta\Desktop\spot\assets\SALA\rastroSangueSala.png">
+                        <collision-poly>
+                            <point x="0.0561798" y="0.0722022" />
+                            <point x="0.5" y="0.314079" />
+                            <point x="0.800562" y="0.256318" />
+                            <point x="0.985955" y="0.981949" />
+                            <point x="0.5" y="0.386282" />
+                            <point x="0.438202" y="0.436823" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GardenObj003" sid="163640615218240">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="907698620603837" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\rastroSangueJardim.png">
+                        <collision-poly>
+                            <point x="0.0702703" y="0.0984849" />
+                            <point x="0.5" y="0.5" />
+                            <point x="0.624324" y="0.526515" />
+                            <point x="0.589189" y="0.5" />
+                            <point x="0.962162" y="0.94697" />
+                            <point x="0.5" y="0.541667" />
+                            <point x="0.367568" y="0.484848" />
+                            <point x="0.116216" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GardenObj004" sid="916092789945652">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="422881410539897" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\cartazBoom.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.0211268" />
+                            <point x="0.823171" y="0.204225" />
+                            <point x="0.932927" y="0.5" />
+                            <point x="0.5" y="0.985915" />
+                            <point x="0.182927" y="0.788732" />
+                            <point x="0.054878" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
