@@ -16,6 +16,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -1528,7 +1529,7 @@
         <object-type name="ShotImpact" sid="614896613856811">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="166700433072719" speed="12">
+                <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="166700433072719" speed="20">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\tiroImpacto\impacto tiro0001.png">
                         <collision-poly>
                             <point x="0.5" y="0.44964" />
@@ -2201,7 +2202,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type global="1" name="Enemy002" sid="220800259211511">
+        <object-type name="Enemy002" sid="220800259211511">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Health" sid="535485063559357" type="number" />
@@ -4221,6 +4222,97 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\raioImpacto\raio12.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\raioImpacto\raio13.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\raioImpacto\raio14.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HealthPlayer" sid="719199324787214">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="SuiteObj013" sid="479967024465338">
+            <plugin id="Tilemap" />
+            <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\armarioQuarto.png" />
+            <tiles />
+        </object-type>
+        <object-type name="SuiteObj014" sid="155396637960808">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\armarioQuarto.png" />
+        </object-type>
+        <object-type name="WardrobeSuiteBottom" sid="526244867462431">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="811309184901262" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\armarioQuarto_v2.png">
+                        <collision-poly>
+                            <point x="0.0192308" y="0.0138889" />
+                            <point x="0.5" y="0" />
+                            <point x="0.980769" y="0.0138889" />
+                            <point x="1" y="0.5" />
+                            <point x="0.980769" y="0.986111" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0192308" y="0.986111" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WardrobeSuiteTop" sid="832025766012057">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="492935405373239" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\armarioQuarto_v1.png">
+                        <collision-poly>
+                            <point x="0.0192308" y="0.00980392" />
+                            <point x="0.980769" y="0.00980392" />
+                            <point x="0.980769" y="0.990196" />
+                            <point x="0.0192308" y="0.990196" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WardrobeKitchenBottom" sid="717388100582472">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="436467779392956" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.506849" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\COZINHA\ArmarioCozinha_v1.png">
+                        <collision-poly>
+                            <point x="0.0192308" y="0.00621118" />
+                            <point x="0.980769" y="0.00621118" />
+                            <point x="1" y="0.496894" />
+                            <point x="0.980769" y="0.993789" />
+                            <point x="0.0192308" y="0.993789" />
+                            <point x="0" y="0.496894" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WardrobeKitchenTop" sid="835154574677373">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="490375696770800" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504762" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\COZINHA\ArmarioCozinha_v2.png">
+                        <collision-poly>
+                            <point x="0.0192308" y="0.00952381" />
+                            <point x="0.980769" y="0.00952381" />
+                            <point x="0.980769" y="0.990476" />
+                            <point x="0.0192308" y="0.990476" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GardenWall" sid="245278671568939">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="296551458058838">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="673020301896316" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\JARDIM\paredeJardim.png" />
                 </animation>
             </animation-folder>
         </object-type>

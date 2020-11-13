@@ -130,50 +130,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FinalHomeButton" uid="268">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>960</x>
-                        <y>672</y>
-                        <z>0</z>
-                        <width>87</width>
-                        <height>86</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.510204077</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="ThatIsAll" uid="270">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-192</x>
-                        <y>864</y>
-                        <z>0</z>
-                        <width>500</width>
-                        <height>111</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.504504502</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
             </instances>
             <effects />
         </layer>
@@ -307,11 +263,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-448</x>
+                        <x>-608</x>
                         <y>256</y>
                         <z>0</z>
-                        <width>647.70715332</width>
-                        <height>431.602416992</height>
+                        <width>920.180908203</width>
+                        <height>613.166442871</height>
                         <depth>0</depth>
                         <hotspotX>0.500468612</hotspotX>
                         <hotspotY>0.500703216</hotspotY>
@@ -329,14 +285,36 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1152</x>
-                        <y>320</y>
+                        <x>1280</x>
+                        <y>352</y>
                         <z>0</z>
-                        <width>281.194976807</width>
-                        <height>43.69921875</height>
+                        <width>413.907806396</width>
+                        <height>64.323509216</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.507246375</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ThatIsAll" uid="270">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-192</x>
+                        <y>928</y>
+                        <z>0</z>
+                        <width>424.136627197</width>
+                        <height>94.158332825</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.504504502</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -422,6 +400,28 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="FinalHomeButton" uid="268">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>928</x>
+                        <y>640</y>
+                        <z>0</z>
+                        <width>87</width>
+                        <height>86</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.510204077</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

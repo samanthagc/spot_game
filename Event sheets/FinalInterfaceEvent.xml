@@ -87,7 +87,7 @@
                 </action>
                 <action id="-3" name="Set position" sid="488873101948079" type="TvFinal">
                     <param id="0" name="X">384</param>
-                    <param id="1" name="Y">320</param>
+                    <param id="1" name="Y">256</param>
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="305835895823702" type="TvFinal" />
                 <action id="-3" name="Set position" sid="986073253619309" type="FinalHomeButton">
@@ -105,8 +105,8 @@
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="-3" name="Set position" sid="242588821167671" type="LegendHistory">
-                    <param id="0" name="X">336</param>
-                    <param id="1" name="Y">389</param>
+                    <param id="0" name="X">315</param>
+                    <param id="1" name="Y">354</param>
                 </action>
             </actions>
         </event-block>
@@ -153,8 +153,8 @@
                     <param id="0" name="Seconds">1.5</param>
                 </action>
                 <action id="-3" name="Set position" sid="632839541405686" type="ThatIsAll">
-                    <param id="0" name="X">384</param>
-                    <param id="1" name="Y">64</param>
+                    <param id="0" name="X">317</param>
+                    <param id="1" name="Y">128</param>
                 </action>
                 <action id="4" name="Set animation" sid="311461516915818" type="ThatIsAll">
                     <param id="0" name="Animation">&quot;Default&quot;</param>

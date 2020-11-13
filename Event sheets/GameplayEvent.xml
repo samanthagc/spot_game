@@ -62,6 +62,10 @@
                     <param id="3" name="Volume">-5</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
+                <action id="-10" name="Set value" sid="901706745951776" type="Enemy002">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">7</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="133013613824012">
@@ -127,6 +131,9 @@
                 <action id="-4" name="Set position to another object" sid="910223829542240" type="EnemyBossSights">
                     <param id="0" name="Object">EnemyBoss</param>
                     <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="0" name="Set text" sid="663000486153531" type="HealthPlayer">
+                    <param id="0" name="Text">LiveBar.Width &amp; &quot;%&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -1235,7 +1242,7 @@
                 </event-block>
                 <event-block sid="481501924231528">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="896575667335810" type="TNT">
+                        <condition id="0" name="On collision with another object" sid="896575667335810" type="Enemy003">
                             <param id="0" name="Object">TNTImpact</param>
                         </condition>
                     </conditions>
@@ -1867,6 +1874,9 @@
                     <param id="1" name="Value">0</param>
                 </action>
                 <action id="-26" name="Restart layout" sid="497803987123346" type="System" />
+                <action id="-2" name="Go to layout" sid="963784869669562" type="System">
+                    <param id="0" name="Layout">Gameplay</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="247135563085525">
@@ -2064,7 +2074,7 @@
                 </condition>
                 <condition id="-5" name="Compare width" sid="320025391353345" type="LiveBar">
                     <param id="0" name="Comparison">3</param>
-                    <param id="1" name="Width">64</param>
+                    <param id="1" name="Width">63</param>
                 </condition>
             </conditions>
             <actions>
@@ -2072,7 +2082,16 @@
                     <param id="0" name="Width">self.Width +1</param>
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="630814673585135" type="EnemyBlood" />
-                <action id="-9" name="Destroy" sid="857190398090307" type="EnemyBlood" />
+            </actions>
+        </event-block>
+        <event-block sid="971406642524696">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="124708906837752" type="GardenWall">
+                    <param id="0" name="Object">TNTImpact</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="999841359516071" type="GardenWall" />
             </actions>
         </event-block>
     </events>
