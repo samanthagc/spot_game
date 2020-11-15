@@ -59,9 +59,9 @@
             </conditions>
             <actions>
                 <action id="0" name="Play" sid="969254559309620" type="Audio">
-                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="0" name="Audio file">Clicking_snd</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
+                    <param id="3" name="Volume">-11</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
                 <action id="-16" name="Wait" sid="774376720070780" type="System">
@@ -220,9 +220,9 @@
                     <param id="0" name="State">1</param>
                 </action>
                 <action id="0" name="Play" sid="396495026791427" type="Audio">
-                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="0" name="Audio file">Clicking_snd</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
+                    <param id="3" name="Volume">-11</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
                 <action id="-16" name="Wait" sid="856498205411863" type="System">
@@ -296,9 +296,9 @@
                     <param id="0" name="State">1</param>
                 </action>
                 <action id="0" name="Play" sid="461824184475147" type="Audio">
-                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="0" name="Audio file">Clicking_snd</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">0</param>
+                    <param id="3" name="Volume">-11</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
                 <action id="-16" name="Wait" sid="724889971251664" type="System">

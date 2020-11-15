@@ -1300,7 +1300,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="LiveBar" sid="677234354238097">
+        <object-type name="LiveBarPlayer" sid="677234354238097">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="177564689539066" speed="5">
@@ -1343,8 +1343,8 @@
         <object-type name="ImprovementPanel" sid="983413586605777">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="212862385343906" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\painelMelhorias.png">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="212862385343906" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\painelMelhorias2.png">
                         <collision-poly>
                             <point x="0.5" y="0.0267857" />
                             <point x="0.431818" y="0.446429" />
@@ -1477,6 +1477,11 @@
         </object-type>
         <object-type name="UpgradeIcon" sid="781099572653392">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="179570413919494">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="576896262670834" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\botaoMelhoriaHud.png">
@@ -3105,6 +3110,9 @@
                 <behavior-type name="Flash" sid="159121317575070">
                     <behavior id="Flash" />
                 </behavior-type>
+                <behavior-type name="Solid" sid="774786537907916">
+                    <behavior id="solid" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="839666627051869" speed="5">
@@ -3116,6 +3124,7 @@
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Health" sid="709839018329048" type="number" />
+                <instance-variable name="MaxHealth" sid="132509909693665" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="LineOfSight" sid="116322063134329">
@@ -4388,6 +4397,113 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="LiveBarBoss" sid="958713921090053">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="708825635452302">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="325224702306489" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\vidaBossBarraVermelha.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LifeBarContainerBoss" sid="806069327923511">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="469249867993779">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="450574108476049" speed="0">
+                    <frame duration="1" hotspotX="0.533333" hotspotY="0.547059" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\vidaBossBarraPreta.png">
+                        <collision-poly>
+                            <point x="0.0666667" y="0.00588235" />
+                            <point x="0.933333" y="0.00588235" />
+                            <point x="1" y="0.5" />
+                            <point x="0.933333" y="0.994118" />
+                            <point x="0.0666667" y="0.994118" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="testando" sid="866620705752322">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="SkullBossLive" sid="272346929095244">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="702297131856127" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\vidaBossCaveira.png">
+                        <collision-poly>
+                            <point x="0.136364" y="0.115385" />
+                            <point x="0.5" y="0" />
+                            <point x="0.863636" y="0.115385" />
+                            <point x="0.977273" y="0.5" />
+                            <point x="0.818182" y="0.846154" />
+                            <point x="0.5" y="1" />
+                            <point x="0.181818" y="0.846154" />
+                            <point x="0.0227273" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Large" sid="465013534081336">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="ShadowBoss" sid="971674039801849">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="790124693646502" speed="0">
+                    <frame duration="1" hotspotX="0.503817" hotspotY="0.50152" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\vidaBossSombra.png">
+                        <collision-poly>
+                            <point x="0.496183" y="0.553191" />
+                            <point x="0.755725" y="0.902736" />
+                            <point x="0.496183" y="0.924012" />
+                            <point x="0.221374" y="0.911854" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="IndentifyBoss" sid="322887409472130">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="716056487962780" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="StarIcon" sid="456461614909261">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="145523952309931">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="747546460621941" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.521739" original-source="C:\Users\user\Desktop\Spot_game_copy\INVENTARIO\Estrela.png">
+                        <collision-poly>
+                            <point x="0.25" y="0.26087" />
+                            <point x="0.5" y="0" />
+                            <point x="0.75" y="0.26087" />
+                            <point x="0.916667" y="0.478261" />
+                            <point x="0.833333" y="0.826087" />
+                            <point x="0.5" y="0.869565" />
+                            <point x="0.166667" y="0.826087" />
+                            <point x="0.0833333" y="0.478261" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -4430,6 +4546,8 @@
         <file name="Upgradeweapons_snd.ogg" />
         <file name="WeaponChange_snd.m4a" />
         <file name="WeaponChange_snd.ogg" />
+        <file name="Clicking.m4a" />
+        <file name="Clicking_snd.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="Carmen Habanera - Georges Bizet - Gameplay(Piano).ogg" />

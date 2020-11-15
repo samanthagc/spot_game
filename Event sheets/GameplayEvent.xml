@@ -59,12 +59,8 @@
                 <action id="0" name="Play" sid="518163125340835" type="Audio">
                     <param id="0" name="Audio file">Carmen Habanera - Georges Bizet - Gameplay(Piano)</param>
                     <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">-5</param>
+                    <param id="3" name="Volume">-1</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
-                </action>
-                <action id="-10" name="Set value" sid="901706745951776" type="Enemy002">
-                    <param id="0" name="Instance variable">Health</param>
-                    <param id="1" name="Value">7</param>
                 </action>
             </actions>
         </event-block>
@@ -80,8 +76,34 @@
                 <action id="0" name="Play" sid="500411285048872" type="Audio">
                     <param id="0" name="Audio file">Summer Storm - Vivaldi - Boss fight</param>
                     <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">-10</param>
+                    <param id="3" name="Volume">-6</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="879031533111791" type="LiveBarBoss">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="220079931962089" type="LifeBarContainerBoss">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="409630717832651" type="SkullBossLive">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="128980817382142" type="ShadowBoss">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="620858441658931">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="501676864300786" type="Player">
+                    <param id="0" name="Object">IndentifyBoss</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="830724687793343" type="IndentifyBoss" />
+                <action id="-3" name="Set position" sid="563233228737887" type="Player">
+                    <param id="0" name="X">1578</param>
+                    <param id="1" name="Y">1319</param>
                 </action>
             </actions>
         </event-block>
@@ -114,6 +136,9 @@
                 <action id="0" name="Set text" sid="935380810164411" type="Viole">
                     <param id="0" name="Text">&quot;Violência em: &quot; &amp; ViolenceCount &amp; &quot;%&quot;</param>
                 </action>
+                <action id="0" name="Set text" sid="663000486153531" type="HealthPlayer">
+                    <param id="0" name="Text">LiveBarPlayer.Width &amp; &quot;%&quot;</param>
+                </action>
                 <action id="4" name="Set animation" sid="454446944717735" type="Enemy001">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
@@ -131,9 +156,6 @@
                 <action id="-4" name="Set position to another object" sid="910223829542240" type="EnemyBossSights">
                     <param id="0" name="Object">EnemyBoss</param>
                     <param id="1" name="Image point (optional)">0</param>
-                </action>
-                <action id="0" name="Set text" sid="663000486153531" type="HealthPlayer">
-                    <param id="0" name="Text">LiveBar.Width &amp; &quot;%&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -165,11 +187,29 @@
                 </condition>
             </conditions>
             <actions>
+                <action behavior="Sine" id="0" name="Set active" sid="852436681780713" type="StarIcon">
+                    <param id="0" name="State">1</param>
+                </action>
                 <action id="-11" name="Add to" sid="499698227862120" type="Player">
                     <param id="0" name="Instance variable">Stars</param>
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-9" name="Destroy" sid="384675432809947" type="CoinStar" />
+                <action id="0" name="Play" sid="941171746639337" type="Audio">
+                    <param id="0" name="Audio file">Upgradeweapons_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-11</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="574713720751544" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="403878152108466" type="StarIcon">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Sine" id="5" name="Set cycle position" sid="958150843809849" type="StarIcon">
+                    <param id="0" name="Cycle position">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block any="1" sid="210489583386210">
@@ -770,7 +810,7 @@
                     <param id="1" name="&apos;Off&apos; time">0.1</param>
                     <param id="2" name="Duration">1.0</param>
                 </action>
-                <action id="-5" name="Set width" sid="227612924822760" type="LiveBar">
+                <action id="-5" name="Set width" sid="227612924822760" type="LiveBarPlayer">
                     <param id="0" name="Width">self.Width -1</param>
                 </action>
             </actions>
@@ -787,7 +827,7 @@
                     <param id="1" name="&apos;Off&apos; time">0.1</param>
                     <param id="2" name="Duration">1.0</param>
                 </action>
-                <action id="-5" name="Set width" sid="523464079044045" type="LiveBar">
+                <action id="-5" name="Set width" sid="523464079044045" type="LiveBarPlayer">
                     <param id="0" name="Width">self.Width -2</param>
                 </action>
             </actions>
@@ -804,7 +844,7 @@
                     <param id="1" name="&apos;Off&apos; time">0.1</param>
                     <param id="2" name="Duration">1.0</param>
                 </action>
-                <action id="-5" name="Set width" sid="509548403095891" type="LiveBar">
+                <action id="-5" name="Set width" sid="509548403095891" type="LiveBarPlayer">
                     <param id="0" name="Width">self.Width -3</param>
                 </action>
                 <action id="-9" name="Destroy" sid="732507751906630" type="Enemy003SpawObj" />
@@ -822,7 +862,7 @@
                     <param id="1" name="&apos;Off&apos; time">0.1</param>
                     <param id="2" name="Duration">1.0</param>
                 </action>
-                <action id="-5" name="Set width" sid="486871192137087" type="LiveBar">
+                <action id="-5" name="Set width" sid="486871192137087" type="LiveBarPlayer">
                     <param id="0" name="Width">self.Width -5</param>
                 </action>
                 <action id="-9" name="Destroy" sid="557158972250364" type="ShotBoss" />
@@ -1499,6 +1539,9 @@
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Value">EnemyBoss.Health - (Player.FireGunLvl  * Player.FireGunDamage)</param>
                 </action>
+                <action id="-6" name="Set height" sid="702899201400608" type="LiveBarBoss">
+                    <param id="0" name="Height">(165 / EnemyBoss.MaxHealth) * EnemyBoss.Health</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="595492479990776">
@@ -1516,6 +1559,9 @@
                 <action id="-10" name="Set value" sid="331249456008575" type="EnemyBoss">
                     <param id="0" name="Instance variable">Health</param>
                     <param id="1" name="Value">EnemyBoss.Health - (Player.TNTLvl  * Player.TntDamage)</param>
+                </action>
+                <action id="-6" name="Set height" sid="562885034412300" type="LiveBarBoss">
+                    <param id="0" name="Height">(165 / EnemyBoss.MaxHealth) * EnemyBoss.Health</param>
                 </action>
             </actions>
         </event-block>
@@ -1539,6 +1585,9 @@
                     <param id="0" name="Magnitude">10</param>
                     <param id="1" name="Duration">0.2</param>
                     <param id="2" name="Mode">0</param>
+                </action>
+                <action id="-6" name="Set height" sid="444110930758740" type="LiveBarBoss">
+                    <param id="0" name="Height">(165 / EnemyBoss.MaxHealth) * EnemyBoss.Health</param>
                 </action>
             </actions>
         </event-block>
@@ -1587,7 +1636,7 @@
                     <param id="0" name="State">1</param>
                 </action>
                 <action id="0" name="Play" sid="852069764995734" type="Audio">
-                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="0" name="Audio file">Clicking_snd</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">-16</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
@@ -1649,7 +1698,7 @@
                     <param id="0" name="State">1</param>
                 </action>
                 <action id="0" name="Play" sid="663952772249521" type="Audio">
-                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="0" name="Audio file">Clicking_snd</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">-16</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
@@ -1715,7 +1764,7 @@
                     <param id="1" name="Y">352</param>
                 </action>
                 <action id="0" name="Play" sid="782135614506383" type="Audio">
-                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="0" name="Audio file">Clicking_snd</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">-16</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
@@ -1743,7 +1792,7 @@
                     <param id="1" name="Y">352</param>
                 </action>
                 <action id="0" name="Play" sid="784585489674971" type="Audio">
-                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="0" name="Audio file">Clicking_snd</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">-16</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
@@ -1759,7 +1808,7 @@
         <comment>Menu Gameplay Game Over</comment>
         <event-block sid="541434928557451">
             <conditions>
-                <condition id="-5" name="Compare width" sid="349497071141700" type="LiveBar">
+                <condition id="-5" name="Compare width" sid="349497071141700" type="LiveBarPlayer">
                     <param id="0" name="Comparison">3</param>
                     <param id="1" name="Width">0</param>
                 </condition>
@@ -1837,7 +1886,7 @@
                     <param id="1" name="Y">352</param>
                 </action>
                 <action id="0" name="Play" sid="402636867137015" type="Audio">
-                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="0" name="Audio file">Clicking_snd</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">-16</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
@@ -1898,7 +1947,7 @@
                     <param id="1" name="Y">352</param>
                 </action>
                 <action id="0" name="Play" sid="517875883841617" type="Audio">
-                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="0" name="Audio file">Clicking_snd</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">-16</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
@@ -1953,6 +2002,9 @@
                 </condition>
             </conditions>
             <actions>
+                <action behavior="Sine" id="0" name="Set active" sid="770764968105353" type="UpgradeIcon">
+                    <param id="0" name="State">1</param>
+                </action>
                 <action id="-11" name="Add to" sid="411851966744441" type="Player">
                     <param id="0" name="Instance variable">FireGunLvl</param>
                     <param id="1" name="Value">1</param>
@@ -1975,6 +2027,15 @@
                     <param id="3" name="Volume">-9</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
+                <action id="-16" name="Wait" sid="298165498366688" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="542918920648796" type="UpgradeIcon">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Sine" id="5" name="Set cycle position" sid="354001994384674" type="UpgradeIcon">
+                    <param id="0" name="Cycle position">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="962976073184113">
@@ -1996,6 +2057,9 @@
                 </condition>
             </conditions>
             <actions>
+                <action behavior="Sine" id="0" name="Set active" sid="255268510239405" type="UpgradeIcon">
+                    <param id="0" name="State">1</param>
+                </action>
                 <action id="-11" name="Add to" sid="714233515946344" type="Player">
                     <param id="0" name="Instance variable">AnvilLvl</param>
                     <param id="1" name="Value">1</param>
@@ -2018,6 +2082,15 @@
                     <param id="3" name="Volume">-9</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
+                <action id="-16" name="Wait" sid="779940812959436" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="373451521401459" type="UpgradeIcon">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Sine" id="5" name="Set cycle position" sid="380461162821712" type="UpgradeIcon">
+                    <param id="0" name="Cycle position">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="611085808673673">
@@ -2039,6 +2112,9 @@
                 </condition>
             </conditions>
             <actions>
+                <action behavior="Sine" id="0" name="Set active" sid="972017770540919" type="UpgradeIcon">
+                    <param id="0" name="State">1</param>
+                </action>
                 <action id="-11" name="Add to" sid="279202409746517" type="Player">
                     <param id="0" name="Instance variable">TNTLvl</param>
                     <param id="1" name="Value">1</param>
@@ -2061,6 +2137,15 @@
                     <param id="3" name="Volume">-9</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
+                <action id="-16" name="Wait" sid="268339432639533" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="530604249472987" type="UpgradeIcon">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Sine" id="5" name="Set cycle position" sid="752726991143722" type="UpgradeIcon">
+                    <param id="0" name="Cycle position">0</param>
+                </action>
             </actions>
         </event-block>
         <comment>Life recovery</comment>
@@ -2072,13 +2157,13 @@
                 <condition id="-6" name="Every X seconds" sid="533604393026032" type="System">
                     <param id="0" name="Interval (seconds)">1.0</param>
                 </condition>
-                <condition id="-5" name="Compare width" sid="320025391353345" type="LiveBar">
+                <condition id="-5" name="Compare width" sid="320025391353345" type="LiveBarPlayer">
                     <param id="0" name="Comparison">3</param>
                     <param id="1" name="Width">63</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-5" name="Set width" sid="423315572177298" type="LiveBar">
+                <action id="-5" name="Set width" sid="423315572177298" type="LiveBarPlayer">
                     <param id="0" name="Width">self.Width +1</param>
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="630814673585135" type="EnemyBlood" />

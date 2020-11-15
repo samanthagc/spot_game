@@ -53,9 +53,9 @@
             </conditions>
             <actions>
                 <action id="0" name="Play" sid="759440068724906" type="Audio">
-                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="0" name="Audio file">Clicking_snd</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">-9</param>
+                    <param id="3" name="Volume">-11</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
                 <action id="-3" name="Set position" sid="727104643106134" type="FinalPhoto">
@@ -120,9 +120,9 @@
             </conditions>
             <actions>
                 <action id="0" name="Play" sid="837297909468522" type="Audio">
-                    <param id="0" name="Audio file">AnyClick_snd</param>
+                    <param id="0" name="Audio file">Clicking_snd</param>
                     <param id="2" name="Loop">0</param>
-                    <param id="3" name="Volume">-9</param>
+                    <param id="3" name="Volume">-11</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
                 <action id="-3" name="Set position" sid="942268074949957" type="FinalHomeButton">

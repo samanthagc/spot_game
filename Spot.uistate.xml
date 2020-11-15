@@ -10,10 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Gameplay</layout>
+        <layout active="1" order="0">Gameplay</layout>
         <layout order="2">MainMenu</layout>
         <layout order="4">FinalInterface</layout>
-        <event-sheet active="1" order="1">GameplayEvent</event-sheet>
+        <event-sheet order="1">GameplayEvent</event-sheet>
         <event-sheet order="3">MainMenuEvent</event-sheet>
         <event-sheet order="5">FinalInterfaceEvent</event-sheet>
     </open-tabs>
@@ -56,7 +56,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/TNT/" />
         <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/Heart/" />
-        <folder expanded="1" path="animation-folder/LiveBar/" />
+        <folder expanded="1" path="animation-folder/LiveBarPlayer/" />
         <folder expanded="1" path="animation-folder/LifeBarContainer/" />
         <folder expanded="1" path="animation-folder/ItemsPanel/" />
         <folder expanded="1" path="animation-folder/RecoveryBarFireGun/" />
@@ -170,5 +170,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/LivingObj015/" />
         <folder expanded="1" path="animation-folder/GardenObj003/" />
         <folder expanded="1" path="animation-folder/GardenObj004/" />
+        <folder expanded="1" path="animation-folder/LiveBarBoss/" />
+        <folder expanded="1" path="animation-folder/LifeBarContainerBoss/" />
+        <folder expanded="1" path="animation-folder/SkullBossLive/" />
+        <folder expanded="1" path="animation-folder/ShadowBoss/" />
+        <folder expanded="1" path="animation-folder/IndentifyBoss/" />
+        <folder expanded="1" path="animation-folder/StarIcon/" />
     </folders-expanded>
 </c2uistate>
