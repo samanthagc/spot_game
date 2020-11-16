@@ -62,6 +62,7 @@
                     <param id="3" name="Volume">-1</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
+                <action id="-9" name="Destroy" sid="689347619659607" type="StarShine" />
             </actions>
         </event-block>
         <event-block sid="133013613824012">
@@ -187,6 +188,11 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Spawn another object" sid="759283251790659" type="CoinStar">
+                    <param id="0" name="Object">StarShine</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
                 <action behavior="Sine" id="0" name="Set active" sid="852436681780713" type="StarIcon">
                     <param id="0" name="State">1</param>
                 </action>
@@ -210,6 +216,10 @@
                 <action behavior="Sine" id="5" name="Set cycle position" sid="958150843809849" type="StarIcon">
                     <param id="0" name="Cycle position">0</param>
                 </action>
+                <action id="-16" name="Wait" sid="125836888826128" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-9" name="Destroy" sid="878451767710229" type="StarShine" />
             </actions>
         </event-block>
         <event-block any="1" sid="210489583386210">
