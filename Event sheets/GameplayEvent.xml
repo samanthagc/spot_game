@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameplayEvent</name>
     <events>
+        <variable constant="0" name="colectedKeys" sid="794449518196938" static="0" type="number">0</variable>
         <variable comment="0 = Gameplay, 1 = GameOver" constant="0" name="GameOver" sid="368237936883552" static="0" type="number">0</variable>
         <variable comment="Number of Violence Count" constant="0" name="ViolenceCount" sid="834883515816128" static="0" type="number">0</variable>
         <variable comment="Number of star for power up" constant="0" name="UpgradeStarPass" sid="406135747323305" static="0" type="number">0</variable>
@@ -106,6 +107,7 @@
                     <param id="0" name="X">1578</param>
                     <param id="1" name="Y">1319</param>
                 </action>
+                <action id="33" name="Stop all" sid="875355433013374" type="Audio" />
             </actions>
         </event-block>
         <event-block sid="982568644414278">
@@ -115,14 +117,6 @@
             <actions>
                 <action id="4" name="Set animation" sid="724444419744019" type="Player">
                     <param id="0" name="Animation">player.Direction</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="-10" name="Set value" sid="248857162311414" type="NPCs">
-                    <param id="0" name="Instance variable">Animation</param>
-                    <param id="1" name="Value">NPCs.AnimationSetter = 0 ? &quot;Baby&quot; : NPCs.AnimationSetter = 1 ? &quot;Dog&quot; : NPCs.AnimationSetter = 2 ? &quot;Cat&quot; : NPCs.AnimationSetter = 3 ? &quot;Duck&quot; : &quot;Turtle&quot;</param>
-                </action>
-                <action id="4" name="Set animation" sid="768000459773029" type="NPCs">
-                    <param id="0" name="Animation">NPCs.Animation</param>
                     <param id="1" name="From">1</param>
                 </action>
                 <action id="0" name="Set text" sid="830783350182631" type="Stars">
@@ -235,6 +229,13 @@
                 <action behavior="8Direction" id="7" name="Simulate control" sid="411250085057163" type="Player">
                     <param id="0" name="Control">1</param>
                 </action>
+                <action id="-1" name="Set X" sid="883456771177150" type="Player">
+                    <param id="0" name="X">Player.X+1</param>
+                </action>
+                <action disabled="1" id="4" name="Set animation" sid="742488751089402" type="Player">
+                    <param id="0" name="Animation">&quot;Side&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
                 <action id="-10" name="Set value" sid="263393810153512" type="Player">
                     <param id="0" name="Instance variable">Direction</param>
                     <param id="1" name="Value">&quot;Side&quot;</param>
@@ -264,6 +265,13 @@
             <actions>
                 <action behavior="8Direction" id="7" name="Simulate control" sid="200930185666487" type="Player">
                     <param id="0" name="Control">0</param>
+                </action>
+                <action id="-1" name="Set X" sid="456777807143470" type="Player">
+                    <param id="0" name="X">Player.X-1</param>
+                </action>
+                <action disabled="1" id="4" name="Set animation" sid="936922291504429" type="Player">
+                    <param id="0" name="Animation">&quot;Side&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-10" name="Set value" sid="140053522360665" type="Player">
                     <param id="0" name="Instance variable">Direction</param>
@@ -295,6 +303,13 @@
                 <action behavior="8Direction" id="7" name="Simulate control" sid="599810294967841" type="Player">
                     <param id="0" name="Control">2</param>
                 </action>
+                <action id="-2" name="Set Y" sid="718833225717986" type="Player">
+                    <param id="0" name="Y">Player.Y-1</param>
+                </action>
+                <action disabled="1" id="4" name="Set animation" sid="819541771725981" type="Player">
+                    <param id="0" name="Animation">&quot;Back&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
                 <action id="-10" name="Set value" sid="823036489623527" type="Player">
                     <param id="0" name="Instance variable">Direction</param>
                     <param id="1" name="Value">&quot;Back&quot;</param>
@@ -320,6 +335,13 @@
             <actions>
                 <action behavior="8Direction" id="7" name="Simulate control" sid="428796051184108" type="Player">
                     <param id="0" name="Control">3</param>
+                </action>
+                <action id="-2" name="Set Y" sid="848816452427694" type="Player">
+                    <param id="0" name="Y">Player.Y+1</param>
+                </action>
+                <action disabled="1" id="4" name="Set animation" sid="636609428150717" type="Player">
+                    <param id="0" name="Animation">&quot;Front&quot;</param>
+                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-10" name="Set value" sid="414011400743398" type="Player">
                     <param id="0" name="Instance variable">Direction</param>
@@ -385,6 +407,9 @@
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="149496517267077" type="Player">
                     <param id="0" name="Instance variable">OnMenuPause</param>
                 </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="451406905579672" type="Mouse">
+                    <param id="0" name="Object">armarioChave</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Spawn another object" sid="861277449766436" type="Player">
@@ -432,6 +457,14 @@
                 </condition>
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="991109365327202" type="Player">
                     <param id="0" name="Instance variable">OnMenuPause</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="258200410300302" type="System">
+                    <param id="0" name="First value">anvil.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="949403215874844" type="Mouse">
+                    <param id="0" name="Object">armarioChave</param>
                 </condition>
             </conditions>
             <actions>
@@ -510,6 +543,9 @@
                 <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="414410937378982" type="Player">
                     <param id="0" name="Instance variable">OnMenuPause</param>
                 </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="162742047517770" type="Mouse">
+                    <param id="0" name="Object">armarioChave</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-3" name="Create object" sid="712108936700276" type="System">
@@ -551,7 +587,7 @@
         <event-block sid="414373486814439">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="672838619627123" type="System">
-                    <param id="0" name="Interval (seconds)">1.0</param>
+                    <param id="0" name="Interval (seconds)">0.7</param>
                 </condition>
                 <condition id="-5" name="Compare width" sid="648186595876251" type="RecoveryBarFireGun">
                     <param id="0" name="Comparison">3</param>
@@ -567,7 +603,7 @@
         <event-block sid="583125477501884">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="882975646325184" type="System">
-                    <param id="0" name="Interval (seconds)">1.0</param>
+                    <param id="0" name="Interval (seconds)">0.7</param>
                 </condition>
                 <condition id="-5" name="Compare width" sid="918888726950155" type="RecoveryBarTNTt">
                     <param id="0" name="Comparison">3</param>
@@ -583,7 +619,7 @@
         <event-block sid="604951343904970">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="516318394300544" type="System">
-                    <param id="0" name="Interval (seconds)">1.0</param>
+                    <param id="0" name="Interval (seconds)">0.7</param>
                 </condition>
                 <condition id="-5" name="Compare width" sid="172233445385695" type="RecoveryBarAnvil">
                     <param id="0" name="Comparison">3</param>
@@ -736,19 +772,6 @@
             </actions>
         </event-block>
         <comment>NPCs</comment>
-        <event-block sid="209647179097727">
-            <conditions>
-                <condition id="-6" name="Every X seconds" sid="694063640312923" type="System">
-                    <param id="0" name="Interval (seconds)">random(10,15)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="138020114222467" type="NPCs">
-                    <param id="0" name="Instance variable">AnimationSetter</param>
-                    <param id="1" name="Value">choose(0,1,2,3,4)</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="377669507247855">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="424899348345054" type="ShotPlayer">
@@ -838,11 +861,11 @@
                     <param id="2" name="Duration">1.0</param>
                 </action>
                 <action id="-5" name="Set width" sid="523464079044045" type="LiveBarPlayer">
-                    <param id="0" name="Width">self.Width -2</param>
+                    <param id="0" name="Width">self.Width -3</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="572300931445691">
+        <event-block any="1" sid="572300931445691">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="979662305642080" type="Enemy003SpawObj">
                     <param id="0" name="Object">Player</param>
@@ -855,9 +878,18 @@
                     <param id="2" name="Duration">1.0</param>
                 </action>
                 <action id="-5" name="Set width" sid="509548403095891" type="LiveBarPlayer">
-                    <param id="0" name="Width">self.Width -3</param>
+                    <param id="0" name="Width">self.Width -2</param>
                 </action>
                 <action id="-9" name="Destroy" sid="732507751906630" type="Enemy003SpawObj" />
+                <action id="0" name="Spawn another object" sid="240688794561274" type="Enemy003SpawObj">
+                    <param id="0" name="Object">inkImpact</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="607963046772709" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-9" name="Destroy" sid="250178970552180" type="inkImpact" />
             </actions>
         </event-block>
         <event-block sid="274332784699848">
@@ -873,7 +905,7 @@
                     <param id="2" name="Duration">1.0</param>
                 </action>
                 <action id="-5" name="Set width" sid="486871192137087" type="LiveBarPlayer">
-                    <param id="0" name="Width">self.Width -5</param>
+                    <param id="0" name="Width">self.Width -3</param>
                 </action>
                 <action id="-9" name="Destroy" sid="557158972250364" type="ShotBoss" />
                 <action id="-9" name="Destroy" sid="364702055608647" type="ShotImpact" />
@@ -1029,6 +1061,11 @@
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="Image point">0</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="513583781844748" type="Enemy001">
+                            <param id="0" name="Object">deadBrush</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -1042,32 +1079,6 @@
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="302925568397303">
-                    <conditions>
-                        <condition id="-1" name="Compare X" sid="784245246408701" type="Enemy002">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="X co-ordinate">Player.X</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Set mirrored" sid="407322280467876" type="Enemy002">
-                            <param id="0" name="State">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="285868813584314">
-                    <conditions>
-                        <condition id="-1" name="Compare X" sid="147880274692750" type="Enemy002">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="X co-ordinate">Player.X</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Set mirrored" sid="325267940812257" type="Enemy002">
-                            <param id="0" name="State">1</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="295150424214366">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="993011205618389" type="ShotPlayer">
@@ -1120,6 +1131,11 @@
                         <condition id="0" name="On collision with another object" sid="631130241649607" type="Anvil">
                             <param id="0" name="Object">Enemy002</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="831718551760040" type="Enemy002">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Flash" id="0" name="Flash" sid="198726063019672" type="Enemy002">
@@ -1135,6 +1151,18 @@
                         <action id="-10" name="Set value" sid="629146589369065" type="Enemy002">
                             <param id="0" name="Instance variable">Health</param>
                             <param id="1" name="Value">Enemy002.Health - (Player.AnvilLvl * Player.AnvilDamage)</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="356232521910934" type="Enemy002">
+                            <param id="0" name="Animation">&quot;amassado&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Pathfinding" id="2" name="Stop" sid="271215222215421" type="Enemy002" />
+                        <action id="-16" name="Wait" sid="851250105729280" type="System">
+                            <param id="0" name="Seconds">5</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="670061396949473" type="Enemy002">
+                            <param id="0" name="Animation">&quot;side&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1160,36 +1188,61 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="701635984699010">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="835800469776086" type="Enemy002">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">Player.X</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="903451823696286" type="Enemy002">
+                            <param id="0" name="Animation">&quot;Side&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="897170263930496" type="Enemy002">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="838454735430012">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="389338785997242" type="Enemy002">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">Player.X</param>
+                        </condition>
+                        <condition id="2" name="Is playing" sid="849974634224204" type="Enemy002">
+                            <param id="0" name="Animation">&quot;Side&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="702408482076231" type="Enemy002">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="512042499535635">
+        <event-block sid="285966838222139">
             <conditions>
-                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="639205861549757" type="Enemy002">
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="633551450187915" type="Enemy002">
                     <param id="0" name="Object">Player</param>
                 </condition>
-                <condition id="-6" name="Every X seconds" sid="240691651835099" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
+                <condition id="-6" name="Every X seconds" sid="680939423940907" type="System">
+                    <param id="0" name="Interval (seconds)">0.1</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="803463198522388" type="Enemy002">
+                    <param id="0" name="Animation">&quot;Side&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Pathfinding" id="0" name="Find path" sid="673764925104961" type="Enemy002">
+                <action behavior="Pathfinding" id="0" name="Find path" sid="611091484864998" type="Enemy002">
                     <param id="0" name="X">Player.X</param>
                     <param id="1" name="Y">Player.Y</param>
                 </action>
-                <action behavior="Pathfinding" id="14" name="Set speed" sid="703962810063129" type="Enemy002">
+                <action behavior="Pathfinding" id="14" name="Set speed" sid="312458987460972" type="Enemy002">
                     <param id="0" name="Speed">150</param>
                 </action>
-                <action behavior="Pathfinding" id="1" name="Move along path" sid="558378506796864" type="Enemy002" />
-            </actions>
-        </event-block>
-        <event-block sid="808592174696030">
-            <conditions>
-                <condition behavior="Pathfinding" id="4" inverted="1" name="Is moving along path" sid="602494689462516" type="Enemy002" />
-            </conditions>
-            <actions>
-                <action id="5" name="Set frame" sid="205468414362017" type="Enemy002">
-                    <param id="0" name="Frame number">13</param>
-                </action>
+                <action behavior="Pathfinding" id="1" name="Move along path" sid="764410502114036" type="Enemy002" />
             </actions>
         </event-block>
         <event-block sid="901504417556154">
@@ -1197,12 +1250,24 @@
                 <condition id="-6" name="Every X seconds" sid="631362773075827" type="System">
                     <param id="0" name="Interval (seconds)">2</param>
                 </condition>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="288187125423629" type="Enemy002">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="766723188604905" type="Enemy002">
+                    <param id="0" name="Animation">&quot;Side&quot;</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Spawn another object" sid="389648149016335" type="Enemy002">
                     <param id="0" name="Object">Enemy002Lightining</param>
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Play" sid="207141076061136" type="Audio">
+                    <param id="0" name="Audio file">ligthtiningSfx</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-30</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
                 <action id="-16" name="Wait" sid="996052279645422" type="System">
                     <param id="0" name="Seconds">0.7</param>
@@ -1351,18 +1416,35 @@
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="Image point">0</param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="915867084608913" type="Enemy003">
+                            <param id="0" name="Object">deadPainting</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="227854828451172">
+        <event-block any="1" sid="227854828451172">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="179971432694469" type="Enemy003SpawObj">
                     <param id="0" name="Object">Solids</param>
                 </condition>
+                <condition id="0" name="On collision with another object" sid="410396858708045" type="Enemy003SpawObj">
+                    <param id="0" name="Object">GarageObj003</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="537223220102637" type="Enemy003SpawObj" />
+                <action id="0" name="Spawn another object" sid="763774127812182" type="Enemy003SpawObj">
+                    <param id="0" name="Object">inkImpact</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-16" name="Wait" sid="767585444833490" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-9" name="Destroy" sid="379529957189363" type="inkImpact" />
             </actions>
         </event-block>
         <event-block sid="716634914933723">
@@ -1491,14 +1573,19 @@
         <event-block sid="215561363029585">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="439630656435488" type="System">
-                    <param id="0" name="Interval (seconds)">random(90,120)</param>
+                    <param id="0" name="Interval (seconds)">random(15,30)</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="854673557856364" type="System">
+                    <param id="0" name="First value">Gate.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="0" name="Spawn another object" sid="511608586343571" type="EnemyBoss">
                     <param id="0" name="Object">Enemy002</param>
                     <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">0</param>
+                    <param id="2" name="Image point">EnemyBoss.X-5</param>
                 </action>
             </actions>
         </event-block>
@@ -1611,6 +1698,9 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="929051489549773" type="EnemyBoss" />
+                <action id="-13" name="Set time scale" sid="510839321110948" type="System">
+                    <param id="0" name="Time scale">0.5</param>
+                </action>
                 <action id="0" name="Spawn another object" sid="444540293902478" type="EnemyBoss">
                     <param id="0" name="Object">EnemyDeath</param>
                     <param id="1" name="Layer">1</param>
@@ -1623,6 +1713,9 @@
                 </action>
                 <action id="-16" name="Wait" sid="755025568556571" type="System">
                     <param id="0" name="Seconds">3.5</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="608941823454101" type="System">
+                    <param id="0" name="Time scale">1</param>
                 </action>
                 <action id="-2" name="Go to layout" sid="129537361390121" type="System">
                     <param id="0" name="Layout">FinalInterface</param>
@@ -1642,17 +1735,17 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Sine" id="0" name="Set active" sid="154577281634312" type="HamburgerMenu">
-                    <param id="0" name="State">1</param>
-                </action>
                 <action id="0" name="Play" sid="852069764995734" type="Audio">
                     <param id="0" name="Audio file">Clicking_snd</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">-16</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
+                <action behavior="Sine" id="0" name="Set active" sid="154577281634312" type="HamburgerMenu">
+                    <param id="0" name="State">1</param>
+                </action>
                 <action id="-16" name="Wait" sid="403260936866923" type="System">
-                    <param id="0" name="Seconds">0.3</param>
+                    <param id="0" name="Seconds">0.2</param>
                 </action>
                 <action behavior="Sine" id="0" name="Set active" sid="584867627961383" type="HamburgerMenu">
                     <param id="0" name="State">0</param>
@@ -1687,9 +1780,6 @@
                 <action id="-13" name="Set time scale" sid="914802534499131" type="System">
                     <param id="0" name="Time scale">0</param>
                 </action>
-                <action id="-16" name="Wait" sid="899666765303225" type="System">
-                    <param id="0" name="Seconds">0.1</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="734926772844524">
@@ -1704,55 +1794,52 @@
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Sine" id="0" name="Set active" sid="931728518350930" type="HamburgerMenu">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action id="0" name="Play" sid="663952772249521" type="Audio">
+                <action id="0" name="Play" sid="659466937665628" type="Audio">
                     <param id="0" name="Audio file">Clicking_snd</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">-16</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
-                <action behavior="Sine" id="0" name="Set active" sid="602164471105586" type="Continue">
+                <action behavior="Sine" id="0" name="Set active" sid="827264693910906" type="HamburgerMenu">
                     <param id="0" name="State">1</param>
                 </action>
-                <action disabled="1" id="-16" name="Wait" sid="468298172097306" type="System">
-                    <param id="0" name="Seconds">0.3</param>
-                </action>
-                <action behavior="Sine" id="0" name="Set active" sid="458056064858828" type="HamburgerMenu">
+                <action behavior="Sine" id="0" name="Set active" sid="233457875688592" type="HamburgerMenu">
                     <param id="0" name="State">0</param>
                 </action>
-                <action behavior="Sine" id="0" name="Set active" sid="529204716668034" type="Continue">
+                <action behavior="Sine" id="0" name="Set active" sid="416490450328509" type="Continue">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="537298917315569" type="Continue">
                     <param id="0" name="State">0</param>
                 </action>
-                <action id="-3" name="Set position" sid="249672118701922" type="Viole">
+                <action id="-3" name="Set position" sid="369003690974794" type="Viole">
                     <param id="0" name="X">-288</param>
                     <param id="1" name="Y">352</param>
                 </action>
-                <action id="-15" name="Set visible" sid="795842522086947" type="PauseMenu">
+                <action id="-15" name="Set visible" sid="766480019221039" type="PauseMenu">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-3" name="Set position" sid="833575200130769" type="Continue">
+                <action id="-3" name="Set position" sid="947387542852007" type="Continue">
                     <param id="0" name="X">-160</param>
                     <param id="1" name="Y">160</param>
                 </action>
-                <action id="-3" name="Set position" sid="382570737863555" type="restart">
+                <action id="-3" name="Set position" sid="867819800109562" type="restart">
                     <param id="0" name="X">-160</param>
                     <param id="1" name="Y">224</param>
                 </action>
-                <action id="-3" name="Set position" sid="856441316427360" type="TitleMenu">
+                <action id="-3" name="Set position" sid="606168654875242" type="TitleMenu">
                     <param id="0" name="X">-160</param>
                     <param id="1" name="Y">228</param>
                 </action>
-                <action id="-13" name="Set boolean" sid="462326259682370" type="Player">
+                <action id="-13" name="Set boolean" sid="939251017617371" type="Player">
                     <param id="0" name="Instance variable">OnMenuPause</param>
                     <param id="1" name="Value">0</param>
                 </action>
-                <action id="-3" name="Set position" sid="690634275690221" type="HamburgerMenu">
+                <action id="-3" name="Set position" sid="851303605271708" type="HamburgerMenu">
                     <param id="0" name="X">704</param>
                     <param id="1" name="Y">32</param>
                 </action>
-                <action id="-13" name="Set time scale" sid="470024596442735" type="System">
+                <action id="-13" name="Set time scale" sid="781557592063351" type="System">
                     <param id="0" name="Time scale">1.0</param>
                 </action>
             </actions>
@@ -1891,15 +1978,24 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-3" name="Set position" sid="258794529315422" type="Viole">
-                    <param id="0" name="X">-288</param>
-                    <param id="1" name="Y">352</param>
-                </action>
                 <action id="0" name="Play" sid="402636867137015" type="Audio">
                     <param id="0" name="Audio file">Clicking_snd</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">-16</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="917679574790260" type="Continue">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="488739515804143" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="998836534869512" type="Continue">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="258794529315422" type="Viole">
+                    <param id="0" name="X">-288</param>
+                    <param id="1" name="Y">352</param>
                 </action>
                 <action id="-15" name="Set visible" sid="918119458818307" type="GameplayTransitionUp">
                     <param id="0" name="Visibility">0</param>
@@ -1952,15 +2048,24 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-3" name="Set position" sid="100469585636291" type="Viole">
-                    <param id="0" name="X">-288</param>
-                    <param id="1" name="Y">352</param>
-                </action>
                 <action id="0" name="Play" sid="517875883841617" type="Audio">
                     <param id="0" name="Audio file">Clicking_snd</param>
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">-16</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="122200849237390" type="TitleMenu">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="565325752482459" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="127655758375258" type="TitleMenu">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="100469585636291" type="Viole">
+                    <param id="0" name="X">-288</param>
+                    <param id="1" name="Y">352</param>
                 </action>
                 <action id="-3" name="Set position" sid="150498792050601" type="restart">
                     <param id="0" name="X">-250</param>
@@ -2174,7 +2279,7 @@
             </conditions>
             <actions>
                 <action id="-5" name="Set width" sid="423315572177298" type="LiveBarPlayer">
-                    <param id="0" name="Width">self.Width +1</param>
+                    <param id="0" name="Width">self.Width +5</param>
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="630814673585135" type="EnemyBlood" />
             </actions>
@@ -2187,6 +2292,92 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="999841359516071" type="GardenWall" />
+            </actions>
+        </event-block>
+        <comment>keys colected</comment>
+        <event-block sid="763380742892006">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="823291997264881" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="269393785015268" type="chavesTexto">
+                    <param id="0" name="Text">&quot;x&quot; &amp;colectedKeys</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="149052395174060">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="357107220719773" type="Player">
+                    <param id="0" name="Object">goldKey</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="349756931156334" type="goldKey">
+                    <param id="0" name="Object">StarShine</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="786968240259746" type="goldKey" />
+                <action id="-10" name="Add to" sid="815999005020343" type="System">
+                    <param id="0" name="Variable">colectedKeys</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="535681010140366">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="798045568089619" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">armarioChave</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="274103316456208" type="System">
+                    <param id="0" name="Variable">colectedKeys</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="2" name="Is playing" sid="327853193381890" type="armarioChave">
+                    <param id="0" name="Animation">&quot;fechado&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="432548857631651" type="armarioChave">
+                    <param id="0" name="Animation">&quot;aberto&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="279322415721226" type="System">
+                    <param id="0" name="Variable">colectedKeys</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="487495514517802" type="System">
+                    <param id="0" name="Object to create">CoinStar</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">armarioChave.X</param>
+                    <param id="3" name="Y">armarioChave.Y+9</param>
+                </action>
+                <action id="-3" name="Create object" sid="509489726574464" type="System">
+                    <param id="0" name="Object to create">CoinStar</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">armarioChave.X</param>
+                    <param id="3" name="Y">armarioChave.Y-9</param>
+                </action>
+                <action id="-3" name="Create object" sid="693062785149852" type="System">
+                    <param id="0" name="Object to create">CoinStar</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">armarioChave.X+9</param>
+                    <param id="3" name="Y">armarioChave.Y</param>
+                </action>
+                <action id="-3" name="Create object" sid="799484744087341" type="System">
+                    <param id="0" name="Object to create">CoinStar</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">armarioChave.X-9</param>
+                    <param id="3" name="Y">armarioChave.Y</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="848945714725338" type="armarioChave">
+                    <param id="0" name="Object">StarShine</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
             </actions>
         </event-block>
     </events>

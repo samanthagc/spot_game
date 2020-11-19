@@ -27,7 +27,7 @@
                 </action>
                 <action id="-3" name="Set position" sid="806809961623583" type="ViolencePanel">
                     <param id="0" name="X">165.819</param>
-                    <param id="1" name="Y">96.909</param>
+                    <param id="1" name="Y">120</param>
                 </action>
                 <action id="-3" name="Set position" sid="418276331593525" type="Ptext">
                     <param id="0" name="X">175.157</param>
@@ -41,6 +41,15 @@
                     <param id="1" name="Y">448</param>
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="984776770751142" type="ContinueButton" />
+                <action behavior="Sine" id="0" name="Set active" sid="734633166794998" type="ContinueButton">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Sine" id="2" name="Set magnitude" sid="438768348134557" type="ContinueButton">
+                    <param id="0" name="Magnitude">5</param>
+                </action>
+                <action behavior="Sine" id="1" name="Set period" sid="126753751089991" type="ContinueButton">
+                    <param id="0" name="Period">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="552914705172512">
@@ -57,6 +66,22 @@
                     <param id="2" name="Loop">0</param>
                     <param id="3" name="Volume">-11</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="33" name="Stop all" sid="298382097069905" type="Audio" />
+                <action id="0" name="Play" sid="314346406087971" type="Audio">
+                    <param id="0" name="Audio file">Moonlight - Sonata - Bethooven - Cutscenes</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="627478422424092" type="ContinueButton">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="351666519436516" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="735242820586429" type="ContinueButton">
+                    <param id="0" name="State">0</param>
                 </action>
                 <action id="-3" name="Set position" sid="727104643106134" type="FinalPhoto">
                     <param id="0" name="X">384</param>
@@ -125,6 +150,15 @@
                     <param id="3" name="Volume">-11</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
+                <action behavior="Sine" id="0" name="Set active" sid="534955915589621" type="FinalHomeButton">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="126494983388400" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="434652261713808" type="FinalHomeButton">
+                    <param id="0" name="State">0</param>
+                </action>
                 <action id="-3" name="Set position" sid="942268074949957" type="FinalHomeButton">
                     <param id="0" name="X">960</param>
                     <param id="1" name="Y">650</param>
@@ -159,6 +193,16 @@
                 <action id="4" name="Set animation" sid="311461516915818" type="ThatIsAll">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="131088021560699" type="LegendHistory" />
+                <action behavior="Sine" id="0" name="Set active" sid="453693499214185" type="FinalHomeButton">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Sine" id="2" name="Set magnitude" sid="567927962181351" type="FinalHomeButton">
+                    <param id="0" name="Magnitude">5</param>
+                </action>
+                <action behavior="Sine" id="1" name="Set period" sid="254126606908751" type="FinalHomeButton">
+                    <param id="0" name="Period">1</param>
                 </action>
             </actions>
         </event-block>

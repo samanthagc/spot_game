@@ -99,6 +99,10 @@
                     <param id="0" name="X">-416</param>
                     <param id="1" name="Y">256</param>
                 </action>
+                <action id="-3" name="Set position" sid="630880952670140" type="jumpCutscenes">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">256</param>
+                </action>
                 <action id="-3" name="Set position" sid="525819429758767" type="CutscenePage1">
                     <param id="0" name="X">384</param>
                     <param id="1" name="Y">256</param>
@@ -360,6 +364,31 @@
                 <action id="-3" name="Set position" sid="233231283307125" type="TitleCover">
                     <param id="0" name="X">384</param>
                     <param id="1" name="Y">256</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="372949311289062">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="245294451291044" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">jumpCutscenes</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="858045782469537" type="DarkScreenFadeIn">
+                    <param id="0" name="X">384</param>
+                    <param id="1" name="Y">256</param>
+                </action>
+                <action id="-15" name="Set visible" sid="933521361666919" type="DarkScreenFadeIn">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="442830333290061" type="DarkScreenFadeIn" />
+                <action id="-16" name="Wait" sid="839275942706288" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="746524745863936" type="System">
+                    <param id="0" name="Layout">Gameplay</param>
                 </action>
             </actions>
         </event-block>
