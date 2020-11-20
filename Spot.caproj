@@ -4274,6 +4274,16 @@
                         </collision-poly>
                     </frame>
                 </animation>
+                <animation framecount="1" loop="0" name="Barrel" pingpong="0" repeatcount="1" repeatto="0" sid="858609944374140" speed="5">
+                    <frame duration="1" hotspotX="0.510204" hotspotY="0.507042" original-source="C:\Users\AleCosta\Desktop\spot\assets\barrel.png">
+                        <collision-poly>
+                            <point x="0" y="0.211268" />
+                            <point x="1" y="0.225352" />
+                            <point x="0.959184" y="0.549295" />
+                            <point x="0" y="0.56338" />
+                        </collision-poly>
+                    </frame>
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="Ptext" sid="640031481916925">
@@ -5401,7 +5411,14 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="481364645000760" speed="5">
-                    <frame duration="1" hotspotX="0.510204" hotspotY="0.577465" original-source="C:\Users\AleCosta\Desktop\spot\assets\GARAGEM\moveisGaragem.png" />
+                    <frame duration="1" hotspotX="0.510204" hotspotY="0.577465" original-source="C:\Users\AleCosta\Desktop\spot\assets\GARAGEM\moveisGaragem.png">
+                        <collision-poly>
+                            <point x="0" y="0.338028" />
+                            <point x="1" y="0.309859" />
+                            <point x="1" y="0.535211" />
+                            <point x="0" y="0.535212" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -5441,6 +5458,93 @@
                             <point x="0.496183" y="0.923664" />
                             <point x="0.267176" y="0.732824" />
                             <point x="0.183206" y="0.496183" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WeaponHUD03" sid="362761105704559">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="940786568501088" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\itemDinamite.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.1625" />
+                            <point x="0.625" y="0.3" />
+                            <point x="0.78125" y="0.5" />
+                            <point x="0.78125" y="0.825" />
+                            <point x="0.203125" y="0.8375" />
+                            <point x="0.203125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="502251940114253" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\itemDinamite.png">
+                        <collision-poly>
+                            <point x="0.203125" y="0.13125" />
+                            <point x="0.8125" y="0.1375" />
+                            <point x="0.796875" y="0.84375" />
+                            <point x="0.179688" y="0.85625" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WeaponHUD02" sid="542820672099112">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="975055061668285" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\000.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.275" />
+                            <point x="0.65625" y="0.275" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.65625" y="0.725" />
+                            <point x="0.34375" y="0.725" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="682118017000960" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\000.png">
+                        <collision-poly>
+                            <point x="0.34375" y="0.275" />
+                            <point x="0.65625" y="0.275" />
+                            <point x="0.875" y="0.5" />
+                            <point x="0.65625" y="0.725" />
+                            <point x="0.34375" y="0.725" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WeaponHUD01" sid="442410736987863">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="161251917139038" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\000.png">
+                        <collision-poly>
+                            <point x="0.390625" y="0.3125" />
+                            <point x="0.5" y="0.2875" />
+                            <point x="0.625" y="0.3" />
+                            <point x="0.625" y="0.5" />
+                            <point x="0.53125" y="0.625" />
+                            <point x="0.46875" y="0.625" />
+                            <point x="0.125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Selected" pingpong="0" repeatcount="1" repeatto="0" sid="619246697810887" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\000.png">
+                        <collision-poly>
+                            <point x="0.390625" y="0.3125" />
+                            <point x="0.5" y="0.2875" />
+                            <point x="0.625" y="0.3" />
+                            <point x="0.625" y="0.5" />
+                            <point x="0.53125" y="0.625" />
+                            <point x="0.46875" y="0.625" />
+                            <point x="0.125" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
