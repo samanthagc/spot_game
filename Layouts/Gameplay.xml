@@ -2702,11 +2702,11 @@
                         <GlovePassLvl>4</GlovePassLvl>
                         <AnvilPassLvl>5</AnvilPassLvl>
                         <TntPassLvl>6</TntPassLvl>
-                        <FireGunDamage>1</FireGunDamage>
+                        <FireGunDamage>3</FireGunDamage>
                         <GloveDamage>2</GloveDamage>
-                        <AnvilDamage>4</AnvilDamage>
-                        <TntDamage>10</TntDamage>
-                        <Stars>0</Stars>
+                        <AnvilDamage>6</AnvilDamage>
+                        <TntDamage>12</TntDamage>
+                        <Stars>25</Stars>
                         <SelectedItem>0</SelectedItem>
                         <IsMirrored>false</IsMirrored>
                     </instance-variables>

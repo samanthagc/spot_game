@@ -49,10 +49,10 @@
                         <GlovePassLvl>4</GlovePassLvl>
                         <AnvilPassLvl>5</AnvilPassLvl>
                         <TntPassLvl>6</TntPassLvl>
-                        <FireGunDamage>1</FireGunDamage>
+                        <FireGunDamage>3</FireGunDamage>
                         <GloveDamage>2</GloveDamage>
-                        <AnvilDamage>4</AnvilDamage>
-                        <TntDamage>10</TntDamage>
+                        <AnvilDamage>6</AnvilDamage>
+                        <TntDamage>12</TntDamage>
                         <Stars>0</Stars>
                         <SelectedItem>0</SelectedItem>
                         <IsMirrored>false</IsMirrored>
