@@ -16,7 +16,6 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -1259,25 +1258,6 @@
         <object-type name="Mouse" sid="933997983767806">
             <plugin id="Mouse" />
         </object-type>
-        <object-type name="Sprite" sid="269344829084905">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="196592220492210" speed="5">
-                    <frame duration="1" hotspotX="0.513514" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\iconeVida.png">
-                        <collision-poly>
-                            <point x="0.0810811" y="0.09375" />
-                            <point x="0.486486" y="0.0625" />
-                            <point x="0.918919" y="0.09375" />
-                            <point x="0.972973" y="0.5" />
-                            <point x="0.810811" y="0.78125" />
-                            <point x="0.486486" y="1" />
-                            <point x="0.189189" y="0.78125" />
-                            <point x="0.027027" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Heart" sid="391150727764991">
             <plugin id="Sprite" />
             <animation-folder>
@@ -2002,14 +1982,6 @@
             <plugin id="TiledBg" />
             <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\moveisQuarto.png" />
         </object-type>
-        <object-type name="SuiteObj012" sid="559987341565060">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="716935757712218" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\quadroQuarto.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="SuiteObj010" sid="372669591561444">
             <plugin id="Sprite" />
             <animation-folder>
@@ -2075,23 +2047,6 @@
                             <point x="0.989247" y="0.992754" />
                             <point x="0.0107527" y="0.992754" />
                             <point x="0" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="SuiteObj011" sid="186777978450433">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="566654015892695" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.503106" original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\armarioQuarto.png">
-                        <collision-poly>
-                            <point x="0.0192308" y="0.00621118" />
-                            <point x="0.980769" y="0.00621118" />
-                            <point x="1" y="0.496894" />
-                            <point x="0.980769" y="0.993789" />
-                            <point x="0.0192308" y="0.993789" />
-                            <point x="0" y="0.496894" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -3452,14 +3407,6 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="825023791360402" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite2" sid="486642692465818">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="184802550095803" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -4892,15 +4839,6 @@
         <object-type name="HealthPlayer" sid="719199324787214">
             <plugin id="Text" />
         </object-type>
-        <object-type name="SuiteObj013" sid="479967024465338">
-            <plugin id="Tilemap" />
-            <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\armarioQuarto.png" />
-            <tiles />
-        </object-type>
-        <object-type name="SuiteObj014" sid="155396637960808">
-            <plugin id="TiledBg" />
-            <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\armarioQuarto.png" />
-        </object-type>
         <object-type name="WardrobeSuiteBottom" sid="526244867462431">
             <plugin id="Sprite" />
             <animation-folder>
@@ -5178,7 +5116,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="inkImpact" sid="101716176107988">
+        <object-type name="Enemy003ObjImpact" sid="101716176107988">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="12" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="608013622174048" speed="25">
@@ -5316,7 +5254,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="armarioChave" sid="945045167797726">
+        <object-type name="KeyCabinet" sid="945045167797726">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Solid" sid="258087209852288">
@@ -5324,7 +5262,7 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="fechado" pingpong="0" repeatcount="1" repeatto="0" sid="847081926253056" speed="0">
+                <animation framecount="1" loop="0" name="Close" pingpong="0" repeatcount="1" repeatto="0" sid="847081926253056" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0" y="0" />
@@ -5334,7 +5272,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="1" loop="0" name="aberto" pingpong="0" repeatcount="1" repeatto="0" sid="592173316329884" speed="0">
+                <animation framecount="1" loop="0" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="592173316329884" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Particular\OneDrive - Fatec Centro Paula Souza\1 SEMESTRE\SMAUG I\IMAGENS\FECHADOS\CENARIOS\GARAGEM\armarioAberto.png">
                         <collision-poly>
                             <point x="0" y="0" />
@@ -5346,7 +5284,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="goldKey" sid="580162542429893">
+        <object-type name="Key" sid="580162542429893">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="268533379517101" speed="5">
@@ -5365,7 +5303,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="chavesHud" sid="163426328823755">
+        <object-type name="KeysPanel" sid="163426328823755">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="722297742146818" speed="5">
@@ -5386,19 +5324,7 @@
         <object-type name="chavesTexto" sid="781246065339128">
             <plugin id="Text" />
         </object-type>
-        <object-type name="SuiteObj9" sid="213210305580640">
-            <plugin id="TiledBg" />
-            <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\moveisQuarto.png" />
-        </object-type>
-        <object-type name="SuiteObj11" sid="483407968417125">
-            <plugin id="TiledBg" />
-            <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\moveisQuarto.png" />
-        </object-type>
-        <object-type name="SuiteObj12" sid="909466722788412">
-            <plugin id="TiledBg" />
-            <texture original-source="C:\Users\user\Desktop\Spot_game_copy\CENARIOS\SUITE\moveisQuarto.png" />
-        </object-type>
-        <object-type name="Sprite3" sid="501056052025373">
+        <object-type name="SuiteObj011" sid="501056052025373">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="491659659212127" speed="5">
@@ -5414,7 +5340,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="deadBrush" sid="180469570181951">
+        <object-type name="Enemy001Dead" sid="180469570181951">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Fade" sid="356770935932211">
@@ -5438,7 +5364,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="deadPainting" sid="728577231722461">
+        <object-type name="Enemy003Dead" sid="728577231722461">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Fade" sid="107386077167853">
@@ -5460,25 +5386,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="deadRabbit" sid="792529828068941">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="434322799938289" speed="5">
-                    <frame duration="1" hotspotX="0.503817" hotspotY="0.503817" original-source="C:\Users\Particular\OneDrive - Fatec Centro Paula Souza\1 SEMESTRE\SMAUG I\IMAGENS\FECHADOS\GAMEPLAY\coelhoAmassado.png">
-                        <collision-poly>
-                            <point x="0.496183" y="0.183206" />
-                            <point x="0.725191" y="0.274809" />
-                            <point x="0.900763" y="0.496183" />
-                            <point x="0.824427" y="0.824427" />
-                            <point x="0.496183" y="0.923664" />
-                            <point x="0.267176" y="0.732824" />
-                            <point x="0.183206" y="0.496183" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="GarageObj2" sid="808154152807224">
+        <object-type name="GarageObj004" sid="808154152807224">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="health" sid="667709388355328" type="number" />
@@ -5512,6 +5420,29 @@
                     <frame duration="1" hotspotX="0.501385" hotspotY="0.501385" original-source="C:\Users\Particular\OneDrive - Fatec Centro Paula Souza\1 SEMESTRE\SMAUG I\IMAGENS\FECHADOS\GAMEPLAY\danoPlayer\danoPlayer7.png" />
                     <frame duration="1" hotspotX="0.501385" hotspotY="0.501385" original-source="C:\Users\Particular\OneDrive - Fatec Centro Paula Souza\1 SEMESTRE\SMAUG I\IMAGENS\FECHADOS\GAMEPLAY\danoPlayer\danoPlayer8.png" />
                     <frame duration="1" hotspotX="0.501385" hotspotY="0.501385" original-source="C:\Users\Particular\OneDrive - Fatec Centro Paula Souza\1 SEMESTRE\SMAUG I\IMAGENS\FECHADOS\GAMEPLAY\danoPlayer\danoPlayer9.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Enemy002Dead" sid="169444480471844">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="544648546771689">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="951654998865195" speed="5">
+                    <frame duration="1" hotspotX="0.503817" hotspotY="0.503817" original-source="C:\Users\AleCosta\Desktop\spot\assets\000.png">
+                        <collision-poly>
+                            <point x="0.496183" y="0.183206" />
+                            <point x="0.725191" y="0.274809" />
+                            <point x="0.900763" y="0.496183" />
+                            <point x="0.824427" y="0.824427" />
+                            <point x="0.496183" y="0.923664" />
+                            <point x="0.267176" y="0.732824" />
+                            <point x="0.183206" y="0.496183" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>

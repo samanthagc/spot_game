@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameplayEvent</name>
     <events>
-        <variable constant="0" name="colectedKeys" sid="794449518196938" static="0" type="number">0</variable>
+        <variable comment="Collected Keys Counter" constant="0" name="CollectedKeys" sid="794449518196938" static="0" type="number">0</variable>
         <variable comment="0 = Gameplay, 1 = GameOver" constant="0" name="GameOver" sid="368237936883552" static="0" type="number">0</variable>
         <variable comment="Number of Violence Count" constant="0" name="ViolenceCount" sid="834883515816128" static="0" type="number">0</variable>
         <variable comment="Number of star for power up" constant="0" name="UpgradeStarPass" sid="406135747323305" static="0" type="number">0</variable>
@@ -35,8 +35,8 @@
                     <param id="0" name="Variable">Weapon</param>
                     <param id="1" name="Value">4</param>
                 </action>
-                <action disabled="1" id="-9" name="Set value" sid="721514398305200" type="System">
-                    <param id="0" name="Variable">colectedKeys</param>
+                <action id="-9" name="Set value" sid="721514398305200" type="System">
+                    <param id="0" name="Variable">CollectedKeys</param>
                     <param id="1" name="Value">0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="311232735694426" type="RecoveryBarFireGun">
@@ -138,6 +138,9 @@
                 <action id="0" name="Set text" sid="663000486153531" type="HealthPlayer">
                     <param id="0" name="Text">LiveBarPlayer.Width &amp; &quot;%&quot;</param>
                 </action>
+                <action id="0" name="Set text" sid="269393785015268" type="chavesTexto">
+                    <param id="0" name="Text">&quot;x&quot; &amp;CollectedKeys</param>
+                </action>
                 <action id="4" name="Set animation" sid="454446944717735" type="Enemy001">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                     <param id="1" name="From">1</param>
@@ -236,10 +239,6 @@
                 <action id="-1" name="Set X" sid="883456771177150" type="Player">
                     <param id="0" name="X">Player.X+1</param>
                 </action>
-                <action disabled="1" id="4" name="Set animation" sid="742488751089402" type="Player">
-                    <param id="0" name="Animation">&quot;Side&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
                 <action id="-10" name="Set value" sid="263393810153512" type="Player">
                     <param id="0" name="Instance variable">Direction</param>
                     <param id="1" name="Value">&quot;Side&quot;</param>
@@ -272,10 +271,6 @@
                 </action>
                 <action id="-1" name="Set X" sid="456777807143470" type="Player">
                     <param id="0" name="X">Player.X-1</param>
-                </action>
-                <action disabled="1" id="4" name="Set animation" sid="936922291504429" type="Player">
-                    <param id="0" name="Animation">&quot;Side&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-10" name="Set value" sid="140053522360665" type="Player">
                     <param id="0" name="Instance variable">Direction</param>
@@ -310,10 +305,6 @@
                 <action id="-2" name="Set Y" sid="718833225717986" type="Player">
                     <param id="0" name="Y">Player.Y-1</param>
                 </action>
-                <action disabled="1" id="4" name="Set animation" sid="819541771725981" type="Player">
-                    <param id="0" name="Animation">&quot;Back&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
                 <action id="-10" name="Set value" sid="823036489623527" type="Player">
                     <param id="0" name="Instance variable">Direction</param>
                     <param id="1" name="Value">&quot;Back&quot;</param>
@@ -342,10 +333,6 @@
                 </action>
                 <action id="-2" name="Set Y" sid="848816452427694" type="Player">
                     <param id="0" name="Y">Player.Y+1</param>
-                </action>
-                <action disabled="1" id="4" name="Set animation" sid="636609428150717" type="Player">
-                    <param id="0" name="Animation">&quot;Front&quot;</param>
-                    <param id="1" name="From">1</param>
                 </action>
                 <action id="-10" name="Set value" sid="414011400743398" type="Player">
                     <param id="0" name="Instance variable">Direction</param>
@@ -412,7 +399,7 @@
                     <param id="0" name="Instance variable">OnMenuPause</param>
                 </condition>
                 <condition id="7" inverted="1" name="Cursor is over object" sid="451406905579672" type="Mouse">
-                    <param id="0" name="Object">armarioChave</param>
+                    <param id="0" name="Object">KeyCabinet</param>
                 </condition>
             </conditions>
             <actions>
@@ -468,7 +455,7 @@
                     <param id="2" name="Second value">0</param>
                 </condition>
                 <condition id="7" inverted="1" name="Cursor is over object" sid="949403215874844" type="Mouse">
-                    <param id="0" name="Object">armarioChave</param>
+                    <param id="0" name="Object">KeyCabinet</param>
                 </condition>
             </conditions>
             <actions>
@@ -548,7 +535,7 @@
                     <param id="0" name="Instance variable">OnMenuPause</param>
                 </condition>
                 <condition id="7" inverted="1" name="Cursor is over object" sid="162742047517770" type="Mouse">
-                    <param id="0" name="Object">armarioChave</param>
+                    <param id="0" name="Object">KeyCabinet</param>
                 </condition>
             </conditions>
             <actions>
@@ -886,14 +873,14 @@
                 </action>
                 <action id="-9" name="Destroy" sid="732507751906630" type="Enemy003SpawObj" />
                 <action id="0" name="Spawn another object" sid="240688794561274" type="Enemy003SpawObj">
-                    <param id="0" name="Object">inkImpact</param>
+                    <param id="0" name="Object">Enemy003ObjImpact</param>
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
                 <action id="-16" name="Wait" sid="607963046772709" type="System">
                     <param id="0" name="Seconds">0.5</param>
                 </action>
-                <action id="-9" name="Destroy" sid="250178970552180" type="inkImpact" />
+                <action id="-9" name="Destroy" sid="250178970552180" type="Enemy003ObjImpact" />
             </actions>
         </event-block>
         <event-block sid="274332784699848">
@@ -1066,7 +1053,7 @@
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="513583781844748" type="Enemy001">
-                            <param id="0" name="Object">deadBrush</param>
+                            <param id="0" name="Object">Enemy001Dead</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="Image point">0</param>
                         </action>
@@ -1187,6 +1174,11 @@
                         </action>
                         <action id="0" name="Spawn another object" sid="122298220283505" type="Enemy002">
                             <param id="0" name="Object">EnemyBlood</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="345461071734733" type="Enemy002">
+                            <param id="0" name="Object">Enemy002Dead</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="Image point">0</param>
                         </action>
@@ -1421,7 +1413,7 @@
                             <param id="2" name="Image point">0</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="915867084608913" type="Enemy003">
-                            <param id="0" name="Object">deadPainting</param>
+                            <param id="0" name="Object">Enemy003Dead</param>
                             <param id="1" name="Layer">0</param>
                             <param id="2" name="Image point">0</param>
                         </action>
@@ -1441,14 +1433,14 @@
             <actions>
                 <action id="-9" name="Destroy" sid="537223220102637" type="Enemy003SpawObj" />
                 <action id="0" name="Spawn another object" sid="763774127812182" type="Enemy003SpawObj">
-                    <param id="0" name="Object">inkImpact</param>
+                    <param id="0" name="Object">Enemy003ObjImpact</param>
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
                 <action id="-16" name="Wait" sid="767585444833490" type="System">
                     <param id="0" name="Seconds">0.5</param>
                 </action>
-                <action id="-9" name="Destroy" sid="379529957189363" type="inkImpact" />
+                <action id="-9" name="Destroy" sid="379529957189363" type="Enemy003ObjImpact" />
             </actions>
         </event-block>
         <event-block sid="716634914933723">
@@ -2298,34 +2290,28 @@
                 <action id="-9" name="Destroy" sid="999841359516071" type="GardenWall" />
             </actions>
         </event-block>
-        <comment>keys colected</comment>
-        <event-block sid="763380742892006">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="823291997264881" type="System" />
-            </conditions>
-            <actions>
-                <action id="0" name="Set text" sid="269393785015268" type="chavesTexto">
-                    <param id="0" name="Text">&quot;x&quot; &amp;colectedKeys</param>
-                </action>
-            </actions>
-        </event-block>
+        <comment>Keys collected</comment>
         <event-block sid="149052395174060">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="357107220719773" type="Player">
-                    <param id="0" name="Object">goldKey</param>
+                    <param id="0" name="Object">Key</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Spawn another object" sid="349756931156334" type="goldKey">
+                <action id="0" name="Spawn another object" sid="349756931156334" type="Key">
                     <param id="0" name="Object">StarShine</param>
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
-                <action id="-9" name="Destroy" sid="786968240259746" type="goldKey" />
+                <action id="-9" name="Destroy" sid="786968240259746" type="Key" />
                 <action id="-10" name="Add to" sid="815999005020343" type="System">
-                    <param id="0" name="Variable">colectedKeys</param>
+                    <param id="0" name="Variable">CollectedKeys</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="-16" name="Wait" sid="206841704549120" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-9" name="Destroy" sid="380074578211134" type="StarShine" />
             </actions>
         </event-block>
         <event-block sid="535681010140366">
@@ -2333,55 +2319,59 @@
                 <condition id="6" name="On object clicked" sid="798045568089619" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
                     <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">armarioChave</param>
+                    <param id="2" name="Object clicked">KeyCabinet</param>
                 </condition>
                 <condition id="-14" name="Compare variable" sid="274103316456208" type="System">
-                    <param id="0" name="Variable">colectedKeys</param>
+                    <param id="0" name="Variable">CollectedKeys</param>
                     <param id="1" name="Comparison">5</param>
                     <param id="2" name="Value">1</param>
                 </condition>
-                <condition id="2" name="Is playing" sid="327853193381890" type="armarioChave">
-                    <param id="0" name="Animation">&quot;fechado&quot;</param>
+                <condition id="2" name="Is playing" sid="327853193381890" type="KeyCabinet">
+                    <param id="0" name="Animation">&quot;Close&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="4" name="Set animation" sid="432548857631651" type="armarioChave">
-                    <param id="0" name="Animation">&quot;aberto&quot;</param>
+                <action id="4" name="Set animation" sid="432548857631651" type="KeyCabinet">
+                    <param id="0" name="Animation">&quot;Open&quot;</param>
                     <param id="1" name="From">1</param>
                 </action>
+                <action id="0" name="Spawn another object" sid="848945714725338" type="KeyCabinet">
+                    <param id="0" name="Object">StarShine</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
                 <action id="-11" name="Subtract from" sid="279322415721226" type="System">
-                    <param id="0" name="Variable">colectedKeys</param>
+                    <param id="0" name="Variable">CollectedKeys</param>
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-3" name="Create object" sid="487495514517802" type="System">
                     <param id="0" name="Object to create">CoinStar</param>
                     <param id="1" name="Layer">1</param>
-                    <param id="2" name="X">armarioChave.X</param>
-                    <param id="3" name="Y">armarioChave.Y+9</param>
+                    <param id="2" name="X">KeyCabinet.X</param>
+                    <param id="3" name="Y">KeyCabinet.Y+9</param>
                 </action>
                 <action id="-3" name="Create object" sid="509489726574464" type="System">
                     <param id="0" name="Object to create">CoinStar</param>
                     <param id="1" name="Layer">1</param>
-                    <param id="2" name="X">armarioChave.X</param>
-                    <param id="3" name="Y">armarioChave.Y-9</param>
+                    <param id="2" name="X">KeyCabinet.X</param>
+                    <param id="3" name="Y">KeyCabinet.Y-9</param>
                 </action>
                 <action id="-3" name="Create object" sid="693062785149852" type="System">
                     <param id="0" name="Object to create">CoinStar</param>
                     <param id="1" name="Layer">1</param>
-                    <param id="2" name="X">armarioChave.X+9</param>
-                    <param id="3" name="Y">armarioChave.Y</param>
+                    <param id="2" name="X">KeyCabinet.X+9</param>
+                    <param id="3" name="Y">KeyCabinet.Y</param>
                 </action>
                 <action id="-3" name="Create object" sid="799484744087341" type="System">
                     <param id="0" name="Object to create">CoinStar</param>
                     <param id="1" name="Layer">1</param>
-                    <param id="2" name="X">armarioChave.X-9</param>
-                    <param id="3" name="Y">armarioChave.Y</param>
+                    <param id="2" name="X">KeyCabinet.X-9</param>
+                    <param id="3" name="Y">KeyCabinet.Y</param>
                 </action>
-                <action id="0" name="Spawn another object" sid="848945714725338" type="armarioChave">
-                    <param id="0" name="Object">StarShine</param>
-                    <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">0</param>
+                <action id="-16" name="Wait" sid="377147585116758" type="System">
+                    <param id="0" name="Seconds">0.5</param>
                 </action>
+                <action id="-9" name="Destroy" sid="928251989963619" type="StarShine" />
             </actions>
         </event-block>
     </events>

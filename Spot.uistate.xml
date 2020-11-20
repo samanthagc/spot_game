@@ -11,8 +11,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout active="1" order="0">Gameplay</layout>
-        <layout order="4">MainMenu</layout>
         <layout order="2">FinalInterface</layout>
+        <layout order="4">MainMenu</layout>
         <event-sheet order="1">GameplayEvent</event-sheet>
         <event-sheet order="3">FinalInterfaceEvent</event-sheet>
         <event-sheet order="5">MainMenuEvent</event-sheet>
@@ -54,7 +54,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/LivingObj010/" />
         <folder expanded="1" path="animation-folder/LivingObj011/" />
         <folder expanded="1" path="animation-folder/TNT/" />
-        <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/Heart/" />
         <folder expanded="1" path="animation-folder/LiveBarPlayer/" />
         <folder expanded="1" path="animation-folder/LifeBarContainer/" />
@@ -77,12 +76,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/LivingObj009/" />
         <folder expanded="1" path="animation-folder/SuiteObj005/" />
         <folder expanded="1" path="animation-folder/SuiteObj007/" />
-        <folder expanded="1" path="animation-folder/SuiteObj012/" />
         <folder expanded="1" path="animation-folder/SuiteObj010/" />
         <folder expanded="1" path="animation-folder/SuiteObj009/" />
         <folder expanded="1" path="animation-folder/SuiteObj002/" />
         <folder expanded="1" path="animation-folder/SuiteObj003/" />
-        <folder expanded="1" path="animation-folder/SuiteObj011/" />
         <folder expanded="1" path="animation-folder/SuiteObj004/" />
         <folder expanded="1" path="animation-folder/SuiteObj006/" />
         <folder expanded="1" path="animation-folder/LaundryObj002/" />
@@ -115,7 +112,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/GarageObj003/" />
         <folder expanded="1" path="animation-folder/EnemyBoss/" />
         <folder expanded="1" path="animation-folder/EnemyBossSights/" />
-        <folder expanded="1" path="animation-folder/Sprite2/" />
         <folder expanded="1" path="animation-folder/Continue/" />
         <folder expanded="1" path="animation-folder/restart/" />
         <folder expanded="1" path="animation-folder/TitleMenu/" />
@@ -177,16 +173,16 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/IndentifyBoss/" />
         <folder expanded="1" path="animation-folder/StarIcon/" />
         <folder expanded="1" path="animation-folder/StarShine/" />
-        <folder expanded="1" path="animation-folder/inkImpact/" />
+        <folder expanded="1" path="animation-folder/Enemy003ObjImpact/" />
         <folder expanded="1" path="animation-folder/jumpCutscenes/" />
-        <folder expanded="1" path="animation-folder/armarioChave/" />
-        <folder expanded="1" path="animation-folder/goldKey/" />
-        <folder expanded="1" path="animation-folder/chavesHud/" />
-        <folder expanded="1" path="animation-folder/Sprite3/" />
-        <folder expanded="1" path="animation-folder/deadBrush/" />
-        <folder expanded="1" path="animation-folder/deadPainting/" />
-        <folder expanded="1" path="animation-folder/deadRabbit/" />
-        <folder expanded="1" path="animation-folder/GarageObj2/" />
+        <folder expanded="1" path="animation-folder/KeyCabinet/" />
+        <folder expanded="1" path="animation-folder/Key/" />
+        <folder expanded="1" path="animation-folder/KeysPanel/" />
+        <folder expanded="1" path="animation-folder/SuiteObj011/" />
+        <folder expanded="1" path="animation-folder/Enemy001Dead/" />
+        <folder expanded="1" path="animation-folder/Enemy003Dead/" />
+        <folder expanded="1" path="animation-folder/GarageObj004/" />
         <folder expanded="1" path="animation-folder/danoPlayer/" />
+        <folder expanded="1" path="animation-folder/Enemy002Dead/" />
     </folders-expanded>
 </c2uistate>

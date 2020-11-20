@@ -784,237 +784,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="NPCs" uid="237">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Dog</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <AnimationSetter>1</AnimationSetter>
-                        <ViolenceCounter>0</ViolenceCounter>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>168</x>
-                        <y>614</y>
-                        <z>0</z>
-                        <width>42.365982056</width>
-                        <height>48.340671539</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.505617976</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="NPCs" uid="239">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Cat</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <AnimationSetter>2</AnimationSetter>
-                        <ViolenceCounter>0</ViolenceCounter>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1104</x>
-                        <y>726</y>
-                        <z>0</z>
-                        <width>42.365982056</width>
-                        <height>48.340671539</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.505617976</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="NPCs" uid="240">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Dog</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <AnimationSetter>1</AnimationSetter>
-                        <ViolenceCounter>0</ViolenceCounter>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1209</x>
-                        <y>726</y>
-                        <z>0</z>
-                        <width>42.365982056</width>
-                        <height>48.340671539</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.505617976</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="NPCs" uid="241">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Baby</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <AnimationSetter>0</AnimationSetter>
-                        <ViolenceCounter>0</ViolenceCounter>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1164</x>
-                        <y>381</y>
-                        <z>0</z>
-                        <width>42.365982056</width>
-                        <height>48.340671539</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.505617976</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="NPCs" uid="245">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Dog</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <AnimationSetter>1</AnimationSetter>
-                        <ViolenceCounter>0</ViolenceCounter>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1489.14465332</x>
-                        <y>1427.838134766</y>
-                        <z>0</z>
-                        <width>42.365982056</width>
-                        <height>48.340671539</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.505617976</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="NPCs" uid="246">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Duck</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <AnimationSetter>3</AnimationSetter>
-                        <ViolenceCounter>0</ViolenceCounter>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>817.689331055</x>
-                        <y>1424.491210938</y>
-                        <z>0</z>
-                        <width>42.365982056</width>
-                        <height>48.340671539</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.505617976</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="NPCs" uid="247">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Turtle</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <AnimationSetter>4</AnimationSetter>
-                        <ViolenceCounter>0</ViolenceCounter>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1071.829345703</x>
-                        <y>1110.443847656</y>
-                        <z>0</z>
-                        <width>42.365982056</width>
-                        <height>48.340671539</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.505617976</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="LaundryObj004" uid="17">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -2360,7 +2129,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="armarioChave" uid="140">
+                <instance type="KeyCabinet" uid="140">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2389,7 +2158,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="armarioChave" uid="141">
+                <instance type="KeyCabinet" uid="141">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2418,7 +2187,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="armarioChave" uid="142">
+                <instance type="KeyCabinet" uid="142">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2447,7 +2216,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="armarioChave" uid="106">
+                <instance type="KeyCabinet" uid="106">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2476,7 +2245,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="armarioChave" uid="143">
+                <instance type="KeyCabinet" uid="143">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2505,7 +2274,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="armarioChave" uid="145">
+                <instance type="KeyCabinet" uid="145">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2534,7 +2303,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="armarioChave" uid="151">
+                <instance type="KeyCabinet" uid="151">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2614,6 +2383,39 @@
                         <depth>0</depth>
                         <hotspotX>0.494382024</hotspotX>
                         <hotspotY>0.504504502</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Enemy002Dead" uid="219">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>2</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-194.103561401</x>
+                        <y>1504.896362305</y>
+                        <z>0</z>
+                        <width>53.385391235</width>
+                        <height>53.385391235</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503816783</hotspotX>
+                        <hotspotY>0.503816783</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -5429,7 +5231,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="inkImpact" uid="15">
+                <instance type="Enemy003ObjImpact" uid="15">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -5748,7 +5550,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="goldKey" uid="152">
+                <instance type="Key" uid="152">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7222,7 +7024,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite3" uid="341">
+                <instance type="SuiteObj011" uid="341">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7439,7 +7241,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="deadBrush" uid="347">
+                <instance type="Enemy001Dead" uid="347">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7472,7 +7274,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="deadPainting" uid="348">
+                <instance type="Enemy003Dead" uid="348">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7505,7 +7307,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="goldKey" uid="349">
+                <instance type="Key" uid="349">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7527,7 +7329,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="goldKey" uid="350">
+                <instance type="Key" uid="350">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7549,7 +7351,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="goldKey" uid="351">
+                <instance type="Key" uid="351">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7593,7 +7395,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="goldKey" uid="326">
+                <instance type="Key" uid="326">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7615,7 +7417,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="goldKey" uid="327">
+                <instance type="Key" uid="327">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7637,7 +7439,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GarageObj2" uid="355">
+                <instance type="GarageObj004" uid="355">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7670,7 +7472,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GarageObj2" uid="356">
+                <instance type="GarageObj004" uid="356">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7703,7 +7505,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GarageObj2" uid="353">
+                <instance type="GarageObj004" uid="353">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7736,7 +7538,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GarageObj2" uid="352">
+                <instance type="GarageObj004" uid="352">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7769,7 +7571,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GarageObj2" uid="354">
+                <instance type="GarageObj004" uid="354">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7820,6 +7622,237 @@
                         <depth>0</depth>
                         <hotspotX>0.501385033</hotspotX>
                         <hotspotY>0.501385033</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPCs" uid="237">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Dog</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSetter>1</AnimationSetter>
+                        <ViolenceCounter>0</ViolenceCounter>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>168</x>
+                        <y>614</y>
+                        <z>0</z>
+                        <width>42.365982056</width>
+                        <height>48.340671539</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPCs" uid="239">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Cat</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSetter>2</AnimationSetter>
+                        <ViolenceCounter>0</ViolenceCounter>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1104</x>
+                        <y>726</y>
+                        <z>0</z>
+                        <width>42.365982056</width>
+                        <height>48.340671539</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPCs" uid="240">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Dog</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSetter>1</AnimationSetter>
+                        <ViolenceCounter>0</ViolenceCounter>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1209</x>
+                        <y>726</y>
+                        <z>0</z>
+                        <width>42.365982056</width>
+                        <height>48.340671539</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPCs" uid="241">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Baby</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSetter>0</AnimationSetter>
+                        <ViolenceCounter>0</ViolenceCounter>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1164</x>
+                        <y>381</y>
+                        <z>0</z>
+                        <width>42.365982056</width>
+                        <height>48.340671539</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPCs" uid="245">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Dog</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSetter>1</AnimationSetter>
+                        <ViolenceCounter>0</ViolenceCounter>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1489.14465332</x>
+                        <y>1427.838134766</y>
+                        <z>0</z>
+                        <width>42.365982056</width>
+                        <height>48.340671539</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPCs" uid="246">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Duck</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSetter>3</AnimationSetter>
+                        <ViolenceCounter>0</ViolenceCounter>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>817.689331055</x>
+                        <y>1424.491210938</y>
+                        <z>0</z>
+                        <width>42.365982056</width>
+                        <height>48.340671539</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="NPCs" uid="247">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Turtle</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <AnimationSetter>4</AnimationSetter>
+                        <ViolenceCounter>0</ViolenceCounter>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1071.829345703</x>
+                        <y>1110.443847656</y>
+                        <z>0</z>
+                        <width>42.365982056</width>
+                        <height>48.340671539</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.505617976</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -9715,7 +9748,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="chavesHud" uid="153">
+                <instance type="KeysPanel" uid="153">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
