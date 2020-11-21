@@ -228,139 +228,149 @@
                 <action id="-9" name="Destroy" sid="878451767710229" type="StarShine" />
             </actions>
         </event-block>
-        <event-block any="1" sid="210489583386210">
+        <event-block sid="706808384162474">
             <conditions>
-                <condition id="2" name="Key is down" sid="519786732500189" type="Keyboard">
-                    <param id="0" name="Key">68</param>
-                </condition>
-                <condition id="2" name="Key is down" sid="516121018774405" type="Keyboard">
-                    <param id="0" name="Key">39</param>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="589672609817108" type="Player">
+                    <param id="0" name="Instance variable">OnMenuPause</param>
                 </condition>
             </conditions>
-            <actions>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="411250085057163" type="Player">
-                    <param id="0" name="Control">1</param>
-                </action>
-                <action id="-1" name="Set X" sid="883456771177150" type="Player">
-                    <param id="0" name="X">Player.X+1</param>
-                </action>
-                <action id="-10" name="Set value" sid="263393810153512" type="Player">
-                    <param id="0" name="Instance variable">Direction</param>
-                    <param id="1" name="Value">&quot;Side&quot;</param>
-                </action>
-                <action id="7" name="Set mirrored" sid="941622614461876" type="Player">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="159241487166026" type="Player">
-                    <param id="0" name="Instance variable">IsMirrored</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="-10" name="Set value" sid="190645878505821" type="Player">
-                    <param id="0" name="Instance variable">AnglePlayer</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="674912564204037">
-            <conditions>
-                <condition id="2" name="Key is down" sid="718831212302294" type="Keyboard">
-                    <param id="0" name="Key">65</param>
-                </condition>
-                <condition id="2" name="Key is down" sid="207179725427436" type="Keyboard">
-                    <param id="0" name="Key">37</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="200930185666487" type="Player">
-                    <param id="0" name="Control">0</param>
-                </action>
-                <action id="-1" name="Set X" sid="456777807143470" type="Player">
-                    <param id="0" name="X">Player.X-1</param>
-                </action>
-                <action id="-10" name="Set value" sid="140053522360665" type="Player">
-                    <param id="0" name="Instance variable">Direction</param>
-                    <param id="1" name="Value">&quot;Side&quot;</param>
-                </action>
-                <action id="7" name="Set mirrored" sid="408494786396218" type="Player">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action id="-13" name="Set boolean" sid="621196249609254" type="Player">
-                    <param id="0" name="Instance variable">IsMirrored</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-10" name="Set value" sid="937550827334278" type="Player">
-                    <param id="0" name="Instance variable">AnglePlayer</param>
-                    <param id="1" name="Value">180</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="465914764697208">
-            <conditions>
-                <condition id="2" name="Key is down" sid="188224470301467" type="Keyboard">
-                    <param id="0" name="Key">87</param>
-                </condition>
-                <condition id="2" name="Key is down" sid="999974155630039" type="Keyboard">
-                    <param id="0" name="Key">38</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="599810294967841" type="Player">
-                    <param id="0" name="Control">2</param>
-                </action>
-                <action id="-2" name="Set Y" sid="718833225717986" type="Player">
-                    <param id="0" name="Y">Player.Y-1</param>
-                </action>
-                <action id="-10" name="Set value" sid="823036489623527" type="Player">
-                    <param id="0" name="Instance variable">Direction</param>
-                    <param id="1" name="Value">&quot;Back&quot;</param>
-                </action>
-                <action id="-10" name="Set value" sid="990452277684916" type="Player">
-                    <param id="0" name="Instance variable">AnglePlayer</param>
-                    <param id="1" name="Value">270</param>
-                </action>
-                <action id="7" name="Set mirrored" sid="566912419293714" type="Player">
-                    <param id="0" name="State">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="506208312038124">
-            <conditions>
-                <condition id="2" name="Key is down" sid="741208822696858" type="Keyboard">
-                    <param id="0" name="Key">83</param>
-                </condition>
-                <condition id="2" name="Key is down" sid="768491127313297" type="Keyboard">
-                    <param id="0" name="Key">40</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="8Direction" id="7" name="Simulate control" sid="428796051184108" type="Player">
-                    <param id="0" name="Control">3</param>
-                </action>
-                <action id="-2" name="Set Y" sid="848816452427694" type="Player">
-                    <param id="0" name="Y">Player.Y+1</param>
-                </action>
-                <action id="-10" name="Set value" sid="414011400743398" type="Player">
-                    <param id="0" name="Instance variable">Direction</param>
-                    <param id="1" name="Value">&quot;Front&quot;</param>
-                </action>
-                <action id="-10" name="Set value" sid="395310849070994" type="Player">
-                    <param id="0" name="Instance variable">AnglePlayer</param>
-                    <param id="1" name="Value">90</param>
-                </action>
-                <action id="7" name="Set mirrored" sid="892505105717269" type="Player">
-                    <param id="0" name="State">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="454030257192912">
-            <conditions>
-                <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="676080497743408" type="Player" />
-            </conditions>
-            <actions>
-                <action id="5" name="Set frame" sid="620778342381045" type="Player">
-                    <param id="0" name="Frame number">4</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block any="1" sid="210489583386210">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="519786732500189" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="516121018774405" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="411250085057163" type="Player">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="883456771177150" type="Player">
+                            <param id="0" name="X">Player.X+ 0.5</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="263393810153512" type="Player">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Value">&quot;Side&quot;</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="941622614461876" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="159241487166026" type="Player">
+                            <param id="0" name="Instance variable">IsMirrored</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="190645878505821" type="Player">
+                            <param id="0" name="Instance variable">AnglePlayer</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="674912564204037">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="718831212302294" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="207179725427436" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="200930185666487" type="Player">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action disabled="1" id="-1" name="Set X" sid="456777807143470" type="Player">
+                            <param id="0" name="X">Player.X-1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="140053522360665" type="Player">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Value">&quot;Side&quot;</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="408494786396218" type="Player">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="621196249609254" type="Player">
+                            <param id="0" name="Instance variable">IsMirrored</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="937550827334278" type="Player">
+                            <param id="0" name="Instance variable">AnglePlayer</param>
+                            <param id="1" name="Value">180</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="465914764697208">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="188224470301467" type="Keyboard">
+                            <param id="0" name="Key">87</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="999974155630039" type="Keyboard">
+                            <param id="0" name="Key">38</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="599810294967841" type="Player">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="718833225717986" type="Player">
+                            <param id="0" name="Y">Player.Y-0.5</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="823036489623527" type="Player">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Value">&quot;Back&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="990452277684916" type="Player">
+                            <param id="0" name="Instance variable">AnglePlayer</param>
+                            <param id="1" name="Value">270</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="566912419293714" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="506208312038124">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="741208822696858" type="Keyboard">
+                            <param id="0" name="Key">83</param>
+                        </condition>
+                        <condition id="2" name="Key is down" sid="768491127313297" type="Keyboard">
+                            <param id="0" name="Key">40</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="428796051184108" type="Player">
+                            <param id="0" name="Control">3</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="848816452427694" type="Player">
+                            <param id="0" name="Y">Player.Y+0.5</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="414011400743398" type="Player">
+                            <param id="0" name="Instance variable">Direction</param>
+                            <param id="1" name="Value">&quot;Front&quot;</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="395310849070994" type="Player">
+                            <param id="0" name="Instance variable">AnglePlayer</param>
+                            <param id="1" name="Value">90</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="892505105717269" type="Player">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="454030257192912">
+                    <conditions>
+                        <condition behavior="8Direction" id="0" inverted="1" name="Is moving" sid="676080497743408" type="Player" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="620778342381045" type="Player">
+                            <param id="0" name="Frame number">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="428801286479160">
             <conditions>
@@ -1647,7 +1657,7 @@
                     <param id="1" name="Value">EnemyBoss.Health - (Player.FireGunLvl  * Player.FireGunDamage)</param>
                 </action>
                 <action id="-6" name="Set height" sid="702899201400608" type="LiveBarBoss">
-                    <param id="0" name="Height">(165 / EnemyBoss.MaxHealth) * EnemyBoss.Health</param>
+                    <param id="0" name="Height">(131.148 / EnemyBoss.MaxHealth) * EnemyBoss.Health</param>
                 </action>
             </actions>
         </event-block>
@@ -1668,7 +1678,7 @@
                     <param id="1" name="Value">EnemyBoss.Health - (Player.TNTLvl  * Player.TntDamage)</param>
                 </action>
                 <action id="-6" name="Set height" sid="562885034412300" type="LiveBarBoss">
-                    <param id="0" name="Height">(165 / EnemyBoss.MaxHealth) * EnemyBoss.Health</param>
+                    <param id="0" name="Height">(131.148 / EnemyBoss.MaxHealth) * EnemyBoss.Health</param>
                 </action>
             </actions>
         </event-block>
@@ -1694,7 +1704,7 @@
                     <param id="2" name="Mode">0</param>
                 </action>
                 <action id="-6" name="Set height" sid="444110930758740" type="LiveBarBoss">
-                    <param id="0" name="Height">(165 / EnemyBoss.MaxHealth) * EnemyBoss.Health</param>
+                    <param id="0" name="Height">(131.148 / EnemyBoss.MaxHealth) * EnemyBoss.Health</param>
                 </action>
             </actions>
         </event-block>
@@ -2292,6 +2302,19 @@
                     <param id="0" name="Width">self.Width +5</param>
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="630814673585135" type="EnemyBlood" />
+            </actions>
+        </event-block>
+        <event-block sid="414552261501289">
+            <conditions>
+                <condition id="-5" name="Compare width" sid="203310852170732" type="LiveBarPlayer">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Width">64</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="972356777564315" type="LiveBarPlayer">
+                    <param id="0" name="Width">64</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="971406642524696">
