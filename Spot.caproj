@@ -32,7 +32,9 @@
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="brightness">Brightness</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -168,6 +170,7 @@
                 <instance-variable name="Stars" sid="650491795693053" type="number" />
                 <instance-variable name="SelectedItem" sid="454922148452795" type="number" />
                 <instance-variable name="IsMirrored" sid="237274298438147" type="boolean" />
+                <instance-variable name="ColectedKeys" sid="810800669041439" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="8Direction" sid="615988158471799">
@@ -1449,11 +1452,19 @@
         </object-type>
         <object-type name="UpgradeIcon" sid="781099572653392">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Light" sid="677418619165369" type="boolean" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Sine" sid="179570413919494">
                     <behavior id="Sin" />
                 </behavior-type>
             </behaviors>
+            <effects>
+                <effect-type name="Brightness">
+                    <effect id="brightness" />
+                </effect-type>
+            </effects>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="576896262670834" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\botaoMelhoriaHud.png">
@@ -3132,8 +3143,9 @@
         <object-type name="AnvilTarget" sid="289517679411410">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="737052531148536" speed="5">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="737052531148536" speed="0">
                     <frame duration="1" hotspotX="0.509804" hotspotY="0.5" original-source="C:\Users\AleCosta\Desktop\spot\assets\ImpactoBigorna\alvoBigorna.png">
+                        <image-point name="Imagepoint 1" x="0.509804" y="0.92" />
                         <collision-poly>
                             <point x="0.137255" y="0.14" />
                             <point x="0.490196" y="0" />
@@ -4277,10 +4289,10 @@
                 <animation framecount="1" loop="0" name="Barrel" pingpong="0" repeatcount="1" repeatto="0" sid="858609944374140" speed="5">
                     <frame duration="1" hotspotX="0.510204" hotspotY="0.507042" original-source="C:\Users\AleCosta\Desktop\spot\assets\barrel.png">
                         <collision-poly>
-                            <point x="0" y="0.211268" />
-                            <point x="1" y="0.225352" />
-                            <point x="0.959184" y="0.549295" />
-                            <point x="0" y="0.56338" />
+                            <point x="0.0229592" y="0" />
+                            <point x="0.961735" y="0" />
+                            <point x="0.961735" y="0.545774" />
+                            <point x="0.0178571" y="0.558098" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -4390,7 +4402,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="398244149308724" speed="0">
-                    <frame duration="1" hotspotX="0.501062" hotspotY="0.504854" original-source="C:\Users\user\Desktop\Spot_game_copy\DERROTA\mensagem.png">
+                    <frame duration="1" hotspotX="0.502" hotspotY="0.504505" original-source="C:\Users\user\Desktop\Spot_game_copy\TVFINAL\issoEtudo\issoEtudoUnico.png">
                         <collision-poly>
                             <point x="0.0955414" y="0.436893" />
                             <point x="0.498938" y="0.116505" />
@@ -5277,8 +5289,8 @@
                         <collision-poly>
                             <point x="0" y="0" />
                             <point x="1" y="0" />
-                            <point x="0.982955" y="1" />
-                            <point x="0" y="1" />
+                            <point x="1" y="0.709822" />
+                            <point x="0" y="0.705358" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -5496,6 +5508,78 @@
                     <frame duration="1" hotspotX="0.506024" hotspotY="0.507246" original-source="C:\Users\AleCosta\Desktop\spot\assets\CORRECOES\setaPainelItem0001.png" />
                     <frame duration="1" hotspotX="0.506024" hotspotY="0.507246" original-source="C:\Users\AleCosta\Desktop\spot\assets\CORRECOES\setaPainelItem0002.png" />
                     <frame duration="1" hotspotX="0.506024" hotspotY="0.507246" original-source="C:\Users\AleCosta\Desktop\spot\assets\CORRECOES\setaPainelItem0003.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="UpArrowIcon" sid="617236980757381">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="429636867035485">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <effects>
+                <effect-type name="Brightness">
+                    <effect id="brightness" />
+                </effect-type>
+            </effects>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="849407815401450" speed="0">
+                    <frame duration="1" hotspotX="0.518519" hotspotY="0.517241" original-source="C:\Users\user\Desktop\Spot_game_copy\HUD\painelMelhorias2-V2.png">
+                        <collision-poly>
+                            <point x="0.259259" y="0.241379" />
+                            <point x="0.481481" y="0" />
+                            <point x="0.740741" y="0.241379" />
+                            <point x="0.740741" y="0.758621" />
+                            <point x="0.481481" y="1" />
+                            <point x="0.259259" y="0.758621" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ChangeWeaponLocal" sid="973329266071858">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="250492564083303" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="DarkBall" sid="617857048186577">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="973802647161914" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CORRECOES\circuloVidaPlayer.png">
+                        <collision-poly>
+                            <point x="0.136364" y="0.136364" />
+                            <point x="0.5" y="0" />
+                            <point x="0.863636" y="0.136364" />
+                            <point x="1" y="0.5" />
+                            <point x="0.863636" y="0.863636" />
+                            <point x="0.5" y="1" />
+                            <point x="0.136364" y="0.863636" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MouseHandIcon" sid="479117645476054">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="558443845589629" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\user\Desktop\Spot_game_copy\CORRECOES\maozinhaTutorial.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.0606061" />
+                            <point x="0.678571" y="0.272727" />
+                            <point x="0.982143" y="0.5" />
+                            <point x="0.910714" y="0.924242" />
+                            <point x="0.5" y="0.984848" />
+                            <point x="0.232143" y="0.80303" />
+                            <point x="0.0357143" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>

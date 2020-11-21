@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameplayEvent</name>
     <events>
-        <variable comment="Collected Keys Counter" constant="0" name="CollectedKeys" sid="794449518196938" static="0" type="number">0</variable>
         <variable comment="0 = Gameplay, 1 = GameOver" constant="0" name="GameOver" sid="368237936883552" static="0" type="number">0</variable>
         <variable comment="Number of Violence Count" constant="0" name="ViolenceCount" sid="834883515816128" static="0" type="number">0</variable>
         <variable comment="Number of star for power up" constant="0" name="UpgradeStarPass" sid="406135747323305" static="0" type="number">0</variable>
@@ -34,10 +33,6 @@
                 <action id="-9" name="Set value" sid="478351129059918" type="System">
                     <param id="0" name="Variable">Weapon</param>
                     <param id="1" name="Value">4</param>
-                </action>
-                <action id="-9" name="Set value" sid="721514398305200" type="System">
-                    <param id="0" name="Variable">CollectedKeys</param>
-                    <param id="1" name="Value">0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="311232735694426" type="RecoveryBarFireGun">
                     <param id="0" name="Visibility">1</param>
@@ -72,6 +67,10 @@
                     <param id="0" name="&apos;On&apos; time">0.15</param>
                     <param id="1" name="&apos;Off&apos; time">0.1</param>
                     <param id="2" name="Duration">1.5</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="629531192350627" type="UpgradeIcon">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;Brightness&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -124,6 +123,9 @@
                 <condition id="-1" name="Every tick" sid="118316467047661" type="System" />
             </conditions>
             <actions>
+                <action id="0" name="Set cursor style" sid="375993636204444" type="Mouse">
+                    <param id="0" name="Cursor style">0</param>
+                </action>
                 <action id="4" name="Set animation" sid="724444419744019" type="Player">
                     <param id="0" name="Animation">player.Direction</param>
                     <param id="1" name="From">1</param>
@@ -141,10 +143,10 @@
                     <param id="0" name="Text">&quot;Violência em: &quot; &amp; ViolenceCount &amp; &quot;%&quot;</param>
                 </action>
                 <action id="0" name="Set text" sid="663000486153531" type="HealthPlayer">
-                    <param id="0" name="Text">LiveBarPlayer.Width &amp; &quot;%&quot;</param>
+                    <param id="0" name="Text">int((100 / 64) * LiveBarPlayer.Width) &amp;&quot; %&quot; </param>
                 </action>
                 <action id="0" name="Set text" sid="269393785015268" type="chavesTexto">
-                    <param id="0" name="Text">&quot;x&quot; &amp;CollectedKeys</param>
+                    <param id="0" name="Text">&quot;x&quot; &amp; Player.ColectedKeys</param>
                 </action>
                 <action id="4" name="Set animation" sid="454446944717735" type="Enemy001">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
@@ -163,6 +165,36 @@
                 <action id="-4" name="Set position to another object" sid="910223829542240" type="EnemyBossSights">
                     <param id="0" name="Object">EnemyBoss</param>
                     <param id="1" name="Image point (optional)">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="215504398772635">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="264491590149183" type="Mouse">
+                    <param id="0" name="Object">UpgradeIcon</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="819614050684992" type="Mouse">
+                    <param id="0" name="Object">ChangeWeaponLocal</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="623714202456097" type="Mouse">
+                    <param id="0" name="Object">HamburgerMenu</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="501276109711496" type="Mouse">
+                    <param id="0" name="Object">KeyCabinet</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="237106235483598" type="Mouse">
+                    <param id="0" name="Object">Continue</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="213440734787411" type="Mouse">
+                    <param id="0" name="Object">restart</param>
+                </condition>
+                <condition id="7" name="Cursor is over object" sid="508163217956110" type="Mouse">
+                    <param id="0" name="Object">TitleMenu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="179127036435700" type="Mouse">
+                    <param id="0" name="Sprite">MouseHandIcon</param>
                 </action>
             </actions>
         </event-block>
@@ -282,8 +314,8 @@
                         <action behavior="8Direction" id="7" name="Simulate control" sid="200930185666487" type="Player">
                             <param id="0" name="Control">0</param>
                         </action>
-                        <action disabled="1" id="-1" name="Set X" sid="456777807143470" type="Player">
-                            <param id="0" name="X">Player.X-1</param>
+                        <action id="-1" name="Set X" sid="456777807143470" type="Player">
+                            <param id="0" name="X">Player.X-0.5</param>
                         </action>
                         <action id="-10" name="Set value" sid="140053522360665" type="Player">
                             <param id="0" name="Instance variable">Direction</param>
@@ -402,7 +434,7 @@
                     <param id="1" name="Width">4</param>
                 </condition>
                 <condition id="7" inverted="1" name="Cursor is over object" sid="378521738288405" type="Mouse">
-                    <param id="0" name="Object">ItemsPanel</param>
+                    <param id="0" name="Object">ChangeWeaponLocal</param>
                 </condition>
                 <condition id="7" inverted="1" name="Cursor is over object" sid="201035654121949" type="Mouse">
                     <param id="0" name="Object">UpgradeIcon</param>
@@ -453,7 +485,7 @@
                     <param id="1" name="Width">16</param>
                 </condition>
                 <condition id="7" inverted="1" name="Cursor is over object" sid="894797657195840" type="Mouse">
-                    <param id="0" name="Object">ItemsPanel</param>
+                    <param id="0" name="Object">ChangeWeaponLocal</param>
                 </condition>
                 <condition id="7" inverted="1" name="Cursor is over object" sid="676252384671939" type="Mouse">
                     <param id="0" name="Object">UpgradeIcon</param>
@@ -509,7 +541,7 @@
                 <action id="0" name="Spawn another object" sid="801286753883830" type="AnvilTarget">
                     <param id="0" name="Object">AnvilImpact</param>
                     <param id="1" name="Layer">1</param>
-                    <param id="2" name="Image point">0</param>
+                    <param id="2" name="Image point">1</param>
                 </action>
                 <action id="-9" name="Destroy" sid="758366491876797" type="AnvilTarget" />
                 <action id="-9" name="Destroy" sid="608063811280608" type="AnvilSpaw" />
@@ -538,7 +570,7 @@
                     <param id="1" name="Width">32</param>
                 </condition>
                 <condition id="7" inverted="1" name="Cursor is over object" sid="394685831781344" type="Mouse">
-                    <param id="0" name="Object">ItemsPanel</param>
+                    <param id="0" name="Object">ChangeWeaponLocal</param>
                 </condition>
                 <condition id="7" inverted="1" name="Cursor is over object" sid="285593872739066" type="Mouse">
                     <param id="0" name="Object">UpgradeIcon</param>
@@ -597,7 +629,7 @@
                 </condition>
                 <condition id="-5" name="Compare width" sid="648186595876251" type="RecoveryBarFireGun">
                     <param id="0" name="Comparison">3</param>
-                    <param id="1" name="Width">64</param>
+                    <param id="1" name="Width">63</param>
                 </condition>
             </conditions>
             <actions>
@@ -613,7 +645,7 @@
                 </condition>
                 <condition id="-5" name="Compare width" sid="918888726950155" type="RecoveryBarTNTt">
                     <param id="0" name="Comparison">3</param>
-                    <param id="1" name="Width">64</param>
+                    <param id="1" name="Width">63</param>
                 </condition>
             </conditions>
             <actions>
@@ -629,7 +661,7 @@
                 </condition>
                 <condition id="-5" name="Compare width" sid="172233445385695" type="RecoveryBarAnvil">
                     <param id="0" name="Comparison">3</param>
-                    <param id="1" name="Width">64</param>
+                    <param id="1" name="Width">63</param>
                 </condition>
             </conditions>
             <actions>
@@ -644,7 +676,7 @@
                 <condition id="6" name="On object clicked" sid="339253126330697" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
                     <param id="1" name="Click type">0</param>
-                    <param id="2" name="Object clicked">ItemsPanel</param>
+                    <param id="2" name="Object clicked">ChangeWeaponLocal</param>
                 </condition>
             </conditions>
             <actions>
@@ -828,7 +860,7 @@
         </event-block>
         <event-block sid="928917399690506">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="147375237152262" type="Anvil">
+                <condition id="0" name="On collision with another object" sid="147375237152262" type="AnvilImpact">
                     <param id="0" name="Object">NPCs</param>
                 </condition>
             </conditions>
@@ -1017,7 +1049,7 @@
                 </event-block>
                 <event-block sid="130904670317128">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="929838812717119" type="Anvil">
+                        <condition id="0" name="On collision with another object" sid="929838812717119" type="AnvilImpact">
                             <param id="0" name="Object">Enemy001</param>
                         </condition>
                     </conditions>
@@ -1143,7 +1175,7 @@
                 </event-block>
                 <event-block sid="103000024850713">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="631130241649607" type="Anvil">
+                        <condition id="0" name="On collision with another object" sid="631130241649607" type="AnvilImpact">
                             <param id="0" name="Object">Enemy002</param>
                         </condition>
                         <condition id="-7" name="Compare instance variable" sid="831718551760040" type="Enemy002">
@@ -1395,7 +1427,7 @@
                 </event-block>
                 <event-block sid="104412907076582">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="826145818847351" type="Anvil">
+                        <condition id="0" name="On collision with another object" sid="826145818847351" type="AnvilImpact">
                             <param id="0" name="Object">Enemy003</param>
                         </condition>
                     </conditions>
@@ -1684,7 +1716,7 @@
         </event-block>
         <event-block sid="489720487452397">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="534776890972451" type="Anvil">
+                <condition id="0" name="On collision with another object" sid="534776890972451" type="AnvilImpact">
                     <param id="0" name="Object">EnemyBoss</param>
                 </condition>
             </conditions>
@@ -2341,8 +2373,8 @@
                     <param id="2" name="Image point">0</param>
                 </action>
                 <action id="-9" name="Destroy" sid="786968240259746" type="Key" />
-                <action id="-10" name="Add to" sid="815999005020343" type="System">
-                    <param id="0" name="Variable">CollectedKeys</param>
+                <action id="-11" name="Add to" sid="815999005020343" type="Player">
+                    <param id="0" name="Instance variable">ColectedKeys</param>
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="206841704549120" type="System">
@@ -2358,8 +2390,8 @@
                     <param id="1" name="Click type">0</param>
                     <param id="2" name="Object clicked">KeyCabinet</param>
                 </condition>
-                <condition id="-14" name="Compare variable" sid="274103316456208" type="System">
-                    <param id="0" name="Variable">CollectedKeys</param>
+                <condition id="-7" name="Compare instance variable" sid="274103316456208" type="Player">
+                    <param id="0" name="Instance variable">ColectedKeys</param>
                     <param id="1" name="Comparison">5</param>
                     <param id="2" name="Value">1</param>
                 </condition>
@@ -2377,8 +2409,8 @@
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">0</param>
                 </action>
-                <action id="-11" name="Subtract from" sid="279322415721226" type="System">
-                    <param id="0" name="Variable">CollectedKeys</param>
+                <action id="-12" name="Subtract from" sid="279322415721226" type="Player">
+                    <param id="0" name="Instance variable">ColectedKeys</param>
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-3" name="Create object" sid="487495514517802" type="System">
@@ -2409,6 +2441,78 @@
                     <param id="0" name="Seconds">0.5</param>
                 </action>
                 <action id="-9" name="Destroy" sid="928251989963619" type="StarShine" />
+            </actions>
+        </event-block>
+        <comment>Visual HUD system</comment>
+        <event-block sid="780651072480147">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="917783968032962" type="System">
+                    <param id="0" name="Variable">UpgradeStarPass</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">Player.Stars</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="845687045066666" type="UpgradeIcon">
+                    <param id="0" name="Instance variable">Light</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Sine" id="0" name="Set active" sid="899349281003040" type="UpArrowIcon">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="383106274536107" type="UpArrowIcon">
+                    <param id="0" name="Mode">1</param>
+                    <param id="1" name="Effect">&quot;Brightness&quot;</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="356123751128659" type="UpgradeIcon">
+                    <param id="0" name="Mode">1</param>
+                    <param id="1" name="Effect">&quot;Brightness&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="488748861332638" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="481229848508073" type="UpgradeIcon">
+                    <param id="0" name="Instance variable">Light</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="805456259243352" type="UpArrowIcon">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;Brightness&quot;</param>
+                </action>
+                <action id="-27" name="Set effect enabled" sid="787355942464944" type="UpgradeIcon">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;Brightness&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="441243676275690" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-13" name="Set boolean" sid="976045919604173" type="UpgradeIcon">
+                    <param id="0" name="Instance variable">Light</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="956069657022725">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="868162415975548" type="System">
+                    <param id="0" name="Variable">UpgradeStarPass</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">Player.Stars</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="665172621701191" type="UpgradeIcon">
+                    <param id="0" name="Instance variable">Light</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="364624618065620" type="UpgradeIcon">
+                    <param id="0" name="Instance variable">Light</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="476835587745559" type="UpArrowIcon">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Sine" id="5" name="Set cycle position" sid="116903459618578" type="UpArrowIcon">
+                    <param id="0" name="Cycle position">0.5</param>
+                </action>
             </actions>
         </event-block>
     </events>

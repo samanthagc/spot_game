@@ -183,18 +183,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="366160048519529">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="985532928633490" type="Keyboard">
-                    <param id="0" name="Key">32</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="757734889346626" type="System">
-                    <param id="0" name="Layout">Gameplay</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="943174227636608">
             <conditions>
                 <condition id="6" name="On object clicked" sid="823166618107413" type="Mouse">

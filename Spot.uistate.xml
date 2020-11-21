@@ -186,5 +186,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Enemy002Dead/" />
         <folder expanded="1" path="animation-folder/HandHUD/" />
         <folder expanded="1" path="animation-folder/WeaponSelected/" />
+        <folder expanded="1" path="animation-folder/UpArrowIcon/" />
+        <folder expanded="1" path="animation-folder/ChangeWeaponLocal/" />
+        <folder expanded="1" path="animation-folder/DarkBall/" />
+        <folder expanded="1" path="animation-folder/MouseHandIcon/" />
     </folders-expanded>
 </c2uistate>
