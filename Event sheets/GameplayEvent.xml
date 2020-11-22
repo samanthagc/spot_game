@@ -198,6 +198,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Rabbit 1</comment>
         <event-block sid="385743756072864">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="526947868667254" type="ShotPlayer">
@@ -218,7 +219,6 @@
                 </action>
             </actions>
         </event-block>
-        <comment>Rabbit 1</comment>
         <event-block sid="502110209101733">
             <conditions>
                 <condition id="0" name="On collision with another object" sid="936684114357725" type="Player">
@@ -506,6 +506,12 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Play" sid="677531873664092" type="Audio">
+                    <param id="0" name="Audio file">TargetWeapon_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action id="-3" name="Create object" sid="134609218242384" type="System">
                     <param id="0" name="Object to create">AnvilTarget</param>
                     <param id="1" name="Layer">1</param>
@@ -586,6 +592,12 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Play" sid="110118638214193" type="Audio">
+                    <param id="0" name="Audio file">TargetWeapon_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action id="-3" name="Create object" sid="712108936700276" type="System">
                     <param id="0" name="Object to create">TNT</param>
                     <param id="1" name="Layer">1</param>
@@ -1487,6 +1499,12 @@
                 </condition>
             </conditions>
             <actions>
+                <action disabled="1" id="0" name="Play" sid="785315100977193" type="Audio">
+                    <param id="0" name="Audio file">PaintShot_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-12</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action id="-9" name="Destroy" sid="537223220102637" type="Enemy003SpawObj" />
                 <action id="0" name="Spawn another object" sid="763774127812182" type="Enemy003SpawObj">
                     <param id="0" name="Object">Enemy003ObjImpact</param>
@@ -1502,7 +1520,7 @@
         <event-block sid="716634914933723">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="933157191412245" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
+                    <param id="0" name="Interval (seconds)">2</param>
                 </condition>
             </conditions>
             <actions>
@@ -1590,6 +1608,12 @@
                     <param id="3" name="Volume">-9</param>
                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
+                <action id="0" name="Play" sid="571224983925438" type="Audio">
+                    <param id="0" name="Audio file">GargalhadaBoss3_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-7</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="151380807482392">
@@ -1638,6 +1662,12 @@
                     <param id="0" name="Object">Enemy002</param>
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="Image point">EnemyBoss.X-5</param>
+                </action>
+                <action id="0" name="Play" sid="606253340522873" type="Audio">
+                    <param id="0" name="Audio file">GargalhadaBoss1_snd</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-7</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -1749,6 +1779,12 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="0" name="Play" sid="892741637860740" type="Audio">
+                    <param id="0" name="Audio file">DeathBoss</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-7</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action id="-9" name="Destroy" sid="929051489549773" type="EnemyBoss" />
                 <action id="-13" name="Set time scale" sid="510839321110948" type="System">
                     <param id="0" name="Time scale">0.5</param>

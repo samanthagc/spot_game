@@ -5628,6 +5628,12 @@
         <file name="Clicking.m4a" />
         <file name="Clicking_snd.ogg" />
         <file name="ligthtiningSfx.ogg" />
+        <file name="DeathBoss.ogg" />
+        <file name="GargalhadaBoss1_snd.ogg" />
+        <file name="GargalhadaBoss2_snd.ogg" />
+        <file name="GargalhadaBoss3_snd.ogg" />
+        <file name="PaintShot_snd.ogg" />
+        <file name="TargetWeapon_snd.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="Carmen Habanera - Georges Bizet - Gameplay(Piano).ogg" />

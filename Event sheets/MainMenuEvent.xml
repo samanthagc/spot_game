@@ -41,7 +41,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="608670415303815">
+        <event-block any="1" sid="608670415303815">
             <conditions>
                 <condition id="6" name="On object clicked" sid="776954931095878" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
@@ -183,7 +183,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="943174227636608">
+        <event-block any="1" sid="943174227636608">
             <conditions>
                 <condition id="6" name="On object clicked" sid="823166618107413" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
@@ -251,7 +251,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="630425642397529">
+        <event-block any="1" sid="630425642397529">
             <conditions>
                 <condition id="6" name="On object clicked" sid="499698613229667" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
@@ -323,7 +323,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="372949311289062">
+        <event-block any="1" sid="372949311289062">
             <conditions>
                 <condition id="6" name="On object clicked" sid="245294451291044" type="Mouse">
                     <param id="0" name="Mouse button">0</param>
