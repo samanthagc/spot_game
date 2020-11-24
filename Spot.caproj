@@ -5408,32 +5408,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="GarageObj004" sid="808154152807224">
-            <plugin id="Sprite" />
-            <instance-variables>
-                <instance-variable name="health" sid="667709388355328" type="number" />
-            </instance-variables>
-            <behaviors>
-                <behavior-type name="Solid" sid="846654383952537">
-                    <behavior id="solid" />
-                </behavior-type>
-                <behavior-type name="Flash" sid="384537393484966">
-                    <behavior id="Flash" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="481364645000760" speed="5">
-                    <frame duration="1" hotspotX="0.510204" hotspotY="0.577465" original-source="C:\Users\AleCosta\Desktop\spot\assets\GARAGEM\moveisGaragem.png">
-                        <collision-poly>
-                            <point x="0" y="0.338028" />
-                            <point x="1" y="0.309859" />
-                            <point x="1" y="0.535211" />
-                            <point x="0" y="0.535212" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="danoPlayer" sid="957451876540814">
             <plugin id="Sprite" />
             <animation-folder>

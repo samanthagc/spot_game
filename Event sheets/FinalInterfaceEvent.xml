@@ -181,6 +181,7 @@
                 <condition id="4" name="On finished" sid="686950371006229" type="LegendHistory">
                     <param id="0" name="Animation">&quot;Default&quot;</param>
                 </condition>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="335101553305586" type="ContinueButton" />
             </conditions>
             <actions>
                 <action id="-16" name="Wait" sid="530015049814632" type="System">
